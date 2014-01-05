@@ -92,7 +92,7 @@ body {
     .container .fourteen.columns                { width: 820px; }
     .container .fifteen.columns                 { width: 880px; }
     .container .sixteen.columns                 { width: 100%;
-    						margin: 25%	}
+    						margin: 25% 25%;}
 
     .container .one-third.column                { width: 300px; }
     .container .two-thirds.column               { width: 620px; }
