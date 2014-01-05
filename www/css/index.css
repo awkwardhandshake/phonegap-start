@@ -91,7 +91,8 @@ body {
     .container .thirteen.columns                { width: 760px; }
     .container .fourteen.columns                { width: 820px; }
     .container .fifteen.columns                 { width: 880px; }
-    .container .sixteen.columns                 { width: 100%;}
+    .container .sixteen.columns                 { width: 100%;
+    						height: 25%;	}
 
     .container .one-third.column                { width: 300px; }
     .container .two-thirds.column               { width: 620px; }
