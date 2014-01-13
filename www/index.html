@@ -4,55 +4,18 @@
     <head>
         <meta charset="utf-8" />
         <meta name="format-detection" content="telephone=no" />
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, 			height=device-height, target-densitydpi=device-dpi" />
         <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <link href="doorcontrol/doorcontrol.css" rel="stylesheet" type="text/css"/>
         <title>SGS Studentbostäder - Hemma</title>
-    <body>
-
-    <div class="container"> 
-     <div id="doorcontrolcontent">
-            <form action="http://hemma.sgsstudentbostader.se/DoorControl/PerformUnlock" method="post"><ul>
-            <div style="height: 10%" class="sixteen columns"></div> 
-        <div class="eight columns center">
-        	<button type="submit" name="epName" value="Första Långgatan 12">
-        	<img class="scale-with-grid" src="img/door_button.png" />
-            <p><strong>Öppna entrédörr</strong></p>
-            <p><small>(Open entrance door)</small></p>
-        	</button>
-        </div>
-                  <li><button type="submit" name="epName" value="Första Långgatan 12">Lås upp Första Långgatan 12</button></li>
-                  </ul>
-            </form><div class="doorControlStatus"></div>
-           
-        </div>
-    </div>
-    <div class="titledContentBoxBottom"></div>
-</div>
-<script type="text/javascript">
-<!--
-    jQuery(document).ready(function() {
-        doorcontrol.activationUrl = "http://hemma.sgsstudentbostader.se/DoorControl/PerformUnlock";
-        doorcontrol.unlockText = "L&#229;ser upp...";
-        doorcontrol.errorText = "Ett fel uppstod! D&#246;rr ej uppl&#229;st.";
-        doorcontrol.unlockDurationSeconds = 5;
-        
-        jQuery("#doorcontrolcontent button").click(doorcontrol.openEntryPath);
-    });
-//-->
-</script>
-                 </div>
-                 <div class="roundedboxbottom"><div class="roundedboxleft"></div></div>
-             </div>
-         </div>
-     </div>
-
-     
-
-
+</head>
+<body>
 
     	<div style="height: 10%" class="sixteen columns"></div> 
         <div class="eight columns center">
-        	<img class="scale-with-grid" src="img/door_button.png" />
+        	<button type="submit" name="epName" value="F&#246;rsta L&#229;nggatan 12">
+        		<img class="scale-with-grid" src="img/door_button.png" />
+        	</button>
             <p><strong>Öppna entrédörr</strong></p>
             <p><small>(Open entrance door)</small></p>
             
@@ -69,5 +32,21 @@
         <script type="text/javascript">
             app.initialize();
         </script>
+        <script type="text/javascript" src="http://hemma.sgsstudentbostader.se/Scripts/doorcontrol.js"></script>
+
+<!-- Detta är öppningsscriptet för dörren -->
+<script type="text/javascript">
+<!--
+    jQuery(document).ready(function() {
+        doorcontrol.activationUrl = "http://hemma.sgsstudentbostader.se/DoorControl/PerformUnlock";
+        doorcontrol.unlockText = "L&#229;ser upp...";
+        doorcontrol.errorText = "Ett fel uppstod! D&#246;rr ej uppl&#229;st.";
+        doorcontrol.unlockDurationSeconds = 5;
+        
+        jQuery("#doorcontrolcontent button").click(doorcontrol.openEntryPath);
+    });
+//-->
+</script>
+<!-- Här slutar scriptet -->
     </body>
 </html>
