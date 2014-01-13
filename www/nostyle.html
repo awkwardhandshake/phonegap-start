@@ -10,18 +10,10 @@
         <title>SGS Studentbostäder - Hemma</title>
 </head>
 <body>
-
 <div class="container">
 	<div class="sixteen columns"></div>
-    	
     	<div class="eight columns center">
-        <form action="http://hemma.sgsstudentbostader.se/DoorControl/PerformUnlock" method="post" target="hej"><ul>
-        	<li><button type="submit" name="epName" value="">
         		<img class="scale-with-grid" src="img/door_button.png" />
-        		        		
-        	</button></li>
-        	</ul>    	
-        </form>
             <p><strong>Öppna entrédörr</strong></p>
             <p><small>(Open entrance door)</small></p>     
         </div>
@@ -37,24 +29,6 @@
         <script type="text/javascript">
             app.initialize();
         </script>
-        <script type="text/javascript" src="http://hemma.sgsstudentbostader.se/Scripts/doorcontrol.js"></script>
-
-<!-- Detta är öppningsscriptet för dörren -->
-<script type="text/javascript">
-<!--
-    jQuery(document).ready(function() {
-        doorcontrol.activationUrl = "http://hemma.sgsstudentbostader.se/DoorControl/PerformUnlock";
-        doorcontrol.unlockText = "L&#229;ser upp...";
-        doorcontrol.errorText = "Ett fel uppstod! D&#246;rr ej uppl&#229;st.";
-        doorcontrol.unlockDurationSeconds = 5;
         
-        jQuery("#doorcontrolcontent button").click(doorcontrol.openEntryPath);
-    });
-//-->
-
-</script>
-<!-- Här slutar scriptet -->
-
-<iframe id="hej" height="100px"></iframe>
     </body>
 </html>
