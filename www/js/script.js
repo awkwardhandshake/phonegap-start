@@ -18,16 +18,14 @@ function hamta() {
 			console.log("Detta lagras för tillfället " + localStorage[newsItem])
 			
         });
-      //loggain()
+      loggain()
       });
       
 };        
-      
-console.log(localStorage.i);
 
 //logga in     
 function loggain(){
-localStorage.removeItem(localStorage.urlen);
+//localStorage.removeItem(localStorage.urlen);
 var str1="_=1366895108402&customer_name=" + localStorage.SGS_CustomerName + "&customerid=" + localStorage.UserName + "&isresident=" + localStorage.SGS_LivesAtSgs + "&loggedin=" + localStorage.LoggedIn + "&token=" + localStorage.SecurityTokenId + "&tvattstuga=" + localStorage.SGS_Laundry;
 localStorage.urlen="http://www.sgsstudentbostader.se/Assets/Handlers/Momentum.ashx?" + str1;
 console.log("Logga in delen, nuvarande sgs.se URL  " + localStorage.urlen);
