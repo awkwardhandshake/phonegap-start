@@ -32,7 +32,7 @@ function inputfields(){
 		'</form>'
 		};
 function iframe(){
-		document.getElementById("index").innerHTML='<iframe id="hej1" src="http://www.google.se" width="500px" height="500px">'+
+		document.getElementById("index").innerHTML='<iframe id="hej1" src="nostyle.html" width="500px" height="500px">'+
     	'</iframe>'
 		};
 
