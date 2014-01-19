@@ -2,7 +2,7 @@
 function getFormData(){    
 localStorage.anv=document.getElementById("username").value;
 localStorage.pass=document.getElementById("password").value;
-//iframe()
+iframe()
 hamta()
 }
 
