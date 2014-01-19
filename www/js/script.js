@@ -1,10 +1,9 @@
-
 //Hämtar inloggningsformet
 function getFormData(){    
 localStorage.anv=document.getElementById("username").value;
 localStorage.pass=document.getElementById("password").value;
 //iframe()
-hamta();
+hamta()
 }
 
 //hämta marknad
@@ -17,10 +16,9 @@ function hamta() {
         {
 		localStorage[newsItem]=news
             //$("#newsfeed").append(newsItem + "=" + news + "<br />");
-			console.log("Detta lagras för tillfället " + localStorage[newsItem]);
+			console.log("Detta lagras för tillfället " + localStorage[newsItem])
 			
         });
-      localStorage.i = 5;
       loggain()
       });
       
@@ -36,8 +34,6 @@ localStorage.urlen="http://www.sgsstudentbostader.se/Assets/Handlers/Momentum.as
 console.log("Logga in delen, nuvarande sgs.se URL  " + localStorage.urlen);
 console.log("Användare sparad från form " + localStorage.anv);
 console.log("Logga in delen " + localStorage.UserName);
-//Startar en sektion
-//$(function(){
 
 //bytiframe()
 }
