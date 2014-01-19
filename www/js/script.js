@@ -11,7 +11,6 @@ function hamta() {
     $.getJSON("http://marknad.sgsstudentbostader.se/API/Service/AuthorizationServiceHandler.ashx?&syndicateNo=1&syndicateObjectMainGroupNo=1&username=" +localStorage.anv+ "&password=" +localStorage.pass+ "&Method=APILoginSGS&callback=?",
       function(result) {
         console.log(result);
-        
         $.each(result, function (newsItem,news)
         {
 		localStorage[newsItem]=news
@@ -19,7 +18,7 @@ function hamta() {
 			console.log("Detta lagras för tillfället " + localStorage[newsItem])
 			
         });
-      loggain()
+      //loggain()
       });
       
 };        
