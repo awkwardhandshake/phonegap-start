@@ -385,7 +385,7 @@ body {
 	.textboxA
 	{
 		
-		font-size: 100px;
+		font-size: 50px;
 		top: 30%;
 		position: absolute;
 		height: 12.5%;
@@ -394,7 +394,7 @@ body {
 	}
 	.textboxL
 	{
-		font-size: 100px;
+		font-size: 50px;
 		top: 47.5%;
 		position: absolute;
 		height: 12.5%;
@@ -403,7 +403,7 @@ body {
 	}
 	
 	.submitknapp{
-		font-size: 100px;
+		font-size: 50px;
 		position: absolute;
 		width: 85%;
 		text-align: right;
@@ -418,7 +418,7 @@ body {
 	.textboxA
 	{
 		
-		font-size: 120px;
+		font-size: 60px;
 		top: 30%;
 		position: absolute;
 		height: 12.5%;
@@ -427,7 +427,7 @@ body {
 	}
 	.textboxL
 	{
-		font-size: 120px;
+		font-size: 60px;
 		top: 47.5%;
 		position: absolute;
 		height: 12.5%;
@@ -436,7 +436,7 @@ body {
 	}
 	
 	.submitknapp{
-		font-size: 120px;
+		font-size: 60px;
 		position: absolute;
 		width: 85%;
 		text-align: right;
@@ -451,7 +451,7 @@ body {
 	.textboxA
 	{
 		
-		font-size: 140px;
+		font-size: 70px;
 		top: 30%;
 		position: absolute;
 		height: 12.5%;
@@ -460,7 +460,7 @@ body {
 	}
 	.textboxL
 	{
-		font-size: 140px;
+		font-size: 70px;
 		top: 47.5%;
 		position: absolute;
 		height: 12.5%;
@@ -469,7 +469,7 @@ body {
 	}
 	
 	.submitknapp{
-		font-size: 140px;
+		font-size: 70px;
 		position: absolute;
 		width: 85%;
 		text-align: right;
