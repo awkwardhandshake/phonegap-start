@@ -479,7 +479,39 @@ body {
 		border: 1px solid green ;
 	}
 }		
-
+/* min bredd 1080px*/
+@media only screen and (min-width: 1081px){	
+	.textboxA
+	{
+		
+		font-size: 90px;
+		top: 30%;
+		position: absolute;
+		height: 12.5%;
+		width: 70%;
+		margin-left: 15%;
+	}
+	.textboxL
+	{
+		font-size: 90px;
+		top: 47.5%;
+		position: absolute;
+		height: 12.5%;
+		width: 70%;
+		margin-left: 15%;
+	}
+	
+	.submitknapp{
+		font-size: 90px;
+		position: absolute;
+		width: 85%;
+		text-align: right;
+		top: 65%;
+		float: right;
+		margin-right: 15%;
+		border: 1px solid green ;
+	}
+}
 
 
 
