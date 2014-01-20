@@ -26,9 +26,9 @@ function startsida(){
 
 function inputfields(){
 		document.getElementById("index").innerHTML='<form id="log">'+ 
-		'Username: <input type="text" id="username"><br>'+
-		'Password: <input type="password" id="password"><br>'+
-		'<input type="button" name="submit" onclick="getFormData();" value="Logga in">'+
+		'<input type="text" id="username" placeholder="Användarnamn"><br>'+
+		'<input type="password" id="password" placeholder="Lösenord"><br>'+
+		'<input type="button" class="submitknapp" name="submit" onclick="getFormData();" value="Logga in">'+
 		'</form>'
 		};
 function iframe(){
