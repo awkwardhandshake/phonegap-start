@@ -375,25 +375,44 @@ body {
 		height: auto; }
 /* #Buttons
 ================================================== */
-	.submitknapp{
-		font-size: 80px;
-	}
+	
 		
 	#form_div {
-		width: 70%;
-		height: 300px;
-		margin-left: 15%;
-		margin-top: 39%;
+		
 	}
 
-	.textbox
+	
+	.textboxA
 	{
-		height: 100px;
-		width: 100%;
-		font-size: 40px;
+		font-size: 25px;
+		top: 30%;
+		position: absolute;
+		height: 12.5%;
+		width: 70%;
+		margin-left: 15%;
+	}
+	.textboxL
+	{
+		font-size: 25px;
+		top: 47.5%;
+		position: absolute;
+		height: 12.5%;
+		width: 70%;
+		margin-left: 15%;
 	}
 	
-
+	.submitknapp{
+		font-size: 30px;
+		position: absolute;
+		width: 85%;
+		text-align: right;
+		top: 65%;
+		float: right;
+		margin-right: 15%;
+		border: 1px solid green ;
+	}
+	
+	
 	.button,
 	button,
 	input[type="submit"],
