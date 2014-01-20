@@ -382,6 +382,10 @@ body {
 	}
 /* screen mellan 480 - 639px */
 @media only screen and (max-width: 639px) {	
+	p{
+		font-size: 24px;
+		
+	}
 	.textboxA
 	{
 		
@@ -415,6 +419,11 @@ body {
 }	
 /* screen mellan 640 - 800px */
 @media only screen and (min-width: 640px) and (max-width: 800px) {	
+	p{
+		font-size: 30px;
+		
+	}
+	
 	.textboxA
 	{
 		
@@ -448,6 +457,11 @@ body {
 }		
 /* screen mellan 801 - 1080px */
 @media only screen and (min-width: 801px) and (max-width: 1080px) {	
+	p{
+		font-size: 40px;
+		
+	}
+	
 	.textboxA
 	{
 		
