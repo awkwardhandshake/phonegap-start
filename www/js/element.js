@@ -30,7 +30,9 @@ function inputfields(){
 		'<form id="log">'+ 
 		'<input type="text" id="username" placeholder="Användarnamn" class="textboxA"><br>'+
 		'<input type="password" id="password" placeholder="Lösenord" class="textboxL"><br>'+
+		'<div id="submitposition">'+
 		'<input type="button" class="submitknapp" name="submit" onclick="getFormData();" value="Logga in">'+
+		'</div>'+
 		'</form>'+
 		'</div>'
 		};

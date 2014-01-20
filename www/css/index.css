@@ -412,15 +412,14 @@ body {
 		margin-left: 15%;
 	}
 	
-	.submitknapp{
+		.submitknapp{
 		font-size: 30px;
-		position: absolute;
-		width: 85%;
-		text-align: right;
-		top: 65%;
+		position: relative;
+		text-align: center;
 		float: right;
-		margin-right: 15%;
-		border: 1px solid green ;
+		background: #aaa;
+		border: 0px;
+		color: #fff;
 	}
 }	
 
@@ -451,15 +450,14 @@ body {
 		margin-left: 15%;
 	}
 	
-	.submitknapp{
+		.submitknapp{
 		font-size: 60px;
-		position: absolute;
-		width: 85%;
-		text-align: right;
-		top: 65%;
+		position: relative;
+		text-align: center;
 		float: right;
-		margin-right: 15%;
-		border: 1px solid green ;
+		background: #aaa;
+		border: 0px;
+		color: #fff;
 	}
 }		
 
@@ -490,15 +488,14 @@ body {
 		margin-left: 15%;
 	}
 	
-	.submitknapp{
+		.submitknapp{
 		font-size: 70px;
-		position: absolute;
-		width: 85%;
-		text-align: right;
-		top: 65%;
+		position: relative;
+		text-align: center;
 		float: right;
-		margin-right: 15%;
-		border: 1px solid green ;
+		background: #aaa;
+		border: 0px;
+		color: #fff;
 	}
 }	
 	
@@ -532,25 +529,31 @@ body {
 	
 	.submitknapp{
 		font-size: 90px;
-		position: absolute;
-		width: 85%;
-		text-align: right;
-		top: 65%;
+		position: relative;
+		text-align: center;
 		float: right;
-		margin-right: 15%;
-		border: 1px solid green ;
+		background: #aaa;
+		border: 0px;
+		color: #fff; 
+		
 	}
 }
 
+	#submitposition{
+		position: absolute;
+		top: 65%;
+		width: 85%;
+		margin-right: 15%;
+	
+	}
 
 
 
 	.button,
 	button,
 	input[type="submit"],
-	input[type="reset"],
-	input[type="button"] {
-		background: url(img/door_button.png) no-repeat 0 0;/* Old browsers */
+	input[type="reset"] {
+		background: transparent; /* url(img/door_button.png) no-repeat 0 0;*//* Old browsers */
 		/*background: #eee -moz-linear-gradient(top, rgba(255,255,255,.2) 0%, rgba(0,0,0,.2) 100%); /* FF3.6+ */
 		/*background: #eee -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,.2)), color-stop(100%,rgba(0,0,0,.2))); /* Chrome,Safari4+ */
 		/*background: #eee -webkit-linear-gradient(top, rgba(255,255,255,.2) 0%,rgba(0,0,0,.2) 100%); /* Chrome10+,Safari5.1+ */
@@ -564,12 +567,12 @@ body {
 	  -webkit-border-radius: 3px;
 	  border-radius: 3px;
 	  /*color: url(img/door_button.png) no-repeat 0 0;*/
-	  display: inline-block;
+	  /*display: inline-block;*/
 	  /*font-size: 40px;*/
-	  font-weight: bold;
-	  text-decoration: none;
+	  /*font-weight: bold;
+	  text-decoration: none;*/
 	  /*text-shadow: 0 1px rgba(255, 255, 255, .75); */
-	  color: #fff;
+	  /*color: #fff;*/
 	  
 	  /*cursor: pointer; */
 	  /*margin-bottom: 20px;
