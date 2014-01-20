@@ -534,7 +534,8 @@ body {
 		float: right;
 		background: #aaa;
 		border: 0px;
-		color: #fff; 
+		color: #fff;
+		padding: 5px; 
 		
 	}
 }
@@ -544,6 +545,7 @@ body {
 		top: 65%;
 		width: 85%;
 		margin-right: 15%;
+		
 	
 	}
 
