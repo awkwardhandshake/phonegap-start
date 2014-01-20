@@ -385,7 +385,7 @@ body {
 	.textboxA
 	{
 		
-		font-size: 50px;
+		font-size: 30px;
 		top: 30%;
 		position: absolute;
 		height: 12.5%;
@@ -394,7 +394,7 @@ body {
 	}
 	.textboxL
 	{
-		font-size: 50px;
+		font-size: 30px;
 		top: 47.5%;
 		position: absolute;
 		height: 12.5%;
@@ -403,7 +403,7 @@ body {
 	}
 	
 	.submitknapp{
-		font-size: 50px;
+		font-size: 30px;
 		position: absolute;
 		width: 85%;
 		text-align: right;
