@@ -25,11 +25,14 @@ function startsida(){
 };
 
 function inputfields(){
-		document.getElementById("index").innerHTML='<form id="log">'+ 
-		'<input type="text" id="username" placeholder="Användarnamn"><br>'+
-		'<input type="password" id="password" placeholder="Lösenord"><br>'+
+		document.getElementById("index").innerHTML=
+		'<div id="form_div">'+
+		'<form id="log">'+ 
+		'<input type="text" id="username" placeholder="Användarnamn" class="textbox"><br>'+
+		'<input type="password" id="password" placeholder="Lösenord" class="textbox"><br>'+
 		'<input type="button" class="submitknapp" name="submit" onclick="getFormData();" value="Logga in">'+
-		'</form>'
+		'</form>'+
+		'</div>'
 		};
 function iframe(){
 		document.getElementById("index").innerHTML='<iframe id="hej1" src="nostyle.html" width="100%" height="500px">'+

@@ -375,20 +375,25 @@ body {
 		height: auto; }
 /* #Buttons
 ================================================== */
-	button.submitknapp{
+	.submitknapp{
+		font-size: 80px;
+	}
+		
+	#form_div {
+		width: 70%;
+		height: 300px;
+		margin-left: 15%;
+		margin-top: 39%;
+	}
+
+	.textbox
+	{
+		height: 100px;
+		width: 100%;
 		font-size: 40px;
 	}
-	placeholder{
-		font-size: 80px;
-		
-	}
-	input[type="text"],
-	input[type="password"]
-	{
-		
-		width: 60%;
-		font-size: 50px;	
-	}
+	
+
 	.button,
 	button,
 	input[type="submit"],
@@ -409,7 +414,7 @@ body {
 	  border-radius: 3px;
 	  /*color: url(img/door_button.png) no-repeat 0 0;*/
 	  display: inline-block;
-	  font-size: 40px;
+	  /*font-size: 40px;*/
 	  font-weight: bold;
 	  text-decoration: none;
 	  /*text-shadow: 0 1px rgba(255, 255, 255, .75); */
