@@ -373,6 +373,10 @@ body {
 	img.scale-with-grid {
 		max-width: 100%;
 		height: auto; }
+		
+	img.scale-with-grid-logo {
+		max-width: 100%;
+		height: auto; }	
 /* #Custom
 ================================================== */
 .logo{
@@ -382,12 +386,104 @@ body {
 	position: fixed;
 	
 }	
+/* screen mellan 240 - 320px */
+@media only screen and (min-width: 240px) and (max-width: 320px) {	
+	img.scale-with-grid{
 		
-	#form_div {
+		height: 120px;
+	}
+	
+	.logo{
+	margin-top: 5%;
+	margin-left: 5%;
+	width: 35%;
+	position: fixed;
+	}
+	
+	p{
+		font-size: 12px;
 		
 	}
+	.textboxA
+	{
+		
+		font-size: 16px;
+		top: 30%;
+		position: absolute;
+		height: 10%;
+		width: 70%;
+		margin-left: 15%;
+	}
+	.textboxL
+	{
+		font-size: 16px;
+		top: 47.5%;
+		position: absolute;
+		height: 10%;
+		width: 70%;
+		margin-left: 15%;
+	}
+	
+		.submitknapp{
+		font-size: 16px;
+		position: relative;
+		text-align: center;
+		float: right;
+		background: #aaa;
+		border: 0px;
+		color: #fff;
+	}
+}
+
+/* screen mellan 240 - 320px */
+@media only screen and (min-width: 321px) and (max-width: 479px) {	
+	
+	
+	.logo{
+	margin-top: 5%;
+	margin-left: 5%;
+	width: 35%;
+	position: fixed;
+	}
+	
+	p{
+		font-size: 20px;
+		
+	}
+	.textboxA
+	{
+		
+		font-size: 24px;
+		top: 30%;
+		position: absolute;
+		height: 12.5%;
+		width: 70%;
+		margin-left: 15%;
+	}
+	.textboxL
+	{
+		font-size: 24px;
+		top: 47.5%;
+		position: absolute;
+		height: 12.5%;
+		width: 70%;
+		margin-left: 15%;
+	}
+	
+		.submitknapp{
+		font-size: 24px;
+		position: relative;
+		text-align: center;
+		float: right;
+		background: #aaa;
+		border: 0px;
+		color: #fff;
+	}
+}
+	
+
 /* screen mellan 480 - 639px */
-@media only screen and (max-width: 639px) {	
+@media only screen and (min-width: 480px) and (max-width: 639px) {	
 	p{
 		font-size: 24px;
 		
