@@ -4,12 +4,34 @@
 <html>
 <head>
 	<title>wwwashcalendar</title>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#div1").load("http://tvatta.sgsstudentbostader.se");
+  });
+});
+</script>
 
 	<script type="text/javascript" id="clientEventHandlersJS" language="javascript" src="http://tvatta.sgsstudentbostader.se/script/wwwash.js"></script>
 
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>
+
 	<link href="css/styles.css" type="text/css" rel="stylesheet" />
 </head>
-<body bgcolor="white" onmousedown="resetTimeOut();" onload="initCalendar();">
-	
+<body>
+
+<button value="Hej på dig"></button>
+
+
+
+<div id="div1">
+
+</div>
+
+
+
+
 </body>
 </html>

@@ -26,7 +26,7 @@ function startsida(){
 
 function inputfields(){
 		document.getElementById("index").innerHTML=
-		'<div id="form_div">'+
+		'<div id="form_div" class="formar">'+
 		'<form id="log">'+ 
 		'<input type="text" id="username" placeholder="Användarnamn" class="textboxA"><br>'+
 		'<input type="password" id="password" placeholder="Lösenord" class="textboxL"><br>'+
