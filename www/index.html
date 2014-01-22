@@ -76,7 +76,32 @@ console.log("Nu kollar readystate om index har laddat");
 <script type="text/javascript" src="js/script.js"></script>
 <script type="text/javascript" src="js/radera.js"></script>
 <!--<iframe id="hej" height="100px"></iframe>-->
+<!-- Detta är enbart ett test: -->
 
-<a href="test.html" font-size="100px">Hej tryck på mig</a>
+<script>
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#div1").load("http://www.sgsstudentbostader.se/ext_gw.aspx?module=wwwash&lang=se#lblPanelName");
+  });
+});
+$(document).ready(function(){
+  $("button").click(function(){
+    $("#div2").load("http://hemma.sgsstudentbostader.se");
+  });
+});
+</script>
+
+<button name="Hej på dig" value="Hej på dig" style="color: #fff; font-size: 60px;">Magi</button>
+
+<div id="div1">
+
+</div>
+<div id="div2">
+
+</div>
+
+
+
+
     </body>
 </html>
