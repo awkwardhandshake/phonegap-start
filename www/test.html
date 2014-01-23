@@ -5,27 +5,23 @@
 <head>
 	<title>wwwashcalendar</title>
 <!--<link rel="stylesheet" type="text/css" href="css/index.css" />-->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js">
-</script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script>
+//$(document).ready(function(){
+  //$("button").click(function(){
+    //$("#div1").load("http://www.sgsstudentbostader.se/ext_gw.aspx?module=wwwash&lang=se#lblPanelName");
+  //});
+//});
+
 $(document).ready(function(){
   $("button").click(function(){
-    $("#div1").load("http://www.sgsstudentbostader.se/ext_gw.aspx?module=wwwash&lang=se#lblPanelName");
-  });
-});
-$(document).ready(function(){
-  $("button").click(function(){
-    $("#div2").load("http://hemma.sgsstudentbostader.se");
+    $("#div1").load('hemma/hemma.html');
   });
 });
 </script>
 
-</head>
-<body>
 
-<button name="Hej på dig" value="Hej på dig" style="color: #000; font-size: 30px;">Magi</button>
-
-
+<button name="Hej på dig" value="Hej på dig" style="color: #fff; font-size: 60px;">Magi</button>
 
 <div id="div1">
 
@@ -33,11 +29,6 @@ $(document).ready(function(){
 <div id="div2">
 
 </div>
-
-<script type="text/javascript" src="phonegap.js"></script>
-<script type="text/javascript">
-            app.initialize();
-        </script>
 
 </body>
 </html>

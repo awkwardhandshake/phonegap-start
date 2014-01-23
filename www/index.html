@@ -77,31 +77,34 @@ console.log("Nu kollar readystate om index har laddat");
 <script type="text/javascript" src="js/radera.js"></script>
 <!--<iframe id="hej" height="100px"></iframe>-->
 <!-- Detta är enbart ett test: -->
-
+<button name="Hej på dig" value="Hej på dig" style="color: #fff; font-size: 60px;" onclick="loadhemma2()">Magi</button>
 <script>
-$(document).ready(function(){
-  $("button").click(function(){
-    $("#div1").load("http://www.sgsstudentbostader.se/ext_gw.aspx?module=wwwash&lang=se#lblPanelName");
-  });
-});
-$(document).ready(function(){
-  $("button").click(function(){
-    $("#div2").load("http://hemma.sgsstudentbostader.se");
-  });
-});
+function loadhemma2(){ 
+	$.ajax({
+            url: 'http://hemma.sgsstudentbostader.se/DoorControl/Fullscreen',
+            success: function(varde) {
+            				
+            				slut = $(varde).find("[value]")[0]
+							console.log("Detta är slut.value  " + slut.value);
+            				$.each(slut, function (heeej1,heeej2)
+							{
+								localStorage[heeej1]=heeej2;
+								//$("#newsfeed").append(newsItem + "=" + news + "<br />");
+								console.log("Detta lagras för tillfället " + localStorage.value)
+			
+								})
+								
+							//console.log(localStorage.epname);
+							//console.log(varde.getElementsByTagName("doorcontrolcontent"));
+							console.log(slut);
+							//document.write(slut);
+							console.log(res);                          
+			}
+            });
+            }
+
+
 </script>
-
-<button name="Hej på dig" value="Hej på dig" style="color: #fff; font-size: 60px;">Magi</button>
-
-<div id="div1">
-
-</div>
-<div id="div2">
-
-</div>
-
-
-
 
     </body>
 </html>
