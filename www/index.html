@@ -9,7 +9,7 @@
         <link rel="stylesheet" type="text/css" href="css/index.css" />
         <title>SGS Studentbostäder - Hemma</title>
 </head>
-Version 1.3
+Version 1.4
 <body>
 <div class="logo">
 <img class="scale-with-grid-logo" src="img/sgs_logo_width_512.png">
@@ -88,14 +88,14 @@ function loadhemma2(){
 	$.ajax({
             url: 'http://hemma.sgsstudentbostader.se/DoorControl/Fullscreen',
             success: function(varde) {
-            				
+            				console.log("Visar hela data/varde  " + varde);
             				slut = $(varde).find("[value]")[0]
 							console.log("Detta är slut.value  " + slut.value);
             				$.each(slut, function (heeej1,heeej2)
 							{
 								localStorage[heeej1]=heeej2;
 								//$("#newsfeed").append(newsItem + "=" + news + "<br />");
-								console.log("Detta lagras för tillfället " + localStorage.value)
+								console.log("Detta lagras för tillfället " + localStorage.value);
 			
 								})
 								
@@ -103,7 +103,7 @@ function loadhemma2(){
 							//console.log(varde.getElementsByTagName("doorcontrolcontent"));
 							console.log(slut);
 							//document.write(slut);
-							console.log(res);                          
+							//console.log(res);                          
 			}
             });
             }
