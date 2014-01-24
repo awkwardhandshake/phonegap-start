@@ -88,6 +88,9 @@ function loadhemma2(){
 	$.ajax({
             url: 'http://hemma.sgsstudentbostader.se/DoorControl/Fullscreen',
             success: function(varde) {
+            var slut;
+            var heeej1;
+            var heeej2;
             				console.log("Visar hela data/varde  " + varde);
             				slut = $(varde).find("[value]")[0]
 							console.log("Detta är slut.value  " + slut.value);
