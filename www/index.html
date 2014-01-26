@@ -93,16 +93,16 @@ function loadhemma2(){
             var heeej22;
             var slut15;
             				console.log("Här är allt i data/varde med  " + varde);
-            				slut15 = $(varde).find('[value]')[0]
-							console.log("Detta är slut.value  " + slut15.value);
+            				slut15 = $(varde).find('button').attr('value');
+							console.log("Detta är slut.value  " + slut15);
 							console.log(slut15);
-            				$.each(slut15, function (heeej11,heeej22)
-							{
-								localStorage[heeej11]=heeej22;
-								//$("#newsfeed").append(newsItem + "=" + news + "<br />");
-								console.log("Detta lagras för tillfället i localstorage " + localStorage.value)
+            				//$.each(slut15, function (heeej11,heeej22)
+							//{
+							//	localStorage[heeej11]=heeej22;
+							//	//$("#newsfeed").append(newsItem + "=" + news + "<br />");
+							//	console.log("Detta lagras för tillfället i localstorage " + localStorage.value)
 			
-								});                         
+							//	});                         
 			}
             });
             }
