@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-           <script src="jquery-1.4.2.min.js" type="text/javascript"></script>
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <title>SGS Studentbostäder - Hemma</title>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="format-detection" content="telephone=no" />
+		<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+		   <script src="jquery-1.4.2.min.js" type="text/javascript"></script>
+		<link rel="stylesheet" type="text/css" href="css/index.css" />
+		<title>SGS Studentbostäder - Hemma</title>
 </head>
 Version 1.5
 <body>
@@ -17,28 +17,29 @@ Version 1.5
 <div id="index">
 <div class="container">
 	<div class="sixteen columns"></div>
-    	<div id="doorcontrolcontent">
-    	<div class="eight columns center">
-        <form action="http://hemma.sgsstudentbostader.se/DoorControl/PerformUnlock" method="post" target="hej">
-        	<ul>
-        	<li><button type="submit" name="epName" value="Första Långgatan 12" class="doorbutton">
-        		<img class="scale-with-grid" src="img/door_button.png" />	        		
-        	</button></li>
-        	</ul>    	
-        </form> <!--<div class="doorControlStatus"></div>-->
-            <p><strong>Öppna entrédörr</strong></p>
-            <p><small>(Open entrance door)</small></p>     
-        </div>
-    	</div>
-    	
-        <div class="eight columns center">
-        	<button onclick="inputfields();">
-        	<img class="scale-with-grid" src="img/cal_button.png" />
-        	</button>
-            <p><strong>Boka facilitet</strong></p>
-            <p><small>(Book facility)</small></p>
-        </div>
-    </div>
+	
+		<div id="doorcontrolcontent">
+		<div class="eight columns center">
+		<form action="http://hemma.sgsstudentbostader.se/DoorControl/PerformUnlock" method="post" target="hej">
+			<ul>
+			<li><button type="submit" name="epName" value="Första Långgatan 12" class="doorbutton">
+				<img class="scale-with-grid" src="img/door_button.png" />					
+			</button></li>
+			</ul>	  	
+		</form> <!--<div class="doorControlStatus"></div>-->
+			<p><strong>Öppna entrédörr</strong></p>
+			<p><small>(Open entrance door)</small></p>	   
+		</div>
+		</div>
+		
+		<div class="eight columns center">
+			<button onclick="inputfields();">
+			<img class="scale-with-grid" src="img/cal_button.png" />
+			</button>
+			<p><strong>Boka facilitet</strong></p>
+			<p><small>(Book facility)</small></p>
+		</div>
+	</div>
 </div>
 <script type="text/javascript">
 function redo(){
@@ -52,24 +53,24 @@ console.log("Nu kollar readystate om index har laddat");
 
 </script>
 		<script type="text/javascript" src="js/element.js"></script>
-        <script type="text/javascript" src="phonegap.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript">
-            app.initialize();
-        </script>
-        <script type="text/javascript" src="http://hemma.sgsstudentbostader.se/Scripts/doorcontrol.js"></script>
+		<script type="text/javascript" src="phonegap.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+		<script type="text/javascript">
+			app.initialize();
+		</script>
+		<script type="text/javascript" src="http://hemma.sgsstudentbostader.se/Scripts/doorcontrol.js"></script>
 
 <!-- Detta är öppningsscriptet för dörren -->
 <script type="text/javascript">
 <!--
-    jQuery(document).ready(function() {
-        doorcontrol.activationUrl = "http://hemma.sgsstudentbostader.se/DoorControl/PerformUnlock";
-        doorcontrol.unlockText = "L&#229;ser upp...";
-        doorcontrol.errorText = "Ett fel uppstod! D&#246;rr ej uppl&#229;st.";
-        doorcontrol.unlockDurationSeconds = 5;
-        
-        //jQuery("#doorcontrolcontent button").click(doorcontrol.openEntryPath);
-    });
+	jQuery(document).ready(function() {
+		doorcontrol.activationUrl = "http://hemma.sgsstudentbostader.se/DoorControl/PerformUnlock";
+		doorcontrol.unlockText = "L&#229;ser upp...";
+		doorcontrol.errorText = "Ett fel uppstod! D&#246;rr ej uppl&#229;st.";
+		doorcontrol.unlockDurationSeconds = 5;
+		
+		//jQuery("#doorcontrolcontent button").click(doorcontrol.openEntryPath);
+	});
 //-->
 
 </script>
@@ -87,27 +88,101 @@ console.log("Nu kollar readystate om index har laddat");
 function loadhemma2(){ 
 		"use strict";
 	$.ajax({
-            url: "http://hemma.sgsstudentbostader.se/DoorControl/Fullscreen",
-            success: function(varde) {
-            var heeej11;
-            var heeej22;
-            var slut15;
-            				console.log("Här är allt i data/varde med  " + varde);
-            				slut15 = $(varde).find('button').attr('value');
+			url: "http://hemma.sgsstudentbostader.se/DoorControl/Fullscreen",
+			success: function(varde) {
+			var heeej11;
+			var heeej22;
+			var slut15;
+									
+							console.log("Här är allt i data/varde med  " + varde);
+							slut15 = $(varde).find('button').attr('value');
 							console.log("Detta är slut.value  " + slut15);
 							console.log(slut15);
-            				//$.each(slut15, function (heeej11,heeej22)
+							//$.each(slut15, function (heeej11,heeej22)
 							//{
 							//	localStorage[heeej11]=heeej22;
 							//	//$("#newsfeed").append(newsItem + "=" + news + "<br />");
 							//	console.log("Detta lagras för tillfället i localstorage " + localStorage.value)
 			
-							//	});                         
+							//	});						  
 			}
-            });
-            }
+			});
+			}
 
 
 </script><!-- slut på script -->
-    </body>
+
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+      
+var tvattaimg;
+var antaltider;
+var nummer;
+var c = 0;
+//Vi laddar in hela tvatta.sgsstudentbostader.se
+function loadtvatta(){ 
+	var table = document.getElementById('myTable');
+	$.ajax({
+            url: 'tvatta/tvatta.html',
+            success: function(data) {
+            	var root2 = document.getElementById('mydiv2');
+            	var tab2=document.createElement('table');
+            	tvattaimg = $(data).find("#tbl1 [src]");
+            	//nummer = $(data).find("#tbl1 a");
+				antaltider = $(data).find( "#tbl1 tr:contains('-')");
+				lank = $(data).find("#tbl1 [onmousedown]");
+				console.log(tvattaimg[13].parentNode.onmousedown);
+				console.log(tvattaimg);
+				console.log(lank);
+				console.log(nummer);
+				console.log("Antal tider/dag  " + antaltider.length);
+				var antal = antaltider.length;
+				console.log(antaltider);
+							
+//Här byggs tabellen upp						
+				var smart = 0;
+				var extra = 6;
+				var nollstall = ((antal * 7)-1);
+				for (var b = 0; b < 7; b++){
+					var row = table.insertRow(-1)
+						if(b >= 1){
+						smart = (smart - nollstall)
+									}
+				for (var i = 0; i < antal; i++){
+					var cell = row.insertCell(-1)
+								
+					cell.innerHTML = tvattaimg[smart].outerHTML;
+					//kollar så att inte onmousedown är null
+						if(tvattaimg[smart].parentNode.onmousedown != null){
+								
+							//splittar upp och tar ut endast värdet ur funktionen
+							split = String(tvattaimg[smart].parentNode.onmousedown).split("'");
+							cell.innerHTML = tvattaimg[smart].outerHTML + "<a href=http://tvatta.sgsstudentbostader.se/" + split[1] + "> tryck här </a>";
+							//console.log(res);
+							console.log("Testar att splitta stringen  " + split[1]);
+							}
+					console.log("CELLER    " + smart);
+					smart = (smart + extra);
+					smart++
+								
+								}
+								}
+			
+            }
+            })
+            }
+            
+
+</script>
+<body>
+<table id="myTable" border="2">
+    <tbody>
+    </tbody>
+</table>
+<button name="Hej på dig" value="Hej på dig" style="color: #fff; font-size: 60px;" onclick="loadtvatta();">ladda tvatta</button>
+
+	</body>
 </html>
