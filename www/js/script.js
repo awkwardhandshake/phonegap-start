@@ -4,7 +4,8 @@ localStorage.anv=document.getElementById("username").value;
 localStorage.pass=document.getElementById("password").value;
 console.log("Den skickar inloggningen");
 //iframe();
-hamta();
+//hamta();
+hiddenbrowser();
 }
 
 //hämta marknad
@@ -45,7 +46,8 @@ function bytiframe(){
 //alt med hidden InAppBrowser
 function hiddenbrowser(){
 	console.log("Går in i funktionen hiddenbrowser");
-	 var ref = window.open('http://www.google.se', '_blank', 'hidden=yes');
+	 var ref = window.open(localStorage.urlen, '_blank', 'hidden=yes');
+	 console.log(ref);
          ref.addEventListener('loadstop', function(event) {
              alert('background window loaded'); 
              console.log("www.google.se är laddad i bakgrunden");
