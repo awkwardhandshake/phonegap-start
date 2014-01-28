@@ -169,7 +169,7 @@ function loadtvatta(){
 							cell.innerHTML = 								
 							"<a href=http://tvatta.sgsstudentbostader.se/" + split[1] + ">" + tvattaimg[smart].outerHTML + "</a>";
 							//console.log(res);
-							console.log("Testar att splitta stringen	 " + split[1] + nummer[smart].innerHTML);
+							console.log("Testar att splitta stringen	 " + split[1]);
 							}
 								
 					console.log("CELLER	" + smart);
