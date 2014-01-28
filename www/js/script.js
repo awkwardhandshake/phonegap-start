@@ -5,7 +5,6 @@ localStorage.pass=document.getElementById("password").value;
 console.log("Den skickar inloggningen");
 //iframe();
 hamta();
-hiddenbrowser();
 }
 
 //hämta marknad
@@ -34,7 +33,7 @@ console.log("Logga in delen, nuvarande sgs.se URL  " + localStorage.urlen);
 console.log("Användare sparad från form " + localStorage.anv);
 console.log("Logga in delen " + localStorage.UserName);
 hiddenbrowser();
-bytiframe();
+//bytiframe();
 }
 //alt med iframe
 function bytiframe(){
@@ -45,9 +44,11 @@ function bytiframe(){
 
 //alt med hidden InAppBrowser
 function hiddenbrowser(){
+	console.log("Går in i funktionen hiddenbrowser");
 	 var ref = window.open('http://www.google.se', '_blank', 'hidden=yes');
          ref.addEventListener('loadstop', function(event) {
              alert('background window loaded'); 
+             console.log("www.google.se är laddad i bakgrunden");
 	
 	
 })
