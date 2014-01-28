@@ -5,6 +5,7 @@ localStorage.pass=document.getElementById("password").value;
 console.log("Den skickar inloggningen");
 //iframe();
 hamta();
+byggnad();
 }
 
 //hämta marknad
@@ -56,10 +57,59 @@ function hiddenbrowser(){
 })
 
 }
+function byggnad(){
+	skapabyggnadtable();
+	document.getElementById("topploga").src = " ";
+	$.ajax({
+			url: 'http://www.sgsstudentbostader.se/ext_gw.aspx?module=wwwash&lang=se#lblPanelName',
+			success: function(data) {
+				//document.getElementById("myTable") = "byggnadtable";
+				var table5 = document.getElementById('byggnad');
+				var indifiera;
+				var byggnadlank;
+				var byggnadnamn;
+				var nastafem;
+				var delabyggnadlank;
+				indifiera = $(data).find("#lblHeaderText");
+				console.log(indifiera[0].id);
+				if(indifiera[0].id == "lblHeaderText"){
+					byggnadlank = $(data).find("td .headerColor");
+					console.log(byggnadlank.length);
+					var d = 0;
+					
+					
+					for(var i = 0; i < byggnadlank.length; i++){
+						var byggnadtable = table5.insertRow(-1);
+						var byggnadcell = byggnadtable.insertCell(-1);
+						byggnadcell.innerHTML = byggnadlank[d].innerHTML;
+						console.log(byggnadlank[d].innerHTML);
+						if(byggnadlank[d].onmousedown != null){
+							delabyggnadlank = String(byggnadlank[d].onmousedown).split("'");
+							byggnadcell.innerHTML = "<a href=http://tvatta.sgsstudentbostader.se/" + delabyggnadlank[1] +">"+ byggnadlank[d].innerHTML + "</a>";
+							
+						}
+						d++;
 
+						
+					}
+					//lank till bokningsfönster
+					console.log(byggnadlank[1].onmousedown);
+					//visar byggnadsnamn
+					console.log(byggnadlank[1].childNodes[0].childNodes[1].textContent);
+				
+				}
+				else{
+					loadtvatta();
+				}
+	
+	}
+	})
+	
+}
 
 //Vi laddar in hela tvatta.sgsstudentbostader.se
-function loadtvatta(){ 
+function loadtvatta(){
+	skapatvattatable(); 
 	document.getElementById("topploga").src = " ";
 	var tvattaimg;
 	var antaltider;
@@ -68,14 +118,14 @@ function loadtvatta(){
 	var tiderdygnet;
 	var c = 0;
 
-	var table = document.getElementById('myTable');
+	var table = document.getElementById('tvatta');
 	$.ajax({
 			url: 'http://www.sgsstudentbostader.se/ext_gw.aspx?module=wwwash&lang=se#lblPanelName',
 			success: function(data) {
 				var root2 = document.getElementById('mydiv2');
 				var tab2=document.createElement('table');
 				tvattaimg = $(data).find("#tbl1 [src]");
-				//nummer = $(data).find("#tbl1 a");
+				nummer = $(data).find("#tbl1 a");
 				antaltider = $(data).find( "#tbl1 tr:contains('-')");
 				dagar = $(data).find("#tbl1 th");
 				lank = $(data).find("#tbl1 [onmousedown]");
@@ -94,7 +144,7 @@ function loadtvatta(){
 				headrow.insertCell(-1);
 				for (h = 0; h < antal; h++){
 						var headcell = headrow.insertCell(-1);
-						headcell.innerHTML = "<p>" + tiderdygnet[f].innerHTML + "<p>";
+						headcell.innerHTML = "<p>" + tiderdygnet[f].innerHTML + "</p>";
 						f++
 						console.log(f);
 						}
@@ -123,7 +173,7 @@ function loadtvatta(){
 							cell.innerHTML = 								
 							"<a href=http://tvatta.sgsstudentbostader.se/" + split[1] + ">" + tvattaimg[smart].outerHTML + "</a>";
 							//console.log(res);
-							console.log("Testar att splitta stringen	 " + split[1]);
+							console.log("Testar att splitta stringen	 " + split[1] + nummer[smart].innerHTML);
 							}
 								
 					console.log("CELLER	" + smart);

@@ -40,10 +40,19 @@ function iframe(){
 		'</iframe>'
 		};
 
-function skapatable(){
+function skapatvattatable(){
 	document.getElementById("styling").href="css/tvatta.css"
 	document.getElementById("index").innerHTML=
-'<table id="myTable" border="2">'+
+'<table id="tvatta" border="2">'+
+	'<tbody>'+
+	'</tbody>'+
+'</table>'
+
+}
+function skapabyggnadtable(){
+	document.getElementById("styling").href="css/tvatta.css"
+	document.getElementById("index").innerHTML=
+'<table id="byggnad" border="2">'+
 	'<tbody>'+
 	'</tbody>'+
 '</table>'
