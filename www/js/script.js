@@ -75,7 +75,7 @@ function loadtvatta(){
 				var root2 = document.getElementById('mydiv2');
 				var tab2=document.createElement('table');
 				tvattaimg = $(data).find("#tbl1 [src]");
-				nummer = $(data).find("#tbl1 a");
+				//nummer = $(data).find("#tbl1 a");
 				antaltider = $(data).find( "#tbl1 tr:contains('-')");
 				dagar = $(data).find("#tbl1 th");
 				lank = $(data).find("#tbl1 [onmousedown]");
@@ -123,7 +123,7 @@ function loadtvatta(){
 							cell.innerHTML = 								
 							"<a href=http://tvatta.sgsstudentbostader.se/" + split[1] + ">" + tvattaimg[smart].outerHTML + "</a>";
 							//console.log(res);
-							console.log("Testar att splitta stringen	 " + split[1] + nummer[smart].innerHTML);
+							console.log("Testar att splitta stringen	 " + split[1]);
 							}
 								
 					console.log("CELLER	" + smart);
