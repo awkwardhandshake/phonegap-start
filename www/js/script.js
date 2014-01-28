@@ -43,7 +43,7 @@ function bytiframe(){
 function hiddenbrowser(){
 	console.log("Går in i funktionen hiddenbrowser");
 	 var ref = window.open(localStorage.urlen, '_blank', 'hidden=yes');
-	 byggnad();
+	 loadtvatta();
 	 console.log(ref);
 		 ref.addEventListener('loadstop', function(event) {
 			 alert('background window loaded'); 
@@ -60,7 +60,6 @@ function byggnad(){
 	$.ajax({
 			url: 'http://www.sgsstudentbostader.se/ext_gw.aspx?module=wwwash&lang=se#lblPanelName',
 			success: function(data) {
-				//document.getElementById("myTable") = "byggnadtable";
 				var table5 = document.getElementById('byggnad');
 				var indifiera;
 				var byggnadlank;
