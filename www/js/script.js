@@ -41,7 +41,7 @@ function bytiframe(){
 	  console.log("Nu sätts iframe adressen till inlogg");
 
 	  //tvattstuga();
-
+}
 //alt med hidden InAppBrowser
 function hiddenbrowser(){
 	console.log("Går in i funktionen hiddenbrowser");
@@ -53,7 +53,7 @@ function hiddenbrowser(){
 	
 })
 }
-}
+
 //setTimeout((function tvattstuga(){
 //var hej1 = document.getElementById('hej1').src="http://www.sgsstudentbostader.se/ext_gw.aspx?module=wwwash&lang=se#lblPanelName";
 //console.log("Nu byts adressen till tvättstuga");
