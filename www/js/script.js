@@ -2,8 +2,10 @@
 function getFormData(){    
 localStorage.anv=document.getElementById("username").value;
 localStorage.pass=document.getElementById("password").value;
-iframe();
+console.log("Den skickar inloggningen");
+//iframe();
 hamta();
+hiddenbrowser();
 }
 
 //hämta marknad
@@ -48,8 +50,9 @@ function hiddenbrowser(){
              alert('background window loaded'); 
 	
 	
+})
 }
-
+}
 //setTimeout((function tvattstuga(){
 //var hej1 = document.getElementById('hej1').src="http://www.sgsstudentbostader.se/ext_gw.aspx?module=wwwash&lang=se#lblPanelName";
 //console.log("Nu byts adressen till tvättstuga");
