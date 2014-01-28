@@ -3,9 +3,7 @@ function getFormData(){
 localStorage.anv=document.getElementById("username").value;
 localStorage.pass=document.getElementById("password").value;
 console.log("Den skickar inloggningen");
-//iframe();
 hamta();
-byggnad();
 }
 
 //hämta marknad
@@ -45,8 +43,7 @@ function bytiframe(){
 function hiddenbrowser(){
 	console.log("Går in i funktionen hiddenbrowser");
 	 var ref = window.open(localStorage.urlen, '_blank', 'hidden=yes');
-	 skapatable();
-	 loadtvatta();
+	 byggnad();
 	 console.log(ref);
 		 ref.addEventListener('loadstop', function(event) {
 			 alert('background window loaded'); 
