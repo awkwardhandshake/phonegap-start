@@ -5,6 +5,7 @@ localStorage.pass=document.getElementById("password").value;
 console.log("Den skickar inloggningen");
 //iframe();
 hamta();
+
 }
 
 //hämta marknad
@@ -45,10 +46,11 @@ function hiddenbrowser(){
 	console.log("Går in i funktionen hiddenbrowser");
 	 var ref = window.open(localStorage.urlen, '_blank', 'hidden=yes');
 	 skapatable();
+	 loadtvatta();
 	 console.log(ref);
 		 ref.addEventListener('loadstop', function(event) {
 			 alert('background window loaded'); 
-			 loadtvatta();
+			 
 			 console.log("www.google.se är laddad i bakgrunden");
 	
 	
@@ -59,6 +61,7 @@ function hiddenbrowser(){
 
 //Vi laddar in hela tvatta.sgsstudentbostader.se
 function loadtvatta(){ 
+
 	var tvattaimg;
 	var antaltider;
 	var nummer;
@@ -81,7 +84,7 @@ function loadtvatta(){
 				console.log("Antal tider/dag  " + antaltider.length);
 				var antal = antaltider.length;
 				console.log(antaltider);
-							
+
 				//Här byggs tabellen upp						
 				var smart = 0;
 				var extra = 6;
@@ -91,20 +94,22 @@ function loadtvatta(){
 						if(b >= 1){
 						smart = (smart - nollstall)
 									}
+										
 				for (var i = 0; i < antal; i++){
 					var cell = row.insertCell(-1)
 								
-					cell.innerHTML = tvattaimg[smart].outerHTML;
+					cell.innerHTML = "<a>" + tvattaimg[smart].outerHTML + "</a>";
 					//kollar så att inte onmousedown är null
 						if(tvattaimg[smart].parentNode.onmousedown != null){
-								
+									
 							//splittar upp och tar ut endast värdet ur funktionen
-							split = String(tvattaimg[smart].parentNode.onmousedown).split("'");
-							cell.innerHTML = 								//src är fel
+							split = String(tvattaimg[smart].parentNode.onmousedown).split("'"); 
+							cell.innerHTML = 								
 							"<a href=http://tvatta.sgsstudentbostader.se/" + split[1] + ">" + tvattaimg[smart].outerHTML + "</a>";
 							//console.log(res);
 							console.log("Testar att splitta stringen	 " + split[1]);
 							}
+								
 					console.log("CELLER	" + smart);
 					smart = (smart + extra);
 					smart++
