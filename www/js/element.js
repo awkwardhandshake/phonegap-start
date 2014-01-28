@@ -41,6 +41,7 @@ function iframe(){
 		};
 
 function skapatable(){
+	document.getElementById("styling").href="css/tvatta.css"
 	document.getElementById("index").innerHTML=
 '<table id="myTable" border="2">'+
 	'<tbody>'+
