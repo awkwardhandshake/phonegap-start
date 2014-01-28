@@ -100,8 +100,8 @@ function loadtvatta(){
 								
 							//splittar upp och tar ut endast värdet ur funktionen
 							split = String(tvattaimg[smart].parentNode.onmousedown).split("'");
-							cell.innerHTML = tvattaimg[smart].outerHTML + 
-							"<a href=http://tvatta.sgsstudentbostader.se/" + split[1] + "> tryck här </a>";
+							cell.innerHTML = 								//src är fel
+							"<a href=http://tvatta.sgsstudentbostader.se/" + split[1] + ">" + tvattaimg[smart].outerHTML + "</a>";
 							//console.log(res);
 							console.log("Testar att splitta stringen	 " + split[1]);
 							}
