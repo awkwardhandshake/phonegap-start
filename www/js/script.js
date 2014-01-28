@@ -94,7 +94,7 @@ function loadtvatta(){
 				headrow.insertCell(-1);
 				for (h = 0; h < antal; h++){
 						var headcell = headrow.insertCell(-1);
-						headcell.innerHTML = tiderdygnet[f].innerHTML;
+						headcell.innerHTML = "<p>" + tiderdygnet[f].innerHTML + "<p>";
 						f++
 						console.log(f);
 						}
