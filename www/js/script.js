@@ -5,7 +5,6 @@ localStorage.pass=document.getElementById("password").value;
 console.log("Den skickar inloggningen");
 //iframe();
 hamta();
-
 }
 
 //hämta marknad
@@ -61,10 +60,12 @@ function hiddenbrowser(){
 
 //Vi laddar in hela tvatta.sgsstudentbostader.se
 function loadtvatta(){ 
-
+	document.getElementById("topploga").src = " ";
 	var tvattaimg;
 	var antaltider;
 	var nummer;
+	var dagar;
+	var tiderdygnet;
 	var c = 0;
 
 	var table = document.getElementById('myTable');
@@ -74,32 +75,47 @@ function loadtvatta(){
 				var root2 = document.getElementById('mydiv2');
 				var tab2=document.createElement('table');
 				tvattaimg = $(data).find("#tbl1 [src]");
-				//nummer = $(data).find("#tbl1 a");
+				nummer = $(data).find("#tbl1 a");
 				antaltider = $(data).find( "#tbl1 tr:contains('-')");
+				dagar = $(data).find("#tbl1 th");
 				lank = $(data).find("#tbl1 [onmousedown]");
-				console.log(tvattaimg[13].parentNode.onmousedown);
-				//console.log(tvattaimg);
-				//console.log(lank);
-				//console.log(nummer);
-				console.log("Antal tider/dag  " + antaltider.length);
+				tiderdygnet = $(data).find("#tbl1 td:contains(':')");
 				var antal = antaltider.length;
-				console.log(antaltider);
-
+				console.log(tiderdygnet[4].innerHTML);
+				
+				
 				//Här byggs tabellen upp						
 				var smart = 0;
 				var extra = 6;
+				var q = 1;
 				var nollstall = ((antal * 7)-1);
+				var headrow = table.insertRow(-1);
+				var f = 0;
+				headrow.insertCell(-1);
+				for (h = 0; h < antal; h++){
+						var headcell = headrow.insertCell(-1);
+						headcell.innerHTML = tiderdygnet[f].innerHTML;
+						f++
+						console.log(f);
+						}
 				for (var b = 0; b < 7; b++){
 					var row = table.insertRow(-1)
+					
+					
+					var cell2 = row.insertCell(-1);
+					cell2.innerHTML = "<p>" + dagar[q].innerHTML + "</p>"
+					q++;
 						if(b >= 1){
 						smart = (smart - nollstall)
-									}
-										
+									}	
+									
+									
 				for (var i = 0; i < antal; i++){
-					var cell = row.insertCell(-1)
-								
+				
+					var cell = row.insertCell(-1)	
 					cell.innerHTML = "<a>" + tvattaimg[smart].outerHTML + "</a>";
 					//kollar så att inte onmousedown är null
+					
 						if(tvattaimg[smart].parentNode.onmousedown != null){
 									
 							//splittar upp och tar ut endast värdet ur funktionen
@@ -107,7 +123,7 @@ function loadtvatta(){
 							cell.innerHTML = 								
 							"<a href=http://tvatta.sgsstudentbostader.se/" + split[1] + ">" + tvattaimg[smart].outerHTML + "</a>";
 							//console.log(res);
-							console.log("Testar att splitta stringen	 " + split[1]);
+							console.log("Testar att splitta stringen	 " + split[1] + nummer[smart].innerHTML);
 							}
 								
 					console.log("CELLER	" + smart);
@@ -116,7 +132,7 @@ function loadtvatta(){
 								
 								}
 								}
-			
+							
 			}
 			})
 			}
