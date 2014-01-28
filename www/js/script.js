@@ -66,7 +66,7 @@ function loadtvatta(){
 
 	var table = document.getElementById('myTable');
 	$.ajax({
-			url: 'tvatta/tvatta.html',
+			url: 'http://www.sgsstudentbostader.se/ext_gw.aspx?module=wwwash&lang=se#lblPanelName',
 			success: function(data) {
 				var root2 = document.getElementById('mydiv2');
 				var tab2=document.createElement('table');
