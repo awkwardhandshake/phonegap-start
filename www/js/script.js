@@ -31,18 +31,27 @@ localStorage.urlen="http://www.sgsstudentbostader.se/Assets/Handlers/Momentum.as
 console.log("Logga in delen, nuvarande sgs.se URL  " + localStorage.urlen);
 console.log("Användare sparad från form " + localStorage.anv);
 console.log("Logga in delen " + localStorage.UserName);
-
+hiddenbrowser();
 bytiframe();
 }
-
+//alt med iframe
 function bytiframe(){
 	  var hej1 = document.getElementById('hej1').src=localStorage.urlen
 	  console.log("Nu sätts iframe adressen till inlogg");
+
 	  //tvattstuga();
 
-
-setTimeout((function tvattstuga(){
-var hej1 = document.getElementById('hej1').src="http://www.sgsstudentbostader.se/ext_gw.aspx?module=wwwash&lang=se#lblPanelName";
-console.log("Nu byts adressen till tvättstuga");
-}),3000);
+//alt med hidden InAppBrowser
+function hiddenbrowser(){
+	 var ref = window.open('http://www.google.se', '_blank', 'hidden=yes');
+         ref.addEventListener('loadstop', function(event) {
+             alert('background window loaded'); 
+	
+	
 }
+
+//setTimeout((function tvattstuga(){
+//var hej1 = document.getElementById('hej1').src="http://www.sgsstudentbostader.se/ext_gw.aspx?module=wwwash&lang=se#lblPanelName";
+//console.log("Nu byts adressen till tvättstuga");
+//}),3000);
+//}
