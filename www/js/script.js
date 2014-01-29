@@ -47,7 +47,7 @@ function hiddenbrowser(){
 	 console.log(ref);
 		 ref.addEventListener('loadstop', function(event) {
 			 alert('background window loaded'); 
-			 loadtvatta();			 
+			 loadtvatta('http://www.sgsstudentbostader.se/ext_gw.aspx?module=wwwash&lang=se#lblPanelName');			 
 			 console.log("www.google.se är laddad i bakgrunden");
 	
 	
@@ -103,8 +103,10 @@ function byggnad(){
 	
 }
 
+
 //Vi laddar in hela tvatta.sgsstudentbostader.se
-function loadtvatta(){
+function loadtvatta(urlfranlankar){
+	
 	skapatvattatable(); 
 	document.getElementById("topploga").src = " ";
 	var tvattaimg;
@@ -112,11 +114,13 @@ function loadtvatta(){
 	var nummer;
 	var dagar;
 	var tiderdygnet;
+	var lankartvatta;
+	
 	var c = 0;
 
 	var table = document.getElementById('tvatta');
 	$.ajax({
-			url: 'http://www.sgsstudentbostader.se/ext_gw.aspx?module=wwwash&lang=se#lblPanelName',
+			url: urlfranlankar,
 			success: function(data) {
 				var root2 = document.getElementById('mydiv2');
 				var tab2=document.createElement('table');
@@ -126,6 +130,8 @@ function loadtvatta(){
 				dagar = $(data).find("#tbl1 th");
 				lank = $(data).find("#tbl1 [onmousedown]");
 				tiderdygnet = $(data).find("#tbl1 td:contains(':')");
+				lankartvatta = $(data).find("#tblNav td.periodLinkColor");
+				console.log(lankartvatta[0].onmousedown);
 				var antal = antaltider.length;
 				console.log(tiderdygnet[4].innerHTML);
 				
@@ -135,12 +141,19 @@ function loadtvatta(){
 				var extra = 6;
 				var q = 1;
 				var nollstall = ((antal * 7)-1);
+				var navrow = table.insertRow(-1);
 				var headrow = table.insertRow(-1);
 				var f = 0;
+				nastavecka = String(lankartvatta[0].onmousedown).split("'");
+				nastavecka = "http://tvatta.sgsstudentbostader.se/" + nastavecka[1];
+				var navcell = navrow.insertCell(-1);
+				console.log(nastavecka[1]);
+				navcell.innerHTML = '<a onmousedown="loadtvatta(nastavecka)"> HEJEEJEJ</a>';
 				headrow.insertCell(-1);
 				for (h = 0; h < antal; h++){
 						var headcell = headrow.insertCell(-1);
-						headcell.innerHTML = "<p>" + tiderdygnet[f].innerHTML + "</p>";
+						headcell.innerHTML = "<p>" + tiderdygnet[f].innerHTML + "</p>" +
+						
 						f++
 						console.log(f);
 						}
