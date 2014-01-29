@@ -158,12 +158,12 @@ function loadtvatta(urlfranlankar){
 				if(lankartvatta[1] != undefined){
 					nastaveckafram = String(lankartvatta[1].onmousedown).split("'");
 					nastaveckafram = "http://tvatta.sgsstudentbostader.se/" + nastaveckafram[1];
-					navcell.innerHTML = '<a onmousedown="loadtvatta(nastaveckabak)">'+ lankartvatta[0].innerText +'</a>';
+					navcell.innerHTML = '<button class="tvattaknapp" onmousedown="loadtvatta(nastaveckabak)">'+ lankartvatta[0].innerText +'</button>';
 					var navcell = navrow.insertCell(-1);
-					navcell.innerHTML = '<a onmousedown="loadtvatta(nastaveckafram)">'+ lankartvatta[1].innerText +'</a>';
+					navcell.innerHTML = '<button class="tvattaknapp" onmousedown="loadtvatta(nastaveckafram)">'+ lankartvatta[1].innerText +'</button>';
 				} 
 				else{
-					navcell.innerHTML = '<a onmousedown="loadtvatta(nastaveckabak)">'+ lankartvatta[0].innerText +'</a>';
+					navcell.innerHTML = '<button class="tvattaknapp" onmousedown="loadtvatta(nastaveckabak)">'+ lankartvatta[0].innerText +'</button>';
 				}
 				
 				//header med tider
