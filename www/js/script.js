@@ -152,9 +152,9 @@ function loadtvatta(urlfranlankar){
 				nastaveckabak = String(lankartvatta[0].onmousedown).split("'");
 				nastaveckabak = "http://tvatta.sgsstudentbostader.se/" + nastaveckabak[1];
 				var navcell = navrow.insertCell(-1);
-				console.log(lankartvatta[1]);
+				//console.log(lankartvatta[1]);
 				console.log("Bakåt " + nastaveckabak);
-				console.log("Framåt  " + nastaveckafram);
+				//console.log("Framåt  " + nastaveckafram);
 				if(lankartvatta[1] != undefined){
 					nastaveckafram = String(lankartvatta[1].onmousedown).split("'");
 					nastaveckafram = "http://tvatta.sgsstudentbostader.se/" + nastaveckafram[1];
@@ -163,7 +163,7 @@ function loadtvatta(urlfranlankar){
 					navcell.innerHTML = '<a onmousedown="loadtvatta(nastaveckafram)">'+ lankartvatta[1].innerText +'</a>';
 				} 
 				else{
-				navcell.innerHTML = '<a onmousedown="loadtvatta(nastaveckabak)">'+ lankartvatta[0].innerText +'</a>';
+					navcell.innerHTML = '<a onmousedown="loadtvatta(nastaveckabak)">'+ lankartvatta[0].innerText +'</a>';
 				}
 				
 				//header med tider
