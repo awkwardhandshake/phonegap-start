@@ -151,7 +151,7 @@ function loadtvatta(urlfranlankar){
 				nastavecka = String(lankartvatta[nasta].onmousedown).split("'");
 				nastavecka = "http://tvatta.sgsstudentbostader.se/" + nastavecka[1];
 				var navcell = navrow.insertCell(-1);
-				console.log(nastavecka[1]);
+				console.log(nastavecka[nasta]);
 				navcell.innerHTML = '<a onmousedown="loadtvatta(nastavecka['+nasta+'])">'+ lankartvatta[nasta].innerText +'</a>';
 				nasta++;
 				}
