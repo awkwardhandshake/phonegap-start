@@ -4,6 +4,7 @@ localStorage.anv=document.getElementById("username").value;
 localStorage.pass=document.getElementById("password").value;
 console.log("Den skickar inloggningen");
 hamta();
+//loadtvatta('tvatta/tvatta.html');
 }
 
 //hämta marknad
@@ -95,7 +96,7 @@ function byggnad(){
 				
 				}
 				else{
-					loadtvatta();
+					loadtvatta('http://www.sgsstudentbostader.se/ext_gw.aspx?module=wwwash&lang=se#lblPanelName');
 				}
 	
 	}
@@ -131,35 +132,50 @@ function loadtvatta(urlfranlankar){
 				lank = $(data).find("#tbl1 [onmousedown]");
 				tiderdygnet = $(data).find("#tbl1 td:contains(':')");
 				lankartvatta = $(data).find("#tblNav td.periodLinkColor");
-				console.log(lankartvatta[0].onmousedown);
+				console.log(lankartvatta[0].innerText);
 				var antal = antaltider.length;
 				console.log(tiderdygnet[4].innerHTML);
 				
 				
 				//Här byggs tabellen upp						
-				var smart = 0;
-				var extra = 6;
-				var q = 1;
-				var nollstall = ((antal * 7)-1);
+				
+				
+				
+				
+				
+				//navigerings knappar
 				var navrow = table.insertRow(-1);
-				var headrow = table.insertRow(-1);
-				var f = 0;
-				nastavecka = String(lankartvatta[0].onmousedown).split("'");
+				var nasta = 0;
+				//navrow.insertCell(-1);
+				for(n = 0; n < lankartvatta.length; n++){
+				nastavecka = String(lankartvatta[nasta].onmousedown).split("'");
 				nastavecka = "http://tvatta.sgsstudentbostader.se/" + nastavecka[1];
 				var navcell = navrow.insertCell(-1);
 				console.log(nastavecka[1]);
-				navcell.innerHTML = '<a onmousedown="loadtvatta(nastavecka)"> HEJEEJEJ</a>';
+				navcell.innerHTML = '<a onmousedown="loadtvatta(nastavecka)">'+ lankartvatta[nasta].innerText +'</a>';
+				nasta++;
+				}
+				
+				//header med tider
+				var f = 0;
+				var headrow = table.insertRow(-1);
 				headrow.insertCell(-1);
 				for (h = 0; h < antal; h++){
 						var headcell = headrow.insertCell(-1);
-						headcell.innerHTML = "<p>" + tiderdygnet[f].innerHTML + "</p>" +
+						headcell.innerHTML = "<p>" + tiderdygnet[f].innerHTML + "</p>";
 						
 						f++
 						console.log(f);
 						}
+				
+				//Här byggs tvatta tabeln upp		
+				var smart = 0;
+				var extra = 6;
+				var q = 1;
+				var nollstall = ((antal * 7)-1);
+				//Datum och dagar
 				for (var b = 0; b < 7; b++){
 					var row = table.insertRow(-1)
-					
 					
 					var cell2 = row.insertCell(-1);
 					cell2.innerHTML = "<p>" + dagar[q].innerHTML + "</p>"
