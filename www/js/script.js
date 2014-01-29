@@ -106,6 +106,8 @@ function byggnad(){
 
 var nastaveckafram;
 var nastaveckabak;
+var lokalenriktig;
+var rakna = 0;
 //Vi laddar in hela tvatta.sgsstudentbostader.se
 function loadtvatta(urlfranlankar){
 	
@@ -117,6 +119,7 @@ function loadtvatta(urlfranlankar){
 	var dagar;
 	var tiderdygnet;
 	var lankartvatta;
+	var valjabokning;
 	var c = 0;
 
 	var table = document.getElementById('tvatta');
@@ -132,38 +135,43 @@ function loadtvatta(urlfranlankar){
 				lank = $(data).find("#tbl1 [onmousedown]");
 				tiderdygnet = $(data).find("#tbl1 td:contains(':')");
 				lankartvatta = $(data).find("#tblNav td.periodLinkColor");
-				//console.log(lankartvatta[0].innerText);
+				valjabokning = $(data).find("table td[width][align][onmousedown].headerColor");
+				console.log(valjabokning[0].onmousedown);
+				console.log(valjabokning[1].onmousedown);
 				var antal = antaltider.length;
-				//console.log(tiderdygnet[4].innerHTML);
 				
 				
-				//Här byggs tabellen upp						
+				//Välja lokal att boka i
+				var lokalrow = table.insertRow(-1);
+				for(var l=0; l < valjabokning.length; l++){
+				var lokalcell = lokalrow.insertCell(-1);
+				lokalenriktig = String(valjabokning[rakna].onmousedown).split("'", 2);
+				lokalenriktig = "'http://tvatta.sgsstudentbostader.se/"+ lokalenriktig[1] +"'";
+				lokalcell.innerHTML = '<button onmousedown="loadtvatta('+ lokalenriktig +')">'+ valjabokning[rakna].innerHTML +'</button>';
+				rakna++;
+				}
 				
-				
-				
-				
-				
-				//Navigerings knappar
+				//Navigerings framåt och bakåt
 				var navrow = table.insertRow(-1);
 				var nasta = 0;
 				var nastavecka;
 
-				//for(n = 0; n < lankartvatta.length; n++){
 				nastaveckabak = String(lankartvatta[0].onmousedown).split("'");
 				nastaveckabak = "http://tvatta.sgsstudentbostader.se/" + nastaveckabak[1];
 				var navcell = navrow.insertCell(-1);
-				//console.log(lankartvatta[1]);
 				console.log("Bakåt " + nastaveckabak);
-				//console.log("Framåt  " + nastaveckafram);
 				if(lankartvatta[1] != undefined){
 					nastaveckafram = String(lankartvatta[1].onmousedown).split("'");
 					nastaveckafram = "http://tvatta.sgsstudentbostader.se/" + nastaveckafram[1];
-					navcell.innerHTML = '<button class="tvattaknapp" onmousedown="loadtvatta(nastaveckabak)">'+ lankartvatta[0].innerText +'</button>';
+					navcell.innerHTML = '<button class="tvattaknapp" onmousedown="loadtvatta(nastaveckabak)">'+ 
+					lankartvatta[0].innerText +'</button>';
 					var navcell = navrow.insertCell(-1);
-					navcell.innerHTML = '<button class="tvattaknapp" onmousedown="loadtvatta(nastaveckafram)">'+ lankartvatta[1].innerText +'</button>';
+					navcell.innerHTML = '<button class="tvattaknapp" onmousedown="loadtvatta(nastaveckafram)">'+
+					lankartvatta[1].innerText +'</button>';
 				} 
 				else{
-					navcell.innerHTML = '<button class="tvattaknapp" onmousedown="loadtvatta(nastaveckabak)">'+ lankartvatta[0].innerText +'</button>';
+					navcell.innerHTML = '<button class="tvattaknapp" onmousedown="loadtvatta(nastaveckabak)">'+ 
+					lankartvatta[0].innerText +'</button>';
 				}
 				
 				//header med tider
