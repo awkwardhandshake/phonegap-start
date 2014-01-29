@@ -43,11 +43,11 @@ function bytiframe(){
 function hiddenbrowser(){
 	console.log("Går in i funktionen hiddenbrowser");
 	 var ref = window.open(localStorage.urlen, '_blank', 'hidden=yes');
-	 loadtvatta();
+ //Denna skall in i loadstop funktionen.
 	 console.log(ref);
 		 ref.addEventListener('loadstop', function(event) {
 			 alert('background window loaded'); 
-			 
+			 loadtvatta();			 
 			 console.log("www.google.se är laddad i bakgrunden");
 	
 	
