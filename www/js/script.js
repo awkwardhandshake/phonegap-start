@@ -116,7 +116,6 @@ function loadtvatta(urlfranlankar){
 	var dagar;
 	var tiderdygnet;
 	var lankartvatta;
-	
 	var c = 0;
 
 	var table = document.getElementById('tvatta');
@@ -132,9 +131,9 @@ function loadtvatta(urlfranlankar){
 				lank = $(data).find("#tbl1 [onmousedown]");
 				tiderdygnet = $(data).find("#tbl1 td:contains(':')");
 				lankartvatta = $(data).find("#tblNav td.periodLinkColor");
-				console.log(lankartvatta[0].innerText);
+				//console.log(lankartvatta[0].innerText);
 				var antal = antaltider.length;
-				console.log(tiderdygnet[4].innerHTML);
+				//console.log(tiderdygnet[4].innerHTML);
 				
 				
 				//Här byggs tabellen upp						
@@ -146,14 +145,24 @@ function loadtvatta(urlfranlankar){
 				//Navigerings knappar
 				var navrow = table.insertRow(-1);
 				var nasta = 0;
-				//navrow.insertCell(-1);
-				for(n = 0; n < lankartvatta.length; n++){
-				nastavecka = String(lankartvatta[nasta].onmousedown).split("'");
-				nastavecka = "http://tvatta.sgsstudentbostader.se/" + nastavecka[1];
+				var nastavecka;
+
+				//for(n = 0; n < lankartvatta.length; n++){
+				nastaveckabak = String(lankartvatta[0].onmousedown).split("'");
+				nastaveckafram = String(lankartvatta[1].onmousedown).split("'");
+
+				nastaveckabak = "http://tvatta.sgsstudentbostader.se/" + nastaveckabak[1];
+				nastaveckafram = "http://tvatta.sgsstudentbostader.se/" + nastaveckafram[1];
 				var navcell = navrow.insertCell(-1);
-				console.log(nastavecka[nasta]);
-				navcell.innerHTML = '<a onmousedown="loadtvatta(nastavecka['+nasta+'])">'+ lankartvatta[nasta].innerText +'</a>';
-				nasta++;
+				console.log("Bakåt " + nastaveckabak);
+				console.log("Framåt  " + nastaveckafram);
+				if(nastaveckafram[1] =! null){
+					navcell.innerHTML = '<a onmousedown="loadtvatta(nastaveckabak)">'+ lankartvatta[0].innerText +'</a>';
+					var navcell = navrow.insertCell(-1);
+					navcell.innerHTML = '<a onmousedown="loadtvatta(nastaveckafram)">'+ lankartvatta[1].innerText +'</a>';
+				} 
+				else{
+				navcell.innerHTML = '<a onmousedown="loadtvatta(nastaveckafram)">'+ lankartvatta[nasta].innerText +'</a>';
 				}
 				
 				//header med tider
