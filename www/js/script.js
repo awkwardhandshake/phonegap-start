@@ -143,7 +143,7 @@ function loadtvatta(urlfranlankar){
 				
 				
 				
-				//navigerings knappar
+				//Navigerings knappar
 				var navrow = table.insertRow(-1);
 				var nasta = 0;
 				//navrow.insertCell(-1);
@@ -152,7 +152,7 @@ function loadtvatta(urlfranlankar){
 				nastavecka = "http://tvatta.sgsstudentbostader.se/" + nastavecka[1];
 				var navcell = navrow.insertCell(-1);
 				console.log(nastavecka[1]);
-				navcell.innerHTML = '<a onmousedown="loadtvatta(nastavecka)">'+ lankartvatta[nasta].innerText +'</a>';
+				navcell.innerHTML = '<a onmousedown="loadtvatta(nastavecka['+nasta+'])">'+ lankartvatta[nasta].innerText +'</a>';
 				nasta++;
 				}
 				
