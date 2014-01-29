@@ -3,8 +3,8 @@ function getFormData(){
 localStorage.anv=document.getElementById("username").value;
 localStorage.pass=document.getElementById("password").value;
 console.log("Den skickar inloggningen");
-hamta();
-//loadtvatta('tvatta/tvatta.html');
+//hamta();
+loadtvatta('tvatta/tvatta.html');
 }
 
 //hämta marknad
@@ -104,7 +104,8 @@ function byggnad(){
 	
 }
 
-
+var nastaveckafram;
+var nastaveckabak;
 //Vi laddar in hela tvatta.sgsstudentbostader.se
 function loadtvatta(urlfranlankar){
 	
