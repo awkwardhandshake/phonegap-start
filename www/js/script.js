@@ -142,7 +142,6 @@ function loadtvatta(urlfranlankar){
 				lankartvatta = $(data).find("#tblNav td.periodLinkColor");
 				valjabokning = $(data).find("table td[width][align][onmousedown].headerColor");
 				typlokal = $(data).find("td[background]");
-				console.log(typlokal);
 				var antal = antaltider.length;
 				
 	console.log("2");				
@@ -156,7 +155,7 @@ function loadtvatta(urlfranlankar){
 						lokalcell.innerHTML = '<button onmousedown="loadtvatta('+ lokalenriktig +')">'
 						+ valjabokning[rakna].innerHTML +'</button>';
 						rakna++;
-								console.log("3");
+						console.log("3");
 					}
 				}
 			
