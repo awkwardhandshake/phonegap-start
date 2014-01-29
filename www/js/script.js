@@ -107,7 +107,9 @@ function byggnad(){
 var nastaveckafram;
 var nastaveckabak;
 var lokalenriktig;
+var typlokalriktig;
 var rakna = 0;
+var typrakna = 0;
 //Vi laddar in hela tvatta.sgsstudentbostader.se
 function loadtvatta(urlfranlankar){
 	
@@ -120,6 +122,7 @@ function loadtvatta(urlfranlankar){
 	var tiderdygnet;
 	var lankartvatta;
 	var valjabokning;
+	var typlokal;
 	var c = 0;
 
 	var table = document.getElementById('tvatta');
@@ -136,26 +139,41 @@ function loadtvatta(urlfranlankar){
 				tiderdygnet = $(data).find("#tbl1 td:contains(':')");
 				lankartvatta = $(data).find("#tblNav td.periodLinkColor");
 				valjabokning = $(data).find("table td[width][align][onmousedown].headerColor");
-				console.log(valjabokning[0].onmousedown);
-				console.log(valjabokning[1].onmousedown);
+				typlokal = $(data).find("td[background]");
 				var antal = antaltider.length;
 				
 				
-				//Välja lokal att boka i
-				var lokalrow = table.insertRow(-1);
-				for(var l=0; l < valjabokning.length; l++){
-				var lokalcell = lokalrow.insertCell(-1);
-				lokalenriktig = String(valjabokning[rakna].onmousedown).split("'", 2);
-				lokalenriktig = "'http://tvatta.sgsstudentbostader.se/"+ lokalenriktig[1] +"'";
-				lokalcell.innerHTML = '<button onmousedown="loadtvatta('+ lokalenriktig +')">'+ valjabokning[rakna].innerHTML +'</button>';
-				rakna++;
+				//Välja typ av lokal att boka
+				if(valjabokning != undefined){
+					var lokalrow = table.insertRow(-1);
+					for(var l=0; l < valjabokning.length; l++){
+						var lokalcell = lokalrow.insertCell(-1);
+						lokalenriktig = String(valjabokning[rakna].onmousedown).split("'", 2);
+						lokalenriktig = "'http://tvatta.sgsstudentbostader.se/"+ lokalenriktig[1] +"'";
+						lokalcell.innerHTML = '<button onmousedown="loadtvatta('+ lokalenriktig +')">'
+						+ valjabokning[rakna].innerHTML +'</button>';
+						rakna++;
+					}
+				}
+				
+				//Välja vilken lokal att boka i
+				if(typlokal != undefined){
+					var typrow = table.insertRow(-1);
+					for(var t = 0; t < typlokal.length; t++){
+						var typcell = typrow.insertCell(-1);
+						typlokalriktig = String(typlokal[typrakna].onmousedown).split("'", 2);
+						typlokalriktig = "'http://tvatta.sgsstudentbostader.se/"+ typlokalriktig[1] +"'";
+						typcell.innerHTML = '<button onmousedown="loadtvatta('+typlokalriktig +')">'
+						+ typlokal[typrakna].innerHTML +'</button>';
+						typrakna++;
+					}
+					
 				}
 				
 				//Navigerings framåt och bakåt
 				var navrow = table.insertRow(-1);
 				var nasta = 0;
 				var nastavecka;
-
 				nastaveckabak = String(lankartvatta[0].onmousedown).split("'");
 				nastaveckabak = "http://tvatta.sgsstudentbostader.se/" + nastaveckabak[1];
 				var navcell = navrow.insertCell(-1);
