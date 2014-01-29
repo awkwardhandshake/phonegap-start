@@ -112,7 +112,7 @@ var rakna = 0;
 var typrakna = 0;
 //Vi laddar in hela tvatta.sgsstudentbostader.se
 function loadtvatta(urlfranlankar){
-
+		'use strict';
 	skapatvattatable(); 
 	document.getElementById("topploga").src = " ";
 	var tvattaimg;
@@ -125,8 +125,7 @@ function loadtvatta(urlfranlankar){
 	var typlokal;
 	var c = 0;
 	var lank;
-	
-	console.log("1");
+
 	var table = document.getElementById('tvatta');
 	$.ajax({
 			url: urlfranlankar,
@@ -142,11 +141,13 @@ function loadtvatta(urlfranlankar){
 				lankartvatta = $(data).find("#tblNav td.periodLinkColor");
 				valjabokning = $(data).find("table td[width][align][onmousedown].headerColor");
 				typlokal = $(data).find("td[background]");
+				console.log(valjabokning.length);
+				console.log(typlokal.length);
 				var antal = antaltider.length;
 				
-	console.log("2");				
+				
 				//Välja typ av lokal att boka
-				if(valjabokning != undefined){
+				if(valjabokning.length != 0){
 					var lokalrow = table.insertRow(-1);
 					for(var l=0; l < valjabokning.length; l++){
 						var lokalcell = lokalrow.insertCell(-1);
@@ -155,12 +156,11 @@ function loadtvatta(urlfranlankar){
 						lokalcell.innerHTML = '<button onmousedown="loadtvatta('+ lokalenriktig +')">'
 						+ valjabokning[rakna].innerHTML +'</button>';
 						rakna++;
-						console.log("3");
 					}
 				}
-			
+				
 				//Välja vilken lokal att boka i
-				if(typlokal != undefined){
+				if(typlokal.length != 0){
 					var typrow = table.insertRow(-1);
 					for(var t = 0; t < typlokal.length; t++){
 						var typcell = typrow.insertCell(-1);
@@ -169,7 +169,6 @@ function loadtvatta(urlfranlankar){
 						typcell.innerHTML = '<button onmousedown="loadtvatta('+typlokalriktig +')">'
 						+ typlokal[typrakna].innerHTML +'</button>';
 						typrakna++;
-								console.log("4");
 					}
 					
 				}
@@ -207,7 +206,7 @@ function loadtvatta(urlfranlankar){
 						f++
 						console.log(f);
 						}
-						console.log("5");
+				
 				//Här byggs tvatta tabeln upp		
 				var smart = 0;
 				var extra = 6;
@@ -224,7 +223,7 @@ function loadtvatta(urlfranlankar){
 						smart = (smart - nollstall)
 									}	
 									
-						console.log("7");					
+									
 				for (var i = 0; i < antal; i++){
 				
 					var cell = row.insertCell(-1)	
@@ -240,7 +239,7 @@ function loadtvatta(urlfranlankar){
 							//console.log(res);
 							console.log("Testar att splitta stringen	 " + split[1]);
 							}
-							console.log("8");			
+								
 					console.log("CELLER	" + smart);
 					smart = (smart + extra);
 					smart++
