@@ -150,20 +150,20 @@ function loadtvatta(urlfranlankar){
 
 				//for(n = 0; n < lankartvatta.length; n++){
 				nastaveckabak = String(lankartvatta[0].onmousedown).split("'");
-				nastaveckafram = String(lankartvatta[1].onmousedown).split("'");
-
 				nastaveckabak = "http://tvatta.sgsstudentbostader.se/" + nastaveckabak[1];
-				nastaveckafram = "http://tvatta.sgsstudentbostader.se/" + nastaveckafram[1];
 				var navcell = navrow.insertCell(-1);
+				console.log(lankartvatta[1]);
 				console.log("Bakåt " + nastaveckabak);
 				console.log("Framåt  " + nastaveckafram);
-				if(nastaveckafram[1] =! null){
+				if(lankartvatta[1] != undefined){
+					nastaveckafram = String(lankartvatta[1].onmousedown).split("'");
+					nastaveckafram = "http://tvatta.sgsstudentbostader.se/" + nastaveckafram[1];
 					navcell.innerHTML = '<a onmousedown="loadtvatta(nastaveckabak)">'+ lankartvatta[0].innerText +'</a>';
 					var navcell = navrow.insertCell(-1);
 					navcell.innerHTML = '<a onmousedown="loadtvatta(nastaveckafram)">'+ lankartvatta[1].innerText +'</a>';
 				} 
 				else{
-				navcell.innerHTML = '<a onmousedown="loadtvatta(nastaveckafram)">'+ lankartvatta[nasta].innerText +'</a>';
+				navcell.innerHTML = '<a onmousedown="loadtvatta(nastaveckabak)">'+ lankartvatta[0].innerText +'</a>';
 				}
 				
 				//header med tider
