@@ -112,7 +112,7 @@ var rakna = 0;
 var typrakna = 0;
 //Vi laddar in hela tvatta.sgsstudentbostader.se
 function loadtvatta(urlfranlankar){
-	
+
 	skapatvattatable(); 
 	document.getElementById("topploga").src = " ";
 	var tvattaimg;
@@ -124,6 +124,7 @@ function loadtvatta(urlfranlankar){
 	var valjabokning;
 	var typlokal;
 	var c = 0;
+	var lank;
 
 	var table = document.getElementById('tvatta');
 	$.ajax({
@@ -140,6 +141,7 @@ function loadtvatta(urlfranlankar){
 				lankartvatta = $(data).find("#tblNav td.periodLinkColor");
 				valjabokning = $(data).find("table td[width][align][onmousedown].headerColor");
 				typlokal = $(data).find("td[background]");
+				console.log(typlokal);
 				var antal = antaltider.length;
 				
 				
@@ -196,7 +198,7 @@ function loadtvatta(urlfranlankar){
 				var f = 0;
 				var headrow = table.insertRow(-1);
 				headrow.insertCell(-1);
-				for (h = 0; h < antal; h++){
+				for (var h = 0; h < antal; h++){
 						var headcell = headrow.insertCell(-1);
 						headcell.innerHTML = "<p>" + tiderdygnet[f].innerHTML + "</p>";
 						
@@ -230,7 +232,7 @@ function loadtvatta(urlfranlankar){
 						if(tvattaimg[smart].parentNode.onmousedown != null){
 									
 							//splittar upp och tar ut endast värdet ur funktionen
-							split = String(tvattaimg[smart].parentNode.onmousedown).split("'"); 
+							var split = String(tvattaimg[smart].parentNode.onmousedown).split("'"); 
 							cell.innerHTML = 								
 							"<a href=http://tvatta.sgsstudentbostader.se/" + split[1] + ">" + tvattaimg[smart].outerHTML + "</a>";
 							//console.log(res);
