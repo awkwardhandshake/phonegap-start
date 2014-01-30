@@ -19,27 +19,6 @@
 	q:before, q:after {
 		content: '';
 		content: none; }
-		
-	#navtvatta table {
-		border-collapse: collapse;
-		border-spacing: 0;
-		width: 100%;
-		height: 100%;
-		}
-	#navtvatta td{
-		border: 2px solid white;
-		text-align: center;
-		vertical-align: middle;
-		width: auto;
-		height: auto;
-	}
-
-	#navtvatta a{
-		font-size: 15px;
-	}
-
-
-
 	#tvatta table {
 		border-collapse: collapse;
 		border-spacing: 0;

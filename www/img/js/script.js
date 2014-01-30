@@ -3,8 +3,8 @@ function getFormData(){
 localStorage.anv=document.getElementById("username").value;
 localStorage.pass=document.getElementById("password").value;
 console.log("Den skickar inloggningen");
-hamta();
-//byggnad('tvatta/byggnad.html');
+//hamta();
+byggnad('tvatta/byggnad.html');
 }
 
 //hämta marknad
@@ -48,7 +48,7 @@ function hiddenbrowser(){
 	 console.log(ref);
 		 ref.addEventListener('loadstop', function(event) {
 			 alert('background window loaded'); 
-			 byggnad('http://www.sgsstudentbostader.se/ext_gw.aspx?module=wwwash&lang=se#lblPanelName');			 
+			 loadtvatta('http://www.sgsstudentbostader.se/ext_gw.aspx?module=wwwash&lang=se#lblPanelName');			 
 			 console.log("www.google.se är laddad i bakgrunden");
 	
 	
@@ -56,44 +56,46 @@ function hiddenbrowser(){
 
 }
 function byggnad(urlfranlankarbyggnad){
+'use strict';
 console.log("Går in i byggnad funktionen");
 	skapabyggnadtable();
 	document.getElementById("topploga").src = " ";
 	$.ajax({
 			url: urlfranlankarbyggnad,
 			success: function(data) {
-				var byggnadtable = document.getElementById('byggnad');
+				var table5 = document.getElementById('byggnad');
 				var indifiera;
 				var byggnadlank;
+				var byggnadnamn;
+				var nastafem;
 				var delabyggnadlank;
 				indifiera = $(data).find("#lblShowFirstAvailable");
-				if(indifiera.length != 0){
+				if(indifiera[0].innerHTML != undefined){
 console.log("Byggnad finns!")
 					byggnadlank = $(data).find("td .headerColor");
 					var d = 0;
-					
 					for(var i = 0; i < byggnadlank.length; i++){
-console.log('Bygger upp table för byggnad');					
-						var byggnadrow = byggnadtable.insertRow(-1);
-						var byggnadcell = byggnadrow.insertCell(-1);
+						var byggnadtable = table5.insertRow(-1);
+						var byggnadcell = byggnadtable.insertCell(-1);
 						byggnadcell.innerHTML = byggnadlank[d].innerHTML;
-						console.log(byggnadlank[d].innerHTML);
 						if(byggnadlank[d].onmousedown != null){
-console.log('Kollar byggnad if-sats');						
 							delabyggnadlank = String(byggnadlank[d].onmousedown).split("'");
-							byggnadcell.innerHTML = "<a href=http://tvatta.sgsstudentbostader.se/" + delabyggnadlank[1] +">"+
-							byggnadlank[d].innerHTML + "</a>";
+							byggnadcell.innerHTML = "<a href=http://tvatta.sgsstudentbostader.se/" + delabyggnadlank[1] +">"
+							+ byggnadlank[d].innerHTML + "</a>";
+							
 						}
-						d++;	
+						d++;
+
+						
 					}
-console.log('Slut av for-loop');				
+				
 				}
 				else{
 console.log("Verkar inte ha funnits någon byggnad???")
-					loadtvatta('http://www.sgsstudentbostader.se/ext_gw.aspx?module=wwwash&lang=se#lblPanelName');
+					byggnad('http://www.sgsstudentbostader.se/ext_gw.aspx?module=wwwash&lang=se#lblPanelName');
 				}
 	
-								}		
+	}
 	})
 	
 }
@@ -120,7 +122,6 @@ console.log("Går in i tvätta funktionen");
 	var lank;
 
 	var table = document.getElementById('tvatta');
-	var navtable = document.getElementById('navtvatta');
 	$.ajax({
 			url: urlfranlankar,
 			success: function(data) {
@@ -136,6 +137,8 @@ console.log('Går in i ajax');
 				lankartvatta = $(data).find("#tblNav td.periodLinkColor");
 				valjabokning = $(data).find("table td[width=12%][align].headerColor");
 				typlokal = $(data).find("td[background]");
+				//console.log(valjabokning.length);
+				//console.log(typlokal.length);
 				var antal = antaltider.length;
 				
 				
@@ -143,7 +146,7 @@ console.log('Går in i ajax');
 				if(valjabokning.length != 0){
 				var rakna = 0;
 console.log('Olika lokaler funktion');				
-					var lokalrow = navtable.insertRow(-1);
+					var lokalrow = table.insertRow(-1);
 					for(var l=0; l < valjabokning.length; l++){
 						var lokalcell = lokalrow.insertCell(-1);
 						if(valjabokning[rakna].onmousedown == null){
@@ -165,7 +168,7 @@ console.log('Olika lokaler funktion');
 				if(typlokal.length != 0){
 				var typrakna = 0;
 console.log('Vilket nummer på lokal funktion');
-					var typrow = navtable.insertRow(-1);
+					var typrow = table.insertRow(-1);
 					for(var t = 0; t < typlokal.length; t++){
 console.log('Vilket nummer på lokal funktion 2');					
 						var typcell = typrow.insertCell(-1);
@@ -192,7 +195,7 @@ console.log('Vilket nummer på lokal funktion 6');
 				if(lankartvatta.length != 0){
 				var navrakna = 0;
 console.log('Navigering framåt och bakåt');
-					var navrow = navtable.insertRow(-1);
+					var navrow = table.insertRow(-1);
 					for(var lt = 0; lt < lankartvatta.length; lt++){
 						var navcell = navrow.insertCell(-1);
 						lankartvattariktig = String(lankartvatta[navrakna].onmousedown).split("'", 2);

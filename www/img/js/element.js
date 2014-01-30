@@ -43,11 +43,6 @@ function iframe(){
 function skapatvattatable(){
 	document.getElementById("styling").href="css/tvatta.css"
 	document.getElementById("index").innerHTML=
-'<table id="navtvatta" border="2">'+
-	'<tbody>'+
-	'</tbody>'+
-'</table>'+
-
 '<table id="tvatta" border="2">'+
 	'<tbody>'+
 	'</tbody>'+
