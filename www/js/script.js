@@ -48,7 +48,7 @@ function hiddenbrowser(){
 	 console.log(ref);
 		 ref.addEventListener('loadstop', function(event) {
 			 alert('background window loaded'); 
-			 byggnad('http://www.sgsstudentbostader.se/ext_gw.aspx?module=wwwash&lang=se#lblPanelName');			 
+			 loadtvatta('http://www.sgsstudentbostader.se/ext_gw.aspx?module=wwwash&lang=se#lblPanelName');			 
 			 console.log("www.google.se är laddad i bakgrunden");
 	
 	
@@ -72,9 +72,7 @@ console.log("Går in i byggnad funktionen");
 				if(indifiera[0].innerHTML != undefined){
 console.log("Byggnad finns!")
 					byggnadlank = $(data).find("td .headerColor");
-					console.log(byggnadlank.length);
 					var d = 0;
-					
 					
 					for(var i = 0; i < byggnadlank.length; i++){
 						var byggnadtable = table5.insertRow(-1);
