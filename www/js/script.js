@@ -171,17 +171,22 @@ console.log('Olika lokaler funktion');
 console.log('Vilket nummer på lokal funktion');
 					var typrow = table.insertRow(-1);
 					for(var t = 0; t < typlokal.length; t++){
+console.log('Vilket nummer på lokal funktion 2');					
 						var typcell = typrow.insertCell(-1);
 						if(typlokal[typrakna].onmousedown == null){
+console.log('Vilket nummer på lokal funktion 3');
 						typcell.innerHTML = '<a>'+ typlokal[typrakna].innerHTML +'</a>';								
 						typrakna++;
+console.log('Vilket nummer på lokal funktion 4');						
 						}
 						else{
+console.log('Vilket nummer på lokal funktion 5');						
 						typlokalriktig = String(typlokal[typrakna].onmousedown).split("'", 2);
 						typlokalriktig = "'http://tvatta.sgsstudentbostader.se/"+ typlokalriktig[1] +"'";
 						typcell.innerHTML = '<button onmousedown="loadtvatta('+typlokalriktig +')">'
 						+ typlokal[typrakna].innerHTML +'</button>';
 						typrakna++;
+console.log('Vilket nummer på lokal funktion 6');						
 						}
 					}
 					
