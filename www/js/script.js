@@ -105,9 +105,6 @@ var nastaveckabak;
 var lokalenriktig;
 var typlokalriktig;
 var lankartvattariktig;
-var rakna = 0;
-var typrakna = 0;
-var navrakna = 0;
 //Vi laddar in hela tvatta.sgsstudentbostader.se
 function loadtvatta(urlfranlankar){
 console.log("Går in i tvätta funktionen");
@@ -147,6 +144,7 @@ console.log('Går in i ajax');
 				
 				//Välja typ av lokal att boka
 				if(valjabokning.length != 0){
+				var rakna = 0;
 console.log('Olika lokaler funktion');				
 					var lokalrow = table.insertRow(-1);
 					for(var l=0; l < valjabokning.length; l++){
@@ -168,6 +166,7 @@ console.log('Olika lokaler funktion');
 				
 				//Välja vilken lokal att boka i
 				if(typlokal.length != 0){
+				var typrakna = 0;
 console.log('Vilket nummer på lokal funktion');
 					var typrow = table.insertRow(-1);
 					for(var t = 0; t < typlokal.length; t++){
@@ -194,6 +193,7 @@ console.log('Vilket nummer på lokal funktion 6');
 				
 				//Navigerings framåt och bakåt
 				if(lankartvatta.length != 0){
+				var navrakna = 0;
 console.log('Navigering framåt och bakåt');
 					var navrow = table.insertRow(-1);
 					for(var lt = 0; lt < lankartvatta.length; lt++){
