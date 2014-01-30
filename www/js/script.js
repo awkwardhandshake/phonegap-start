@@ -92,7 +92,7 @@ console.log("Byggnad finns!")
 				}
 				else{
 console.log("Verkar inte ha funnits någon byggnad???")
-					loadtvatta('http://www.sgsstudentbostader.se/ext_gw.aspx?module=wwwash&lang=se#lblPanelName');
+					byggnad('http://www.sgsstudentbostader.se/ext_gw.aspx?module=wwwash&lang=se#lblPanelName');
 				}
 	
 	}
