@@ -56,7 +56,7 @@ function hiddenbrowser(){
 
 }
 function byggnad(urlfranlankarbyggnad){
-'use strict';
+console.log("Går in i byggnad funktionen");
 	skapabyggnadtable();
 	document.getElementById("topploga").src = " ";
 	$.ajax({
@@ -112,7 +112,7 @@ var typrakna = 0;
 var navrakna = 0;
 //Vi laddar in hela tvatta.sgsstudentbostader.se
 function loadtvatta(urlfranlankar){
-		console.log(urlfranlankar);
+console.log("Går in i tvätta funktionen");
 	skapatvattatable(); 
 	document.getElementById("topploga").src = " ";
 	var tvattaimg;
@@ -130,7 +130,7 @@ function loadtvatta(urlfranlankar){
 	$.ajax({
 			url: urlfranlankar,
 			success: function(data) {
-console.log('ajax funktionen');			
+console.log('Går in i ajax');			
 				var root2 = document.getElementById('mydiv2');
 				var tab2=document.createElement('table');
 				tvattaimg = $(data).find("#tbl1 [src]");
