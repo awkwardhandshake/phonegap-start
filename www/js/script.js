@@ -332,9 +332,9 @@ function hamtahemma(hemmaurl){
 
 
 function oppnadorr(epName){
-	console.log("Öppnadörr funktionen " + epName);
+	//console.log("Öppnadörr funktionen " + epName);
 	var sendform = $('#formdorren');
-	console.log(sendform[0]);
+	//console.log(sendform[0]);
 	$.ajax({
 	
 		type: "POST",
