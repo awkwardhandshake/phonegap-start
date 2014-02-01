@@ -315,9 +315,14 @@ function hamtahemma(hemmaurl){
 			url: hemmaurl,
 			success: function(varde) {
 			var buttonvalue;
+			var buttonname;
 									
 							console.log("Här är allt i data/varde med  " + varde);
 							buttonvalue = $(varde).find('button').attr('value');
+							buttonname = $(varde).find('button');
+							console.log(buttonname[0].innerHTML);
+							document.getElementById('hemmadorren').value = buttonvalue;
+							document.getElementById('hemmadorren').innerHTML = buttonname[0].innerHTML
 							console.log("Detta är buttonvalue	 " + buttonvalue);
 							console.log(buttonvalue);
 							oppnadorr(buttonvalue);
@@ -331,14 +336,16 @@ function hamtahemma(hemmaurl){
 
 
 function oppnadorr(epName){
+	'use strict';
 	console.log("Öppnadörr funktionen " + epName);
+	var sendform = $('#formdorren');
 	$.ajax({
 		type: "POST",
 		url: "http://hemma.sgsstudentbostader.se/DoorControl/PerformUnlock",
-		data: epName,
+		data: sendform.serialize(),
 		success: function(data){
 			alert(data);
-			console.log('Information är skickad');
+			console.log(data);
 		}
 		
 		

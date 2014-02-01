@@ -11,7 +11,8 @@
 </head>
 Version 1.9
 <body>
-<a onmousedown="hamtahemma('http://hemma.sgsstudentbostader.se/DoorControl/Fullscreen')"> Hej på dig </a>
+<a onmousedown="hamtahemma('hemma/hemma.html')"> Chrome-knapp </a>
+<a onmousedown="hamtahemma('http://hemma.sgsstudentbostader.se/DoorControl/Fullscreen')"> App-knapp </a>
 <div class="logo">
 <img id="topploga" class="scale-with-grid-logo" src="img/sgs_logo_width_512.png">
 </div>
@@ -54,6 +55,20 @@ Version 1.9
 <!-- Här slutar scriptet -->
 <script type="text/javascript" src="js/script.js"></script>
 <script type="text/javascript" src="js/radera.js"></script>
+
+
+
+<div id="doorcontrolcontent">
+		<form action="http://hemma.sgsstudentbostader.se/DoorControl/PerformUnlock" method="post" id="formdorren">
+			<ul>
+			<li><button type="submit" name="epName" value="värde" id="hemmadorren">Värde</button>
+			</li>
+			</ul>	  	
+		</form>
+		</div>
+
+
+
 
 
 	</body>
