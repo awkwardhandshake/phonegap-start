@@ -335,6 +335,7 @@ function oppnadorr(epName){
 	//console.log("Öppnadörr funktionen " + epName);
 	var sendform = $('#formdorren');
 	//console.log(sendform[0]);
+	setTimeout(
 	$.ajax({
 	
 		type: "POST",
@@ -347,7 +348,7 @@ function oppnadorr(epName){
 		
 		
 		
-	})
+	}), 2000)
 	
 	
 	
