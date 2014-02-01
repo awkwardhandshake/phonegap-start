@@ -338,6 +338,7 @@ console.log("1");
 		type: "POST",
 		url: "http://hemma.sgsstudentbostader.se/DoorControl/PerformUnlock",
 		data: sendform,
+		contenttype: "application/x-www-form-urlencoded",
 		charset: 'UTF-8',
 		dataType: 'html',
 		success: function(data){
