@@ -333,7 +333,6 @@ function hamtahemma(hemmaurl){
 
 
 function oppnadorr(epName){
-	'use strict';
 	console.log("Öppnadörr funktionen " + epName);
 	var sendform = $('#formdorren');
 	console.log(sendform[0]);
