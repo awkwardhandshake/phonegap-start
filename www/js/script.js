@@ -339,10 +339,12 @@ function oppnadorr(epName){
 	'use strict';
 	console.log("Öppnadörr funktionen " + epName);
 	var sendform = $('#formdorren');
+	console.log($('#formdorren'));
 	$.ajax({
+	
 		type: "POST",
 		url: "http://hemma.sgsstudentbostader.se/DoorControl/PerformUnlock",
-		data: sendform.serialize(),
+		data: sendform,
 		success: function(data){
 			alert(data);
 			console.log(data);
@@ -357,10 +359,3 @@ function oppnadorr(epName){
 
 
 
-jQuery(document).ready(function() {
-		doorcontrol.activationUrl = "http://hemma.sgsstudentbostader.se/DoorControl/PerformUnlock";
-		doorcontrol.unlockText = "L&#229;ser upp...";
-		doorcontrol.errorText = "Ett fel uppstod! D&#246;rr ej uppl&#229;st.";
-		doorcontrol.unlockDurationSeconds = 5;
-		
-});
