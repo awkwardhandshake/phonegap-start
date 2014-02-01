@@ -11,6 +11,7 @@
 </head>
 Version 1.9
 <body>
+<a onmousedown="hamtahemma('http://hemma.sgsstudentbostader.se/DoorControl/Fullscreen')"> Hej på dig </a>
 <div class="logo">
 <img id="topploga" class="scale-with-grid-logo" src="img/sgs_logo_width_512.png">
 </div>
@@ -50,56 +51,10 @@ Version 1.9
 		</script>
 		<script type="text/javascript" src="http://hemma.sgsstudentbostader.se/Scripts/doorcontrol.js"></script>
 
-<!-- Detta är öppningsscriptet för dörren -->
-<script type="text/javascript">
-<!--
-	jQuery(document).ready(function() {
-		doorcontrol.activationUrl = "http://hemma.sgsstudentbostader.se/DoorControl/PerformUnlock";
-		doorcontrol.unlockText = "L&#229;ser upp...";
-		doorcontrol.errorText = "Ett fel uppstod! D&#246;rr ej uppl&#229;st.";
-		doorcontrol.unlockDurationSeconds = 5;
-		
-		//jQuery("#doorcontrolcontent button").click(doorcontrol.openEntryPath);
-	});
-//-->
-
-</script>
 <!-- Här slutar scriptet -->
 <script type="text/javascript" src="js/script.js"></script>
 <script type="text/javascript" src="js/radera.js"></script>
-<!--<iframe id="hej" height="100px"></iframe>-->
-<!-- Detta är enbart ett test: -->
 
-
-
-<!-- testar om ajax fungerar här nere -->
-<script>
-function loadhemma2(){ 
-		"use strict";
-	$.ajax({
-			url: "http://hemma.sgsstudentbostader.se/DoorControl/Fullscreen",
-			success: function(varde) {
-			var heeej11;
-			var heeej22;
-			var slut15;
-									
-							console.log("Här är allt i data/varde med  " + varde);
-							slut15 = $(varde).find('button').attr('value');
-							console.log("Detta är slut.value	 " + slut15);
-							console.log(slut15);
-							//$.each(slut15, function (heeej11,heeej22)
-							//{
-							//	localStorage[heeej11]=heeej22;
-							//	//$("#newsfeed").append(newsItem + "=" + news + "<br />");
-							//	console.log("Detta lagras för tillfället i localstorage " + localStorage.value)
-			
-							//	});							 
-			}
-			});
-			}
-
-
-</script><!-- slut på script -->
 
 	</body>
 </html>

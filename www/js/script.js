@@ -304,3 +304,55 @@ console.log('bokar pass i hidden=yes');
 })
 
 }
+
+
+
+
+//hemma.sgsstudentbostader.se
+
+function hamtahemma(hemmaurl){ 
+	$.ajax({
+			url: hemmaurl,
+			success: function(varde) {
+			var buttonvalue;
+									
+							console.log("Här är allt i data/varde med  " + varde);
+							buttonvalue = $(varde).find('button').attr('value');
+							console.log("Detta är buttonvalue	 " + buttonvalue);
+							console.log(buttonvalue);
+							oppnadorr(buttonvalue);
+							
+													 
+			}
+			});
+			}
+			
+
+
+
+function oppnadorr(epName){
+	console.log("Öppnadörr funktionen " + epName);
+	$.ajax({
+		type: "POST",
+		url: "http://hemma.sgsstudentbostader.se/DoorControl/PerformUnlock",
+		data: epName,
+		success: function(data){
+			alert(data);
+		}
+		
+		
+	})
+	
+	
+	
+}
+
+
+
+jQuery(document).ready(function() {
+		doorcontrol.activationUrl = "http://hemma.sgsstudentbostader.se/DoorControl/PerformUnlock";
+		doorcontrol.unlockText = "L&#229;ser upp...";
+		doorcontrol.errorText = "Ett fel uppstod! D&#246;rr ej uppl&#229;st.";
+		doorcontrol.unlockDurationSeconds = 5;
+		
+});
