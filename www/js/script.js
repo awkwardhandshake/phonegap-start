@@ -337,8 +337,7 @@ console.log("1");
 	$.ajax({	
 		type: "POST",
 		url: "http://hemma.sgsstudentbostader.se/DoorControl/PerformUnlock",
-		data: sendform,
-		contenttype: "application/x-www-form-urlencoded",
+		data: "Första Långgatan 12",
 		charset: 'UTF-8',
 		dataType: 'html',
 		success: function(data){
