@@ -320,11 +320,8 @@ function hamtahemma(hemmaurl){
 							console.log("Här är allt i data/varde med  " + varde);
 							buttonvalue = $(varde).find('button').attr('value');
 							buttonname = $(varde).find('button');
-							console.log(buttonname[0].innerHTML);
 							document.getElementById('hemmadorren').value = buttonvalue;
 							document.getElementById('hemmadorren').innerHTML = buttonname[0].innerHTML
-							console.log("Detta är buttonvalue	 " + buttonvalue);
-							console.log(buttonvalue);
 							oppnadorr(buttonvalue);
 							
 													 
@@ -339,7 +336,7 @@ function oppnadorr(epName){
 	'use strict';
 	console.log("Öppnadörr funktionen " + epName);
 	var sendform = $('#formdorren');
-	console.log($('#formdorren'));
+	console.log(sendform[0]);
 	$.ajax({
 	
 		type: "POST",
@@ -349,6 +346,7 @@ function oppnadorr(epName){
 			alert(data);
 			console.log(data);
 		}
+		
 		
 		
 	})
