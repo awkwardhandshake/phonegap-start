@@ -317,7 +317,6 @@ function hamtahemma(hemmaurl){
 			var buttonvalue;
 			var buttonname;
 									
-							console.log("Här är allt i data/varde med  " + varde);
 							buttonvalue = $(varde).find('button').attr('value');
 							buttonname = $(varde).find('button');
 							document.getElementById('hemmadorren').value = buttonvalue;
@@ -343,7 +342,6 @@ function oppnadorr(epName){
 		data: sendform,
 		dataType: 'html',
 		success: function(data){
-			alert(data);
 			console.log(data);
 		}
 		
