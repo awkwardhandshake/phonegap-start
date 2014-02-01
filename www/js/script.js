@@ -341,6 +341,7 @@ function oppnadorr(epName){
 		type: "POST",
 		url: "http://hemma.sgsstudentbostader.se/DoorControl/PerformUnlock",
 		data: sendform,
+		dataType: 'html',
 		success: function(data){
 			alert(data);
 			console.log(data);
