@@ -337,7 +337,7 @@ console.log("1");
 	$.ajax({	
 		type: "POST",
 		url: "http://hemma.sgsstudentbostader.se/DoorControl/PerformUnlock",
-		data: "Första Långgatan 12",
+		data: "epName: Första Långgatan 12",
 		charset: 'UTF-8',
 		dataType: 'html',
 		success: function(data){
