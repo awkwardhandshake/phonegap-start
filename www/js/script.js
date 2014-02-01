@@ -316,28 +316,25 @@ function hamtahemma(hemmaurl){
 			success: function(varde) {
 			var buttonvalue;
 			var buttonname;
-									
 							buttonvalue = $(varde).find('button').attr('value');
 							buttonname = $(varde).find('button');
 							document.getElementById('hemmadorren').value = buttonvalue;
 							document.getElementById('hemmadorren').innerHTML = buttonname[0].innerHTML
-							oppnadorr(buttonvalue);
-							
-													 
+							setTimeout(oppnadorr,3000);								
 			}
+
 			});
+
 			}
 			
 
 
 
-function oppnadorr(epName){
-	//console.log("Öppnadörr funktionen " + epName);
+function oppnadorr(){
+console.log("1");
 	var sendform = $('#formdorren');
-	//console.log(sendform[0]);
-	setTimeout(
-	$.ajax({
-	
+console.log("1");	
+	$.ajax({	
 		type: "POST",
 		url: "http://hemma.sgsstudentbostader.se/DoorControl/PerformUnlock",
 		data: sendform,
@@ -345,14 +342,11 @@ function oppnadorr(epName){
 		success: function(data){
 			console.log(data);
 		}
+
 		
 		
-		
-	}), 2000)
+	})
 	
-	
+console.log("1");	
 	
 }
-
-
-
