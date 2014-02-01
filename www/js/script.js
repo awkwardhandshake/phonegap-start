@@ -4,7 +4,8 @@ localStorage.anv=document.getElementById("username").value;
 localStorage.pass=document.getElementById("password").value;
 console.log("Den skickar inloggningen");
 hamta();
-//byggnad('tvatta/byggnad.html');
+//byggnad('tvatta/tvatta.html');
+//loadtvatta('tvatta/tvatta.html');
 }
 
 //hämta marknad
@@ -55,6 +56,7 @@ function hiddenbrowser(){
 })
 
 }
+//Byggnads väljare
 function byggnad(urlfranlankarbyggnad){
 console.log("Går in i byggnad funktionen");
 	skapabyggnadtable();
@@ -79,10 +81,11 @@ console.log('Bygger upp table för byggnad');
 						byggnadcell.innerHTML = byggnadlank[d].innerHTML;
 						console.log(byggnadlank[d].innerHTML);
 						if(byggnadlank[d].onmousedown != null){
-console.log('Kollar byggnad if-sats');						
-							delabyggnadlank = String(byggnadlank[d].onmousedown).split("'");
-							byggnadcell.innerHTML = "<a href=http://tvatta.sgsstudentbostader.se/" + delabyggnadlank[1] +">"+
-							byggnadlank[d].innerHTML + "</a>";
+console.log('Kollar byggnad if-sats');					
+							delabyggnadlank = String(byggnadlank[d].onmousedown).split("'",2);
+							delabyggnadlank = "'http://tvatta.sgsstudentbostader.se/" + delabyggnadlank[1] + "'";
+							byggnadcell.innerHTML = '<a onmousedown="loadtvatta('+ delabyggnadlank +')">'+
+							byggnadlank[d].innerText + "</a>";
 						}
 						d++;	
 					}
@@ -268,11 +271,13 @@ console.log('Här skapas bokningstabellen');
 					//kollar så att inte onmousedown är null
 					
 						if(tvattaimg[smart].parentNode.onmousedown != null){
-									
+console.log('Skapar en klickbar lank');									
 							//splittar upp och tar ut endast värdet ur funktionen
-							var split = String(tvattaimg[smart].parentNode.onmousedown).split("'"); 
-							cell.innerHTML = 								
-							"<a href=http://tvatta.sgsstudentbostader.se/" + split[1] + ">" + tvattaimg[smart].outerHTML + "</a>";
+							var split = String(tvattaimg[smart].parentNode.onmousedown).split("'",2);
+							split = "'http://tvatta.sgsstudentbostader.se/" + split[1] +"','"+ urlfranlankar + "'";
+							cell.innerHTML = '<a onmousedown="bokatid(' + split +')">' 
+							+ tvattaimg[smart].outerHTML + '</a>';
+console.log(split);							
 							}
 								
 					smart = (smart + extra);
@@ -284,3 +289,18 @@ console.log('Här skapas bokningstabellen');
 			}
 			})
 			}
+			
+//alt med hidden InAppBrowser
+function bokatid(tiden,nuvarandebokning){
+	console.log("Går in i funktionen bokatid");
+	 var ref = window.open(tiden, '_blank', 'hidden=yes');
+console.log('bokar pass i hidden=yes');
+		 ref.addEventListener('loadstop', function(event) {
+			 alert('Pass bokat'); 
+			 loadtvatta(nuvarandebokning);
+			 console.log("Passet är bokat");
+	
+	
+})
+
+}
