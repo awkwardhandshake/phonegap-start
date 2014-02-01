@@ -338,6 +338,7 @@ function oppnadorr(epName){
 		data: epName,
 		success: function(data){
 			alert(data);
+			console.log('Information är skickad');
 		}
 		
 		
