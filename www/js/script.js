@@ -332,15 +332,15 @@ function hamtahemma(hemmaurl){
 
 function oppnadorr(){
 console.log("1");
-	var sendform = document.getElementsByName('epName');
+	var sendform = document.getElementById('hemmadorren');
 	//sendform = sendform[0].name + ": " + sendform[0].value
-	console.log(sendform.outerHTML);
-	console.log(sendform);
+	//console.log(sendform);
+	//console.log(sendform.value);
 console.log("1");	
 	$.ajax({	
 		type: "POST",
 		url: "http://hemma.sgsstudentbostader.se/DoorControl/PerformUnlock",
-		data: "epName=" + encodeURIComponent(sendform[0].value),
+		data: "epName=" + encodeURIComponent(sendform.value),
 		charset: 'UTF-8',
 		success: function(data){
 			console.log(data);
