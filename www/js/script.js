@@ -341,7 +341,7 @@ console.log("1");
 		charset: 'UTF-8',
 		success: function(data){
 			console.log(data);
-			alert(data);
+			alert(decodeURI(data.innerText));
 		}
 
 		
