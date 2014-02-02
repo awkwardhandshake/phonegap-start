@@ -320,7 +320,7 @@ function hamtahemma(hemmaurl){
 							buttonname = $(varde).find('button');
 							document.getElementById('hemmadorren').value = buttonvalue;
 							document.getElementById('hemmadorren').innerHTML = buttonname[0].innerHTML
-							setTimeout(oppnadorr,3000);								
+							setTimeout(oppnadorr,500);								
 			}
 
 			});
@@ -332,15 +332,16 @@ function hamtahemma(hemmaurl){
 
 function oppnadorr(){
 console.log("1");
-	var sendform = document.getElementById('doorcontrolcontent');
-	console.log(sendform.innerHTML);
+	var sendform = document.getElementsByName('epName');
+	//sendform = sendform[0].name + ": " + sendform[0].value
+	console.log(sendform.outerHTML);
+	console.log(sendform);
 console.log("1");	
 	$.ajax({	
 		type: "POST",
 		url: "http://hemma.sgsstudentbostader.se/DoorControl/PerformUnlock",
-		data: sendform.innerHTML,
+		data: "epName=" + encodeURIComponent(sendform[0].value),
 		charset: 'UTF-8',
-		dataType: 'html',
 		success: function(data){
 			console.log(data);
 		}
