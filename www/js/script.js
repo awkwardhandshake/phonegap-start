@@ -333,9 +333,6 @@ function hamtahemma(hemmaurl){
 function oppnadorr(){
 console.log("1");
 	var sendform = document.getElementById('hemmadorren');
-	//sendform = sendform[0].name + ": " + sendform[0].value
-	//console.log(sendform);
-	//console.log(sendform.value);
 console.log("1");	
 	$.ajax({	
 		type: "POST",
@@ -344,6 +341,7 @@ console.log("1");
 		charset: 'UTF-8',
 		success: function(data){
 			console.log(data);
+			alert(data);
 		}
 
 		
