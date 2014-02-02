@@ -332,7 +332,8 @@ function hamtahemma(hemmaurl){
 
 function oppnadorr(){
 console.log("1");
-	var sendform = $('#formdorren');
+	var sendform = document.getElementById('doorcontrolcontent');
+	console.log(sendform.innerHTML);
 console.log("1");	
 	$.ajax({	
 		type: "POST",
