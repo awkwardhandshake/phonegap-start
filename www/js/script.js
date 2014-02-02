@@ -340,7 +340,7 @@ console.log("1");
 	$.ajax({	
 		type: "POST",
 		url: "http://hemma.sgsstudentbostader.se/DoorControl/PerformUnlock",
-		data: "epName=" + encodeURIComponent(sendform.value),
+		data: "epName=" + encodeURI(sendform.value),
 		charset: 'UTF-8',
 		success: function(data){
 			console.log(data);
