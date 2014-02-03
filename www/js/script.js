@@ -3,9 +3,9 @@ function getFormData(){
 localStorage.anv=document.getElementById("username").value;
 localStorage.pass=document.getElementById("password").value;
 console.log("Den skickar inloggningen");
-//hamta();
+hamta();
 //byggnad('tvatta/tvatta.html');
-loadtvatta('tvatta/tvatta.html');
+//loadtvatta('tvatta/tvatta.html');
 }
 
 //hämta marknad
