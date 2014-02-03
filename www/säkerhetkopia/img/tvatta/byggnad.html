@@ -1,0 +1,49 @@
+
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
+<html>
+<head>
+	<title>wwwash</title>
+	<link href="css/styles.css" type="text/css" rel="stylesheet" />
+
+	<script type="text/javascript">
+		function resetTimeOut() {
+			if (top.inactiveSeconds != null) {
+				top.resetTimer();
+			}
+		}
+	</script>
+
+</head>
+<body>
+	<table width="100%" height="100%" cellspacing="0" cellpadding="0">
+		<tr>
+			<td align="center" valign="middle">
+				<table width="400" cellspacing="0" cellpadding="5" style="border-right: black 1px solid; border-top: black 1px solid; border-left: black 1px solid; border-bottom: black 1px solid">
+					<tr class="bgActiveColor">
+						<td align="center" valign="middle">
+							<table width="400" cellpadding="5" style="border-right: white 1px solid; border-top: #666666 1px solid; border-left: #666666 1px solid; border-bottom: white 1px solid; background-color: #ffffff">
+								<tr>
+									<td colspan="2">
+										<span id="lblHeaderText" class="bigText headerColor" style="font-weight: bold">V&#228;lj en plats d&#228;r du vill boka</span>
+										<br />
+									</td>
+								</tr>
+								<tr><td class="headerColor" style="cursor:pointer; cursor:hand; padding-top:10; padding-bottom:10" onmousedown="javascript:location.href='wwwashcalendar.aspx?panelId=2758'"><span style="padding-left:10"><img src="Images/pil2_right.gif" align="top">&nbsp;Lindholmsallen 25</span></td></tr><tr><td class="headerColor" style="cursor:pointer; cursor:hand; padding-top:10; padding-bottom:10" onmousedown="javascript:location.href='wwwashcalendar.aspx?panelId=7904'"><span style="padding-left:10"><img src="Images/pil2_right.gif" align="top">&nbsp;Lindholmsallen 39</span></td></tr>
+								<tr>
+									<td id="tdShowFirst" class="headerColor" style="padding-bottom: 10px; cursor: pointer; cursor: hand; padding-top: 10px" onmousedown="javascript:location.href='wwwashwait2.aspx?MaxTimes=5'">
+										<span style="padding-left: 10px">
+											<img src="Images/icon_plus_small.gif" align="top" alt="" />
+											&nbsp;<span id="lblShowFirstAvailable">Visa första lediga tid</span></span>
+									</td>
+
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+</body>
+</html>

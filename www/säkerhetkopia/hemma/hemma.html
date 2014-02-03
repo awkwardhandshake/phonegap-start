@@ -1,0 +1,104 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" class="simpleLayout">
+<head><link href="/Content/simple.css" rel="stylesheet" type="text/css"/>
+    
+    <script src="/Scripts/jquery-1.4.2.min.js" type="text/javascript"></script><script type="text/javascript" src="/Scripts/jquery.cookie.js"></script>
+    <script type="text/javascript" src="/Scripts/jquery.query-2.1.7.js"></script>
+    
+    <link href="/Content/jscalendar-1.0/calendar-win2k-1.css" rel="Stylesheet" type="text/css"></link>
+<script src="/Content/jscalendar-1.0/calendar.js" type="text/javascript"></script>
+<script src="/Content/jscalendar-1.0/lang/calendar-sv.js" type="text/javascript"></script>
+<script src="/Content/jscalendar-1.0/cwp-calendar-setup.js" type="text/javascript"></script><script type="text/javascript" src="/Scripts/cwp.js"></script>
+    
+    <title>
+SGS Hemma
+</title>
+    
+    <!--  Tell mobile devices to _not_ assume web page is for e.g. 840 px so that a default
+          zoom is not applied. --><meta name="viewport" content="width=device-width"/>
+</head>
+
+<body>
+    <script type="text/javascript">
+    jQuery(document).ready(function() {
+        //jQuery(".old-browser-warning").show();
+        if ($.browser.msie && $.browser.version < 7)
+            jQuery(".old-browser-warning").show();
+        } );
+    </script>
+     <div class="old-browser-warning" style="display: none;">
+        Du använder en mycket gammal webbläsare. Sidan kan se konstig ut, eller inte fungera korrekt.
+     </div>
+     <div id="header-area">
+         <div class="header-contents">
+             <ul class="pagecontrols">
+    <li><a id="textSizeModifier" href="#">Textstorlek Aa</a></li>
+    <li><a href="/Culture/Set?culture=en-GB&amp;returnUrl=http%3A%2F%2Fhemma.sgsstudentbostader.se%2FDoorControl%2FFullscreen">English</a></li>
+    </ul>
+
+<script type="text/javascript">
+<!--
+jQuery(function () {
+    jQuery("#textSizeModifier").click(function() {
+        cwp.toggleTextSize(); return false; });
+        cwp.initTextSize();
+    });
+//-->
+</script><h1>SGS Hemma</h1>
+         </div>
+         <div class="section-end"></div>
+     </div>
+     <div id="content-area">
+         <div class="content-contents">
+             <div class="content-main roundedbox">
+                 <div class="roundedboxtop"><div class="roundedboxleft"></div></div>
+                 <div class="roundedboxcontent">
+                    
+    <div class="titledContentBox doorControlBox">
+    <div class="titledContentBoxTop">
+        <span class="icon"></span>
+        <h4>Entr&#233;</h4>
+    </div>
+    <div class="titledContentBoxContent">
+        <div id="doorcontrolcontent">
+            <form action="/DoorControl/PerformUnlock" method="post"><ul>
+                  <li><button type="submit" name="epName" value="Första Långgatan 12">Lås upp Första Långgatan 12</button></li>
+                  </ul>
+            </form><div class="doorControlStatus"></div>
+            <div class="doorControlBottom"><a href="/DoorControl/Fullscreen">Direktl&#228;nk</a></div>
+        </div>
+    </div>
+    <div class="titledContentBoxBottom"></div>
+</div>
+
+<script type="text/javascript" src="/Scripts/doorcontrol.js"></script>
+
+
+<script type="text/javascript">
+<!--
+    jQuery(document).ready(function() {
+        doorcontrol.activationUrl = "/DoorControl/PerformUnlock";
+        doorcontrol.unlockText = "L&#229;ser upp...";
+        doorcontrol.errorText = "Ett fel uppstod! D&#246;rr ej uppl&#229;st.";
+        doorcontrol.unlockDurationSeconds = 5;
+        
+        jQuery("#doorcontrolcontent button").click(doorcontrol.openEntryPath);
+    });
+//-->
+</script>
+
+                 </div>
+                 <div class="roundedboxbottom"><div class="roundedboxleft"></div></div>
+             </div>
+         </div>
+     </div>
+
+     <div id="footer-area">
+         <div class="footer-contents">
+             <p>&copy; Copyright 2010 SGS Studentbostäder</p>
+             <address>SGS Studentbostäder&nbsp; |&nbsp; Kaserntorget 11&nbsp; |&nbsp; 411 18 Göteborg&nbsp; |&nbsp; Tele 031-333 63 00&nbsp; |&nbsp; Fax 031-333 63 01</address>
+         </div>
+     </div>
+</body>
+</html>

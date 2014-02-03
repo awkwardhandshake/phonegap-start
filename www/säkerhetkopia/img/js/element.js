@@ -1,29 +1,26 @@
 function startsida(){
-	document.getElementById("index").innerHTML=
-	'<div class="container">'+
+	document.getElementById("index").innerHTML='<div class="container">'+
 	'<div class="sixteen columns"></div>'+
-		'<div class="eight columns center">'+	
-			'<button onmousedown="hamtahemma("http://hemma.sgsstudentbostader.se/DoorControl/Fullscreen")" class="doorbutton">'+
-				'<img class="scale-with-grid" src="img/door_button.png" />'+					
-			'</button>'+
-			'<p><strong>Öppna entrédörr</strong></p>'+
-			'<p><small>(Open entrance door)</small></p>'+		 
-		'</div>'+
+		'<div id="doorcontrolcontent">'+
 		'<div class="eight columns center">'+
-			'<button onclick="inputfields();">'+
-			'<img class="scale-with-grid" src="img/cal_button.png" />'+
-			'</button>'+
-			'<p><strong>Boka</strong></p>'+
-			'<p><small>(Book)</small></p>'+
+		'<form action="http://hemma.sgsstudentbostader.se/DoorControl/PerformUnlock" method="post" target="hej">'+
+			'<ul>'+
+			'<li><button type="submit" name="epName" value="Första Långgatan 12">'+
+				'<img class="scale-with-grid" src="img/door_button.png" />'+			   		
+			'</button></li>'+
+			'</ul>'+	 	
+		'</form> <!--<div class="doorControlStatus"></div>-->'+
+			'<p><strong>Öppna entrédörr</strong></p>'+
+			'<p><small>(Open entrance door)</small></p>'+	  
 		'</div>'+
-	'</div>'+
-'<div id="doorcontrolcontent">'+
-            '<form action="/DoorControl/PerformUnlock" method="post" ><ul>'+
-                  '<li><button type="submit" name="epName" value="varde" id="hemmadorren">varde</button></li>'+
-                  '</ul>'+
-            '</form><div class="doorControlStatus"></div>'+
-'</div>'	
-
+		'</div>'+
+		
+		'+<div class="eight columns center">'+
+			'<img class="scale-with-grid" src="img/cal_button.png" />'+
+			'<p><strong>Boka facilitet</strong></p>'+
+			'<p><small>(Book facility)</small></p>'+
+		'</div>'+
+	'</div>'
 	
 };
 
@@ -46,11 +43,6 @@ function iframe(){
 function skapatvattatable(){
 	document.getElementById("styling").href="css/tvatta.css"
 	document.getElementById("index").innerHTML=
-'<table id="navtvatta" border="2">'+
-	'<tbody>'+
-	'</tbody>'+
-'</table>'+
-
 '<table id="tvatta" border="2">'+
 	'<tbody>'+
 	'</tbody>'+

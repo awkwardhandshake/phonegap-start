@@ -19,65 +19,12 @@
 	q:before, q:after {
 		content: '';
 		content: none; }
-			
-	
-	
-	#navtvatta table {
-		border-collapse: collapse;
-		border-spacing: 0;
-		width: 100%;
-		height: 100%;
-		}
-	#navtvatta td{
-		/*border: 2px solid white;*/
-		text-align: center;
-		vertical-align: middle;
-		width: auto;
-		height: auto;
-	}
-	a {
-		text-decoration: none
-		
-	}
-	.typlokal{
-		padding: 2%;
-	}
-	
-	.typlokallank{
-		background-color: #ccc;	
-	}
-	.lokalnav{
-		padding: 2%;
-	}
-	
-	.navknapparlank{
-		padding: 2%;
-		background-color: #ccc;
-	}
-	
-	.lokalnavlank{
-		background-color: #ccc;
-	}
-	
-	#navtvatta a{
-		font-size: 15px;
-	}
-	
 	#tvatta table {
 		border-collapse: collapse;
 		border-spacing: 0;
 		width: 100%;
 		height: 100%;
 		}
-	/*.bokningstider p{
-		font-size: 75%;
-	}*/
-	.bokningsikoner{
-		padding: 2%;
-	}	
-	.bokningsdatum p{
-		font-size: 60%;
-	}
 	#tvatta td{
 		/*border: 2px solid white;*/
 		text-align: center;
@@ -88,13 +35,13 @@
 	#tvatta a img{
 		width: 100%;
 		height: auto;
-
 	}
 	#tvatta a{
 		font-size: 20px;
 		
 	}
 	#byggnad td{
+
 		text-align: center;
 	}	
 	table{
@@ -123,7 +70,7 @@ body {
     background-color:#252c47;
     background-attachment:fixed;
     font-family: Arial, sans-serif;
-    /*font-size:24px;*/
+    font-size:24px;
     height:100%;
     margin:0px;
     padding:0px;
@@ -220,7 +167,6 @@ body {
 	small { font-size: 80%; }
 	.center { text-align: center }
 
-
 /*	Blockquotes  */
 	blockquote, blockquote p { font-size: 17px; line-height: 24px; color: #777; font-style: italic; }
 	blockquote { margin: 0 0 20px; padding: 9px 20px 0 19px; border-left: 1px solid #ddd; }
@@ -233,7 +179,7 @@ body {
 
 /* #Links
 ================================================== */
-	a, a:visited { color: #fff; text-decoration: none; outline: 0; font-size: 50px; }
+	a, a:visited { color: #fff; text-decoration: underline; outline: 0; font-size: 50px; }
 	a:hover, a:focus { color: #fff; }
 	p a, p a:visited { line-height: inherit; }
 
@@ -283,25 +229,6 @@ body {
 		height: 120px;
 	}
 	
-	#navtvatta a{
-		font-size: 13px;
-	}	
-	
-	#navtvatta b{
-		font-size: 17px;	
-		
-	}
-	
-	.bokningsdatum p{
-		font-size: 6px;
-	}
-	
-	.bokningstider p{
-	font-size: 8px;
-	
-	}
-	
-	
 	.logo{
 	margin-top: 5%;
 	margin-left: 5%;
@@ -350,27 +277,12 @@ body {
 /* screen mellan 240 - 320px */
 @media only screen and (min-width: 321px) and (max-width: 479px) {	
 	
-	#navtvatta a{
-		font-size: 16px;
-		
-	}
-	
-	#navtvatta b{
-		font-size: 18px;	
-		
-	}
 	
 	.logo{
 	margin-top: 5%;
 	margin-left: 5%;
 	width: 35%;
 	position: fixed;
-	}
-	.bokningsdatum p{
-		font-size: 9px;
-	}
-	.bokningstider p{
-	font-size: 11px;
 	}
 	
 	p{
@@ -411,31 +323,10 @@ body {
 
 /* screen mellan 480 - 639px */
 @media only screen and (min-width: 480px) and (max-width: 639px) {	
-	
-	#navtvatta a{
-		font-size: 25px;
-		
-	}
-	
-	#navtvatta b{
-		font-size: 27px;	
-		
-	}
-
-	
-	.bokningstider p{
-	font-size: 15px;
-	}
-	
-	.bokningsdatum p{
-		font-size: 15px;
-	}
-	
 	p{
 		font-size: 24px;
 		
 	}
-	
 	.textboxA
 	{
 		
@@ -469,24 +360,6 @@ body {
 
 /* screen mellan 640 - 800px */
 @media only screen and (min-width: 640px) and (max-width: 800px) {	
-	
-	#navtvatta a{
-		font-size: 30px;
-		
-	}
-	
-	#navtvatta b{
-		font-size: 32px;	
-		
-	}
-	
-	.bokningstider p{
-	font-size: 20px;
-	}
-	.bokningsdatum p{
-		font-size: 20px;
-	}
-	
 	p{
 		font-size: 30px;
 		
@@ -525,25 +398,6 @@ body {
 
 /* screen mellan 801 - 1080px */
 @media only screen and (min-width: 801px) and (max-width: 1080px) {	
-	
-	#navtvatta a{
-		font-size: 35px;
-		
-	}
-	
-	#navtvatta b{
-		font-size: 37px;	
-		
-	}
-	
-	.bokningstider p{
-		font-size: 25px;
-	}
-	
-	.bokningsdatum p{
-		font-size: 25px;
-	}
-	
 	p{
 		font-size: 40px;
 		
@@ -582,22 +436,6 @@ body {
 	
 /* min bredd 1080px*/
 @media only screen and (min-width: 1081px){	
-	#navtvatta a{
-		font-size: 40px;
-		
-	}
-	
-	#navtvatta b{
-		font-size: 42px;	
-		
-	}
-	
-	.bokningstider p{
-	font-size: 30px;
-	}
-	.bokningsdatum p{
-		font-size: 30px;
-	}
 	.logo{
 		margin-top: 5%;
 		margin-left: 5%;
