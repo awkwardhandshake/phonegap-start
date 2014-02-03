@@ -142,7 +142,6 @@ console.log('Går in i ajax');
 				typlokal = $(data).find("td[background]");
 				var antal = antaltider.length;
 				
-				
 				//Välja typ av lokal att boka
 				if(valjabokning.length != 0){
 				var valjabokningtext;
@@ -242,6 +241,7 @@ console.log('Går in i ajax');
 					var cell2 = row.insertCell(-1);
 					cell2.setAttribute("class", "bokningsdatum");
 					dagarriktiga = String(dagar[q].innerHTML).split('dag');
+					console.log(dagarriktiga[1]);
 					cell2.innerHTML = "<p>" + dagarriktiga[0] + dagarriktiga[1] + "</p>"
 					q++;
 						if(b >= 1){

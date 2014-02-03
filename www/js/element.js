@@ -46,6 +46,14 @@ function iframe(){
 function skapatvattatable(){
 	document.getElementById("styling").href="css/tvatta.css"
 	document.getElementById("index").innerHTML=
+'<table class="overskrift" border="2">'+
+	'<tbody>'+
+	'<tr>'+
+		'<td><a>Lokaler</a></td>'+
+	'<tr>'+	
+	'</tbody>'+
+'</table>'+
+
 '<table id="navtvatta" border="2">'+
 	'<tbody>'+
 	'</tbody>'+
