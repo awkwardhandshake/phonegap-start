@@ -124,7 +124,6 @@ console.log("Går in i tvätta funktionen");
 
 	var table = document.getElementById('tvatta');
 	var navtable = document.getElementById('navtvatta');
-	var navtablebottom = document.getElementById('navtablebottom');
 	$.ajax({
 			url: urlfranlankar,
 			success: function(data) {
@@ -142,27 +141,26 @@ console.log('Går in i ajax');
 				typlokal = $(data).find("td[background]");
 				var antal = antaltider.length;
 				
+				
 				//Välja typ av lokal att boka
 				if(valjabokning.length != 0){
-				var valjabokningtext;
-				var rakna = 0;			
+				var rakna = 0;
+console.log('Olika lokaler funktion');				
 					var lokalrow = navtable.insertRow(-1);
 					for(var l=0; l < valjabokning.length; l++){
 						var lokalcell = lokalrow.insertCell(-1);
 						if(valjabokning[rakna].onmousedown == null){
 						console.log("Den går in i if satsen för olika lokaler");
 							lokalcell.setAttribute("class", "lokalnav");
-							valjabokningtext = String(valjabokning[rakna].innerHTML).split('&nbsp;');
-							lokalcell.innerHTML = '<a>'+ valjabokningtext[0] +'</a>';
+							lokalcell.innerHTML = '<a>'+ valjabokning[rakna].innerHTML +'</a>';
 							rakna++;
 						}
 						else{
 						lokalenriktig = String(valjabokning[rakna].onmousedown).split("'", 2);
 						lokalenriktig = "'http://tvatta.sgsstudentbostader.se/"+ lokalenriktig[1] +"'";
 						lokalcell.setAttribute("class", "lokalnavlank");
-						valjabokningtext = String(valjabokning[rakna].innerHTML).split('&nbsp;');
 						lokalcell.innerHTML = '<a onmousedown="loadtvatta('+ lokalenriktig +')">'
-						+ valjabokningtext[0] +'</a>';
+						+ valjabokning[rakna].innerHTML +'</a>';
 						rakna++;
 							}
 					}
@@ -170,24 +168,21 @@ console.log('Går in i ajax');
 				
 				//Välja vilken lokal att boka i
 				if(typlokal.length != 0){
-				var typlokaltext;
 				var typrakna = 0;
 					var typrow = navtable.insertRow(-1);
 					for(var t = 0; t < typlokal.length; t++){					
 						var typcell = typrow.insertCell(-1);
 						if(typlokal[typrakna].onmousedown == null){
 						typcell.setAttribute("class", "typlokal");
-						typlokaltext = String(typlokal[typrakna].innerHTML).split('&nbsp;');
-						typcell.innerHTML = '<a>' + typlokaltext[0] +'</a>';								
+						typcell.innerHTML = '<a>'+ typlokal[typrakna].innerHTML +'</a>';								
 						typrakna++;						
 						}
 						else{						
 						typlokalriktig = String(typlokal[typrakna].onmousedown).split("'", 2);
 						typlokalriktig = "'http://tvatta.sgsstudentbostader.se/"+ typlokalriktig[1] +"'";
 						typcell.setAttribute("class", "typlokallank");
-						typlokaltext = String(typlokal[typrakna].innerHTML).split('&nbsp;');
 						typcell.innerHTML = '<a onmousedown="loadtvatta('+typlokalriktig +')">'
-						+ typlokaltext[0] +'</a>';
+						+ typlokal[typrakna].innerHTML +'</a>';
 						typrakna++;						
 						}
 					}
@@ -197,17 +192,14 @@ console.log('Går in i ajax');
 				//Navigerings framåt och bakåt
 				if(lankartvatta.length != 0){
 				var navrakna = 0;
-				var lankartvattatext;
-					var navrow = navtablebottom.insertRow(-1);
+					var navrow = navtable.insertRow(-1);
 					for(var lt = 0; lt < lankartvatta.length; lt++){
 						var navcell = navrow.insertCell(-1);
 						lankartvattariktig = String(lankartvatta[navrakna].onmousedown).split("'", 2);
 						lankartvattariktig = "'http://tvatta.sgsstudentbostader.se/"+ lankartvattariktig[1] +"'";
-						lankartvattatext = String(lankartvatta[navrakna].innerText).split('&nbsp;');
-						console.log(lankartvattatext);
 						navcell.setAttribute("class", "navknapparlank");
 						navcell.innerHTML = '<a onmousedown="loadtvatta('+lankartvattariktig +')">'
-						+ lankartvattatext[0] +'</a>';
+						+ lankartvatta[navrakna].innerText +'</a>';
 						navrakna++;
 					}
 				}
@@ -241,8 +233,8 @@ console.log('Går in i ajax');
 					var cell2 = row.insertCell(-1);
 					cell2.setAttribute("class", "bokningsdatum");
 					dagarriktiga = String(dagar[q].innerHTML).split('dag');
-					console.log(dagarriktiga[1]);
-					cell2.innerHTML = "<p>" + dagarriktiga[0] + dagarriktiga[1] + "</p>"
+					console.log(dagarriktiga[2]);
+					cell2.innerHTML = "<p>" + dagarriktiga + dagarriktiga + "</p>"
 					q++;
 						if(b >= 1){
 						smart = (smart - nollstall)

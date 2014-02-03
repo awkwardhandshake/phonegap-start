@@ -32,30 +32,19 @@
 		/*border: 2px solid white;*/
 		text-align: center;
 		vertical-align: middle;
-		width: 25%;
+		width: auto;
 		height: auto;
 	}
-	#navtablebottom td{
-		/*border: 2px solid white;*/
-		text-align: center;
-		vertical-align: middle;
-		width: 50%;
-		height: auto;
-	}
-	#navtvatta a{
-		/*border-bottom: 2px solid #fff;
-		padding-bottom: 3px;*/
-	}
-	
-	.overskrift{
-		text-align: center;
+	a {
+		text-decoration: none
+		
 	}
 	.typlokal{
 		padding: 2%;
 	}
 	
 	.typlokallank{
-		/*background-color: #ccc;*/
+		background-color: #ccc;	
 	}
 	.lokalnav{
 		padding: 2%;
@@ -63,12 +52,11 @@
 	
 	.navknapparlank{
 		padding: 2%;
-		/*background-color: #ccc;*/
+		background-color: #ccc;
 	}
 	
-	.lokalnavlank, .typlokallank{
-		color: #000;
-		background-color: #fff;
+	.lokalnavlank{
+		background-color: #ccc;
 	}
 	
 	#navtvatta a{
@@ -81,7 +69,9 @@
 		width: 100%;
 		height: 100%;
 		}
-	
+	/*.bokningstider p{
+		font-size: 75%;
+	}*/
 	.bokningsikoner{
 		padding: 2%;
 	}	
@@ -243,7 +233,7 @@ body {
 
 /* #Links
 ================================================== */
-	a, a:visited { outline: 0; font-size: 50px; }
+	a, a:visited { color: #fff; text-decoration: none; outline: 0; font-size: 50px; }
 	a:hover, a:focus { color: #fff; }
 	p a, p a:visited { line-height: inherit; }
 
@@ -294,7 +284,7 @@ body {
 	}
 	
 	#navtvatta a{
-		font-size: 20px;
+		font-size: 13px;
 	}	
 	
 	#navtvatta b{
@@ -303,7 +293,7 @@ body {
 	}
 	
 	.bokningsdatum p{
-		font-size: 10px;
+		font-size: 6px;
 	}
 	
 	.bokningstider p{
@@ -323,10 +313,7 @@ body {
 		font-size: 12px;
 		
 	}
-	a{
-		font-size: 12px;
-		
-	}
+	
 	
 	.textboxA
 	{
@@ -363,11 +350,6 @@ body {
 /* screen mellan 240 - 320px */
 @media only screen and (min-width: 321px) and (max-width: 479px) {	
 	
-	a{
-		font-size: 16px;
-		
-	}
-	
 	#navtvatta a{
 		font-size: 16px;
 		
@@ -385,10 +367,10 @@ body {
 	position: fixed;
 	}
 	.bokningsdatum p{
-		font-size: 15px;
+		font-size: 9px;
 	}
 	.bokningstider p{
-	font-size: 9px;
+	font-size: 11px;
 	}
 	
 	p{
@@ -430,12 +412,6 @@ body {
 /* screen mellan 480 - 639px */
 @media only screen and (min-width: 480px) and (max-width: 639px) {	
 	
-	a{
-		font-size: 25px;
-		
-	}
-	
-	
 	#navtvatta a{
 		font-size: 25px;
 		
@@ -448,11 +424,11 @@ body {
 
 	
 	.bokningstider p{
-	font-size: 14px;
+	font-size: 15px;
 	}
 	
 	.bokningsdatum p{
-		font-size: 25px;
+		font-size: 15px;
 	}
 	
 	p{
@@ -494,11 +470,6 @@ body {
 /* screen mellan 640 - 800px */
 @media only screen and (min-width: 640px) and (max-width: 800px) {	
 	
-	a{
-		font-size: 35px;
-		
-	}
-	
 	#navtvatta a{
 		font-size: 30px;
 		
@@ -513,7 +484,7 @@ body {
 	font-size: 20px;
 	}
 	.bokningsdatum p{
-		font-size: 30px;
+		font-size: 20px;
 	}
 	
 	p{
@@ -555,11 +526,6 @@ body {
 /* screen mellan 801 - 1080px */
 @media only screen and (min-width: 801px) and (max-width: 1080px) {	
 	
-	a{
-		font-size: 40px;
-		
-	}
-	
 	#navtvatta a{
 		font-size: 35px;
 		
@@ -575,7 +541,7 @@ body {
 	}
 	
 	.bokningsdatum p{
-		font-size: 40px;
+		font-size: 25px;
 	}
 	
 	p{
@@ -616,12 +582,6 @@ body {
 	
 /* min bredd 1080px*/
 @media only screen and (min-width: 1081px){	
-	
-	a{
-		font-size: 50px;
-		
-	}
-	
 	#navtvatta a{
 		font-size: 40px;
 		
@@ -633,10 +593,10 @@ body {
 	}
 	
 	.bokningstider p{
-	font-size: 35px;
+	font-size: 30px;
 	}
 	.bokningsdatum p{
-		font-size: 50px;
+		font-size: 30px;
 	}
 	.logo{
 		margin-top: 5%;
