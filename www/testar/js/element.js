@@ -54,12 +54,8 @@ function skapatvattatable(){
 '<table id="tvatta" border="2">'+
 	'<tbody>'+
 	'</tbody>'+
-'</table>'+
-
-'<table id="navtablebottom" border="2">'+
-	'<tbody>'+
-	'</tbody>'+
 '</table>'
+
 }
 function skapabyggnadtable(){
 	document.getElementById("styling").href="css/tvatta.css"

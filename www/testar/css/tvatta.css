@@ -32,14 +32,7 @@
 		/*border: 2px solid white;*/
 		text-align: center;
 		vertical-align: middle;
-		width: 50%;
-		height: auto;
-	}
-	#navtablebottom td{
-		/*border: 2px solid white;*/
-		text-align: center;
-		vertical-align: middle;
-		width: 50%;
+		width: auto;
 		height: auto;
 	}
 	a {
@@ -51,7 +44,7 @@
 	}
 	
 	.typlokallank{
-		/*background-color: #ccc;*/
+		background-color: #ccc;	
 	}
 	.lokalnav{
 		padding: 2%;
@@ -59,11 +52,11 @@
 	
 	.navknapparlank{
 		padding: 2%;
-		/*background-color: #ccc;*/
+		background-color: #ccc;
 	}
 	
 	.lokalnavlank{
-		/*background-color: #ccc;*/
+		background-color: #ccc;
 	}
 	
 	#navtvatta a{
@@ -76,7 +69,9 @@
 		width: 100%;
 		height: 100%;
 		}
-	
+	/*.bokningstider p{
+		font-size: 75%;
+	}*/
 	.bokningsikoner{
 		padding: 2%;
 	}	
@@ -298,7 +293,7 @@ body {
 	}
 	
 	.bokningsdatum p{
-		font-size: 10px;
+		font-size: 6px;
 	}
 	
 	.bokningstider p{
@@ -372,10 +367,10 @@ body {
 	position: fixed;
 	}
 	.bokningsdatum p{
-		font-size: 15px;
+		font-size: 9px;
 	}
 	.bokningstider p{
-	font-size: 9px;
+	font-size: 11px;
 	}
 	
 	p{
@@ -429,11 +424,11 @@ body {
 
 	
 	.bokningstider p{
-	font-size: 14px;
+	font-size: 15px;
 	}
 	
 	.bokningsdatum p{
-		font-size: 25px;
+		font-size: 15px;
 	}
 	
 	p{
@@ -489,7 +484,7 @@ body {
 	font-size: 20px;
 	}
 	.bokningsdatum p{
-		font-size: 30px;
+		font-size: 20px;
 	}
 	
 	p{
@@ -546,7 +541,7 @@ body {
 	}
 	
 	.bokningsdatum p{
-		font-size: 40px;
+		font-size: 25px;
 	}
 	
 	p{
@@ -598,10 +593,10 @@ body {
 	}
 	
 	.bokningstider p{
-	font-size: 35px;
+	font-size: 30px;
 	}
 	.bokningsdatum p{
-		font-size: 50px;
+		font-size: 30px;
 	}
 	.logo{
 		margin-top: 5%;
