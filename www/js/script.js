@@ -59,7 +59,7 @@ console.log("Går in i byggnad funktionen");
 	skapabyggnadtable();
 	document.getElementById("topploga").src = " ";
 	$.ajax({
-			url: 'tvatta/byggnad.html',
+			url: urlfranlankarbyggnad,
 			success: function(data) {
 				var byggnadtable = document.getElementById('byggnad');
 				var indifiera;
