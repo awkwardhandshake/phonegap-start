@@ -1,12 +1,11 @@
-var historik = new Array();
 //Hämtar inloggningsformet
 function getFormData(){	   
 localStorage.anv=document.getElementById("username").value;
 localStorage.pass=document.getElementById("password").value;
 console.log("Den skickar inloggningen");
-hamta();
+//hamta();
 //byggnad('tvatta/tvatta.html');
-//loadtvatta('tvatta/tvatta.html');
+loadtvatta('tvatta/tvatta.html');
 }
 
 //hämta marknad
@@ -36,6 +35,11 @@ console.log("Användare sparad från form " + localStorage.anv);
 console.log("Logga in delen " + localStorage.UserName);
 hiddenbrowser();
 }
+//alt med iframe
+function bytiframe(){
+	  var hej1 = document.getElementById('hej1').src=localStorage.urlen
+	  console.log("Nu sätts iframe adressen till inlogg");
+}
 
 //alt med hidden InAppBrowser
 function hiddenbrowser(){
@@ -54,12 +58,11 @@ function hiddenbrowser(){
 }
 //Byggnads väljare
 function byggnad(urlfranlankarbyggnad){
-historia("byggnad");
 console.log("Går in i byggnad funktionen");
 	skapabyggnadtable();
 	document.getElementById("topploga").src = " ";
 	$.ajax({
-			url: 'tvatta/byggnad.html',
+			url: urlfranlankarbyggnad,
 			success: function(data) {
 				var byggnadtable = document.getElementById('byggnad');
 				var indifiera;
@@ -67,18 +70,18 @@ console.log("Går in i byggnad funktionen");
 				var delabyggnadlank;
 				indifiera = $(data).find("#lblShowFirstAvailable");
 				if(indifiera.length != 0){
-//console.log("Byggnad finns!")
+console.log("Byggnad finns!")
 					byggnadlank = $(data).find("td .headerColor");
 					var d = 0;
 					
 					for(var i = 0; i < byggnadlank.length; i++){
-//console.log('Bygger upp table för byggnad');					
+console.log('Bygger upp table för byggnad');					
 						var byggnadrow = byggnadtable.insertRow(-1);
 						var byggnadcell = byggnadrow.insertCell(-1);
 						byggnadcell.innerHTML = byggnadlank[d].innerHTML;
-//console.log(byggnadlank[d].innerHTML);
+						console.log(byggnadlank[d].innerHTML);
 						if(byggnadlank[d].onmousedown != null){
-//console.log('Kollar byggnad if-sats');					
+console.log('Kollar byggnad if-sats');					
 							delabyggnadlank = String(byggnadlank[d].onmousedown).split("'",2);
 							delabyggnadlank = "'http://tvatta.sgsstudentbostader.se/" + delabyggnadlank[1] + "'";
 							byggnadcell.innerHTML = '<a onmousedown="loadtvatta('+ delabyggnadlank +')">'+
@@ -86,10 +89,10 @@ console.log("Går in i byggnad funktionen");
 						}
 						d++;	
 					}
-//console.log('Slut av for-loop');				
+console.log('Slut av for-loop');				
 				}
 				else{
-//console.log("Verkar inte ha funnits någon byggnad???")
+console.log("Verkar inte ha funnits någon byggnad???")
 					loadtvatta('http://www.sgsstudentbostader.se/ext_gw.aspx?module=wwwash&lang=se#lblPanelName');
 				}
 	
@@ -105,8 +108,7 @@ var typlokalriktig;
 var lankartvattariktig;
 //Vi laddar in hela tvatta.sgsstudentbostader.se
 function loadtvatta(urlfranlankar){
-historia('loadtvatta()',urlfranlankar);
-//console.log("Går in i tvätta funktionen");
+console.log("Går in i tvätta funktionen");
 	skapatvattatable(); 
 	document.getElementById("topploga").src = " ";
 	var tvattaimg;
@@ -122,11 +124,10 @@ historia('loadtvatta()',urlfranlankar);
 
 	var table = document.getElementById('tvatta');
 	var navtable = document.getElementById('navtvatta');
-	var navtablebottom = document.getElementById('navtablebottom');
 	$.ajax({
 			url: urlfranlankar,
 			success: function(data) {
-//console.log('Går in i ajax');			
+console.log('Går in i ajax');			
 				var root2 = document.getElementById('mydiv2');
 				var tab2=document.createElement('table');
 				tvattaimg = $(data).find("#tbl1 [src]");
@@ -140,29 +141,26 @@ historia('loadtvatta()',urlfranlankar);
 				typlokal = $(data).find("td[background]");
 				var antal = antaltider.length;
 				
+				
 				//Välja typ av lokal att boka
 				if(valjabokning.length != 0){
-				var valjabokningtext;
-				var rakna = 0;			
+				var rakna = 0;
+console.log('Olika lokaler funktion');				
 					var lokalrow = navtable.insertRow(-1);
-					lokalrow.setAttribute("id", "navlokal");
 					for(var l=0; l < valjabokning.length; l++){
 						var lokalcell = lokalrow.insertCell(-1);
 						if(valjabokning[rakna].onmousedown == null){
-//console.log("Den går in i if satsen för olika lokaler");
+						console.log("Den går in i if satsen för olika lokaler");
 							lokalcell.setAttribute("class", "lokalnav");
-							valjabokningtext = String(valjabokning[rakna].innerHTML).split('&nbsp;');
-							var navnummer = String("navnummer");
-							lokalcell.innerHTML = '<a onClick="show_navnummer()">'+ valjabokningtext[0] +'</a>';
+							lokalcell.innerHTML = '<a>'+ valjabokning[rakna].innerHTML +'</a>';
 							rakna++;
 						}
 						else{
 						lokalenriktig = String(valjabokning[rakna].onmousedown).split("'", 2);
 						lokalenriktig = "'http://tvatta.sgsstudentbostader.se/"+ lokalenriktig[1] +"'";
 						lokalcell.setAttribute("class", "lokalnavlank");
-						lokalcell.setAttribute("onmousedown", "loadtvatta("+ lokalenriktig +")" )
-						valjabokningtext = String(valjabokning[rakna].innerHTML).split('&nbsp;');
-						lokalcell.innerHTML = '<a>'+ valjabokningtext[0] +'</a>';
+						lokalcell.innerHTML = '<a onmousedown="loadtvatta('+ lokalenriktig +')">'
+						+ valjabokning[rakna].innerHTML +'</a>';
 						rakna++;
 							}
 					}
@@ -170,25 +168,21 @@ historia('loadtvatta()',urlfranlankar);
 				
 				//Välja vilken lokal att boka i
 				if(typlokal.length != 0){
-				var typlokaltext;
 				var typrakna = 0;
 					var typrow = navtable.insertRow(-1);
-					typrow.setAttribute("id", "navnummer")
 					for(var t = 0; t < typlokal.length; t++){					
 						var typcell = typrow.insertCell(-1);
 						if(typlokal[typrakna].onmousedown == null){
 						typcell.setAttribute("class", "typlokal");
-						typlokaltext = String(typlokal[typrakna].innerHTML).split('&nbsp;');
-						typcell.innerHTML = '<a>' + typlokaltext[0] +'</a>';								
+						typcell.innerHTML = '<a>'+ typlokal[typrakna].innerHTML +'</a>';								
 						typrakna++;						
 						}
 						else{						
 						typlokalriktig = String(typlokal[typrakna].onmousedown).split("'", 2);
 						typlokalriktig = "'http://tvatta.sgsstudentbostader.se/"+ typlokalriktig[1] +"'";
 						typcell.setAttribute("class", "typlokallank");
-						typcell.setAttribute("onmousedown", "loadtvatta("+typlokalriktig +")")
-						typlokaltext = String(typlokal[typrakna].innerHTML).split('&nbsp;');
-						typcell.innerHTML = '<a>'+ typlokaltext[0] +'</a>';
+						typcell.innerHTML = '<a onmousedown="loadtvatta('+typlokalriktig +')">'
+						+ typlokal[typrakna].innerHTML +'</a>';
 						typrakna++;						
 						}
 					}
@@ -198,16 +192,14 @@ historia('loadtvatta()',urlfranlankar);
 				//Navigerings framåt och bakåt
 				if(lankartvatta.length != 0){
 				var navrakna = 0;
-				var lankartvattatext;
-					var navrow = navtablebottom.insertRow(-1);
+					var navrow = navtable.insertRow(-1);
 					for(var lt = 0; lt < lankartvatta.length; lt++){
 						var navcell = navrow.insertCell(-1);
 						lankartvattariktig = String(lankartvatta[navrakna].onmousedown).split("'", 2);
 						lankartvattariktig = "'http://tvatta.sgsstudentbostader.se/"+ lankartvattariktig[1] +"'";
-						lankartvattatext = String(lankartvatta[navrakna].innerText).split('&nbsp;');
-						navcell.setAttribute("onmousedown", "loadtvatta("+lankartvattariktig +")")
 						navcell.setAttribute("class", "navknapparlank");
-						navcell.innerHTML = '<a>' + lankartvattatext[0] +'</a>';
+						navcell.innerHTML = '<a onmousedown="loadtvatta('+lankartvattariktig +')">'
+						+ lankartvatta[navrakna].innerText +'</a>';
 						navrakna++;
 					}
 				}
@@ -223,7 +215,7 @@ historia('loadtvatta()',urlfranlankar);
 						var headcell = headrow.insertCell(-1);
 						headcell.setAttribute("class", "bokningstider");
 						tiderdygnetriktig = String(tiderdygnet[f].innerHTML).split('&nbsp;');
-//console.log(tiderdygnetriktig[2]);
+						console.log(tiderdygnetriktig[2]);
 						headcell.innerHTML = "<p>" + tiderdygnetriktig[2] + "</p>";
 						
 						f++
@@ -241,8 +233,8 @@ historia('loadtvatta()',urlfranlankar);
 					var cell2 = row.insertCell(-1);
 					cell2.setAttribute("class", "bokningsdatum");
 					dagarriktiga = String(dagar[q].innerHTML).split('dag');
-//console.log(dagarriktiga[1]);
-					cell2.innerHTML = "<p>" + dagarriktiga[0] + dagarriktiga[1] + "</p>"
+					console.log(dagarriktiga[2]);
+					cell2.innerHTML = "<p>" + dagarriktiga + dagarriktiga + "</p>"
 					q++;
 						if(b >= 1){
 						smart = (smart - nollstall)
@@ -253,12 +245,12 @@ historia('loadtvatta()',urlfranlankar);
 					var tvattaimgriktig;
 					var cell = row.insertCell(-1)
 					tvattaimgriktig = String(tvattaimg[smart].outerHTML).split('.');
-//console.log(tvattaimgriktig[0]);
+					console.log(tvattaimgriktig[0]);
 					tvattaimgriktig = tvattaimgriktig[0] +'.png">';
-//console.log(tvattaimgriktig);
+					console.log(tvattaimgriktig);
 					cell.setAttribute("class", "bokningsikoner");	
 					cell.innerHTML = "<a>" + tvattaimgriktig + "</a>";
-//console.log(tvattaimg[smart].outerHTML);
+					console.log(tvattaimg[smart].outerHTML);
 					//kollar så att inte onmousedown är null
 					
 						if(tvattaimg[smart].parentNode.onmousedown != null){								
@@ -270,7 +262,7 @@ historia('loadtvatta()',urlfranlankar);
 							cell.setAttribute("class", "bokningsikoner");
 							cell.innerHTML = '<a onmousedown="bokatid(' + split +')">' 
 							+ tvattaimgriktig + "</a>";
-//console.log(split);							
+console.log(split);							
 							}
 								
 					smart = (smart + extra);
@@ -287,11 +279,11 @@ historia('loadtvatta()',urlfranlankar);
 function bokatid(tiden,nuvarandebokning){
 	console.log("Går in i funktionen bokatid");
 	 var ref = window.open(tiden, '_blank', 'hidden=yes');
-//console.log('bokar pass i hidden=yes');
+console.log('bokar pass i hidden=yes');
 		 ref.addEventListener('loadstop', function(event) {
 			 alert('Pass bokat'); 
 			 loadtvatta(nuvarandebokning);
-//console.log("Passet är bokat");
+			 console.log("Passet är bokat");
 	
 	
 })
@@ -344,22 +336,3 @@ console.log("1");
 console.log("1");	
 	
 }
-function show_navnummer(){
-
-    var menu = document.getElementById("navnummer");
-    if(menu.style.display == 'table-row'){
-        menu.style.display = 'none';
-    }else {
-        menu.style.display = 'table-row';                    
-    }
-}  
-
-function show_navlokal(){
-
-	var menu = document.getElementById("navtvatta");
-    if(menu.style.display == 'table'){
-        menu.style.display = 'none';
-    }else {
-        menu.style.display = 'table';                    
-    }
-}  

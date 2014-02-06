@@ -1,20 +1,14 @@
 function startsida(){
-	document.getElementById("styling").href="css/index.css"
 	document.getElementById("index").innerHTML=
-	'<div id="index">'+
-'<div class="container">'+
+	'<div class="container">'+
 	'<div class="sixteen columns"></div>'+
-	
-		'<div class="eight columns center">'+
-			
+		'<div class="eight columns center">'+	
 			'<button onmousedown="hamtahemma("http://hemma.sgsstudentbostader.se/DoorControl/Fullscreen")" class="doorbutton">'+
 				'<img class="scale-with-grid" src="img/door_button.png" />'+					
 			'</button>'+
-				  	
 			'<p><strong>Öppna entrédörr</strong></p>'+
 			'<p><small>(Open entrance door)</small></p>'+		 
 		'</div>'+
-		
 		'<div class="eight columns center">'+
 			'<button onclick="inputfields();">'+
 			'<img class="scale-with-grid" src="img/cal_button.png" />'+
@@ -28,9 +22,8 @@ function startsida(){
                   '<li><button type="submit" name="epName" value="varde" id="hemmadorren">varde</button></li>'+
                   '</ul>'+
             '</form><div class="doorControlStatus"></div>'+
-'</div>'+	
-'</div>'
-historia('startsida()');
+'</div>'	
+
 	
 };
 
@@ -43,7 +36,6 @@ function inputfields(){
 		'<input type="button" class="submitknapp" name="submit" onclick="getFormData();" value="Logga in"></input>'+
 		'</form>'+
 		'</div>'
-historia('inputfields()');
 		};
 		
 function iframe(){
@@ -54,30 +46,17 @@ function iframe(){
 function skapatvattatable(){
 	document.getElementById("styling").href="css/tvatta.css"
 	document.getElementById("index").innerHTML=
-'<table class="overskrift" border="2">'+
-	'<tbody>'+
-	'<tr>'+
-		'<td><div class="dropdown_button" class="menu_button" onClick="show_navlokal()">Lokaler</div></td>'+
-	'<tr>'+	
-	'</tbody>'+
-'</table>'+
-'<span id="hide" class="hidden_menu">'+
 '<table id="navtvatta" border="2">'+
 	'<tbody>'+
 	'</tbody>'+
 '</table>'+
-'</span>'+
 
 '<table id="tvatta" border="2">'+
 	'<tbody>'+
 	'</tbody>'+
-'</table>'+
-'<table id="navtablebottom" border="2">'+
-	'<tbody>'+
-	'</tbody>'+
 '</table>'
-}
 
+}
 function skapabyggnadtable(){
 	document.getElementById("styling").href="css/tvatta.css"
 	document.getElementById("index").innerHTML=
