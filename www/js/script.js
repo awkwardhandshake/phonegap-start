@@ -54,7 +54,7 @@ function hiddenbrowser(){
 }
 //Byggnads väljare
 function byggnad(urlfranlankarbyggnad){
-historia("byggnad");
+historia("byggnad()", urlfranlankarbyggnad);
 console.log("Går in i byggnad funktionen");
 	skapabyggnadtable();
 	document.getElementById("topploga").src = " ";
