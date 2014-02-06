@@ -43,7 +43,7 @@ function inputfields(){
 		'<input type="button" class="submitknapp" name="submit" onclick="getFormData();" value="Logga in"></input>'+
 		'</form>'+
 		'</div>'
-historia('inputfields()');
+historia('inputfields');
 		};
 		
 function iframe(){
