@@ -16,18 +16,14 @@ console.log('Går in i onLoad');
     }
     function onDeviceReady() {
 console.log('Går in i DeviceReady');    	
-        document.addEventListener("backbutton", onBackKeyDown, false);
-    }
-    function onBackKeyDown(){
-console.log('Går in i onBackKeyDown');
-
-console.log('Slut på onBackKeyDown');		
+        document.addEventListener("backbutton", function() {startsida()}, false);
     }
 </script>
 </head>
 Version 2.1.4
 <body onload="onLoad()">
 <button id="navigering" onmousedown="onDeviceReady()">onDeviceReady</button>
+<button onmousedown="onBackKeyDown()">Hej på dig</button>
 <!--
 <a onmousedown="hamtahemma('hemma/hemma.html')"> Chrome-knapp </a>
 <a onmousedown="hamtahemma('http://hemma.sgsstudentbostader.se/DoorControl/Fullscreen')"> App-knapp </a>
