@@ -8,7 +8,6 @@
 		<script src="jquery-1.4.2.min.js" type="text/javascript"></script>
 		<link rel="stylesheet" id="styling" type="text/css" href="css/index.css" />
 		<title>SGS Studentbostäder - Hemma</title>
-<span id="backscript">
 <script type="text/javascript">
 function onLoad() {
 console.log('Går in i onLoad');
@@ -19,10 +18,9 @@ console.log('Går in i DeviceReady');
         document.addEventListener("backbutton", function() {kommaihag[kommaihag - 1]}, false);
     };
 </script>
-</span>
 </head>
 Version 2.1.6
-<body>
+<body onload="onLoad()">
 <button id="navigering" onmousedown="onDeviceReady()">onDeviceReady</button>
 <button onmousedown="onBackKeyDown()">Hej på dig</button>
 <!--
