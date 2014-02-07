@@ -44,6 +44,7 @@ console.log("Längden på array EFTER " + kommaihag.length);
 	sesam = 1;
 	console.log(sesam);
 	position = 0;
+	onLoad();
 console.log('=============================================================================');
 }
 
@@ -81,6 +82,7 @@ console.log(kommaihag);
 	var navigeringkul = navigering.setAttribute('onmousedown', kommaihag[(kommaihag.length-2)]);
 	navigering.setAttribute("class", "null")
 sesam = 0;	
+onLoad();
 console.log('-------------------------------------------------------------------------------');
 
 }
