@@ -72,19 +72,19 @@ console.log(kommaihag);
 //back.setAttribute("Kul", "Detta");
 //document.addEventListener("backbutton", kommaihag[kommaihag.length-2], false);
 	var backbuttonelse = document.getElementById('backscript');
-	backbuttonelse.innerHTML = 'function onLoad() {' +
-	'console.log("Går in i onLoad");' +
-	'document.addEventListener("deviceready", onDeviceReady, false);' +
-	'}' +
-	'function onDeviceReady() {' +
-	'console.log("Går in i DeviceReady");' +
-	'document.addEventListener("backbutton", onBackKeyDown, false);' +
-	'}' +
-	'function onBackKeyDown(){' +
-	'console.log("Går in i onBackKeyDown");' +
+	backbuttonelse.innerHTML = ' function onLoad() { ' +
+	' console.log("Går in i onLoad"); ' +
+	' document.addEventListener("deviceready", onDeviceReady, false); ' +
+	' } ' +
+	' function onDeviceReady() { ' +
+	' console.log("Går in i DeviceReady"); ' +
+	' document.addEventListener("backbutton", onBackKeyDown, false); ' +
+	' } ' +
+	' function onBackKeyDown(){ ' +
+	' console.log("Går in i onBackKeyDown"); ' +
 	kommaihag[(kommaihag.length - 2)] +
-	'console.log("Slut på onBackKeyDown");' +
-	'}';
+	' console.log("Slut på onBackKeyDown"); ' +
+	' } ';
 
 
 	var navigering = document.getElementById('navigering')
