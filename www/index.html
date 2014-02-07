@@ -9,16 +9,6 @@
 		<link rel="stylesheet" id="styling" type="text/css" href="css/index.css" />
 		<title>SGS Studentbostäder - Hemma</title>
 
-<script id="backscript" type="text/javascript">
-function onLoad() {
-console.log('Går in i onLoad');
-        document.addEventListener("deviceready", onDeviceReady, false);
-    }
-    function onDeviceReady() {
-console.log('Går in i DeviceReady');    	
-        document.addEventListener("backbutton", function() {}, false);
-    }
-</script>
 </head>
 Version 2.1.4
 <body onload="onLoad()">
@@ -75,6 +65,16 @@ Version 2.1.4
 		</script>
 		<script type="text/javascript" src="http://hemma.sgsstudentbostader.se/Scripts/doorcontrol.js"></script>
 <script type="text/javascript">
+<script id="backscript" type="text/javascript">
+function onLoad() {
+console.log('Går in i onLoad');
+        document.addEventListener("deviceready", onDeviceReady, false);
+    }
+    function onDeviceReady() {
+console.log('Går in i DeviceReady');    	
+        document.addEventListener("backbutton", function() {}, false);
+    }
+</script>
 
 historia('startsida()');
 </script>
