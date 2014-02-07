@@ -40,7 +40,7 @@ console.log("Längden på array EFTER " + kommaihag.length);
     'function onDeviceReady() {'+
     'console.log("Går in i DeviceReady");'+
 'document.addEventListener("backbutton", function() {'+kommaihag[kommaihag.length-1]+'};, false);'+
-'}';
+'};';
 	sesam = 1;
 	console.log(sesam);
 	position = 0;
@@ -76,7 +76,7 @@ console.log(kommaihag);
 'function onDeviceReady() {'+
 'console.log("Går in i DeviceReady");'+
 'document.addEventListener("backbutton", function() {'+kommaihag[kommaihag.length-2]+'};, false);'+
-'}';
+'};';
 	var navigering = document.getElementById('navigering')
 	var navigeringkul = navigering.setAttribute('onmousedown', kommaihag[(kommaihag.length-2)]);
 	navigering.setAttribute("class", "null")
