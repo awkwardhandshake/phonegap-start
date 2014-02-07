@@ -30,18 +30,18 @@ console.log("Längden på array EFTER " + kommaihag.length);
 	var navigering = document.getElementById('navigering')
 	var navigeringkul = navigering.setAttribute('onmousedown', kommaihag[(kommaihag.length - 1)]);
 	navigering.setAttribute("class", "Nu har if-satsen ändrat");
-	var backbutton = document.getElementById('backscript');
-	backbutton.innerHTML =
-	'<script type="text/javascript">'+
-	'function onLoad() {'+
-'console.log("Går in i onLoad Historia");'+
-'document.addEventListener("deviceready", onDeviceReady, false);'+
-        '}'+
-    'function onDeviceReady() {'+
-    'console.log("Går in i DeviceReady Historia");'+
-'document.addEventListener("backbutton", function() {'+kommaihag[kommaihag.length-1]+'}, false);'+
-'};'+
-'<script>';
+//	var backbutton = document.getElementById('backscript');
+//	backbutton.innerHTML =
+//	'<script type="text/javascript">'+
+//	'function onLoad() {'+
+//'console.log("Går in i onLoad Historia");'+
+//'document.addEventListener("deviceready", onDeviceReady, false);'+
+//        '}'+
+//    'function onDeviceReady() {'+
+//    'console.log("Går in i DeviceReady Historia");'+
+//'document.addEventListener("backbutton", function() {'+kommaihag[kommaihag.length-1]+'}, false);'+
+//'};'+
+//'<script>';
 	sesam = 1;
 	console.log(sesam);
 	position = 0;
@@ -68,18 +68,18 @@ console.log(kommaihag);
 //console.log(back.childNodes[1].childNodes[0].data)
 //back.setAttribute("Kul", "Detta");
 //document.addEventListener("backbutton", kommaihag[kommaihag.length-2], false);
-	var backbuttonelse = document.getElementById('backscript');
-	backbuttonelse.innerHTML =
-	'<script type="text/javascript">'+
-	'function onLoad() {'+
-'console.log("Går in i onLoad Historia");'+
-'document.addEventListener("deviceready", onDeviceReady, false);'+
-'}'+
-'function onDeviceReady() {'+
-'console.log("Går in i DeviceReady Historia");'+
-'document.addEventListener("backbutton", function() {'+kommaihag[kommaihag.length-2]+'}, false);'+
-'};'+
-'<script>';
+//	var backbuttonelse = document.getElementById('backscript');
+//	backbuttonelse.innerHTML =
+//	'<script type="text/javascript">'+
+//	'function onLoad() {'+
+//'console.log("Går in i onLoad Historia");'+
+//'document.addEventListener("deviceready", onDeviceReady, false);'+
+//'}'+
+//'function onDeviceReady() {'+
+//'console.log("Går in i DeviceReady Historia");'+
+//'document.addEventListener("backbutton", function() {'+kommaihag[kommaihag.length-2]+'}, false);'+
+//'};'+
+//'<script>';
 	var navigering = document.getElementById('navigering')
 	var navigeringkul = navigering.setAttribute('onmousedown', kommaihag[(kommaihag.length-2)]);
 	navigering.setAttribute("class", "null")
