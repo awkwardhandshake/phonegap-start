@@ -8,32 +8,25 @@
 		<script src="jquery-1.4.2.min.js" type="text/javascript"></script>
 		<link rel="stylesheet" id="styling" type="text/css" href="css/index.css" />
 		<title>SGS Studentbostäder - Hemma</title>
-<script type="text/javascript">
+
+<script id="backscript" type="text/javascript">
 function onLoad() {
- console.log('Går in i onLoad');
+console.log('Går in i onLoad');
         document.addEventListener("deviceready", onDeviceReady, false);
     }
-
-    // device APIs are available
-    //
     function onDeviceReady() {
 console.log('Går in i DeviceReady');    	
-        // Register the event listener
         document.addEventListener("backbutton", onBackKeyDown, false);
-		//var b = String(kommaihag[kommaihag.length -1])
-		//b();
     }
-    
     function onBackKeyDown(){
-		loadtvatta('tvatta/tvatta.html');
-		
-//		kommaihag[kommaihag.length -1]
+console.log('Går in i onBackKeyDown');
+
+console.log('Slut på onBackKeyDown');		
     }
 </script>
 </head>
 Version 2.1.4
 <body onload="onLoad()">
-<!--<button id="navigering" onmousedown="bakåt">Gå bakåt i sidorna</button>-->
 <button id="navigering" onmousedown="onDeviceReady()">onDeviceReady</button>
 <!--
 <a onmousedown="hamtahemma('hemma/hemma.html')"> Chrome-knapp </a>
@@ -87,7 +80,7 @@ Version 2.1.4
 		<script type="text/javascript" src="http://hemma.sgsstudentbostader.se/Scripts/doorcontrol.js"></script>
 <script type="text/javascript">
 
-historia('startsida');
+historia('startsida()');
 </script>
 <!-- Här slutar scriptet -->
 <script type="text/javascript" src="js/script.js"></script>
