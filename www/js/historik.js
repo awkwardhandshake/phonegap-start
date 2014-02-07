@@ -3,8 +3,7 @@ var kommaihag = new Array();
 var namnan = 0;
 var sesam;
 var sesamkommaihag;
-function historia(nufunktion, nuadress){
-'use strict';	
+function historia(nufunktion, nuadress){	
 if(nuadress != undefined){
 var kontrollnufunktion = String(nufunktion).split(')')[0]  + '"' + nuadress +'");';
 }
@@ -51,7 +50,6 @@ console.log('===================================================================
 }
 
 else{
-'use strict';
 console.log('-------------------------------------------------------------------------------');
 if(sesam === 1){
 	kommaihag[kommaihag.length] = sesamkommaihag;
