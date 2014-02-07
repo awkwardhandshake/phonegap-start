@@ -34,11 +34,11 @@ console.log("Längden på array EFTER " + kommaihag.length);
 	var backbutton = document.getElementById('backscript');
 	backbutton.innerHTML =
 	'function onLoad() {'+
-'console.log("Går in i onLoad");'+
+'console.log("Går in i onLoad Historia");'+
 'document.addEventListener("deviceready", onDeviceReady, false);'+
         '}'+
     'function onDeviceReady() {'+
-    'console.log("Går in i DeviceReady");'+
+    'console.log("Går in i DeviceReady Historia");'+
 'document.addEventListener("backbutton", function() {'+kommaihag[kommaihag.length-1]+'}, false);'+
 '};';
 	sesam = 1;
@@ -71,11 +71,11 @@ console.log(kommaihag);
 	var backbuttonelse = document.getElementById('backscript');
 	backbuttonelse.innerHTML =
 	'function onLoad() {'+
-'console.log("Går in i onLoad");'+
+'console.log("Går in i onLoad Historia");'+
 'document.addEventListener("deviceready", onDeviceReady, false);'+
 '}'+
 'function onDeviceReady() {'+
-'console.log("Går in i DeviceReady");'+
+'console.log("Går in i DeviceReady Historia");'+
 'document.addEventListener("backbutton", function() {'+kommaihag[kommaihag.length-2]+'}, false);'+
 '};';
 	var navigering = document.getElementById('navigering')
