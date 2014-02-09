@@ -66,18 +66,18 @@ console.log("Går in i byggnad funktionen");
 				var delabyggnadlank;
 				indifiera = $(data).find("#lblShowFirstAvailable");
 				if(indifiera.length != 0){
-//console.log("Byggnad finns!")
+console.log("Byggnad finns!")
 					byggnadlank = $(data).find("td .headerColor");
 					var d = 0;
 					
 					for(var i = 0; i < byggnadlank.length; i++){
-//console.log('Bygger upp table för byggnad');					
+console.log('Bygger upp table för byggnad');					
 						var byggnadrow = byggnadtable.insertRow(-1);
 						var byggnadcell = byggnadrow.insertCell(-1);
 						byggnadcell.innerHTML = byggnadlank[d].innerHTML;
-//console.log(byggnadlank[d].innerHTML);
+console.log(byggnadlank[d].innerHTML);
 						if(byggnadlank[d].onmousedown != null){
-//console.log('Kollar byggnad if-sats');					
+console.log('Kollar byggnad if-sats');					
 							delabyggnadlank = String(byggnadlank[d].onmousedown).split("'",2);
 							delabyggnadlank = "'http://tvatta.sgsstudentbostader.se/" + delabyggnadlank[1] + "'";
 							byggnadcell.innerHTML = '<a onmousedown="loadtvatta('+ delabyggnadlank +')">'+
@@ -85,10 +85,10 @@ console.log("Går in i byggnad funktionen");
 						}
 						d++;	
 					}
-//console.log('Slut av for-loop');				
+console.log('Slut av for-loop');				
 				}
 				else{
-//console.log("Verkar inte ha funnits någon byggnad???")
+console.log("Verkar inte ha funnits någon byggnad???")
 					loadtvatta('http://www.sgsstudentbostader.se/ext_gw.aspx?module=wwwash&lang=se#lblPanelName');
 				}
 	
