@@ -6,7 +6,7 @@ localStorage.pass=document.getElementById("password").value;
 console.log("Den skickar inloggningen");
 hamta();
 //byggnad('tvatta/tvatta.html');
-//loadtvatta('tvatta/tvatta.html');
+//loadtvatta('tvatta/tvatta2.html');
 }
 
 //hämta marknad
@@ -57,7 +57,6 @@ function byggnad(urlfranlankarbyggnad){
 historia("byggnad()", urlfranlankarbyggnad);
 console.log("Går in i byggnad funktionen");
 	skapabyggnadtable();
-	document.getElementById("topploga").src = " ";
 	$.ajax({
 			url: urlfranlankarbyggnad,
 			success: function(data) {
@@ -107,8 +106,7 @@ var lankartvattariktig;
 function loadtvatta(urlfranlankar){
 historia('loadtvatta()',urlfranlankar);
 //console.log("Går in i tvätta funktionen");
-	skapatvattatable(); 
-	document.getElementById("topploga").src = " ";
+	skapatvattatable(); 	
 	var tvattaimg;
 	var antaltider;
 	var nummer;
@@ -119,7 +117,7 @@ historia('loadtvatta()',urlfranlankar);
 	var typlokal;
 	var c = 0;
 	var lank;
-
+	var recordposition;
 	var table = document.getElementById('tvatta');
 	var navtable = document.getElementById('navtvatta');
 	var navtablebottom = document.getElementById('navtablebottom');
@@ -154,6 +152,7 @@ historia('loadtvatta()',urlfranlankar);
 							valjabokningtext = String(valjabokning[rakna].innerHTML).split('&nbsp;');
 							var navnummer = String("navnummer");
 							lokalcell.innerHTML = '<a onClick="show_navnummer()">'+ valjabokningtext[0] +'</a>';
+							recordposition = l;
 							rakna++;
 						}
 						else{
@@ -172,9 +171,16 @@ historia('loadtvatta()',urlfranlankar);
 				if(typlokal.length != 0){
 				var typlokaltext;
 				var typrakna = 0;
-					var typrow = navtable.insertRow(-1);
-					typrow.setAttribute("id", "navnummer")
+				console.log(recordposition);
+					var u = 0;						
 					for(var t = 0; t < typlokal.length; t++){					
+						var typrow = navtable.insertRow(-1);
+						for(var u = 0; u < recordposition; u++){
+						typrow.insertCell(-1);
+						console.log('Går in i recordposition');
+						}
+						
+						typrow.setAttribute("id", "navnummer")
 						var typcell = typrow.insertCell(-1);
 						if(typlokal[typrakna].onmousedown == null){
 						typcell.setAttribute("class", "typlokal");

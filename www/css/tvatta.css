@@ -19,10 +19,22 @@
 	q:before, q:after {
 		content: '';
 		content: none; }
-			
+
+	#uppernav{
+		width: 100%;
+		height: 20%;
+		text-align: center;
+		display: table;
+		}
+		
+	#uppernav td{
+		width: 33%;
+		vertical-align: middle;
+		}			
 	
 	#navtvatta{
 		/*display: none;*/
+
 	}
 	#navnummer{
 		/*display: none;*/
@@ -59,7 +71,31 @@
 	}
 	
 	.lokalnav, .typlokal{
-		padding: 2%;
+		/*padding: 2%;*/
+		color: black;
+	}
+
+	
+	.typlokallank{
+		border-top: 4px solid #252c47;
+		text-decoration: underline;	
+	}
+	.lokalnavlank{
+		text-decoration: underline;
+	}
+	.lokalnav{
+		/*border-left: 4px solid black;
+		border-right: 4px solid black;
+		border-top: 4px solid black;*/
+	}
+	.lokalnav, .typlokal, .typlokallank{
+		background-color: gray;
+		padding: 1%;
+
+	}
+
+	.navnummer{
+		border: solid green;
 	}
 	
 	.navknapparlank{
@@ -67,7 +103,7 @@
 		/*background-color: #ccc;*/
 	}
 	
-	.lokalnavlank, .typlokallank{
+	.lokalnavlank{
 		color: #000;
 		background-color: #fff;
 		/*display: none;*/
@@ -248,7 +284,7 @@ body {
 /* #Links
 ================================================== */
 	a, a:visited { outline: 0; font-size: 50px; }
-	a:hover, a:focus { color: #fff; }
+	/*a:hover, a:focus { color: #fff; }*/
 	p a, p a:visited { line-height: inherit; }
 
 
@@ -280,6 +316,12 @@ body {
 	img.scale-with-grid-logo {
 		max-width: 100%;
 		height: auto; }	
+
+	img.scale-with-grid-logo-small {
+		max-width: 33%;
+		height: auto;
+		margin-top: 2%;
+		}	
 /* #Custom
 ================================================== */
 .logo{
@@ -298,11 +340,11 @@ body {
 	}
 	
 	#navtvatta a{
-		font-size: 20px;
+		font-size: 14px;
 	}	
 	
 	#navtvatta b{
-		font-size: 17px;	
+		font-size: 14px;	
 		
 	}
 	
@@ -572,10 +614,10 @@ body {
 		
 	}
 	
-	#navtvatta b{
+	/*#navtvatta b{
 		font-size: 37px;	
 		
-	}
+	}*/
 	
 	.bokningstider p{
 		font-size: 25px;
