@@ -167,6 +167,13 @@ function skapatvattatable(){
 function skapabyggnadtable(){
 	document.getElementById("styling").href="css/tvatta.css"
 	document.getElementById("index").innerHTML=
+'<table class="overskrift" border="2">'+
+	'<tbody>'+
+	'<tr>'+
+		'<td><div class="dropdown_button" class="menu_button" onClick="show_navlokal()"><a>Meny</a></div></td>'+
+	'<tr>'+	
+	'</tbody>'+
+'</table>'+
 '<table id="byggnad" border="2">'+
 	'<tbody>'+
 	'</tbody>'+

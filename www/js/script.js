@@ -5,7 +5,7 @@ localStorage.anv=document.getElementById("username").value;
 localStorage.pass=document.getElementById("password").value;
 console.log("Den skickar inloggningen");
 hamta();
-//byggnad('tvatta/tvatta2.html');
+//byggnad('tvatta/byggnad.html');
 //loadtvatta('tvatta/tvatta2.html');
 }
 
@@ -74,8 +74,7 @@ console.log("Byggnad finns!")
 console.log('Bygger upp table för byggnad');					
 						var byggnadrow = byggnadtable.insertRow(-1);
 						var byggnadcell = byggnadrow.insertCell(-1);
-						byggnadcell.innerHTML = byggnadlank[d].innerHTML;
-console.log(byggnadlank[d].innerHTML);
+
 						if(byggnadlank[d].onmousedown != null){
 console.log('Kollar byggnad if-sats');					
 							byggnadcell.setAttribute("class", "byggnadnav");
