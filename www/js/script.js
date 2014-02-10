@@ -5,7 +5,7 @@ localStorage.anv=document.getElementById("username").value;
 localStorage.pass=document.getElementById("password").value;
 console.log("Den skickar inloggningen");
 hamta();
-//byggnad('tvatta/tvatta.html');
+//byggnad('tvatta/tvatta2.html');
 //loadtvatta('tvatta/tvatta2.html');
 }
 
@@ -353,6 +353,7 @@ console.log("1");
 function show_navnummer(){
 
     var menu = document.getElementById("navnummer");
+    console.log(menu);
     if(menu.style.display == 'table-row'){
         menu.style.display = 'none';
     }else {

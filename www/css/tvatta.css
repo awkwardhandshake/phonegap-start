@@ -21,21 +21,30 @@
 		content: none; }
 
 	#uppernav{
+		padding-top: 1%;
 		width: 100%;
 		height: 20%;
 		text-align: center;
 		display: table;
+		padding-bottom: 1%;
+		/*margin-bottom: 2%;*/
+		border-bottom: 2px solid #fff;
 		}
 		
 	#uppernav td{
 		width: 33%;
 		vertical-align: middle;
 		}			
+	.uppernavclass{
+		/*background-color: #000;*/
+		
+	}
 	
 	#navtvatta{
 		/*display: none;*/
 
 	}
+	
 	#navnummer{
 		/*display: none;*/
 	}
@@ -46,6 +55,7 @@
 		width: 100%;
 		height: 100%;
 		}
+		
 	#navtvatta td{
 		/*border: 2px solid white;*/
 		text-align: center;
@@ -61,6 +71,7 @@
 		width: 50%;
 		height: auto;
 	}
+	
 	#navtvatta a{
 		/*border-bottom: 2px solid #fff;
 		padding-bottom: 3px;*/
@@ -68,29 +79,40 @@
 	
 	.overskrift{
 		text-align: center;
+		padding-top: 2%;
+		padding-bottom: 2%;
 	}
+	
+	.overskrift a{
+		/*font-size: 10.0vw;*/
+	}
+	
 	
 	.lokalnav, .typlokal{
 		/*padding: 2%;*/
-		color: black;
+		/*color: black;*/
 	}
 
 	
 	.typlokallank{
 		border-top: 4px solid #252c47;
-		text-decoration: underline;	
+		
 	}
+	
 	.lokalnavlank{
-		text-decoration: underline;
+		
+		
 	}
-	.lokalnav{
-		/*border-left: 4px solid black;
-		border-right: 4px solid black;
-		border-top: 4px solid black;*/
+	
+	.lokalnav, .typlokal{
+		background-color: #FFF;
+		color: #252c47;
+		padding: 3%;
 	}
-	.lokalnav, .typlokal, .typlokallank{
-		background-color: gray;
-		padding: 1%;
+	
+	.typlokallank{
+		border: 2px solid #FFF;
+		padding: 3%;
 
 	}
 
@@ -104,15 +126,19 @@
 	}
 	
 	.lokalnavlank{
-		color: #000;
-		background-color: #fff;
+		color: #FFF;
+		border: 2px solid #FFF;
+		/*background-color: #fff;*/
 		/*display: none;*/
 	}
 	
 	#navtvatta a{
 		font-size: 15px;
 	}
-	
+
+	#tvatta{
+		padding-top: 6%;
+	}	
 	#tvatta table {
 		-webkit-animation-direction: normal;
 		animation-direction:alternate;
@@ -120,14 +146,17 @@
 		border-spacing: 0;
 		width: 100%;
 		height: 100%;
-		}
+
+	}
 	
 	.bokningsikoner{
 		padding: 2%;
 	}	
+	
 	.bokningsdatum p{
 		font-size: 60%;
 	}
+	
 	#tvatta td{
 		/*border: 2px solid white;*/
 		text-align: center;
@@ -135,26 +164,31 @@
 		width: auto;
 		height: auto;
 	}
+	
 	#tvatta a img{
 		width: 100%;
 		height: auto;
-
 	}
+	
 	#tvatta a{
 		font-size: 20px;
 		
 	}
+	
 	#byggnad td{
 		text-align: center;
-	}	
+	}
+		
 	table{
 		width: 100%;
 		height: 100%;
 	}
+	
 	.tvattaknapp{
 		font-size: 10px;
 		
 	}
+	
 	
 
 	/*td {
@@ -433,6 +467,7 @@ body {
 	width: 35%;
 	position: fixed;
 	}
+	
 	.bokningsdatum p{
 		font-size: 15px;
 	}

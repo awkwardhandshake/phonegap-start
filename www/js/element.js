@@ -66,17 +66,25 @@ function inputfields(){
 		document.getElementById("index").innerHTML=	
 		
 		'<div id="information" class="inforuta_hide">'+
-		'<div class="rutaett">'+
+
+'<table>'+
+
+'<tr><td class="rutatvatt">'+		
+
 		'<img src="img/door_button.png" class="scale-with-grid-start-information"></img>'+
-		'<br><br>'+
+'</td><td class="information-text-middle">'+
 		'Dörr öppningsknappen är tillför att ge ett komplement till hemma.sgsstudentbostader.se. Om ditt område är utrustat med öppning av entrédörren via hemma.sgsstudentbostader.se gör Dörr-knappen samma sak.'+
-		'</div>'+
-		'<div class="rutatva">'+
+'</td></tr>'+
+
+'<tr><td class="rutatvatt">'+
+
 		'<img src="img/cal_button.png" class="scale-with-grid-start-information"></img>'+
-		'<br><br><br>'+
-		'<a>Kalenderikonen tar dig till bokningen för bland annat tvättstuga och sällskapsrum. Du kommer behöva använda ditt inlogg som du använder på www.sgsstudentbostader.se för att logga in.</a>'+	
-		'</div>'+
-		'</div>'+
+'</td><td class="information-text-middle">'+
+		'Kalenderikonen tar dig till bokningen för bland annat tvättstuga och sällskapsrum. Du kommer behöva använda ditt inlogg som du använder på www.sgsstudentbostader.se för att logga in.'+	
+'</td></tr>'+
+
+'</table>'+
+'</div>'+
 		
 		'<div id="form_div" class="formar">'+
 		'<form id="log">'+ 
@@ -131,7 +139,7 @@ function skapatvattatable(){
 '<table class="overskrift" border="2">'+
 	'<tbody>'+
 	'<tr>'+
-		'<td><div class="dropdown_button" class="menu_button" onClick="show_navlokal()">Lokaler</div></td>'+
+		'<td><div class="dropdown_button" class="menu_button" onClick="show_navlokal()"><a>Meny</a></div></td>'+
 	'<tr>'+	
 	'</tbody>'+
 '</table>'+

@@ -58,7 +58,7 @@
 	background-color: #252c47;
 	padding: 3%;
 	border-radius: 50px;
-	font-size: 1.5vw;
+	font-size: 2.2vw;
 	-webkit-animation:myfirst 0.5s; /* Safari and Chrome */
 	
 }
@@ -90,7 +90,7 @@
 
 
 img.scale-with-grid-start-information{
-		max-width: 20%;
+		max-width: 100%;
 		height: auto;
 		float: left; 
 	}
