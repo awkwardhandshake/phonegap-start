@@ -104,7 +104,7 @@ var typlokalriktig;
 var lankartvattariktig;
 //Vi laddar in hela tvatta.sgsstudentbostader.se
 function loadtvatta(urlfranlankar){
-//historia('loadtvatta()',urlfranlankar);
+historia('loadtvatta()');
 //console.log("Går in i tvätta funktionen");
 	skapatvattatable(); 	
 	var tvattaimg;
