@@ -4,89 +4,88 @@ var namnan = 0;
 var sesam;
 var sesamkommaihag;
 function historia(nufunktion, nuadress){	
-if(nuadress != undefined){
+console.log("Nuadressen " + nuadress);
+if(nuadress === 'element'){
+	kommaihag = kommaihag.slice(0,0);
+}
+if(nuadress != undefined && nuadress !== "element"){
 var kontrollnufunktion = String(nufunktion).split(')')[0]  + '"' + nuadress +'");';
 }
 else{
-	kontrollnufunktion = nufunktion;
-	
+	kontrollnufunktion = nufunktion;	
 }
+
+
 	
-if(kommaihag.indexOf(kontrollnufunktion) != -1){
+if(kommaihag.indexOf(kontrollnufunktion) > 0){
 console.log('=============================================================================');
 	var position = kommaihag.indexOf(kontrollnufunktion);
 	sesamkommaihag = kommaihag[position];
-	kommaihag = kommaihag.slice(0,position);
-//console.log("Längden på array INNAN " + kommaihag.length);	
-//console.log("Nummer INNAN ändring i IF-sats " + namnan);
+	kommaihag = kommaihag.slice(0,(position+1));
+
 console.log(kommaihag);
-console.log("Positionsnummer " + position);	
+
 	namnan = (kommaihag.length -1)
 	if(namnan < 0){
 		namnan = 0;
-	}
-console.log("Nummer efter ändring i IF-sats " + namnan);
-console.log("Längden på array EFTER " + kommaihag.length);	
+	}	
 	var navigering = document.getElementById('navigering')
-	var navigeringkul = navigering.setAttribute('onmousedown', kommaihag[(kommaihag.length - 1)]);
+	var navigeringkul = navigering.setAttribute('onmousedown', kommaihag[(kommaihag.length - 2)]);
 	navigering.setAttribute("class", "Nu har if-satsen ändrat");
-//	var backbutton = document.getElementById('backscript');
-//	backbutton.innerHTML =
-//	'<script type="text/javascript">'+
-//	'function onLoad() {'+
-//'console.log("Går in i onLoad Historia");'+
-//'document.addEventListener("deviceready", onDeviceReady, false);'+
-//        '}'+
-//    'function onDeviceReady() {'+
-//    'console.log("Går in i DeviceReady Historia");'+
-//'document.addEventListener("backbutton", function() {'+kommaihag[kommaihag.length-1]+'}, false);'+
-//'};'+
-//'<script>';
-	sesam = 1;
-	console.log(sesam);
+
+	sesam = true;
+	console.log("Sesam i if-satsen " + sesam);
 	position = 0;
-	onLoad();
+
+//	onLoad();
 console.log('=============================================================================');
 }
 
 else{
 console.log('-------------------------------------------------------------------------------');
-if(sesam === 1){
-	kommaihag[kommaihag.length] = sesamkommaihag;
-	console.log("Sesam öppnar sig");
-}
+console.log("Sesam i else-satsen TOPPEN " + sesam);
+console.log("Finns denna redan? TOPPEN " + kontrollnufunktion +" = "+ sesamkommaihag);
+//if((kommaihag.indexOf(sesamkommaihag) < 0 && sesam == true)){
+	
 
+//	if(kontrollnufunktion != sesamkommaihag && sesam == true){
+//	kommaihag[kommaihag.length] = sesamkommaihag +"Denna kommer från sesam";
+//	var nyttnummer = kommaihag.length
+//	kommaihag[nyttnummer] = kontrollnufunktion;
+//	console.log('Lägga den dubbelt i IF-satsen???');
+//	console.log(kommaihag);
+//	console.log(kommaihag.indexOf(sesamkommaihag));
+//	console.log(sesam);
+//}
+//Lägger på dubbelt i onödan	
+//}
+
+//else{
 var nyttnummer = kommaihag.length
 	kommaihag[nyttnummer] = kontrollnufunktion;
-//console.log(nyttnummer);
+	
+
 
 console.log(kommaihag);
 	namnan++;
 		
 	var back = document.getElementById('testar');
-//console.log(back);
-//console.log(back.childNodes[1].childNodes[0].data)
-//back.setAttribute("Kul", "Detta");
-//document.addEventListener("backbutton", kommaihag[kommaihag.length-2], false);
-//	var backbuttonelse = document.getElementById('backscript');
-//	backbuttonelse.innerHTML =
-//	'<script type="text/javascript">'+
-//	'function onLoad() {'+
-//'console.log("Går in i onLoad Historia");'+
-//'document.addEventListener("deviceready", onDeviceReady, false);'+
-//'}'+
-//'function onDeviceReady() {'+
-//'console.log("Går in i DeviceReady Historia");'+
-//'document.addEventListener("backbutton", function() {'+kommaihag[kommaihag.length-2]+'}, false);'+
-//'};'+
-//'<script>';
+
+	//var navigering = document.getElementById('navigering')
+	//var navigeringkul = navigering.setAttribute('onmousedown', kommaihag[(kommaihag.length-2)]);
+	//navigering.setAttribute("class", "null")
+	console.log("Sesam i else-satsen BOTTEN " + sesam);
+	console.log("Finns denna redan? BOTTEN " + kommaihag.indexOf(sesamkommaihag));
+	sesam = false;
+
+//onLoad();
+console.log('-------------------------------------------------------------------------------');
+
+//}
+//Var skall denna ligga för bästa effekt???
 	var navigering = document.getElementById('navigering')
 	var navigeringkul = navigering.setAttribute('onmousedown', kommaihag[(kommaihag.length-2)]);
 	navigering.setAttribute("class", "null")
-sesam = 0;	
-onLoad();
-console.log('-------------------------------------------------------------------------------');
 
 }
-
-}	
+}

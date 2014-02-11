@@ -171,13 +171,13 @@ historia('loadtvatta()');
 				if(typlokal.length != 0){
 				var typlokaltext;
 				var typrakna = 0;
-				console.log(recordposition);
+				//console.log(recordposition);
 					var u = 0;						
 					for(var t = 0; t < typlokal.length; t++){					
 						var typrow = navtable.insertRow(-1);
 						for(var u = 0; u < recordposition; u++){
 						typrow.insertCell(-1);
-						console.log('Går in i recordposition');
+						//console.log('Går in i recordposition');
 						}
 						
 						typrow.setAttribute("id", "navnummer")

@@ -510,7 +510,46 @@ body {
 	width: 30%;
 	position: fixed;
 	
-}	
+}
+
+	.textboxA
+	{
+		
+		top: 15%;
+		position: absolute;
+		height: 12.5%;
+		width: 70%;
+		margin-left: 15%;
+	}
+	.textboxL
+	{
+
+		top: 32.5%;
+		position: absolute;
+		height: 12.5%;
+		width: 70%;
+		margin-left: 15%;
+	}
+	
+		.submitknapp{
+		position: relative;
+		text-align: center;
+		float: right;
+		background: #aaa;
+		border: 0px;
+		color: #fff;
+	}
+	
+	#submitposition{
+		position: absolute;
+		top: 55%;
+		width: 85%;
+		margin-right: 15%;
+	}
+
+
+
+
 /* screen mellan 240 - 320px */
 @media only screen and (min-width: 240px) and (max-width: 320px) {	
 	
@@ -536,16 +575,18 @@ body {
 	{
 		
 		font-size: 16px;
-		top: 30%;
+		top: 15%;
 		position: absolute;
 		height: 10%;
 		width: 70%;
 		margin-left: 15%;
+
 	}
+
 	.textboxL
 	{
 		font-size: 16px;
-		top: 47.5%;
+		top: 30%;
 		position: absolute;
 		height: 10%;
 		width: 70%;
@@ -560,6 +601,12 @@ body {
 		background: #aaa;
 		border: 0px;
 		color: #fff;
+	}
+	#submitposition{
+		position: absolute;
+		top: 45%;
+		width: 85%;
+		margin-right: 15%;
 	}
 	
 }
@@ -583,30 +630,33 @@ body {
 	{
 		
 		font-size: 24px;
-		top: 30%;
+/*		top: 30%;
 		position: absolute;
 		height: 12.5%;
 		width: 70%;
 		margin-left: 15%;
+*/
 	}
 	.textboxL
 	{
 		font-size: 24px;
-		top: 47.5%;
+/*		top: 47.5%;
 		position: absolute;
 		height: 12.5%;
 		width: 70%;
 		margin-left: 15%;
+*/
 	}
 	
 		.submitknapp{
 		font-size: 24px;
-		position: relative;
+/*		position: relative;
 		text-align: center;
 		float: right;
 		background: #aaa;
 		border: 0px;
 		color: #fff;
+*/
 	}
 }
 	
@@ -621,30 +671,33 @@ body {
 	{
 		
 		font-size: 30px;
-		top: 30%;
+/*		top: 30%;
 		position: absolute;
 		height: 12.5%;
 		width: 70%;
 		margin-left: 15%;
+*/
 	}
 	.textboxL
 	{
 		font-size: 30px;
-		top: 47.5%;
+/*		top: 47.5%;
 		position: absolute;
 		height: 12.5%;
 		width: 70%;
 		margin-left: 15%;
+*/
 	}
 	
 		.submitknapp{
 		font-size: 30px;
-		position: relative;
+/*		position: relative;
 		text-align: center;
 		float: right;
 		background: #aaa;
 		border: 0px;
 		color: #fff;
+*/
 	}
 }	
 
@@ -659,30 +712,33 @@ body {
 	{
 		
 		font-size: 60px;
-		top: 30%;
+/*		top: 30%;
 		position: absolute;
 		height: 12.5%;
 		width: 70%;
 		margin-left: 15%;
+*/
 	}
 	.textboxL
 	{
 		font-size: 60px;
-		top: 47.5%;
+/*		top: 47.5%;
 		position: absolute;
 		height: 12.5%;
 		width: 70%;
 		margin-left: 15%;
+*/
 	}
 	
 		.submitknapp{
 		font-size: 60px;
-		position: relative;
+/*		position: relative;
 		text-align: center;
 		float: right;
 		background: #aaa;
 		border: 0px;
 		color: #fff;
+*/
 	}
 }		
 
@@ -697,30 +753,33 @@ body {
 	{
 		
 		font-size: 70px;
-		top: 30%;
+/*		top: 30%;
 		position: absolute;
 		height: 12.5%;
 		width: 70%;
 		margin-left: 15%;
+*/
 	}
 	.textboxL
 	{
 		font-size: 70px;
-		top: 47.5%;
+/*		top: 47.5%;
 		position: absolute;
 		height: 12.5%;
 		width: 70%;
 		margin-left: 15%;
+*/
 	}
 	
 		.submitknapp{
 		font-size: 70px;
-		position: relative;
+/*		position: relative;
 		text-align: center;
 		float: right;
 		background: #aaa;
 		border: 0px;
 		color: #fff;
+*/
 	}
 }	
 	
@@ -736,41 +795,38 @@ body {
 	{
 		
 		font-size: 90px;
-		top: 30%;
+/*		top: 30%;
 		position: absolute;
 		height: 12.5%;
 		width: 70%;
 		margin-left: 15%;
+*/
 	}
 	.textboxL
 	{
 		font-size: 90px;
-		top: 47.5%;
+/*		top: 47.5%;
 		position: absolute;
 		height: 12.5%;
 		width: 70%;
 		margin-left: 15%;
+*/
 	}
 	
 	.submitknapp{
 		font-size: 90px;
-		position: relative;
+/*		position: relative;
 		text-align: center;
 		float: right;
 		background: #aaa;
 		border: 0px;
 		color: #fff;
 		padding: 5px; 
-		
+*/		
 	}
 }
 
-	#submitposition{
-		position: absolute;
-		top: 65%;
-		width: 85%;
-		margin-right: 15%;
-	}
+	
 
 
 
@@ -915,5 +971,34 @@ body {
 	.half-bottom { margin-bottom: 10px !important; }
 	.add-bottom { margin-bottom: 20px !important; }
 
+/*
+Gamal värden 11feb 1429
+	.textboxA
+	{
+		
+		top: 30%;
+		position: absolute;
+		height: 12.5%;
+		width: 70%;
+		margin-left: 15%;
+	}
+	.textboxL
+	{
 
+		top: 47.5%;
+		position: absolute;
+		height: 12.5%;
+		width: 70%;
+		margin-left: 15%;
+	}
+	
+		.submitknapp{
+		position: relative;
+		text-align: center;
+		float: right;
+		background: #aaa;
+		border: 0px;
+		color: #fff;
+	}
 
+*/

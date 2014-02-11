@@ -1,10 +1,12 @@
 
 // ==================================================================================================================
 function startsida(){
+element = 'element';
 	var uppernav = document.getElementById('uppernav');
 	uppernav.style.display = 'none'
 	document.getElementById("styling").href="css/index.css"
 	document.getElementById("index").innerHTML=
+	'<button onmousedown="loadtvatta()">Trycka vidare</button>'+
 	'<div id="information" class="inforuta_hide">'+
 		'<div class="rutaett">'+
 		'<img src="img/door_button.png" class="scale-with-grid-information"></img>'+
@@ -50,7 +52,8 @@ function startsida(){
             '</form><div class="doorControlStatus"></div>'+
 '</div>'+	
 '</div>'
-historia('startsida()');
+
+historia("startsida()", element);
 // ==================================================================================================================	
 };
 
@@ -62,6 +65,7 @@ function popup(){
 // ==================================================================================================================
 function inputfields(){
 		var uppernav = document.getElementById('uppernav');
+		document.getElementById("styling").href="css/index.css"
 		uppernav.style.display = 'table'
 		document.getElementById("index").innerHTML=	
 		
@@ -90,7 +94,9 @@ function inputfields(){
 		'<form id="log">'+ 
 		'<input type="text" id="username" placeholder="Användarnamn" class="textboxA"><br>'+
 		'<input type="password" id="password" placeholder="Lösenord" class="textboxL"><br>'+
+		'<div id="submitposition">'+
 		'<input type="button" class="submitknapp" name="submit" onclick="getFormData();" value="Logga in"></input>'+
+		'</div>'+
 		'</form>'+
 		'</div>'
 
@@ -139,7 +145,7 @@ function skapatvattatable(){
 '<table class="overskrift" border="2">'+
 	'<tbody>'+
 	'<tr>'+
-		'<td><div class="dropdown_button" class="menu_button" onClick="show_navlokal()"><a>Meny</a></div></td>'+
+		'<td><div class="dropdown_button" class="menu_button" onClick="loadtvatta()"><a>Meny</a></div></td>'+
 	'<tr>'+	
 	'</tbody>'+
 '</table>'+
@@ -167,6 +173,7 @@ function skapatvattatable(){
 function skapabyggnadtable(){
 	document.getElementById("styling").href="css/tvatta.css"
 	document.getElementById("index").innerHTML=
+'<button onmousedown="loadtvatta()">Trycka vidare</button>'+	
 '<table class="overskrift" border="2">'+
 	'<tbody>'+
 	'<tr>'+
