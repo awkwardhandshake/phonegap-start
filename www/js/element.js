@@ -29,7 +29,7 @@ element = 'element';
 	
 		'<div class="eight columns center">'+
 			
-			'<button onmousedown="hamtahemma("http://hemma.sgsstudentbostader.se/DoorControl/Fullscreen")" class="doorbutton">'+
+			'<button onmousedown="hamtahemma()" class="doorbutton">'+
 				'<img class="scale-with-grid" src="img/door_button.png" />'+					
 			'</button>'+
 				  	

@@ -54,7 +54,6 @@ function hiddenbrowser(){
 }
 //Byggnads väljare
 function byggnad(urlfranlankarbyggnad){
-historia("byggnad()", urlfranlankarbyggnad);
 console.log("Går in i byggnad funktionen");
 	skapabyggnadtable();
 	$.ajax({
@@ -66,6 +65,7 @@ console.log("Går in i byggnad funktionen");
 				var delabyggnadlank;
 				indifiera = $(data).find("#lblShowFirstAvailable");
 				if(indifiera.length != 0){
+historia("byggnad()", urlfranlankarbyggnad);				
 console.log("Byggnad finns!")
 					byggnadlank = $(data).find("td .headerColor");
 					var d = 0;
@@ -309,9 +309,9 @@ function bokatid(tiden,nuvarandebokning){
 
 //hemma.sgsstudentbostader.se
 
-function hamtahemma(hemmaurl){ 
+function hamtahemma(){ 
 	$.ajax({
-			url: hemmaurl,
+			url: 'http://hemma.sgsstudentbostader.se/DoorControl/Fullscreen',
 			success: function(varde) {
 			var buttonvalue;
 			var buttonname;
