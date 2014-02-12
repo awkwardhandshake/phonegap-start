@@ -1,5 +1,10 @@
-
+#loading{
+	top: 50%;
+	position: fixed;
+	margin-left: 30%;
+}
 #ballsWaveG{
+top: 50%;
 position:relative;
 width:128px;
 height:30px}
@@ -164,8 +169,8 @@ background-color:#252c47;
 
 }
 
-
-							<div id="ballsWaveG">
+<span id="loading" style='display:none;'>
+<div id="ballsWaveG">
 <div id="ballsWaveG_1" class="ballsWaveG">
 </div>
 <div id="ballsWaveG_2" class="ballsWaveG">
@@ -183,4 +188,4 @@ background-color:#252c47;
 <div id="ballsWaveG_8" class="ballsWaveG">
 </div>
 </div>
-
+</span>

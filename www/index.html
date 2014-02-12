@@ -37,6 +37,31 @@ console.log('Går in i DeviceReady');
 <td id="infoclick" onclick="info_animation()"><img src="img/button_info.png" class="scale-with-grid-logo-small"></img</td>
 </tr>
 </table>
+
+<span id="loading" style='display:none;'>
+<div id="ballsWaveG">
+<div id="ballsWaveG_1" class="ballsWaveG">
+</div>
+<div id="ballsWaveG_2" class="ballsWaveG">
+</div>
+<div id="ballsWaveG_3" class="ballsWaveG">
+</div>
+<div id="ballsWaveG_4" class="ballsWaveG">
+</div>
+<div id="ballsWaveG_5" class="ballsWaveG">
+</div>
+<div id="ballsWaveG_6" class="ballsWaveG">
+</div>
+<div id="ballsWaveG_7" class="ballsWaveG">
+</div>
+<div id="ballsWaveG_8" class="ballsWaveG">
+</div>
+</div>
+</span>	
+
+
+
+
 <div id="index">
 <div class="logo">
 <img id="topploga" class="scale-with-grid-logo" src="img/sgs_logo_width_512.png">
@@ -70,7 +95,7 @@ console.log('Går in i DeviceReady');
 
 
 	
-	
+
 <div id="doorcontrolcontent">
             <form action="/DoorControl/PerformUnlock" method="post" ><ul>
                   <li><button type="submit" name="epName" value="varde" id="hemmadorren">varde</button></li>

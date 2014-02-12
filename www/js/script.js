@@ -241,11 +241,18 @@ function bokatid(tiden,nuvarandebokning){
 	console.log("Går in i funktionen bokatid");
 	 var ref = window.open(tiden, '_blank', 'hidden=yes');
 //console.log('bokar pass i hidden=yes');
+		 
+		 ref.addEventListener('loadstart', function(event2){
+			console.log('Loadstart v.1');
+			var loading = document.getElementById('loading');
+			loading.style.display = 'inline';
+		 })
+		 
 		 ref.addEventListener('loadstop', function(event) {
-		 	console.log('Nu bokar/avbokar vi v.1');
-		 	//console.log(event[0]);
-		 	console.log(event.url);
-			alert('Pass bokat'); 
+		 	console.log('Loadstop v.1');
+		 	var loading2 = document.getElementById('loading');
+			loading2.style.display = 'none';
+		 	//console.log(event.url);
 			loadtvatta(nuvarandebokning);
 //console.log("Passet är bokat");
 	
