@@ -244,13 +244,13 @@ function bokatid(tiden,nuvarandebokning){
 		 
 		 ref.addEventListener('loadstart', function(event2){
 			console.log('Loadstart v.1.1');
-			document.getElementById('loading').innerHTML = '<img src="img/spinner.gif" class="spinner">';
+			document.getElementById('loading').innerHTML = '<div id="loaderImage"></div>';
 		 })
 		 
 		 ref.addEventListener('loadstop', function(event) {
 		 	console.log('Loadstop v.1.1');
-		 	var loading2 = document.getElementById('loading');
-			loading2.style.display = 'none';
+		 	//var loading2 = document.getElementById('loading');
+			//loading2.style.display = 'none';
 		 	//console.log(event.url);
 			loadtvatta(nuvarandebokning);
 //console.log("Passet är bokat");
@@ -261,7 +261,7 @@ function bokatid(tiden,nuvarandebokning){
 }
 
 function show(){
-	document.getElementById('loading').innerHTML = '<img src="img/spinner.gif" class="spinner">';
+	document.getElementById('loading').innerHTML = '<div id="loaderImage"></div>';
 }
 
 
