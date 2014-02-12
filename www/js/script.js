@@ -234,7 +234,7 @@ historia('loadtvatta()');
 							
 			}
 			})
-			loadtvattaklar();
+			window.onload = function () {loadtvattaklar()}
 			}
 			
 //alt med hidden InAppBrowser
