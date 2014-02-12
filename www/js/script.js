@@ -261,6 +261,10 @@ function bokatid(tiden,nuvarandebokning){
 
 }
 
+function show(){
+	var loading = document.getElementById('loading');
+	loading.style.display = 'inline';
+}
 
 
 
