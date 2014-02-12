@@ -244,7 +244,7 @@ function bokatid(tiden,nuvarandebokning){
 		 ref.addEventListener('loadstop', function(event) {
 		 	console.log('Nu bokar/avbokar vi');
 		 	console.log(event[0]);
-		 	console.log(event[0].url);
+		 	//console.log(event[0].url);
 			alert('Pass bokat'); 
 			loadtvatta(nuvarandebokning);
 //console.log("Passet är bokat");
