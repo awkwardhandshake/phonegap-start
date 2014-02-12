@@ -253,12 +253,13 @@ function bokatid(tiden,nuvarandebokning){
 		 	//var loading2 = document.getElementById('loading');
 			//loading2.style.display = 'none';
 		 	//console.log(event.url);
+		 	})
 		 ref.addEventListener('exit', function(event3){
 			 console.log('Exit kanske fungerar bättre?');
-		 }
+		 })
 	
-})
-			loadtvatta(nuvarandebokning);
+
+loadtvatta(nuvarandebokning);
 }
 
 function show(){
