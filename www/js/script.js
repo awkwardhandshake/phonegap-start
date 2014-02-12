@@ -242,8 +242,9 @@ function bokatid(tiden,nuvarandebokning){
 	 var ref = window.open(tiden, '_blank', 'hidden=yes');
 //console.log('bokar pass i hidden=yes');
 		 ref.addEventListener('loadstop', function(event) {
-			 alert('Pass bokat'); 
-			 loadtvatta(nuvarandebokning);
+		 	console.log(event);
+			alert('Pass bokat'); 
+			loadtvatta(nuvarandebokning);
 //console.log("Passet är bokat");
 	
 	
@@ -267,8 +268,11 @@ function hamtahemma(){
 							document.getElementById('hemmadorren').value = buttonvalue;
 							document.getElementById('hemmadorren').innerHTML = buttonname[0].innerHTML
 							setTimeout(oppnadorr,500);								
+			},
+			error: function(varde2){
+			
+					hemmafel();
 			}
-
 			});
 
 			}
@@ -286,8 +290,19 @@ console.log("1");
 		data: "epName=" + encodeURI(sendform.value),
 		charset: 'UTF-8',
 		success: function(data){
+			var vilkenhemma = $(data).find('.doorControlEntryPath');
+			vilkenhemma = vilkenhemma[0].innerHTML;
+			console.log(vilkenhemma);
+			
+			var meddelandehemma = $(data).find('.doorControlMessage');
+			meddelandehemma = meddelandehemma[0].innerHTML;
+			
+			hemmavilken(vilkenhemma,meddelandehemma);
+			console.log(meddelandehemma[0].innerHTML);
+			
+			
 			console.log(data);
-			alert(data);
+			
 		}
 
 		

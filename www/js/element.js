@@ -6,7 +6,6 @@ element = 'element';
 	uppernav.style.display = 'none'
 	document.getElementById("styling").href="css/index.css"
 	document.getElementById("index").innerHTML=
-	'<button onmousedown="loadtvatta()">Trycka vidare</button>'+
 	'<div id="information" class="inforuta_hide">'+
 		'<div class="rutaett">'+
 		'<img src="img/door_button.png" class="scale-with-grid-information"></img>'+
@@ -72,9 +71,7 @@ function inputfields(){
 		'<div id="information" class="inforuta_hide">'+
 
 '<table>'+
-
 '<tr><td class="rutatvatt">'+		
-
 		'<img src="img/door_button.png" class="scale-with-grid-start-information"></img>'+
 '</td><td class="information-text-middle">'+
 		'Dörr öppningsknappen är tillför att ge ett komplement till hemma.sgsstudentbostader.se. Om ditt område är utrustat med öppning av entrédörren via hemma.sgsstudentbostader.se gör Dörr-knappen samma sak.'+
@@ -98,8 +95,9 @@ function inputfields(){
 		'<input type="button" class="submitknapp" name="submit" onclick="getFormData();" value="Logga in"></input>'+
 		'</div>'+
 		'</form>'+
+		'<span id="felvidinlogg" class="felinlogg">'+
+		'<span>'+
 		'</div>'
-
 historia('inputfields()');
 		};
 

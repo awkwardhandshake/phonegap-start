@@ -36,7 +36,14 @@ function hamta() {
 			console.log(newsItem + " = " + localStorage[newsItem])
 			
 		});
+		
+		if(localStorage.ReturnCode == 'NOMATCH'){
+			inloggningfel();
+		}
+		else{
+		
 	  loggain()
+	  }
 	  });
 	  
 };		  

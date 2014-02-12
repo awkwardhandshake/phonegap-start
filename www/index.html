@@ -8,6 +8,7 @@
 		<script src="jquery-1.4.2.min.js" type="text/javascript"></script>
 		<link rel="stylesheet" id="styling" type="text/css" href="css/index.css" />
 		<link rel="stylesheet" type="text/css" href="css/animationer.css" />
+		<link rel="stylesheet" type="text/css" href="css/loading.css" />
 		<script type="text/javascript" src="js/lankar.js"></script>
 		<title>SGS Studentbostäder - Hemma</title>
 <script type="text/javascript">
@@ -25,6 +26,8 @@ console.log('Går in i DeviceReady');
 <body onload="onLoad()">
 <span id="bakgrundinformation" class="bakgrundinformation_hide">
 </span>
+
+<button onmousedown="loggaut()">Logga ut</button>
 <table id="uppernav" class="uppernavclass">
 <tr>
 <td id="navigering" onmousedown="varde"><img src="img/button_tillbaka.png" class="scale-with-grid-logo-small"></img></td>
@@ -34,11 +37,7 @@ console.log('Går in i DeviceReady');
 <td id="infoclick" onclick="info_animation()"><img src="img/button_info.png" class="scale-with-grid-logo-small"></img</td>
 </tr>
 </table>
-<button onmousedown="loggaut()"><a>Det är dags att logga ut</a></button>
-	
-
 <div id="index">
-
 <div class="logo">
 <img id="topploga" class="scale-with-grid-logo" src="img/sgs_logo_width_512.png">
 </div>
@@ -47,12 +46,16 @@ console.log('Går in i DeviceReady');
 	
 		<div class="eight columns center">
 			
+			
 			<button onmousedown="hamtahemma('http://hemma.sgsstudentbostader.se/DoorControl/Fullscreen')" class="doorbutton">
-				<img class="scale-with-grid" src="img/door_button.png" />					
+
+				<img class="scale-with-grid" src="img/door_button.png" />
+								
 			</button>
-				  	
+			<span id="meddelande">
 			<p><strong>Öppna entrédörr</strong></p>
-			<p><small>(Open entrance door)</small></p>		 
+			<p><small>(Open entrance door)</small></p>
+			</span>		 
 		</div>
 		
 		<div class="eight columns center">
@@ -64,7 +67,8 @@ console.log('Går in i DeviceReady');
 		</div>
 	</div>
 
-	
+
+
 	
 	
 <div id="doorcontrolcontent">
@@ -81,6 +85,7 @@ console.log('Går in i DeviceReady');
 		<script type="text/javascript" src="js/historik.js"></script>
 		<script type="text/javascript" src="js/animation.js"></script>
 		<script type="text/javascript" src="js/inloggning.js"></script>
+		<script type="text/javascript" src="js/felmeddelande.js"></script>
 		
 		<script type="text/javascript">
 			app.initialize();
