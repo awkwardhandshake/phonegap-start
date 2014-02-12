@@ -20,7 +20,7 @@ function getFormData(){
 localStorage.anv=document.getElementById("username").value;
 localStorage.pass=document.getElementById("password").value;
 console.log("Den skickar inloggningen");
-//hamta();
+hamta();
 //byggnad('tvatta/byggnad.html');
 //loadtvatta('tvatta/tvatta2.html');
 }
