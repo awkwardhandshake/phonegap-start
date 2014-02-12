@@ -38,7 +38,7 @@ element = 'element';
 		'</div>'+
 		
 		'<div class="eight columns center">'+
-			'<button onclick="inputfields();">'+
+			'<button onclick="kollainlogg()">'+
 			'<img class="scale-with-grid" src="img/cal_button.png" />'+
 			'</button>'+
 			'<p><strong>Boka</strong></p>'+

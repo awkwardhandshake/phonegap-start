@@ -1,11 +1,13 @@
 //Kolla om inlogg redan existrerar
 function kollainlogg(){
-	if(localstorage.anv != null && localStorage.pass != null){
+	if(localStorage.LoggedIn == 'true'){
 		hamta();
 		console.log('Det verkar finnas en användare');
+		console.log("Detta är användaren" + localStorage.LoggedIn);
 	}
 	else{
 		inputfields();
+		console.log('Detta är användaren i else ' + localStorage.LoggedIn);
 	}
 }
 
@@ -31,7 +33,7 @@ function hamta() {
 		{
 		localStorage[newsItem]=news
 			//$("#newsfeed").append(newsItem + "=" + news + "<br />");
-			console.log("Detta lagras för tillfället " + localStorage[newsItem])
+			console.log(newsItem + " = " + localStorage[newsItem])
 			
 		});
 	  loggain()
@@ -72,7 +74,7 @@ function loggaut(){
 	console.log("Loggar ut momentum " + loggautmomentum);
 	console.log("Loggar ut marknad " + loggautmarknad);
 	
-	loggautmomentum.addEventListener('loadstop' function(momentumevent){
+	loggautmomentum.addEventListener('loadstop', function(momentumevent){
 		console.log('Den har laddat klart logga ut momentum');
 		console.log(momentumevent);
 	})
@@ -82,10 +84,8 @@ function loggaut(){
 		console.log(marknadevent);
 	})
 	console.log('Sätter anv och pass till null');
-	localStorage.anv = null;
-	localStorage.pass = null;
-	console.log(localStorage.anv);
-	console.log(localStorage.user);
+	localStorage.LoggedIn = 'false';
+	console.log(localStorage.LoggedIn);
 	navigator.app.exitApp() ;
 }
 
