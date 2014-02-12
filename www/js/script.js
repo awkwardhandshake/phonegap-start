@@ -234,6 +234,7 @@ historia('loadtvatta()');
 							
 			}
 			})
+			loadtvattaklar();
 			}
 			
 //alt med hidden InAppBrowser
@@ -344,4 +345,11 @@ function show_navlokal(){
     }else {
         menu.style.display = 'table';                    
     }
-}  
+} 
+
+
+function loadtvattaklar(){
+	console.log('laddat klart');
+	var spinnerevent = document.getElementById('loading');
+			spinnerevent.style.display = 'none';
+}
