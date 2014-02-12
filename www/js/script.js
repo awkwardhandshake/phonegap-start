@@ -244,8 +244,7 @@ function bokatid(tiden,nuvarandebokning){
 		 
 		 ref.addEventListener('loadstart', function(event2){
 			console.log('Loadstart v.1.1');
-			var loading = document.getElementById('loading');
-			loading.style.display = 'inline';
+			document.getElementById('loading').innerHTML = '<img src="img/spinner.gif" class="spinner">';
 		 })
 		 
 		 ref.addEventListener('loadstop', function(event) {
@@ -262,8 +261,7 @@ function bokatid(tiden,nuvarandebokning){
 }
 
 function show(){
-	var loading = document.getElementById('loading');
-	loading.style.display = 'inline';
+	document.getElementById('loading').innerHTML = '<img src="img/spinner.gif" class="spinner">';
 }
 
 
