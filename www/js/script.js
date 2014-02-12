@@ -253,10 +253,10 @@ function bokatid(tiden,nuvarandebokning){
 		 	//var loading2 = document.getElementById('loading');
 			//loading2.style.display = 'none';
 		 	//console.log(event.url);
-			loadtvatta(nuvarandebokning);
+
 	
 })
-
+			loadtvatta(nuvarandebokning);
 }
 
 function show(){
