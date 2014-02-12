@@ -234,14 +234,13 @@ historia('loadtvatta()');
 							
 			}
 			})
-
+loadtvattaklar();
 			}
 			
 //alt med hidden InAppBrowser
 function bokatid(tiden,nuvarandebokning){
 	console.log("Går in i funktionen bokatid");
 	 var ref = window.open(tiden, '_blank', 'hidden=yes');
-//console.log('bokar pass i hidden=yes');
 		 
 		 ref.addEventListener('loadstart', function(event2){
 			console.log('Loadstart v.1.2');
@@ -255,8 +254,6 @@ function bokatid(tiden,nuvarandebokning){
 			//loading2.style.display = 'none';
 		 	//console.log(event.url);
 			loadtvatta(nuvarandebokning);
-//console.log("Passet är bokat");
-	
 	
 })
 
