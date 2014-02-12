@@ -104,7 +104,7 @@ historia('inputfields()');
 // ==================================================================================================================		
 
 function skapatvattatable(){
-	document.getElementById("styling").href="css/tvatta.css"
+	document.getElementById("styling").href= "css/tvatta.css";
 	document.getElementById("index").innerHTML=
 	
 '<div id="information" class="inforuta_hide">'+
@@ -162,6 +162,10 @@ function skapatvattatable(){
 	'<tbody>'+
 	'</tbody>'+
 '</table>'
+window.onload = function () {
+		console.log('Nu skall hela sidan vara klar');
+		loadtvattaklar()
+		}
 }
 
 // ==================================================================================================================

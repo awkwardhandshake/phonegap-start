@@ -2,7 +2,6 @@
 function kollainlogg(){
 	if(localStorage.LoggedIn == 'true'){
 		hamta();
-		//loadtvatta('http://www.sgsstudentbostader.se/ext_gw.aspx?module=wwwash&lang=se#lblPanelName');
 		console.log('Det verkar finnas en användare');
 		console.log("Detta är användaren" + localStorage.LoggedIn);
 	}
@@ -51,7 +50,6 @@ function hamta() {
 
 //logga in	   
 function loggain(){
-//localStorage.removeItem(localStorage.urlen);
 var str1="_=1366895108402&customer_name=" + localStorage.SGS_CustomerName + "&customerid=" + localStorage.UserName + "&isresident=" + localStorage.SGS_LivesAtSgs + "&loggedin=" + localStorage.LoggedIn + "&token=" + localStorage.SecurityTokenId + "&tvattstuga=" + localStorage.SGS_Laundry;
 localStorage.urlen="http://www.sgsstudentbostader.se/Assets/Handlers/Momentum.ashx?" + str1;
 console.log("Logga in delen, nuvarande sgs.se URL  " + localStorage.urlen);
