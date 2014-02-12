@@ -243,12 +243,13 @@ function bokatid(tiden,nuvarandebokning){
 //console.log('bokar pass i hidden=yes');
 		 
 		 ref.addEventListener('loadstart', function(event2){
-			console.log('Loadstart v.1.1');
-			document.getElementById('loading').innerHTML = '<div id="loaderImage"></div>';
+			console.log('Loadstart v.1.2');
+			var spinnerevent = document.getElementById('loading');
+			spinnerevent.style.display = 'inline';
 		 })
 		 
 		 ref.addEventListener('loadstop', function(event) {
-		 	console.log('Loadstop v.1.1');
+		 	console.log('Loadstop v.1.2');
 		 	//var loading2 = document.getElementById('loading');
 			//loading2.style.display = 'none';
 		 	//console.log(event.url);
@@ -261,7 +262,8 @@ function bokatid(tiden,nuvarandebokning){
 }
 
 function show(){
-	document.getElementById('loading').innerHTML = '<div id="loaderImage"></div>';
+	var spinnerevent = document.getElementById('loading');
+	spinnerevent.style.display = 'inline';
 }
 
 
