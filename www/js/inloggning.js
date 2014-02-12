@@ -2,6 +2,7 @@
 function kollainlogg(){
 	if(localStorage.LoggedIn == 'true'){
 		hamta();
+		//loadtvatta('http://www.sgsstudentbostader.se/ext_gw.aspx?module=wwwash&lang=se#lblPanelName');
 		console.log('Det verkar finnas en användare');
 		console.log("Detta är användaren" + localStorage.LoggedIn);
 	}
@@ -19,7 +20,7 @@ function getFormData(){
 localStorage.anv=document.getElementById("username").value;
 localStorage.pass=document.getElementById("password").value;
 console.log("Den skickar inloggningen");
-hamta();
+//hamta();
 //byggnad('tvatta/byggnad.html');
 //loadtvatta('tvatta/tvatta2.html');
 }
