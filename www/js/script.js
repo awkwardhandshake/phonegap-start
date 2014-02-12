@@ -242,9 +242,9 @@ function bokatid(tiden,nuvarandebokning){
 	 var ref = window.open(tiden, '_blank', 'hidden=yes');
 //console.log('bokar pass i hidden=yes');
 		 ref.addEventListener('loadstop', function(event) {
-		 	console.log('Nu bokar/avbokar vi');
-		 	console.log(event[0]);
-		 	//console.log(event[0].url);
+		 	console.log('Nu bokar/avbokar vi v.1');
+		 	//console.log(event[0]);
+		 	console.log(event.url);
 			alert('Pass bokat'); 
 			loadtvatta(nuvarandebokning);
 //console.log("Passet är bokat");
