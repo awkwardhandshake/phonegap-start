@@ -3,7 +3,6 @@
 function startsida(){
 element = 'element';
 	var uppernav = document.getElementById('uppernav');
-	uppernav.style.display = 'none'
 	document.getElementById("styling").href="css/index.css"
 	document.getElementById("index").innerHTML=
 	'<div id="information" class="inforuta_hide">'+
@@ -143,7 +142,7 @@ function skapatvattatable(){
 '<table class="overskrift" border="2">'+
 	'<tbody>'+
 	'<tr>'+
-		'<td><div class="dropdown_button" class="menu_button" onClick="loadtvatta()"><a>Meny</a></div></td>'+
+		'<td><div class="dropdown_button" class="menu_button"><a>Meny</a></div></td>'+
 	'<tr>'+	
 	'</tbody>'+
 '</table>'+
@@ -162,10 +161,10 @@ function skapatvattatable(){
 	'<tbody>'+
 	'</tbody>'+
 '</table>'
-window.onload = function () {
-		console.log('Nu skall hela sidan vara klar');
-		loadtvattaklar()
-		}
+//window.onload = function () {
+//		console.log('Nu skall hela sidan vara klar');
+//		loadtvattaklar()
+//		}
 }
 
 // ==================================================================================================================
