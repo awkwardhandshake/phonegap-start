@@ -161,10 +161,7 @@ function skapatvattatable(){
 	'<tbody>'+
 	'</tbody>'+
 '</table>'
-//window.onload = function () {
-//		console.log('Nu skall hela sidan vara klar');
-//		loadtvattaklar()
-//		}
+
 }
 
 // ==================================================================================================================

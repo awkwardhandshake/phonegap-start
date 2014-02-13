@@ -244,8 +244,9 @@ function bokatid(tiden,nuvarandebokning){
 		 
 		 ref.addEventListener('loadstart', function(event2){
 			console.log('Loadstart v.1.4');
-			var spinnerevent = document.getElementById('loading');
-			spinnerevent.style.display = 'inline';
+			show();
+			//var spinnerevent = document.getElementById('loading');
+			//spinnerevent.style.display = 'inline';
 		 })
 		 
 		 ref.addEventListener('loadstop', function(event) {
@@ -262,18 +263,12 @@ function bokatid(tiden,nuvarandebokning){
 		 	console.log(event);
 		 	console.log(nuvarandebokning);
 		 	})
-		 ref.addEventListener('exit', function(event3){
-			 console.log('Exit kanske fungerar bättre?');
-		 })
-	
+		 	
 
 
 }
 
-function show(){
-	var spinnerevent = document.getElementById('loading');
-	spinnerevent.style.display = 'inline';
-}
+
 
 
 
@@ -356,8 +351,16 @@ function show_navlokal(){
 } 
 
 
+function show(){
+	document.getElementById('bakgrundinformation').className = 'bakgrundinformation_show';
+	var spinnerevent = document.getElementById('loading');
+	spinnerevent.style.display = 'inline';
+}
+
+
 function loadtvattaklar(){
 	console.log('laddat klart');
 	var spinnerevent = document.getElementById('loading');
 			spinnerevent.style.display = 'none';
+	document.getElementById('bakgrundinformation').className = 'bakgrundinformation_hide';
 }
