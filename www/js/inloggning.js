@@ -1,5 +1,6 @@
 //Kolla om inlogg redan existrerar
 function kollainlogg(){
+'use strict';
 	if(localStorage.LoggedIn == 'true'){
 		hamta();
 		//loadtvatta('http://www.sgsstudentbostader.se/ext_gw.aspx?module=wwwash&lang=se#lblPanelName');
@@ -9,10 +10,8 @@ function kollainlogg(){
 	else{
 		inputfields();
 		console.log('Detta är användaren i else ' + localStorage.LoggedIn);
-		var testarstring = 'http://tvatta.sgsstudentbostader.se/wwwashcommand.aspx?command=cancel&PanelId=592&TypeId=5129&GroupId=5444&Date=2014-02-14&IntervalId=0&NextPage='
-		testarstring = String(testarstring).match('NextPage');
-		console.log(testarstring);
-		if(testarstring != null){
+		var testarstring = 'http://tvatta.sgsstudentbostader.se/wwwashcommand.aspx?command=cancel&PanelId=592&TypeId=5129&GroupId=5444&Date=2014-02-14&IntervalId=0&NextPagyye='
+		if(String(testarstring).match('wwwashcalendar.aspx') != null || String(testarstring).match('NextPage') != null){
 			console.log('Den är skild från null');
 		}
 	}

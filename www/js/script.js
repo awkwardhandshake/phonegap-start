@@ -252,9 +252,8 @@ function bokatid(tiden,nuvarandebokning){
 		 	console.log('Loadstop v.1.4');
 		 	//var loading2 = document.getElementById('loading');
 			//loading2.style.display = 'none';
-		 	var gemfora = String(event.url).match('NextPage');
-		 	console.log(gemfora);
-		 	if(gemfora != null){
+			var testarstring = event.url;
+		 	if(String(testarstring).match('wwwashcalendar.aspx') != null || String(testarstring).match('NextPage') != null){
 		 		console.log('bokatid if-sats');
 			 	loadtvatta(nuvarandebokning);
 			 	loadtvattaklar();
