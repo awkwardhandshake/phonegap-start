@@ -139,9 +139,6 @@ function skapatvattatable(){
 '</table>'+
 
 '</div>'+	
-
-
-
 '<table class="overskrift" border="2">'+
 	'<tbody>'+
 	'<tr>'+
@@ -164,6 +161,7 @@ function skapatvattatable(){
 	'<tbody>'+
 	'</tbody>'+
 '</table>'
+
 }
 
 // ==================================================================================================================
