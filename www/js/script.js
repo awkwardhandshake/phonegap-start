@@ -249,7 +249,7 @@ function bokatid(tiden,nuvarandebokning){
 		 })
 		 
 		 ref.addEventListener('loadstop', function(event) {
-		 	console.log('Loadstop v.1.2');
+		 	console.log('Loadstop v.1.3');
 		 	//var loading2 = document.getElementById('loading');
 			//loading2.style.display = 'none';
 		 	console.log(event.url);
