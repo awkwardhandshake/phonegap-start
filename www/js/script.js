@@ -252,6 +252,12 @@ function bokatid(tiden,nuvarandebokning){
 		 	console.log('Loadstop v.1.3');
 		 	//var loading2 = document.getElementById('loading');
 			//loading2.style.display = 'none';
+		 	
+		 	if(event.url == nuvarandebokning){
+		 		console.log('bokatid if-sats');
+			 	loadtvatta(nuvarandebokning);
+			 	loadtvattaklar();
+		 	}
 		 	console.log(event.url);
 		 	console.log(event);
 		 	console.log(nuvarandebokning);
@@ -261,7 +267,7 @@ function bokatid(tiden,nuvarandebokning){
 		 })
 	
 
-loadtvatta(nuvarandebokning);
+
 }
 
 function show(){
