@@ -254,6 +254,7 @@ function bokatid(tiden,nuvarandebokning){
 			//loading2.style.display = 'none';
 		 	console.log(event.url);
 		 	console.log(event);
+		 	console.log(nuvarandebokning);
 		 	})
 		 ref.addEventListener('exit', function(event3){
 			 console.log('Exit kanske fungerar bättre?');
