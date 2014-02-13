@@ -9,6 +9,12 @@ function kollainlogg(){
 	else{
 		inputfields();
 		console.log('Detta är användaren i else ' + localStorage.LoggedIn);
+		var testarstring = 'http://tvatta.sgsstudentbostader.se/wwwashcommand.aspx?command=cancel&PanelId=592&TypeId=5129&GroupId=5444&Date=2014-02-14&IntervalId=0&NextPage='
+		testarstring = String(testarstring).match('NextPage');
+		console.log(testarstring);
+		if(testarstring != null){
+			console.log('Den är skild från null');
+		}
 	}
 }
 

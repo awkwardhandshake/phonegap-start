@@ -243,17 +243,18 @@ function bokatid(tiden,nuvarandebokning){
 	 var ref = window.open(tiden, '_blank', 'hidden=yes');
 		 
 		 ref.addEventListener('loadstart', function(event2){
-			console.log('Loadstart v.1.2');
+			console.log('Loadstart v.1.3');
 			var spinnerevent = document.getElementById('loading');
 			spinnerevent.style.display = 'inline';
 		 })
 		 
 		 ref.addEventListener('loadstop', function(event) {
-		 	console.log('Loadstop v.1.3');
+		 	console.log('Loadstop v.1.4');
 		 	//var loading2 = document.getElementById('loading');
 			//loading2.style.display = 'none';
-		 	
-		 	if(event.url == nuvarandebokning){
+		 	var gemfora = String(event.url).match('NextPage');
+		 	console.log(gemfora);
+		 	if(gemfora != null){
 		 		console.log('bokatid if-sats');
 			 	loadtvatta(nuvarandebokning);
 			 	loadtvattaklar();
