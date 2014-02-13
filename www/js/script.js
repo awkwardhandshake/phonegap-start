@@ -252,7 +252,8 @@ function bokatid(tiden,nuvarandebokning){
 		 	console.log('Loadstop v.1.2');
 		 	//var loading2 = document.getElementById('loading');
 			//loading2.style.display = 'none';
-		 	//console.log(event.url);
+		 	console.log(event.url);
+		 	console.log(event);
 		 	})
 		 ref.addEventListener('exit', function(event3){
 			 console.log('Exit kanske fungerar bättre?');
