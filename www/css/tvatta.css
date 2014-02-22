@@ -28,6 +28,9 @@
 	}
 	
 	#uppernav{
+		 
+		position: fixed;
+		z-index: 1;
 		padding-top: 1%;
 		width: 100%;
 		height: 20%;
@@ -41,9 +44,10 @@
 	#uppernav td{
 		width: 33%;
 		vertical-align: middle;
+		/*background-color: #252c47;*/
 		}			
 	.uppernavclass{
-		/*background-color: #000;*/
+		background-color: #252c47;
 		
 	}
 	
