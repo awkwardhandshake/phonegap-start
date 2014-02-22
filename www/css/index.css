@@ -142,12 +142,13 @@ body {
 		width: 100%;
 		height: 20%;
 		text-align: center;
-		display: none;
 		padding-bottom: 1%;
 		/*margin-bottom: 2%;*/
 		border-bottom: 2px solid #fff;
 		}
-
+#navigering img{
+	/*visibility: hidden;*/
+}
 #uppernav td{
 	/*border: solid #fff;*/
 	width: 33%;
@@ -531,7 +532,7 @@ body {
 		margin-left: 15%;
 	}
 	
-		.submitknapp{
+	.submitknapp{
 		position: relative;
 		text-align: center;
 		float: right;
@@ -539,6 +540,16 @@ body {
 		border: 0px;
 		color: #fff;
 	}
+	
+	#loggaut{
+		position: relative;
+		text-align: center;
+		float: left;
+		background: #aaa;
+		border: 0px;
+		color: #fff;
+	}
+	
 	
 	#submitposition{
 		position: absolute;

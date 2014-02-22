@@ -1,4 +1,8 @@
 
+
+
+
+
 //Byggnads väljare
 function byggnad(urlfranlankarbyggnad){
 console.log("Går in i byggnad funktionen");
@@ -195,7 +199,7 @@ historia('loadtvatta()');
 					cell2.setAttribute("class", "bokningsdatum");
 					dagarriktiga = String(dagar[q].innerHTML).split('dag');
 //console.log(dagarriktiga[1]);
-					cell2.innerHTML = "<p>" + dagarriktiga[0] + dagarriktiga[1] + "</p>"
+					cell2.innerHTML = "<p>" + "&nbsp;&nbsp;" +dagarriktiga[0]+ "&nbsp;&nbsp;" + dagarriktiga[1] + "</p>"
 					q++;
 						if(b >= 1){
 						smart = (smart - nollstall)
@@ -287,8 +291,7 @@ function hamtahemma(){
 							setTimeout(oppnadorr,500);								
 			},
 			error: function(varde2){
-			
-					hemmafel();
+				hemmafel();
 			}
 			});
 

@@ -14,12 +14,14 @@
 <script type="text/javascript">
 function onLoad() {
 console.log('Går in i onLoad');
-        document.addEventListener("deviceready", onDeviceReady, false);
+        document.addEventListener("deviceready", onDeviceReady, false); 
     };
     function onDeviceReady() {
 console.log('Går in i DeviceReady');    	
         document.addEventListener("backbutton", function() {kommaihag[kommaihag - 1]}, false);
     };
+</script>
+<script>
 </script>
 </head>
 
@@ -50,9 +52,9 @@ console.log('Går in i DeviceReady');
 
 
 <div id="index">
-<div class="logo">
+<!--<div class="logo">
 <img id="topploga" class="scale-with-grid-logo" src="img/sgs_logo_width_512.png">
-</div>
+</div>-->
 <div class="container">
 	<div class="sixteen columns"></div>
 	
@@ -88,7 +90,8 @@ console.log('Går in i DeviceReady');
                   <li><button type="submit" name="epName" value="varde" id="hemmadorren">varde</button></li>
                   </ul>
             </form><div class="doorControlStatus"></div>
-</div>	
+</div>
+<input type="button" class="submitknapp" name="submit" id="loggaut" onclick="loggaut()" value="Logga ut">	
 </div>
 
 		<script type="text/javascript" src="js/element.js"></script>
