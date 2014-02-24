@@ -272,6 +272,26 @@ function bokatid(tiden,nuvarandebokning){
 
 }
 
+function show_navnummer(){
+
+    var menu = document.getElementById("navnummer");
+    console.log(menu);
+    if(menu.style.display == 'table-row'){
+        menu.style.display = 'none';
+    }else {
+        menu.style.display = 'table-row';                    
+    }
+}  
+
+function show_navlokal(){
+
+	var menu = document.getElementById("navtvatta");
+    if(menu.style.display == 'table'){
+        menu.style.display = 'none';
+    }else {
+        menu.style.display = 'table';                    
+    }
+} 
 
 
 
@@ -295,7 +315,6 @@ function hamtahemma(){
 			},
 			error: function(varde2){
 				hemmafel();
-				show();
 			}
 			});
 
@@ -336,26 +355,7 @@ console.log("1");
 console.log("1");	
 	
 }
-function show_navnummer(){
 
-    var menu = document.getElementById("navnummer");
-    console.log(menu);
-    if(menu.style.display == 'table-row'){
-        menu.style.display = 'none';
-    }else {
-        menu.style.display = 'table-row';                    
-    }
-}  
-
-function show_navlokal(){
-
-	var menu = document.getElementById("navtvatta");
-    if(menu.style.display == 'table'){
-        menu.style.display = 'none';
-    }else {
-        menu.style.display = 'table';                    
-    }
-} 
 
 //Hanterar horisontell bar
 function show(){
