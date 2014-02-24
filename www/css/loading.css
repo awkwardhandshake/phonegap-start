@@ -1,9 +1,12 @@
 #loading{
 	z-index: 1;
-	top: 50%;
-	position: absolute;
-	margin-left: 30%;
+	height: 20px;
+	/*top: 50%;*/
+	/*position: absolute;*/
+	margin-left: 10%;
+	
 }
+
 #ballsWaveG{
 top: 50%;
 position:relative;
