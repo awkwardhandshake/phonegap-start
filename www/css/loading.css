@@ -2,7 +2,7 @@
 	z-index: 1;
 	left: 50%;
 	margin-left: -110px;
-	position: relative;
+	position: absolute;
 	max-width: 220px;
 	
 }
