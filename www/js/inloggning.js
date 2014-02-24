@@ -70,7 +70,8 @@ function hiddenbrowser(){
 	 var ref = window.open(localStorage.urlen, '_blank', 'hidden=yes');
  //Denna skall in i loadstop funktionen.
 	 console.log(ref);
-	 	ref.addEventListener('loadstart', function(event2){
+	 	ref.addEventListener('loadstart', function(event) {
+	 		console.log('Inloggning hidden loadstart');
 		 	show();
 	 	})
 		ref.addEventListener('loadstop', function(event) {
