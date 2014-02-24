@@ -300,18 +300,18 @@ function show_navlokal(){
 
 function hamtahemma(){ 
 	$.ajax({
-			//url: 'http://hemma.sgsstudentbostader.se/DoorControl/Fullscreen',
-			url: 'http://vindpust.com/public_html/appkopia/hemma/hemma.html',
+			url: 'http://hemma.sgsstudentbostader.se/DoorControl/Fullscreen',
 			success: function(varde) {
 			var buttonvalue;
 			var buttonname;
+							show();
 							buttonvalue = $(varde).find('button').attr('value');
 							buttonname = $(varde).find('button');
 							document.getElementById('hemmadorren').value = buttonvalue;
 							document.getElementById('hemmadorren').innerHTML = buttonname[0].innerHTML
-//Ändrat bort denna för att snabba upp öppningen
 							//setTimeout(oppnadorr,500);
-							show();						
+							oppnadorr();
+						
 			},
 			error: function(varde2){
 				hemmafel();
