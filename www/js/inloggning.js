@@ -74,9 +74,9 @@ function hiddenbrowser(){
 		 	show();
 	 	})
 		ref.addEventListener('loadstop', function(event) {
-			 alert('background window loaded'); 
+			 //alert('background window loaded'); 
 			 byggnad('http://www.sgsstudentbostader.se/ext_gw.aspx?module=wwwash&lang=se#lblPanelName');			 
-			 console.log("www.google.se är laddad i bakgrunden");
+			 console.log("Inloggning hidden loadstop");
 	
 	
 })
