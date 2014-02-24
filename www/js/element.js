@@ -145,7 +145,7 @@ function skapatvattatable(){
 '</td></tr>'+
 '</table>'+
 
-'</div>'+	
+'</div>'+
 '<table class="overskrift" border="2">'+
 	'<tbody>'+
 	'<tr>'+

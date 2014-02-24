@@ -137,23 +137,31 @@ body {
 	
 }*/
 
-#uppernav{
+	#uppernav{
+		position: fixed;
+		z-index: 1;
 		padding-top: 1%;
 		width: 100%;
-		height: 20%;
+		/*height: 20%;*/
 		text-align: center;
 		padding-bottom: 1%;
 		/*margin-bottom: 2%;*/
 		border-bottom: 2px solid #fff;
 		}
-#navigering img{
+		
+	.uppernavclass{
+		background-color: #252c47;
+		/*height: 10%;*/
+		
+	}		
+	#navigering img{
 	/*visibility: hidden;*/
-}
-#uppernav td{
+	}
+	#uppernav td{
 	/*border: solid #fff;*/
 	width: 33%;
 	vertical-align: middle;
-}
+	}
 
 
 
