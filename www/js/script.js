@@ -45,7 +45,7 @@ console.log("Verkar inte ha funnits någon byggnad???")
 	
 								}		
 	})
-	
+	loadtvattaklar();
 }
 
 var nastaveckafram;
@@ -280,7 +280,8 @@ function bokatid(tiden,nuvarandebokning){
 
 function hamtahemma(){ 
 	$.ajax({
-			url: 'http://hemma.sgsstudentbostader.se/DoorControl/Fullscreen',
+			//url: 'http://hemma.sgsstudentbostader.se/DoorControl/Fullscreen',
+			url: 'http://vindpust.com/public_html/appkopia/hemma/hemma.html',
 			success: function(varde) {
 			var buttonvalue;
 			var buttonname;
@@ -288,10 +289,13 @@ function hamtahemma(){
 							buttonname = $(varde).find('button');
 							document.getElementById('hemmadorren').value = buttonvalue;
 							document.getElementById('hemmadorren').innerHTML = buttonname[0].innerHTML
-							setTimeout(oppnadorr,500);								
+//Ändrat bort denna för att snabba upp öppningen
+							//setTimeout(oppnadorr,500);
+							show();						
 			},
 			error: function(varde2){
 				hemmafel();
+				show();
 			}
 			});
 
@@ -322,7 +326,7 @@ console.log("1");
 			
 			
 			console.log(data);
-			
+			loadtvattaklar();
 		}
 
 		
@@ -353,17 +357,17 @@ function show_navlokal(){
     }
 } 
 
-
+//Hanterar horisontell bar
 function show(){
-	document.getElementById('bakgrundinformation').className = 'bakgrundinformation_show';
+	//document.getElementById('bakgrundinformation').className = 'bakgrundinformation_show';
 	var spinnerevent = document.getElementById('loading');
-	spinnerevent.style.display = 'inline';
+	spinnerevent.style.visibility = 'visible';
 }
 
 
 function loadtvattaklar(){
 	console.log('laddat klart');
 	var spinnerevent = document.getElementById('loading');
-			spinnerevent.style.display = 'none';
-	document.getElementById('bakgrundinformation').className = 'bakgrundinformation_hide';
+			spinnerevent.style.visibility = 'hidden';
+	//document.getElementById('bakgrundinformation').className = 'bakgrundinformation_hide';
 }

@@ -2,8 +2,8 @@
 function kollainlogg(){
 'use strict';
 	if(localStorage.LoggedIn == 'true'){
-		//hamta();
-		loadtvatta('http://www.sgsstudentbostader.se/ext_gw.aspx?module=wwwash&lang=se#lblPanelName');
+		hamta();
+		//loadtvatta('http://www.sgsstudentbostader.se/ext_gw.aspx?module=wwwash&lang=se#lblPanelName');
 		console.log('Det verkar finnas en användare');
 		console.log("Detta är användaren" + localStorage.LoggedIn);
 	}
@@ -70,7 +70,10 @@ function hiddenbrowser(){
 	 var ref = window.open(localStorage.urlen, '_blank', 'hidden=yes');
  //Denna skall in i loadstop funktionen.
 	 console.log(ref);
-		 ref.addEventListener('loadstop', function(event) {
+	 	ref.addEventListener('loadstart', function(event2){
+		 	show();
+	 	})
+		ref.addEventListener('loadstop', function(event) {
 			 alert('background window loaded'); 
 			 byggnad('http://www.sgsstudentbostader.se/ext_gw.aspx?module=wwwash&lang=se#lblPanelName');			 
 			 console.log("www.google.se är laddad i bakgrunden");
