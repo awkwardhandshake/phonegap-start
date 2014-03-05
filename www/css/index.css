@@ -155,10 +155,12 @@ body {
 		background-color: #252c47;
 		/*height: 10%;*/
 		
-	}		
-	#navigering img{
-	/*visibility: hidden;*/
 	}
+			
+	#navigering img{
+	visibility: hidden;
+	}
+	
 	#uppernav td{
 	/*border: solid #fff;*/
 	width: 33%;

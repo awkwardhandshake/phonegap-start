@@ -1,8 +1,4 @@
 
-
-
-
-
 //Byggnads väljare
 function byggnad(urlfranlankarbyggnad){
 console.log("Går in i byggnad funktionen");
@@ -299,12 +295,13 @@ function show_navlokal(){
 //hemma.sgsstudentbostader.se
 
 function hamtahemma(){ 
+	show();
 	$.ajax({
 			url: 'http://hemma.sgsstudentbostader.se/DoorControl/Fullscreen',
 			success: function(varde) {
 			var buttonvalue;
 			var buttonname;
-							show();
+
 							buttonvalue = $(varde).find('button').attr('value');
 							buttonname = $(varde).find('button');
 							document.getElementById('hemmadorren').value = buttonvalue;
@@ -313,8 +310,13 @@ function hamtahemma(){
 							oppnadorr();
 						
 			},
-			error: function(varde2){
+			//Vill att den skall stänga av loading om det blir fel.
+			error: function(varde2, status, error){
+				console.log(varde2);
+				console.log(status);
+				console.log(error);				
 				hemmafel();
+				loadtvattaklar();
 			}
 			});
 

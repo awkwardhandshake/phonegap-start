@@ -4,6 +4,9 @@ function startsida(){
 element = 'element';
 	var navigering = document.getElementById('navigering');
 	document.getElementById("styling").href="css/index.css"
+	var navback = document.getElementById('back');
+		console.log(navback);
+		navback.style.visibility = 'hidden';
 	document.getElementById("index").innerHTML=
 '<div id="information" class="inforuta_hide">'+
 '<table>'+
@@ -69,9 +72,13 @@ function popup(){
 
 // ==================================================================================================================
 function inputfields(){
+
 		var uppernav = document.getElementById('uppernav');
 		document.getElementById("styling").href="css/index.css"
 		uppernav.style.display = 'table'
+		var navback = document.getElementById('back');
+		console.log(navback);
+		navback.style.visibility = 'visible';
 		document.getElementById("index").innerHTML=	
 		
 		'<div id="information" class="inforuta_hide">'+
@@ -178,7 +185,6 @@ function skapatvattatable(){
 function skapabyggnadtable(){
 	document.getElementById("styling").href="css/tvatta.css"
 	document.getElementById("index").innerHTML=
-'<button onmousedown="loadtvatta()">Trycka vidare</button>'+	
 '<table class="overskrift" border="2">'+
 	'<tbody>'+
 	'<tr>'+
