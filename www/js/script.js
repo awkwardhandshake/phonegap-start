@@ -39,9 +39,13 @@ console.log("Verkar inte ha funnits någon byggnad???")
 					loadtvatta('http://www.sgsstudentbostader.se/ext_gw.aspx?module=wwwash&lang=se#lblPanelName');
 				}
 	
+								},
+								error: function(){
+									console.log('Något verkar ha gått snett');
 								}		
 	})
 	loadtvattaklar();
+	
 }
 
 var nastaveckafram;
@@ -232,6 +236,9 @@ historia('loadtvatta()');
 								}
 								}
 							
+			},
+			error: function(){
+				console.log('Något har gått snett i tvätta');
 			}
 			})
 loadtvattaklar();
