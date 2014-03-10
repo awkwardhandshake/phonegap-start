@@ -9,6 +9,10 @@ function kollainlogg(){
 	}
 	else{
 		inputfields();
+		if(localStorage.ReturnCode == 'TOOMANYFAILEDLOGINS'){
+			console.log('Du har loggat in för många gånger, var god vänta en stund och försök igen');
+			tomany();
+		}
 		console.log('Detta är användaren i else ' + localStorage.LoggedIn);
 		var testarstring = 'http://tvatta.sgsstudentbostader.se/wwwashcommand.aspx?command=cancel&PanelId=592&TypeId=5129&GroupId=5444&Date=2014-02-14&IntervalId=0&NextPagyye='
 		if(String(testarstring).match('wwwashcalendar.aspx') != null || String(testarstring).match('NextPage') != null){
