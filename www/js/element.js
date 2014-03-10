@@ -117,6 +117,9 @@ historia('inputfields()');
 // ==================================================================================================================		
 
 function skapatvattatable(){
+	var navback = document.getElementById('back');
+	console.log(navback);
+	navback.style.visibility = 'visible';
 	document.getElementById("styling").href= "css/tvatta.css";
 	document.getElementById("index").innerHTML=
 	
@@ -183,6 +186,9 @@ function skapatvattatable(){
 
 // ==================================================================================================================
 function skapabyggnadtable(){
+	var navback = document.getElementById('back');
+	console.log(navback);
+	navback.style.visibility = 'visible';
 	document.getElementById("styling").href="css/tvatta.css"
 	document.getElementById("index").innerHTML=
 '<table class="overskrift" border="2">'+
