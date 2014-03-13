@@ -77,7 +77,7 @@ historia('loadtvatta()');
 			success: function(data) {
 			navigator.notification.confirm(
                     'Något gick snett, vill du försöka igen?',
-                    yourCallback,
+                    yourCallback('Hej'),
                     'Fel',
                     'Nej,Ja'
 					)
