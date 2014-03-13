@@ -75,12 +75,6 @@ historia('loadtvatta()');
 	$.ajax({
 			url: urlfranlankar,
 			success: function(data) {
-			navigator.notification.confirm(
-                    'Något gick snett, vill du försöka igen?',
-                    yourCallbackTvatta,
-                    'Fel',
-                    'Nej,Ja'
-					)
 //console.log('Går in i ajax');			
 				var root2 = document.getElementById('mydiv2');
 				var tab2=document.createElement('table');
@@ -247,7 +241,7 @@ historia('loadtvatta()');
 				console.log('Något har gått snett i tvätta');
 				navigator.notification.confirm(
                     'Något gick snett, vill du försöka igen?',
-                    yourCallback(urlfranlankar),
+                    yourCallbackTvatta,
                     'Fel',
                     'Nej,Ja'
 					)
