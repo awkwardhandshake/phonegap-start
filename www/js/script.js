@@ -318,7 +318,7 @@ function hamtahemma(){
 							buttonvalue = $(varde).find('button').attr('value');
 							buttonname = $(varde).find('button');
 							document.getElementById('hemmadorren').value = buttonvalue;
-							document.getElementById('hemmadorren').innerHTML = buttonname[0].innerHTML
+							/*document.getElementById('hemmadorren').innerHTML = buttonname[0].innerHTML*/
 							oppnadorr();
 						
 			},
