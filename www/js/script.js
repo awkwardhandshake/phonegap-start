@@ -319,7 +319,6 @@ function hamtahemma(){
 							buttonname = $(varde).find('button');
 							document.getElementById('hemmadorren').value = buttonvalue;
 							document.getElementById('hemmadorren').innerHTML = buttonname[0].innerHTML
-							//setTimeout(oppnadorr,500);
 							oppnadorr();
 						
 			},
@@ -359,8 +358,9 @@ console.log("1");
 			console.log(meddelandehemma[0].innerHTML);
 			
 			
-			console.log(data);
+			console.log('Detta är data från Hemma POST ' + data);
 			loadtvattaklar();
+			console.log('Nu är vi under loadtvattaklari Hemma POST');
 		}
 
 		
