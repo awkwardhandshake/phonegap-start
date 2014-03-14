@@ -18,7 +18,13 @@ console.log('Går in i onLoad');
     };
     function onDeviceReady() {
 console.log('Går in i DeviceReady');    	
-        document.addEventListener("backbutton", function() {kommaihag[kommaihag - 1]}, false);
+        document.addEventListener("backbutton", function(){
+	        navigator.notification.confirm(
+			'Vill du stänga ner appen?',
+			yourCallbackStanga,
+			'Avsluta',
+			'Nej,Ja')
+        }, false);
     };
 </script>
 <script>
@@ -76,9 +82,6 @@ Kalenderikonen tar dig till bokningen för bland annat tvättstuga och sällskap
 
 </table>
 </div>
-<!--<div class="logo">
-<img id="topploga" class="scale-with-grid-logo" src="img/sgs_logo_width_512.png">
-</div>-->
 <div class="container">
 	<div class="sixteen columns"></div>
 	
@@ -138,7 +141,7 @@ historia('startsida()');
 </script>
 <!-- Här slutar scriptet -->
 
-Version 2.1.8
+<!-- Version 2.1.8 -->
 
 
 

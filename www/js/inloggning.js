@@ -2,10 +2,11 @@
 function kollainlogg(){
 'use strict';
 	if(localStorage.LoggedIn == 'true'){
-		//hamta();
-		loadtvatta('http://www.sgsstudentbostader.se/ext_gw.aspx?module=wwwash&lang=se#lblPanelName');
+		hamta();
+		//loadtvatta('http://www.sgsstudentbostader.se/ext_gw.aspx?module=wwwash&lang=se#lblPanelName');
+		//byggnad('http://www.sgsstudentbostader.se/ext_gw.aspx?module=wwwash&lang=se#lblPanelName');
 		console.log('Det verkar finnas en användare');
-		console.log("Detta är användaren" + localStorage.LoggedIn);
+		console.log("Detta är användaren" + localStorage.ReturnCode);
 	}
 	else{
 		inputfields();
@@ -14,12 +15,9 @@ function kollainlogg(){
 			tomany();
 		}
 		console.log('Detta är användaren i else ' + localStorage.LoggedIn);
-		var testarstring = 'http://tvatta.sgsstudentbostader.se/wwwashcommand.aspx?command=cancel&PanelId=592&TypeId=5129&GroupId=5444&Date=2014-02-14&IntervalId=0&NextPagyye='
-		if(String(testarstring).match('wwwashcalendar.aspx') != null || String(testarstring).match('NextPage') != null){
-			console.log('Den är skild från null');
 		}
 	}
-}
+
 
 
 
@@ -30,8 +28,7 @@ localStorage.anv=document.getElementById("username").value;
 localStorage.pass=document.getElementById("password").value;
 console.log("Den skickar inloggningen");
 hamta();
-//byggnad('tvatta/byggnad.html');
-//loadtvatta('tvatta/tvatta2.html');
+
 }
 
 //hämta marknad
@@ -42,7 +39,6 @@ function hamta() {
 		$.each(result, function (newsItem,news)
 		{
 		localStorage[newsItem]=news
-			//$("#newsfeed").append(newsItem + "=" + news + "<br />");
 			console.log(newsItem + " = " + localStorage[newsItem])
 			
 		});
@@ -79,7 +75,6 @@ function hiddenbrowser(){
 		 	show();
 	 	})
 		ref.addEventListener('loadstop', function(event) {
-			 //alert('background window loaded'); 
 			 byggnad('http://www.sgsstudentbostader.se/ext_gw.aspx?module=wwwash&lang=se#lblPanelName');			 
 			 console.log("Inloggning hidden loadstop");
 	
