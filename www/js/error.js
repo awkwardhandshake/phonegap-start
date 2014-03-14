@@ -7,7 +7,7 @@ function yourCallbackTvatta(button) {
 		}
 }
 
-function yourCallbackStanga(){
+function yourCallbackStanga(button){
 	if (button == 2){
 		navigator.app.exitApp();
 		}
