@@ -358,9 +358,7 @@ console.log("1");
 			console.log(meddelandehemma[0].innerHTML);
 			
 			
-			console.log('Detta är data från Hemma POST ' + data);
 			loadtvattaklar();
-			console.log('Nu är vi under loadtvattaklari Hemma POST');
 		}
 
 		
