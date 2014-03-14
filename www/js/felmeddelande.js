@@ -8,8 +8,10 @@ function tomany(){
 
 function hemmafel(){
 	document.getElementById('meddelande').innerHTML = '<p>Fel vid öppning av porten</p>';
+	loadtvattaklar();
 }
 
 function hemmavilken(adress,medd){
 	document.getElementById('meddelande').innerHTML = '<p>' + adress + '</p>' + '<p><small>' + medd + '</small></p>';
+	loadtvattaklar();
 }
