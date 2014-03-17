@@ -491,6 +491,7 @@ body {
 	}
 	.bokningstider p{
 	font-size: 9px;
+	white-space: nowrap;
 	}
 	
 	p{
@@ -551,6 +552,7 @@ body {
 	
 	.bokningstider p{
 	font-size: 12px;
+	white-space: nowrap;
 	}
 	
 	.bokningsdatum p{
@@ -613,6 +615,7 @@ body {
 	
 	.bokningstider p{
 	font-size: 20px;
+	white-space: nowrap;
 	}
 	.bokningsdatum p{
 		font-size: 30px;

@@ -177,6 +177,7 @@ historia('loadtvatta()');
 				var headrow = table.insertRow(-1);
 				headrow.insertCell(-1);
 				for (var h = 0; h < antal; h++){
+						console.log(tiderdygnetriktig);
 						var headcell = headrow.insertCell(-1);
 						headcell.setAttribute("class", "bokningstider");
 						tiderdygnetriktig = String(tiderdygnet[f].innerHTML).split('&nbsp;');
