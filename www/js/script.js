@@ -361,7 +361,7 @@ console.log("1");
 			
 			loadtvattaklar();
 		},
-		error{
+		error: function(){
 			console.log('Error på hemma-post');
 			hemmafel();
 			loadtvattaklar();
