@@ -9,17 +9,17 @@ element = 'element';
 	document.getElementById("index").innerHTML=
 '<div id="information" class="inforuta_hide">'+
 '<table>'+
-'<tr><td class="rutatvatt">'+		
-		'<img src="img/door_button.png" class="scale-with-grid-start-information"></img>'+
-'</td><td class="information-text-middle">'+
-		'Dörr öppningsknappen är tillför att ge ett komplement till hemma.sgsstudentbostader.se. Om ditt område är utrustat med öppning av entrédörren via hemma.sgsstudentbostader.se gör Dörr-knappen samma sak.'+
+'<tr><td class="infostart_door">'+
+'<img src="img/door_button.png" class="scale-with-grid-start-information"></img>'+
+'</td></tr><tr><td class="information-text-middle-start">'+
+'Dörr öppningsknappen är tillför att ge ett komplement till hemma.sgsstudentbostader.se. Om ditt område är utrustat med öppning av entrédörren via hemma.sgsstudentbostader.se gör Dörr-knappen samma sak.'+
 '</td></tr>'+
 
-'<tr><td class="rutatvatt">'+
+'<tr><td class="infostart_door">'+
+'<img src="img/cal_button.png" class="scale-with-grid-start-information"></img>'+
+'</td></tr><tr><td class="information-text-middle-start">'+
+'Kalenderikonen tar dig till bokningen för bland annat tvättstuga och sällskapsrum. Du kommer behöva använda ditt inlogg som du använder på www.sgsstudentbostader.se för att logga in.'+
 
-		'<img src="img/cal_button.png" class="scale-with-grid-start-information"></img>'+
-'</td><td class="information-text-middle">'+
-		'Kalenderikonen tar dig till bokningen för bland annat tvättstuga och sällskapsrum. Du kommer behöva använda ditt inlogg som du använder på www.sgsstudentbostader.se för att logga in.'+	
 '</td></tr>'+
 
 '</table>'+
