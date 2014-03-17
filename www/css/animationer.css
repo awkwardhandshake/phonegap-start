@@ -112,8 +112,8 @@ img.scale-with-grid-tvatt-information{
 	border: 40px transparent;
 	margin-top: 50px;
 }
+
 .inforuta td{
-	
 	height: auto;
 }
 
@@ -126,9 +126,20 @@ img.scale-with-grid-tvatt-information{
 	padding-bottom: 10%;
 }
 
+.information-text-middle-tvatt{
+	float: left;
+	vertical-align: middle;
+	width: 100%;
+	font-size: 1.0vh;
+	padding-top: 10px;
+	padding-left: 10px;
+	padding-bottom: 10%;
+}
+
 .rutatvatt{
 	height: auto;
 	padding-top: 10px;
+	width: 20%;
 }
 
 .rutaett{
