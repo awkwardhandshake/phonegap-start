@@ -324,12 +324,12 @@ function hamtahemma(){
 			},
 			//Vill att den skall stänga av loading om det blir fel.
 			error: function(varde2, status, error){
+				hemmafel();
+				loadtvattaklar();
 				console.log('Error på hemma-get');
 				console.log(varde2);
 				console.log(status);
 				console.log(error);				
-				hemmafel();
-				loadtvattaklar();
 			}
 			});
 
