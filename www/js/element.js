@@ -123,28 +123,28 @@ function skapatvattatable(){
 '<div id="information" class="inforuta_hide">'+
 '<table>'+
 
-'<tr><td class="rutatvatt">'+		
+'<tr class="rowtvatt"><td class="rutatvatt">'+		
 		'<img src="images/icon_plus_small.png" class="scale-with-grid-tvatt-information"></img>'+
-'</td><td class="information-text-middle-tvatt">'+
+'</td><td class="information-text-middle-tvatt" class="rutatvatt">'+
 		'Detta passet är ledigt och går att boka, tryck på ikonen för att utföra bokningen.'+
 '</td></tr>'+
 
-'<tr><td class="rutatvatt">'+
+'<tr class="rowtvatt"><td class="rutatvatt">'+
 		'<img src="images/icon_no.png" class="scale-with-grid-tvatt-information"></img>'+
 '</td><td class="information-text-middle-tvatt">'+
 		'Passet är redan bokat av en annan användare.'+	
 '</td></tr>'+
 
-'<tr><td class="rutatvatt">'+
+'<tr class="rowtvatt"><td class="rutatvatt">'+
 		'<img src="images/icon_own.png" class="scale-with-grid-tvatt-information"></img>'+
 '</td><td class="information-text-middle-tvatt">'+
 		'Passet är bokat på ditt konto.'+	
 '</td></tr>'+
 
-'<tr><td class="rutatvatt">'+		
+'<tr class="rowtvatt"><td class="rutatvatt">'+		
 		'<img src="images/icon_no_not.png" class="scale-with-grid-tvatt-information"></img>'+
 '</td><td class="information-text-middle-tvatt">'+
-		'Tiden/datumet har passerat eller så är passet inte tillgängligt just nu. ddh dh dhkdk hdh kjahsdskjdha skjdhkasjhd kjsahd kasjdh askjdhaskd asjhdk ahsdk jahsdkja shdkajhsdkjshadkjh askjd ksahd kjash'+	
+		'Tiden/datumet har passerat eller så är passet inte tillgängligt just nu.'+	
 '</td></tr>'+
 '</table>'+
 

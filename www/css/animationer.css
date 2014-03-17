@@ -132,9 +132,7 @@ img.scale-with-grid-tvatt-information{
 	vertical-align: middle;
 	width: 100%;
 	font-size: 1.0vh;
-	/*padding-top: 10px;*/
-	/*padding-left: 10px;*/
-	/*padding-bottom: 10%;*/
+	padding-top: 2%;
 	
 }
 
@@ -143,6 +141,7 @@ img.scale-with-grid-tvatt-information{
 	/*padding-top: 10px;*/
 	width: 15%;
 	vertical-align: middle;
+	padding-top: 2%;
 	
 }
 
@@ -159,6 +158,6 @@ img.scale-with-grid-tvatt-information{
 	text-decoration: none;
 }
 
-.infostart_door{
+.rowtvatt{
 
 }
