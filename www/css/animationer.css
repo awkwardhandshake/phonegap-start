@@ -100,9 +100,12 @@
 
 
 img.scale-with-grid-start-information{
-		max-width: 50%;
+		max-width: 20%;
 		height: auto;
-		float: left; 
+		/*float: left; */
+		margin-left: 40%;
+		margin-right: 40%;
+		
 	}
 
 img.scale-with-grid-tvatt-information{
@@ -121,14 +124,18 @@ img.scale-with-grid-tvatt-information{
 }
 .information-text-middle{
 	vertical-align: middle;
-	width: 85%;
+	width: 100%;
+	font-size: 3.2vw;
 	padding-top: 10px;
+	padding-left: 10px;
+	padding-bottom: 10%;
 }
 
 
 .rutatvatt{
 	height: auto;
-	float: left;
+	/*float: left;*/
+	/*margin-right: auto;*/
 	padding-top: 10px;
 }
 
@@ -136,12 +143,16 @@ img.scale-with-grid-tvatt-information{
 	float: left;
 }
 .rutatva{
-	float: left;
+	/*float: left;*/
+	
 	vertical-align: bottom;
 }
 .rutatva a{
 	vertical-align: bottom;
-	font-size: 2.2vw;
+
 	text-decoration: none;
 	
+}
+
+.infostart_door{
 }
