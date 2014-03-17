@@ -177,9 +177,9 @@
 	}
 	
 	#tvatta td{
-		/*border: 2px solid white;*/
-		/*text-align: center;
-		vertical-align: middle;*/
+		border: 1px solid white;
+		text-align: center;
+		vertical-align: middle;
 		width: auto;
 		height: auto;
 	}
