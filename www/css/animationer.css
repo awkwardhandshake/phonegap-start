@@ -27,7 +27,7 @@
 	
 	display: none;
 	height: auto;
-	top: 20%;
+	top: 10%;
 	width: 60%;
 	margin-left: 20%;
 	color: #FFF;
@@ -44,7 +44,7 @@
 	z-index: -1;
 	position: absolute;
 	height: auto;
-	top: 20%;
+	top: 10%;
 	width: 90%;
 	margin-left: 5%;
 	color: #252c47;
@@ -60,7 +60,7 @@
 	z-index: 2;
 	position: absolute;
 	height: auto;
-	top: 20%;
+	top: 10%;
 	width: 90%;
 	margin-left: 2%;
 	color: #FFF;
@@ -84,7 +84,7 @@
 	
 	100% {	
 		font-size: 1.0vh;
-		top: 20%;
+		top: 10%;
 		width: 90%;
 		margin-right: 2%;
 		-webkit-opacity: 1;
@@ -117,10 +117,10 @@ img.scale-with-grid-tvatt-information{
 	height: auto;
 }
 
-.information-text-middle{
+.information-text-middle-start{
 	vertical-align: middle;
 	width: 100%;
-	font-size: 1.0vh;
+	font-size: 1.5vh;
 	padding-top: 10px;
 	padding-left: 10px;
 	padding-bottom: 10%;
