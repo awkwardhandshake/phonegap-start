@@ -103,7 +103,7 @@ img.scale-with-grid-start-information{
 	}
 
 img.scale-with-grid-tvatt-information{
-	max-width: 50%;
+	max-width: 80%;
 	height: auto;
 	float: left;
 }
@@ -127,20 +127,23 @@ img.scale-with-grid-tvatt-information{
 }
 
 .information-text-middle-tvatt{
+	height: 100%;
 	float: left;
 	vertical-align: middle;
 	width: 100%;
 	font-size: 1.0vh;
-	padding-top: 10px;
-	padding-left: 10px;
-	padding-bottom: 10%;
+	/*padding-top: 10px;*/
+	/*padding-left: 10px;*/
+	/*padding-bottom: 10%;*/
+	
 }
 
 .rutatvatt{
 	height: auto;
-	padding-top: 10px;
-	width: 20%;
+	/*padding-top: 10px;*/
+	width: 15%;
 	vertical-align: middle;
+	
 }
 
 .rutaett{

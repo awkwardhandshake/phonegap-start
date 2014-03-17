@@ -144,7 +144,7 @@ function skapatvattatable(){
 '<tr><td class="rutatvatt">'+		
 		'<img src="images/icon_no_not.png" class="scale-with-grid-tvatt-information"></img>'+
 '</td><td class="information-text-middle-tvatt">'+
-		'Tiden/datumet har passerat eller så är passet inte tillgängligt just nu.'+	
+		'Tiden/datumet har passerat eller så är passet inte tillgängligt just nu. ddh dh dhkdk hdh kjahsdskjdha skjdhkasjhd kjsahd kasjdh askjdhaskd asjhdk ahsdk jahsdkja shdkajhsdkjshadkjh askjd ksahd kjash'+	
 '</td></tr>'+
 '</table>'+
 
