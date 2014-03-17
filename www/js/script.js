@@ -324,6 +324,7 @@ function hamtahemma(){
 			},
 			//Vill att den skall stänga av loading om det blir fel.
 			error: function(varde2, status, error){
+				console.log('Error på hemma-get');
 				console.log(varde2);
 				console.log(status);
 				console.log(error);				
@@ -358,6 +359,11 @@ console.log("1");
 			console.log(meddelandehemma[0].innerHTML);
 			
 			
+			loadtvattaklar();
+		},
+		error{
+			console.log('Error på hemma-post');
+			hemmafel();
 			loadtvattaklar();
 		}
 

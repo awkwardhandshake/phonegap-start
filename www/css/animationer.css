@@ -121,8 +121,11 @@ img.scale-with-grid-tvatt-information{
 	vertical-align: middle;
 	width: 100%;
 	font-size: 1.5vh;
-	padding-top: 10px;
+	/*padding-top: 10px;*/
 	padding-left: 10px;
+	/*padding-bottom: 10%;*/
+}
+.information-text-middle-start-bottom{
 	padding-bottom: 10%;
 }
 
