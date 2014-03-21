@@ -219,7 +219,7 @@ body {
     .container .five.columns                    { width: 280px; }
     .container .six.columns                     { width: 340px; }
     .container .seven.columns                   { width: 400px; }
-    .container .eight.columns                   { width: 49%; border: solid 1px #aaa;   }
+    .container .eight.columns                   { width: 50%; 	}
     .container .nine.columns                    { width: 520px; }
     .container .ten.columns                     { width: 580px; }
     .container .eleven.columns                  { width: 640px; }
@@ -569,7 +569,7 @@ body {
 		background: #aaa;
 		border: 0px;
 		color: #fff;
-		bottom: 5%;
+		bottom: 0%;
 	}
 	
 	
