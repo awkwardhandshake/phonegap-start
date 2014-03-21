@@ -140,6 +140,9 @@ body {
 	#helamenyn{
 		position: fixed;
 	}
+	#pushmeny{
+		visibility: hidden;
+	}
 	#uppernav{
 		/*position: fixed;*/
 		z-index: 1;
@@ -557,7 +560,7 @@ body {
 		position: relative;
 		text-align: center;
 		float: right;
-		background: #aaa;
+		background: #252c47;
 		border: 0px;
 		color: #fff;
 	}
@@ -566,7 +569,7 @@ body {
 		position: absolute;
 		text-align: center;
 		float: left;
-		background: #aaa;
+		background-color: #252c47;
 		border: 0px;
 		color: #fff;
 		bottom: 0%;
@@ -644,7 +647,7 @@ body {
 		position: relative;
 		text-align: center;
 		float: right;
-		background: #aaa;
+		background: #252c47;
 		border: 0px;
 		color: #fff;
 	}

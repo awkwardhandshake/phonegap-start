@@ -31,6 +31,10 @@
 		position: fixed;
 	}
 	
+	#pushmeny{
+		visibility: hidden;
+	}
+	
 	#uppernav{	 
 		/*position: fixed;*/
 		z-index: 1;
