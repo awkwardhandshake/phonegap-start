@@ -54,7 +54,7 @@ element = 'element';
 	'</div>'+
 '<div id="doorcontrolcontent">'+
             '<form action="/DoorControl/PerformUnlock" method="post" ><ul>'+
-                  '<li><button type="submit" name="epName" value="varde" id="hemmadorren">varde</button></li>'+
+                  '<li><button type="submit" name="epName" value="varde" id="hemmadorren"></button></li>'+
                   '</ul>'+
             '</form><div class="doorControlStatus"></div>'+
 '</div>'+	
