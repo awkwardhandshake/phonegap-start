@@ -196,11 +196,10 @@ body {
 /* #Base 960 Grid
 ================================================== */
 
-    .container                                  { position: relative; width: 100%; /*margin: 0 auto; */
-    											padding-top: 40%;
+    .container                                  { position: relative; width: 100%; margin: 0px auto; padding-top: 40%;
     											}
     .container .column,
-    .container .columns                         { float: left; /*display: inline; margin-left: 10px; margin-right: 10px;*/ }
+    .container .columns                         { float: left;}
     .row                                        { margin-bottom: 20px; }
 
     /* Nested Column Classes */
@@ -216,9 +215,7 @@ body {
     .container .five.columns                    { width: 280px; }
     .container .six.columns                     { width: 340px; }
     .container .seven.columns                   { width: 400px; }
-    .container .eight.columns                   { width: 50%;   										
-    											
-    }
+    .container .eight.columns                   { width: 49%; border: solid 1px #aaa;   }
     .container .nine.columns                    { width: 520px; }
     .container .ten.columns                     { width: 580px; }
     .container .eleven.columns                  { width: 640px; }
@@ -510,7 +507,8 @@ body {
 	img.scale-with-grid {
 
 		max-width: 100%;
-		height: auto; }
+		height: auto; 
+		}
 		
 	img.scale-with-grid-logo {
 		max-width: 100%;
