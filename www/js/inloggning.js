@@ -1,5 +1,6 @@
 //Kolla om inlogg redan existrerar
 function kollainlogg(){
+show();
 'use strict';
 	if(localStorage.LoggedIn == 'true'){
 		hamta();
@@ -10,9 +11,11 @@ function kollainlogg(){
 	}
 	else{
 		inputfields();
+		loadtvattaklar();
 		if(localStorage.ReturnCode == 'TOOMANYFAILEDLOGINS'){
 			console.log('Du har loggat in för många gånger, var god vänta en stund och försök igen');
 			tomany();
+			loadtvattaklar();
 		}
 		console.log('Detta är användaren i else ' + localStorage.LoggedIn);
 		}
