@@ -45,6 +45,7 @@ console.log("Verkar inte ha funnits någon byggnad???")
 								}		
 	})
 	loadtvattaklar();
+	console.log('loading bar avstängd via byggnad');
 	
 }
 
@@ -249,6 +250,7 @@ historia('loadtvatta()');
 			}
 			})
 loadtvattaklar();
+	console.log('loading bar avstängd via tvatta');
 			}
 			
 //alt med hidden InAppBrowser
