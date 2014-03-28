@@ -12,13 +12,13 @@ element = 'element';
 '<tr><td class="infostart_door">'+
 '<img src="img/door_button.png" class="scale-with-grid-start-information"></img>'+
 '</td></tr><tr><td class="information-text-middle-start">'+
-'Dörr öppningsknappen är tillför att ge ett komplement till hemma.sgsstudentbostader.se. Om ditt område är utrustat med öppning av entrédörren via hemma.sgsstudentbostader.se gör Dörr-knappen samma sak.'+
+'<p>Dörr öppningsknappen är tillför att ge ett komplement till hemma.sgsstudentbostader.se. Om ditt område är utrustat med öppning av entrédörren via hemma.sgsstudentbostader.se gör Dörr-knappen samma sak.</p>'+
 '</td></tr>'+
 
 '<tr><td class="infostart_door">'+
 '<img src="img/cal_button.png" class="scale-with-grid-start-information"></img>'+
 '</td></tr><tr><td class="information-text-middle-start">'+
-'Kalenderikonen tar dig till bokningen för bland annat tvättstuga och sällskapsrum. Du kommer behöva använda ditt inlogg som du använder på www.sgsstudentbostader.se för att logga in.'+
+'<p>Kalenderikonen tar dig till bokningen för bland annat tvättstuga och sällskapsrum. Du kommer behöva använda ditt inlogg som du använder på www.sgsstudentbostader.se för att logga in.</p>'+
 
 '</td></tr>'+
 
@@ -126,25 +126,25 @@ function skapatvattatable(){
 '<tr class="rowtvatt"><td class="rutatvatt">'+		
 		'<img src="images/icon_plus_small.png" class="scale-with-grid-tvatt-information"></img>'+
 '</td><td class="information-text-middle-tvatt" class="rutatvatt">'+
-		'Detta passet är ledigt och går att boka, tryck på ikonen för att utföra bokningen.'+
+		'<p>Detta passet är ledigt och går att boka, tryck på ikonen för att utföra bokningen.</p>'+
 '</td></tr>'+
 
 '<tr class="rowtvatt"><td class="rutatvatt">'+
 		'<img src="images/icon_no.png" class="scale-with-grid-tvatt-information"></img>'+
 '</td><td class="information-text-middle-tvatt">'+
-		'Passet är redan bokat av en annan användare.'+	
+		'<p>Passet är redan bokat av en annan användare.</p>'+	
 '</td></tr>'+
 
 '<tr class="rowtvatt"><td class="rutatvatt">'+
 		'<img src="images/icon_own.png" class="scale-with-grid-tvatt-information"></img>'+
 '</td><td class="information-text-middle-tvatt">'+
-		'Passet är bokat på ditt konto.'+	
+		'<p>Passet är bokat på ditt konto.</p>'+	
 '</td></tr>'+
 
 '<tr class="rowtvatt"><td class="rutatvatt">'+		
 		'<img src="images/icon_no_not.png" class="scale-with-grid-tvatt-information"></img>'+
 '</td><td class="information-text-middle-tvatt">'+
-		'Tiden/datumet har passerat eller så är passet inte tillgängligt just nu.'+	
+		'<p>Tiden/datumet har passerat eller så är passet inte tillgängligt just nu.</p>'+	
 '</td></tr>'+
 '</table>'+
 
