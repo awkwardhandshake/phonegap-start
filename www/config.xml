@@ -39,6 +39,7 @@
     <preference name="DisallowOverscroll" value="true" />
     <preference name="UIWebViewBounce" value="false" />
     <preference name="SuppressesIncrementalRendering" value="true"/>
+    <preference name="StatusBarBackgroundColor" value="#252c47" />
 
     <!-- Plugins -->
 
@@ -59,6 +60,7 @@
     <gap:plugin name="org.apache.cordova.inappbrowser" />
     <!-- <gap:plugin name="org.apache.cordova.media" /> -->
     <gap:plugin name="org.apache.cordova.network-information" />
+    <gap:plugin name="com.phonegap.plugin.statusbar" />
 	<!--    <gap:plugin name="org.apache.cordova.splashscreen" />
     <gap:plugin name="org.apache.cordova.vibration" /> -->
 
