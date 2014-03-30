@@ -25,9 +25,10 @@
 	
 		
     
-      	<feature name="StatusBar">
+      	<!--<feature name="StatusBar">
             <param name="ios-package" value="CDVStatusBar" onload="true" />
         </feature>
+        -->
 	
     <!-- Customize your app and platform with the preference element. -->
 	<!--<preference name="permissions"                value="nome"/>-->
