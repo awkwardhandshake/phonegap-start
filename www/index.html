@@ -19,9 +19,7 @@ console.log('Går in i onLoad');
 
     };
     function onDeviceReady() {
-    StatusBar.hide();
-/*StatusBar.overlaysWebView(true);
-StatusBar.backgroundColorByHexString("#cccccc");*/
+
 console.log('Går in i DeviceReady');    	
         document.addEventListener("backbutton", function(){
 	        navigator.notification.confirm(
@@ -30,6 +28,10 @@ console.log('Går in i DeviceReady');
 			'Avsluta',
 			'Nej,Ja')
         }, false);
+alert('hi');
+StatusBar.hide();
+StatusBar.overlaysWebView(true);
+StatusBar.backgroundColorByHexString("#cccccc");
     };
 </script>
 <script>
