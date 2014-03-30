@@ -37,7 +37,7 @@ body {
     font-family: Arial, sans-serif;
     font-size:24px;
     height:95%;
-    margin-top:20px;
+    margin-top:0px;
     padding:0px;
     width:100%;
 	color: #fff;
@@ -143,6 +143,7 @@ body {
 }*/
 	#helamenyn{
 		position: fixed;
+		margin-top: 20px;
 	}
 	#pushmeny{
 		visibility: hidden;
