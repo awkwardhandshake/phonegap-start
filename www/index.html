@@ -13,11 +13,12 @@
 		<title>SGS Studentbostäder - Hemma</title>
 <script type="text/javascript">
 function onLoad() {
+StatusBar.backgroundColorByHexString("#252c47");
 console.log('Går in i onLoad');
         document.addEventListener("deviceready", onDeviceReady, false); 
     };
     function onDeviceReady() {
-    StatusBar.backgroundColorByHexString("#252c47");
+
 console.log('Går in i DeviceReady');    	
         document.addEventListener("backbutton", function(){
 	        navigator.notification.confirm(
