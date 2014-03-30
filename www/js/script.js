@@ -212,12 +212,9 @@ historia('loadtvatta()');
 					var tvattaimgriktig;
 					var cell = row.insertCell(-1)
 					tvattaimgriktig = String(tvattaimg[smart].outerHTML).split('.');
-//console.log(tvattaimgriktig[0]);
 					tvattaimgriktig = tvattaimgriktig[0] +'.png">';
-//console.log(tvattaimgriktig);
 					cell.setAttribute("class", "bokningsikoner");	
 					cell.innerHTML = "<a>" + tvattaimgriktig + "</a>";
-//console.log(tvattaimg[smart].outerHTML);
 					//kollar så att inte onmousedown är null
 					
 						if(tvattaimg[smart].parentNode.onmousedown != null){								
@@ -229,7 +226,6 @@ historia('loadtvatta()');
 							cell.setAttribute("class", "bokningsikoner");
 							cell.innerHTML = '<a onmousedown="bokatid(' + split +')">' 
 							+ tvattaimgriktig + "</a>";
-//console.log(split);							
 							}
 								
 					smart = (smart + extra);
