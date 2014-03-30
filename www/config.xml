@@ -20,13 +20,14 @@
         If you do not want any permissions to be added to your app, add the
         following tag to your config.xml; you will still have the INTERNET
         permission on your app, which PhoneGap requires.
+	-->
 		<preference name="permissions"                value="none"/>
-    -->
+    <!--
       <feature name="StatusBar">
             <param name="ios-package" value="CDVStatusBar" onload="true" />
         </feature>
         
-    
+    -->
 	
     <!-- Customize your app and platform with the preference element. -->
     <preference name="phonegap-version"           value="3.1.0" />          <!-- all: current version of PhoneGap -->
@@ -44,7 +45,8 @@
     <preference name="DisallowOverscroll" value="true" />
     <preference name="UIWebViewBounce" value="false" />
     <preference name="SuppressesIncrementalRendering" value="true"/>
-    <preference name="StatusBarBackgroundColor" value="#252c47" />
+    
+    <!--<preference name="StatusBarBackgroundColor" value="#252c47" />-->
 
     <!-- Plugins -->
 
