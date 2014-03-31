@@ -63,7 +63,7 @@ element = 'element';
 '</div>'
 
 	var bytaut = document.getElementById('navigering');
-	bytaut.outerHTML = '<td id="navigering" onmousedown="varde" onclick="loggaut()"><img src="img/sgs_logout.png" class="scale-with-grid-logo-small" id="back"></img></td>';
+	bytaut.outerHTML = '<td id="navigering" onmousedown="varde" onclick="yourCallbackloggaut()"><img src="img/sgs_logout.png" class="scale-with-grid-logo-small" id="back"></img></td>';
 
 historia("startsida()", element);
 // ==================================================================================================================	

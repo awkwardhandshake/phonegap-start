@@ -86,7 +86,8 @@ function hiddenbrowser(){
 
 }
 
-function loggaut(){
+function loggaut(button){
+if(button == 2){			
 	var loggautmomentum = window.open('http://www.sgsstudentbostader.se/Assets/Handlers/MomentumLogout.ashx?_=1390854127881', '_blank', 'hidden=yes');
 	var loggautmarknad = window.open('http://marknad.sgsstudentbostader.se/API/Service/AuthorizationServiceHandler.ashx?&Method=APILogout&callback=jsonp1390854117395', '_blank', 'hidden=yes');
 	console.log("Loggar ut momentum " + loggautmomentum);
@@ -107,6 +108,7 @@ function loggaut(){
 	alert('Du är nu utloggad');
 	console.log(localStorage.LoggedIn);
 	navigator.app.exitApp() ;
+	}
 }
 
 
