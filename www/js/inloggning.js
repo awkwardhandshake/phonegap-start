@@ -110,7 +110,7 @@ if(button == 2){
 	var mobilsystem = device.platform;
 	console.log(mobilsystem);
 	
-	if(device != 'iOS'){
+	if(mobilsystem != 'iOS'){
 		navigator.app.exitApp() ;
 		alert('Du är nu utloggad 2');
 	}
