@@ -107,8 +107,8 @@ if(button == 2){
 	
 	alert('Du är nu utloggad');
 	console.log(localStorage.LoggedIn);
-	console.log(device.platform);
-	var device = device.platform;
+	var mobilsystem = device.platform;
+	console.log(mobilsystem);
 	
 	if(device != 'iOS'){
 		navigator.app.exitApp() ;
