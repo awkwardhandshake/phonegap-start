@@ -128,6 +128,9 @@ function skapatvattatable(){
 	document.getElementById("styling").href= "css/tvatta.css";
 	/*var navigeringmeny = document.getElementById('navigering');
 	navigeringmeny.onclick = null;*/
+	var navigeringmeny = document.getElementById('navigering');
+	navigeringmeny.removeAttribute('onclick');
+	
 	var navback = document.getElementById('back');
 	navback.src = 'img/button_tillbaka.png';
 	document.getElementById("index").innerHTML=
@@ -196,6 +199,9 @@ function skapabyggnadtable(){
 	document.getElementById("styling").href="css/tvatta.css"
 	/*var navigeringmeny = document.getElementById('navigering');
 	navigeringmeny.onclick = null;*/
+	
+	var navigeringmeny = document.getElementById('navigering');
+	navigeringmeny.removeAttribute('onclick');
 	var navback = document.getElementById('back');
 	navback.src = 'img/button_tillbaka.png';
 	document.getElementById("index").innerHTML=
