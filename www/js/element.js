@@ -62,11 +62,8 @@ element = 'element';
 '</div>'+	
 '</div>'
 
-	var navigeringmeny2 = document.getElementById('navigering');
-	navigeringmeny2.setAttribute('onclick', 'loggaut()');
-	/*navigeringmeny2.onmousedown = 'varde';*/
-	console.log('Startsida värde');
-	console.log(navigeringmeny2);
+	var bytaut = document.getElementById('navigering');
+	bytaut.outerHTML = '<td id="navigering" onmousedown="varde" onclick="loggaut()"><img src="img/sgs_logout.png" class="scale-with-grid-logo-small" id="back"></img></td>';
 
 historia("startsida()", element);
 // ==================================================================================================================	
@@ -81,8 +78,10 @@ function inputfields(){
 		var navigeringmeny = document.getElementById('navigering');
 		navigeringmeny.removeAttribute('onclick');
 		
+		
+		var navigeringmeny3 = document.getElementById('navigering');
 		console.log(' =Input= ');
-		console.log(navigeringmeny);
+		console.log(navigeringmeny3);
 		var navback = document.getElementById('back');
 		navback.src = 'img/button_tillbaka.png';
 		document.getElementById("index").innerHTML=	
@@ -117,6 +116,7 @@ function inputfields(){
 		'<span id="felvidinlogg" class="felinlogg">'+
 		'<span>'+
 		'</div>'
+		
 historia('inputfields()');
 		};
 

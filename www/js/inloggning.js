@@ -103,6 +103,8 @@ function loggaut(){
 	})
 	console.log('Sätter anv och pass till null');
 	localStorage.LoggedIn = 'false';
+	
+	alert('Du är nu utloggad');
 	console.log(localStorage.LoggedIn);
 	navigator.app.exitApp() ;
 }
