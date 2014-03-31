@@ -107,7 +107,7 @@ if(button == 2){
 	
 	alert('Du är nu utloggad');
 	console.log(localStorage.LoggedIn);
-	navigator.app.exitApp() ;
+	//navigator.app.exitApp() ;
 	alert('Du är nu utloggad 2');
 	}
 }
