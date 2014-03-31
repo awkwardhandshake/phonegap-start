@@ -3,9 +3,11 @@
 function startsida(){
 element = 'element';
 	var navigering = document.getElementById('navigering');
-	document.getElementById("styling").href="css/index.css"
+	document.getElementById("styling").href="css/index.css";
+	
 	var navback = document.getElementById('back');
-		navback.style.visibility = 'hidden';
+	navback.src = "img/sgs_logout.png";
+	
 	document.getElementById("index").innerHTML=
 '<div id="information" class="inforuta_hide">'+
 '<table>'+
@@ -60,14 +62,15 @@ element = 'element';
 '</div>'+	
 '</div>'
 
+	var navigeringmeny2 = document.getElementById('navigering');
+	navigeringmeny2.setAttribute('onclick', 'loggaut()');
+	/*navigeringmeny2.onmousedown = 'varde';*/
+	console.log('Startsida värde');
+	console.log(navigeringmeny2);
+
 historia("startsida()", element);
 // ==================================================================================================================	
 };
-
-function popup(){
-	document.getElementById('')
-	
-}
 
 // ==================================================================================================================
 function inputfields(){
@@ -75,8 +78,13 @@ function inputfields(){
 		var uppernav = document.getElementById('uppernav');
 		document.getElementById("styling").href="css/index.css"
 		uppernav.style.display = 'table'
+		var navigeringmeny = document.getElementById('navigering');
+		navigeringmeny.removeAttribute('onclick');
+		
+		console.log(' =Input= ');
+		console.log(navigeringmeny);
 		var navback = document.getElementById('back');
-		navback.style.visibility = 'visible';
+		navback.src = 'img/button_tillbaka.png';
 		document.getElementById("index").innerHTML=	
 		
 		'<div id="information" class="inforuta_hide">'+
@@ -118,6 +126,10 @@ function skapatvattatable(){
 	var navback = document.getElementById('back');
 	navback.style.visibility = 'visible';
 	document.getElementById("styling").href= "css/tvatta.css";
+	/*var navigeringmeny = document.getElementById('navigering');
+	navigeringmeny.onclick = null;*/
+	var navback = document.getElementById('back');
+	navback.src = 'img/button_tillbaka.png';
 	document.getElementById("index").innerHTML=
 	
 '<div id="information" class="inforuta_hide">'+
@@ -182,6 +194,10 @@ function skapabyggnadtable(){
 	var navback = document.getElementById('back');
 	navback.style.visibility = 'visible';
 	document.getElementById("styling").href="css/tvatta.css"
+	/*var navigeringmeny = document.getElementById('navigering');
+	navigeringmeny.onclick = null;*/
+	var navback = document.getElementById('back');
+	navback.src = 'img/button_tillbaka.png';
 	document.getElementById("index").innerHTML=
 '<table class="overskrift" border="2">'+
 	'<tbody>'+

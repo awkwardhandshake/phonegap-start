@@ -50,26 +50,31 @@ alert('hi2');*/
 <span id="helamenyn">
 <table id="uppernav" class="uppernavclass">
 <tr>
-<td id="navigering" onmousedown="varde"><img src="img/button_tillbaka.png" class="scale-with-grid-logo-small" id="back"></img></td>
+
+<!-- här kan det bli fel när varde är borta -->
+
+<td id="navigering" onmousedown="varde" onclick="loggaut()"><img src="img/sgs_logout.png" class="scale-with-grid-logo-small" id="back"></img></td>
 <td>
 <img id="topplogga" class="scale-with-grid-logo-small" src="img/sgs_logo_width_512.png">
 </td>
 <td id="infoclick" onclick="info_animation()"><img src="img/button_info.png" class="scale-with-grid-logo-small"></img</td>
 </tr>
 </table>
+
 <div id="loading" style="visibility:hidden">
 <div id="loaderImage"></div>
 </div>
 </span>
+
+
 <span id="pushmeny">
 <table id="underuppernav" class="uppernavclass">
 <tr>
-
-<td id="navigering" onmousedown="varde"><img src="img/button_tillbaka.png" class="scale-with-grid-logo-small"></img></td>
+<td id="navigering2" onmousedown="varde"><img src="img/button_tillbaka.png" class="scale-with-grid-logo-small"></img></td>
 <td>
-<img id="topplogga" class="scale-with-grid-logo-small" src="img/sgs_logo_width_512.png">
+<img id="topplogga2" class="scale-with-grid-logo-small" src="img/sgs_logo_width_512.png">
 </td>
-<td id="infoclick" onclick="info_animation()"><img src="img/button_info.png" class="scale-with-grid-logo-small"></img</td>
+<td id="infoclick2" onclick="info_animation()"><img src="img/button_info.png" class="scale-with-grid-logo-small"></img</td>
 </tr>
 </table>
 </span>
@@ -130,7 +135,9 @@ alert('hi2');*/
                   </ul>
             </form><div class="doorControlStatus"></div>
 </div>
-<input type="button" class="submitknapp" name="submit" id="loggaut" onclick="loggaut()" value="Logga ut">	
+<!-- Gamla logga ut 
+<input type="button" class="submitknapp" name="submit" id="loggaut" onclick="loggaut()" value="Logga ut">
+-->
 </div>
 
 		<script type="text/javascript" src="js/element.js"></script>

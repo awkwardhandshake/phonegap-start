@@ -43,10 +43,6 @@ body {
 	color: #fff;
 }
 
-
-
-
-
 /*.bakgrundinformation_hide{
 	z-index: -1;
 
@@ -167,7 +163,7 @@ body {
 	}
 			
 	#navigering img{
-	visibility: hidden;
+	
 	}
 	
 	#uppernav td{
