@@ -57,7 +57,6 @@ var lankartvattariktig;
 //Vi laddar in hela tvatta.sgsstudentbostader.se
 function loadtvatta(urlfranlankar){
 historia('loadtvatta()');
-//console.log("Går in i tvätta funktionen");
 	skapatvattatable(); 	
 	var tvattaimg;
 	var antaltider;
@@ -76,7 +75,6 @@ historia('loadtvatta()');
 	$.ajax({
 			url: urlfranlankar,
 			success: function(data) {
-//console.log('Går in i ajax');			
 				var root2 = document.getElementById('mydiv2');
 				var tab2=document.createElement('table');
 				tvattaimg = $(data).find("#tbl1 [src]");
@@ -99,7 +97,6 @@ historia('loadtvatta()');
 					for(var l=0; l < valjabokning.length; l++){
 						var lokalcell = lokalrow.insertCell(-1);
 						if(valjabokning[rakna].onmousedown == null){
-//console.log("Den går in i if satsen för olika lokaler");
 							lokalcell.setAttribute("class", "lokalnav");
 							valjabokningtext = String(valjabokning[rakna].innerHTML).split('&nbsp;');
 							var navnummer = String("navnummer");
@@ -123,13 +120,11 @@ historia('loadtvatta()');
 				if(typlokal.length != 0){
 				var typlokaltext;
 				var typrakna = 0;
-				//console.log(recordposition);
 					var u = 0;						
 					for(var t = 0; t < typlokal.length; t++){					
 						var typrow = navtable.insertRow(-1);
 						for(var u = 0; u < recordposition; u++){
 						typrow.insertCell(-1);
-						//console.log('Går in i recordposition');
 						}
 						
 						typrow.setAttribute("id", "navnummer")
@@ -178,11 +173,9 @@ historia('loadtvatta()');
 				var headrow = table.insertRow(-1);
 				headrow.insertCell(-1);
 				for (var h = 0; h < antal; h++){
-						//console.log(tiderdygnetriktig);
 						var headcell = headrow.insertCell(-1);
 						headcell.setAttribute("class", "bokningstider");
 						tiderdygnetriktig = String(tiderdygnet[f].innerHTML).split('&nbsp;');
-//console.log(tiderdygnetriktig[2]);
 						headcell.innerHTML = "<p>" + tiderdygnetriktig[2] + "</p>";
 						
 						f++
@@ -200,7 +193,6 @@ historia('loadtvatta()');
 					var cell2 = row.insertCell(-1);
 					cell2.setAttribute("class", "bokningsdatum");
 					dagarriktiga = String(dagar[q].innerHTML).split('dag');
-//console.log(dagarriktiga[1]);
 					cell2.innerHTML = "<p>" + "&nbsp;&nbsp;" +dagarriktiga[0]+ "&nbsp;&nbsp;" + dagarriktiga[1] + "</p>"
 					q++;
 						if(b >= 1){
@@ -245,6 +237,7 @@ historia('loadtvatta()');
 					)
 			}
 			})
+			
 loadtvattaklar();
 	console.log('loading bar avstängd via tvatta');
 			}
@@ -257,19 +250,14 @@ function bokatid(tiden,nuvarandebokning){
 		 ref.addEventListener('loadstart', function(event2){
 			console.log('Loadstart v.1.4');
 			show();
-			//var spinnerevent = document.getElementById('loading');
-			//spinnerevent.style.display = 'inline';
 		 })
 		 
 		 ref.addEventListener('loadstop', function(event) {
 		 	console.log('Loadstop v.1.5');
-		 	//var loading2 = document.getElementById('loading');
-			//loading2.style.display = 'none';
 			var testarstring = event.url;
 		 	if(String(testarstring).match('wwwashcalendar.aspx') != null || String(testarstring).match('NextPage') != null){
 		 		console.log('bokatid if-sats');
 			 	loadtvatta(nuvarandebokning);
-			 	//loadtvattaklar();
 		 	}
 		 	console.log(event.url);
 		 	console.log(event);
@@ -317,7 +305,6 @@ function hamtahemma(){
 							buttonvalue = $(varde).find('button').attr('value');
 							buttonname = $(varde).find('button');
 							document.getElementById('hemmadorren').value = buttonvalue;
-							/*document.getElementById('hemmadorren').innerHTML = buttonname[0].innerHTML*/
 							oppnadorr();
 						
 			},
@@ -377,7 +364,6 @@ console.log("1");
 
 //Hanterar horisontell bar
 function show(){
-	//document.getElementById('bakgrundinformation').className = 'bakgrundinformation_show';
 	var spinnerevent = document.getElementById('loading');
 	spinnerevent.style.visibility = 'visible';
 }
@@ -387,5 +373,4 @@ function loadtvattaklar(){
 	console.log('laddat klart');
 	var spinnerevent = document.getElementById('loading');
 			spinnerevent.style.visibility = 'hidden';
-	//document.getElementById('bakgrundinformation').className = 'bakgrundinformation_hide';
 }

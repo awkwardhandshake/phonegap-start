@@ -67,11 +67,10 @@ console.log("Logga in delen " + localStorage.UserName);
 hiddenbrowser();
 }
 
-//alt med hidden InAppBrowser
+//Hidden InAppBrowser
 function hiddenbrowser(){
 	console.log("Går in i funktionen hiddenbrowser");
 	 var ref = window.open(localStorage.urlen, '_blank', 'hidden=yes');
- //Denna skall in i loadstop funktionen.
 	 console.log(ref);
 	 	ref.addEventListener('loadstart', function(event) {
 	 		console.log('Inloggning hidden loadstart');
@@ -105,17 +104,15 @@ if(button == 2){
 	console.log('Sätter anv och pass till null');
 	localStorage.LoggedIn = 'false';
 	
-	alert('Du är nu utloggad');
 	console.log(localStorage.LoggedIn);
 	var mobilsystem = device.platform;
 	console.log(mobilsystem);
 	
 	if(mobilsystem != 'iOS'){
-		navigator.app.exitApp() ;
-		alert('Du är nu utloggad 2');
+		navigator.app.exitApp();
 	}
 	
-	alert('Du är nu utloggad 3');
+	alert('Du är nu utloggad!');
 	
 	}
 }

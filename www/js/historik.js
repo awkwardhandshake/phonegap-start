@@ -45,22 +45,7 @@ else{
 console.log('-------------------------------------------------------------------------------');
 console.log("Sesam i else-satsen TOPPEN " + sesam);
 console.log("Finns denna redan? TOPPEN " + kontrollnufunktion +" = "+ sesamkommaihag);
-//if((kommaihag.indexOf(sesamkommaihag) < 0 && sesam == true)){
-	
 
-//	if(kontrollnufunktion != sesamkommaihag && sesam == true){
-//	kommaihag[kommaihag.length] = sesamkommaihag +"Denna kommer från sesam";
-//	var nyttnummer = kommaihag.length
-//	kommaihag[nyttnummer] = kontrollnufunktion;
-//	console.log('Lägga den dubbelt i IF-satsen???');
-//	console.log(kommaihag);
-//	console.log(kommaihag.indexOf(sesamkommaihag));
-//	console.log(sesam);
-//}
-//Lägger på dubbelt i onödan	
-//}
-
-//else{
 var nyttnummer = kommaihag.length
 	kommaihag[nyttnummer] = kontrollnufunktion;
 	
@@ -71,17 +56,14 @@ console.log(kommaihag);
 		
 	var back = document.getElementById('testar');
 
-	//var navigering = document.getElementById('navigering')
-	//var navigeringkul = navigering.setAttribute('onmousedown', kommaihag[(kommaihag.length-2)]);
-	//navigering.setAttribute("class", "null")
+
 	console.log("Sesam i else-satsen BOTTEN " + sesam);
 	console.log("Finns denna redan? BOTTEN " + kommaihag.indexOf(sesamkommaihag));
 	sesam = false;
 
-//onLoad();
+
 console.log('-------------------------------------------------------------------------------');
 
-//}
 //Var skall denna ligga för bästa effekt???
 	var navigering = document.getElementById('navigering')
 	var navigeringkul = navigering.setAttribute('onmousedown', kommaihag[(kommaihag.length-2)]);
