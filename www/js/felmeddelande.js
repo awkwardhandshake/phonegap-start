@@ -9,7 +9,10 @@ function tomany(){
 function hemmafel(){
 	document.getElementById('meddelande').innerHTML = '<p>Fel vid öppning av porten</p>';
 	loadtvattaklar();
-	setTimeout(alert('Nu har det gått 10sek sedan fel vid inloggning visades!'), 10000)
+	setTimeout(function(){
+		document.getElementById('meddelande').innerHTML = 	'<p><strong>Öppna entrédörr</strong></p>'+
+															'<p><small>(Open entrance door)</small></p>'
+	},10000)
 }
 
 function hemmavilken(adress,medd){

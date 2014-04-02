@@ -20,7 +20,9 @@ console.log('Går in i onLoad');
     };
     function onDeviceReady() {
 
-console.log('Går in i DeviceReady');    	
+console.log('Går in i DeviceReady');
+		navigator.splashscreen.hide();
+		console.log('Gömmer splash screen för framförallt android');
         document.addEventListener("backbutton", function(){
 	        navigator.notification.confirm(
 			'Vill du stänga ner appen?',
