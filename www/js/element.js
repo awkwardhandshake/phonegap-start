@@ -89,17 +89,14 @@ function inputfields(){
 		'<div id="information" class="inforuta_hide">'+
 
 '<table>'+
-'<tr><td class="rutatvatt">'+		
-		'<img src="img/door_button.png" class="scale-with-grid-start-information"></img>'+
-'</td><td class="information-text-middle">'+
-		'Dörr öppningsknappen är tillför att ge ett komplement till hemma.sgsstudentbostader.se. Om ditt område är utrustat med öppning av entrédörren via hemma.sgsstudentbostader.se gör Dörr-knappen samma sak.'+
+'<tr>'+
+'<td class="information-text-middle">'+
+		'<p><strong>Användarnamn:</strong> Detta är samma som du använder för att logga in på www.sgsstudentbostader.se</p>'+
 '</td></tr>'+
 
-'<tr><td class="rutatvatt">'+
-
-		'<img src="img/cal_button.png" class="scale-with-grid-start-information"></img>'+
-'</td><td class="information-text-middle">'+
-		'Kalenderikonen tar dig till bokningen för bland annat tvättstuga och sällskapsrum. Du kommer behöva använda ditt inlogg som du använder på www.sgsstudentbostader.se för att logga in.'+	
+'<tr>'+
+'<td class="information-text-middle">'+
+		'<p><strong>Lösenord:</strong> Använd det lösenord du blev tilldelad eller valde när du registrerade dig på www.sgsstudentbostader.se hemsida.</p>'+	
 '</td></tr>'+
 
 '</table>'+

@@ -203,7 +203,7 @@ body {
 
 /* #Base 960 Grid
 ================================================== */
-
+@media only screen and (min-width: 0px) and (max-width: 1080px) {	
     .container                                  { position: relative; width: 100%; margin: 0px auto; padding-top: 40%;
     											}
     .container .column,
@@ -255,7 +255,7 @@ body {
     .container .offset-by-fourteen              { padding-left: 840px; }
     .container .offset-by-fifteen               { padding-left: 900px; }
 
-
+}
 
 /* #Tablet (Portrait)
 ================================================== */
@@ -835,6 +835,17 @@ body {
 	
 /* min bredd 1080px*/
 @media only screen and (min-width: 1081px){	
+	.container                                  { position: relative; max-width: 80%; margin: 0px auto; padding-top: 10%; }
+    .container .column,
+    .container .columns                         { float: left; }
+    .row                                        { margin-bottom: 20px; }
+    /* Base Grid */
+    .container .eight.columns                   { max-width: 50%; }
+	
+	
+	
+	
+	
 	.logo{
 		margin-top: 5%;
 		margin-left: 5%;
