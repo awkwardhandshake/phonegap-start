@@ -16,7 +16,7 @@ function yourCallbackStanga(button){
 
 function yourCallbackloggaut(){
 	navigator.notification.confirm(
-			'Vill du logga ut? Det kan i vissa fall ta en viss tid innan en ny användare kan logga in',
+			'Vill du logga ut? Det kan i vissa fall ta en viss tid innan en ny användare kan logga in.',
 			loggaut,
 			'Utloggning',
 			'Nej,Ja'
