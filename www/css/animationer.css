@@ -82,6 +82,11 @@
 		margin-left: 70%;
 		top: 5%;
 		color: #252c47;
+		font-size: 0px;
+	}
+	
+	75%{
+		font-size: 0px;
 	}
 	
 	100% {	
@@ -89,11 +94,6 @@
 		top: 10%;
 		width: 90%;
 		margin-right: 2%;
-		-webkit-opacity: 1;
-		background-color: #252c47;
-	}
-	
-}
 
 
 
