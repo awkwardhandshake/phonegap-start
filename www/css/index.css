@@ -834,7 +834,52 @@ body {
 }	
 	
 /* min bredd 1080px*/
-@media only screen and (min-width: 1081px){	
+@media only screen and (min-width: 1081px){
+	
+	
+	
+	.logo{
+		margin-top: 5%;
+		margin-left: 5%;
+		width: 15%;
+	
+	}	
+	.textboxA
+	{
+		
+		font-size: 90px;
+/*		top: 30%;
+		position: absolute;
+		height: 12.5%;
+		width: 70%;
+		margin-left: 15%;
+*/
+	}
+	.textboxL
+	{
+		font-size: 90px;
+/*		top: 47.5%;
+		position: absolute;
+		height: 12.5%;
+		width: 70%;
+		margin-left: 15%;
+*/
+	}
+	
+	.submitknapp{
+		font-size: 90px;
+/*		position: relative;
+		text-align: center;
+		float: right;
+		background: #aaa;
+		border: 0px;
+		color: #fff;
+		padding: 5px; 
+*/		
+	}
+}
+
+@media only screen and (min-width: 1081px) and (device-aspect-ratio: 4/3){	
 	.container                                  { position: relative; max-width: 80%; margin: 0px auto; padding-top: 10%; }
     .container .column,
     .container .columns                         { float: left; }
@@ -886,7 +931,6 @@ body {
 */		
 	}
 }
-
 	
 
 
