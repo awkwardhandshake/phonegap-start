@@ -165,12 +165,12 @@ function skapatvattatable(){
 	'<tr>'+	
 	'</tbody>'+
 '</table>'+
-'<span id="hide" class="hidden_menu">'+
+//'<span id="hide" class="hidden_menu">'+
 '<table id="navtvatta" border="2">'+
 	'<tbody>'+
 	'</tbody>'+
 '</table>'+
-'</span>'+
+//'</span>'+
 
 '<table id="tvatta" border="2">'+
 	'<tbody>'+

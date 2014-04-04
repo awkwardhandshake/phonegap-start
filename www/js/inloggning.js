@@ -3,8 +3,8 @@ function kollainlogg(){
 show();
 'use strict';
 	if(localStorage.LoggedIn == 'true'){
-		hamta();
-		//loadtvatta('http://www.sgsstudentbostader.se/ext_gw.aspx?module=wwwash&lang=se#lblPanelName');
+		//hamta();
+		loadtvatta('http://www.sgsstudentbostader.se/ext_gw.aspx?module=wwwash&lang=se#lblPanelName');
 		//byggnad('http://www.sgsstudentbostader.se/ext_gw.aspx?module=wwwash&lang=se#lblPanelName');
 		console.log('Det verkar finnas en användare');
 		console.log("Detta är användaren" + localStorage.ReturnCode);

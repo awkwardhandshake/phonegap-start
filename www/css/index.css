@@ -209,7 +209,7 @@ body {
 
 /* #Base 960 Grid
 ================================================== */
-@media only screen and (min-width: 320px) and (max-width: 1080px) {	
+@media only screen and (min-width: 0px) and (max-width: 1080px) {	
     .container                                  { position: relative; width: 100%; margin: 0px auto; padding-top: 40%;
     											}
     .container .column,
