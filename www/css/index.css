@@ -43,6 +43,12 @@ body {
 	color: #fff;
 }
 
+#doorcontrolcontent{
+	display: none;
+}
+
+
+
 /*.bakgrundinformation_hide{
 	z-index: -1;
 
@@ -603,18 +609,17 @@ body {
 /* screen mellan 240 - 320px */
 @media only screen and (min-width: 240px) and (max-width: 320px) {	
 	
-	
+/*	
 	.container                                  { position: relative; width: 100%; margin: 0px auto; padding-top: 20%; }
     .container .column,
     .container .columns                         { float: left; }
     .row                                        { margin-bottom: 20px; }
 
-    /* Nested Column Classes */
-    /* Base Grid */
+    
     .container .eight.columns                   { width: 50%; }
     .container .sixteen.columns                 { width: 100%; }
 
-
+*/
 
 	
 	
