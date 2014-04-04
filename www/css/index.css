@@ -610,16 +610,11 @@ body {
     .row                                        { margin-bottom: 20px; }
 
     /* Nested Column Classes */
-    .column.alpha, .columns.alpha               { margin-left: 0; }
-    .column.omega, .columns.omega               { margin-right: 0; }
-
     /* Base Grid */
     .container .eight.columns                   { width: 50%; }
-
     .container .sixteen.columns                 { width: 100%; }
 
-    .container .one-third.column                { width: 300px; }
-    .container .two-thirds.column               { width: 620px; }
+
 
 	
 	
