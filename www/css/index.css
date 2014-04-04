@@ -604,7 +604,7 @@ body {
 @media only screen and (min-width: 240px) and (max-width: 320px) {	
 	
 	
-	.container                                  { position: relative; width: 100%; margin: 0px auto; padding-top: 30%; }
+	.container                                  { position: relative; width: 100%; margin: 0px auto; padding-top: 20%; }
     .container .column,
     .container .columns                         { float: left; }
     .row                                        { margin-bottom: 20px; }
