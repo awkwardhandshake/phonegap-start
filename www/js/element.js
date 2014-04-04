@@ -197,6 +197,17 @@ function skapabyggnadtable(){
 	var navback = document.getElementById('back');
 	navback.src = 'img/button_tillbaka.png';
 	document.getElementById("index").innerHTML=
+'<div id="information" class="inforuta_hide">'+
+
+'<table>'+
+'<tr>'+
+'<td class="information-text-middle">'+
+		'<p>Om ditt område har möjlighet att boka tvättstuga på flera olika adresser eller uppgångar visas de olika alternativen på denna sida.</p>'+
+'</td></tr>'+
+'</table>'+
+'</div>'+
+
+
 '<table class="overskrift" border="2">'+
 	'<tbody>'+
 	'<tr>'+
