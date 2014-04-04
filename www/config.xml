@@ -20,11 +20,11 @@
         If you do not want any permissions to be added to your app, add the
         following tag to your config.xml; you will still have the INTERNET
         permission on your app, which PhoneGap requires.
-    -->
+    
         <feature name="StatusBar">
             <param name="ios-package" value="CDVStatusBar" onload="true" />
-        </feature>    
-	
+        </feature>
+	-->
 		
     
 
