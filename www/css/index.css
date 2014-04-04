@@ -203,7 +203,7 @@ body {
 
 /* #Base 960 Grid
 ================================================== */
-@media only screen and (min-width: 319px) and (max-width: 1080px) {	
+@media only screen and (min-width: 0px) and (max-width: 1080px) {	
     .container                                  { position: relative; width: 100%; margin: 0px auto; padding-top: 40%;
     											}
     .container .column,
@@ -602,25 +602,6 @@ body {
 
 /* screen mellan 240 - 320px */
 @media only screen and (min-width: 240px) and (max-width: 320px) {	
-	.container                                  { position: relative; width: 100%; margin: 0px auto; padding-top: 30%; }
-    .container .column,
-    .container .columns                         { float: left; }
-    .row                                        { margin-bottom: 20px; }
-
-    /* Nested Column Classes */
-    .column.alpha, .columns.alpha               { margin-left: 0; }
-    .column.omega, .columns.omega               { margin-right: 0; }
-
-    /* Base Grid */
-    .container .eight.columns                   { width: 50%; }
-
-    .container .sixteen.columns                 { width: 100%; }
-
-    .container .one-third.column                { width: 300px; }
-    .container .two-thirds.column               { width: 620px; }
-
-
-
 	
 	img.scale-with-grid{
 		
@@ -853,7 +834,15 @@ body {
 }	
 	
 /* min bredd 1080px*/
-@media only screen and (min-width: 1081px){
+@media only screen and (min-width: 1081px){	
+	.container                                  { position: relative; max-width: 80%; margin: 0px auto; padding-top: 10%; }
+    .container .column,
+    .container .columns                         { float: left; }
+    .row                                        { margin-bottom: 20px; }
+    /* Base Grid */
+    .container .eight.columns                   { max-width: 50%; }
+	
+	
 	
 	
 	
@@ -898,57 +887,6 @@ body {
 	}
 }
 
-/**/@media only screen and (min-width: 1081px) {	
-	.container                                  { position: relative; max-width: 80%; margin: 0px auto; padding-top: 10%; }
-    .container .column,
-    .container .columns                         { float: left; }
-    .row                                        { margin-bottom: 20px; }
-    .container .eight.columns                   { width: 49%; }
-	.container .sixteen.columns             	{ width: 100%; }
-	
-	
-	
-	
-	.logo{
-		margin-top: 5%;
-		margin-left: 5%;
-		width: 15%;
-	
-	}	
-	.textboxA
-	{
-		
-		font-size: 90px;
-/*		top: 30%;
-		position: absolute;
-		height: 12.5%;
-		width: 70%;
-		margin-left: 15%;
-*/
-	}
-	.textboxL
-	{
-		font-size: 90px;
-/*		top: 47.5%;
-		position: absolute;
-		height: 12.5%;
-		width: 70%;
-		margin-left: 15%;
-*/
-	}
-	
-	.submitknapp{
-		font-size: 90px;
-/*		position: relative;
-		text-align: center;
-		float: right;
-		background: #aaa;
-		border: 0px;
-		color: #fff;
-		padding: 5px; 
-*/		
-	}
-}
 	
 
 
