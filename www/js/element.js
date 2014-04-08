@@ -130,7 +130,7 @@ function skapatvattatable(){
 	document.getElementById("index").innerHTML=
 	
 '<div id="information" class="inforuta_hide">'+
-'<table>'+
+'<table class="info-tabel-tvatta">'+
 
 '<tr class="rowtvatt"><td class="rutatvatt">'+		
 		'<img src="images/icon_plus_small.png" class="scale-with-grid-tvatt-information"></img>'+
@@ -158,6 +158,8 @@ function skapatvattatable(){
 '</table>'+
 
 '</div>'+
+
+
 '<table class="overskrift" border="2">'+
 	'<tbody>'+
 	'<tr>'+

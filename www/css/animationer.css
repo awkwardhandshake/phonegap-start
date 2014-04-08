@@ -7,12 +7,12 @@
 }*/
 
 	.nyinforuta{
-		opacity: 0.85;
+		opacity: 0.97;
 		position: fixed;
 		z-index: 1;
 		height: 100%;
-		background-color: #000;
-		color: #fff;
+		background-color:#252c47;
+		color:rgba(255,255,255,1.0);
 		-webkit-animation:inforutavisa 0.5s;  /*Safari and Chrome */	
 		/*visibility: hidden;*/
 	}
@@ -30,11 +30,15 @@
 	
 	@-webkit-keyframes inforutavisa{
 	0% {
-		opacity: 0;		
+		opacity: 0;
+		/*color:rgba(255,255,255,0.0);
+		background-color:rgba(37,44,71,0.0);*/		
 	}
 	
 	100% {	
-		opacity: 0.85;
+		opacity: 0.97;
+		/*background-color:rgba(37,44,71,0.8);
+		color:rgba(255,255,255,1.0);*/
 		}
 }
 
@@ -183,12 +187,14 @@ img.scale-with-grid-tvatt-information{
 }
 
 .inforuta td{
-	height: auto;
+	/*height: auto;*/
+	
 }
 
 .information-text-middle-start{
+	text-align: left;
 	vertical-align: middle;
-	width: 100%;
+	width: auto;
 	/*font-size: 1.5vh;*/
 	/*padding-top: 10px;*/
 	padding-left: 10px;
@@ -199,12 +205,13 @@ img.scale-with-grid-tvatt-information{
 }
 
 .information-text-middle-tvatt{
-	height: 100%;
+	height: auto;
 	float: left;
 	vertical-align: middle;
-	width: 100%;
+	width: auto;
 	/*font-size: 1.0vh;*/
 	padding-top: 2%;
+
 	
 }
 
@@ -212,11 +219,14 @@ img.scale-with-grid-tvatt-information{
 	padding-top: 4%;	
 }
 
-.rutatvatt{
+.info-tabel-tvatta{
 	height: auto;
+}
+
+.rutatvatt{
+
 	/*padding-top: 10px;*/
 	width: 15%;
-	vertical-align: middle;
 	padding-top: 2%;
 	
 }
@@ -232,8 +242,4 @@ img.scale-with-grid-tvatt-information{
 .rutatva a{
 	vertical-align: bottom;
 	text-decoration: none;
-}
-
-.rowtvatt{
-
 }
