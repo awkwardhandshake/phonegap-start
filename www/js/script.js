@@ -27,7 +27,8 @@ historia("byggnad()", urlfranlankarbyggnad);
 						}
 						d++;	
 					}
-				
+				loadtvattaklar();
+				console.log('loading bar avstängd via byggnad');
 				}
 				else{
 console.log("Verkar inte ha funnits någon byggnad???")
@@ -44,11 +45,14 @@ console.log("Verkar inte ha funnits någon byggnad???")
 									)
 								}		
 	})
-	loadtvattaklar();
-	console.log('loading bar avstängd via byggnad');
+	//loadtvattaklar();
+
 	
 }
 
+
+var keyer;
+keyer = 'sgsstudentbostaderskaparjustnuenapplikation';
 var nastaveckafram;
 var nastaveckabak;
 var lokalenriktig;
@@ -84,8 +88,9 @@ historia('loadtvatta()');
 				lank = $(data).find("#tbl1 [onmousedown]");
 				tiderdygnet = $(data).find("#tbl1 td:contains(':')");
 				lankartvatta = $(data).find("#tblNav td.periodLinkColor");
-				valjabokning = $(data).find("table td[width=12%][align].headerColor");
+				valjabokning = $(data).find("table td[align].headerColor[width]:not(.bigText)");
 				typlokal = $(data).find("td[background]");
+				console.log(valjabokning);
 				var antal = antaltider.length;
 				
 				//Välja typ av lokal att boka
@@ -96,6 +101,7 @@ historia('loadtvatta()');
 					lokalrow.setAttribute("id", "navlokal");
 					for(var l=0; l < valjabokning.length; l++){
 						var lokalcell = lokalrow.insertCell(-1);
+						
 						if(valjabokning[rakna].onmousedown == null){
 							lokalcell.setAttribute("class", "lokalnav");
 							valjabokningtext = String(valjabokning[rakna].innerHTML).split('&nbsp;');
@@ -104,6 +110,7 @@ historia('loadtvatta()');
 							recordposition = l;
 							rakna++;
 						}
+						
 						else{
 						lokalenriktig = String(valjabokning[rakna].onmousedown).split("'", 2);
 						lokalenriktig = "'http://tvatta.sgsstudentbostader.se/"+ lokalenriktig[1] +"'";
@@ -129,12 +136,17 @@ historia('loadtvatta()');
 						
 						typrow.setAttribute("id", "navnummer")
 						var typcell = typrow.insertCell(-1);
+						
 						if(typlokal[typrakna].onmousedown == null){
 						typcell.setAttribute("class", "typlokal");
+						//Här blir det fel för Rosendal, T på ensam rad.
+						console.log(typlokal[typrakna].innerHTML);
 						typlokaltext = String(typlokal[typrakna].innerHTML).split('&nbsp;');
+						console.log("Rätt??? " + typlokaltext);
 						typcell.innerHTML = '<a>' + typlokaltext[0] +'</a>';								
 						typrakna++;						
 						}
+						
 						else{						
 						typlokalriktig = String(typlokal[typrakna].onmousedown).split("'", 2);
 						typlokalriktig = "'http://tvatta.sgsstudentbostader.se/"+ typlokalriktig[1] +"'";
@@ -222,7 +234,14 @@ historia('loadtvatta()');
 								
 					smart = (smart + extra);
 					smart++
-								
+								//Sätter ett onloadevent på sista bilden, får dock ett error. Osäker på vad det innebär..
+								if(nollstall == (smart - extra - 1)){
+									console.log('Den sätter en onload event');
+									var onloadimg = cell.childNodes[0].childNodes;
+									onloadimg[0].setAttribute("onload", "loadtvattaklar()");
+									console.log("stängs av via onload event");
+
+								}
 								}
 								}
 							
@@ -237,8 +256,9 @@ historia('loadtvatta()');
 					)
 			}
 			})
-			
-loadtvattaklar();
+
+
+//loadtvattaklar();
 	console.log('loading bar avstängd via tvatta');
 			}
 			
@@ -333,21 +353,39 @@ console.log("1");
 		url: "http://hemma.sgsstudentbostader.se/DoorControl/PerformUnlock",
 		data: "epName=" + encodeURI(sendform.value),
 		charset: 'UTF-8',
-		success: function(data){
-			var vilkenhemma = $(data).find('.doorControlEntryPath');
-			vilkenhemma = vilkenhemma[0].innerHTML;
-			console.log(vilkenhemma);
+		success: function(data,status,kul){
 			
+			console.log(kul);
+			kul = kul.responseText;
+			
+			var fatalerror;
+			fatalerror = data;
+			fatalerror = $(fatalerror).eq(4);
+			
+			fatalerror = fatalerror[0].innerHTML
+			console.log(fatalerror);
+			fatalerror = String(fatalerror).split('<h1>', 2)
+			console.log(fatalerror[1]);
+			
+			var vilkenhemma = $(data).find('.doorControlEntryPath');
+			
+			//Hade stora fel på denna innan, det verkar kunna bli så om SGS krånglar. Kolla igen imorgon om det fungerar bättre.
+			if(vilkenhemma[0] != undefined){
+			vilkenhemma = vilkenhemma[0].innerHTML;
 			var meddelandehemma = $(data).find('.doorControlMessage');
 			meddelandehemma = meddelandehemma[0].innerHTML;
 			
 			hemmavilken(vilkenhemma,meddelandehemma);
 			console.log(meddelandehemma[0].innerHTML);
 			
-			
 			loadtvattaklar();
+			}
+			else if(fatalerror != undefined){
+				hemmavilken(fatalerror[1]);
+				loadtvattaklar();
+			}
 		},
-		error: function(){
+		error: function(error){
 			console.log('Error på hemma-post');
 			hemmafel();
 			loadtvattaklar();
@@ -366,6 +404,9 @@ console.log("1");
 function show(){
 	var spinnerevent = document.getElementById('loading');
 	spinnerevent.style.visibility = 'visible';
+	setTimeout(function(){
+		loadtvattaklar();
+	},60000)
 }
 
 

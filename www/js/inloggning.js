@@ -3,9 +3,9 @@ function kollainlogg(){
 show();
 'use strict';
 	if(localStorage.LoggedIn == 'true'){
-		hamta();
-		//loadtvatta('http://www.sgsstudentbostader.se/ext_gw.aspx?module=wwwash&lang=se#lblPanelName');
-		//byggnad('http://www.sgsstudentbostader.se/ext_gw.aspx?module=wwwash&lang=se#lblPanelName');
+		//dehamta(localStorage.anv,localStorage.pass);
+		//loadtvatta('https://www.sgsstudentbostader.se/ext_gw.aspx?module=wwwash&lang=se#lblPanelName');
+		byggnad('http://www.sgsstudentbostader.se/ext_gw.aspx?module=wwwash&lang=se#lblPanelName');
 		console.log('Det verkar finnas en användare');
 		console.log("Detta är användaren" + localStorage.ReturnCode);
 	}
@@ -30,20 +30,26 @@ function getFormData(){
 localStorage.anv=document.getElementById("username").value;
 localStorage.pass=document.getElementById("password").value;
 console.log("Den skickar inloggningen");
-hamta();
+//Kyrptering av känslig data
+encrypt(localStorage.anv,localStorage.pass);
+dehamta(localStorage.anv,localStorage.pass);
 
 }
 
 //hämta marknad
-function hamta() {
-	$.getJSON("http://marknad.sgsstudentbostader.se/API/Service/AuthorizationServiceHandler.ashx?&syndicateNo=1&syndicateObjectMainGroupNo=1&username=" +localStorage.anv+ "&password=" +localStorage.pass+ "&Method=APILoginSGS&callback=?",
+function hamta(anv,pass) {
+	$.getJSON("http://marknad.sgsstudentbostader.se/API/Service/AuthorizationServiceHandler.ashx?&syndicateNo=1&syndicateObjectMainGroupNo=1&username=" +anv.toString(CryptoJS.enc.Utf8)+ "&password=" +pass.toString(CryptoJS.enc.Utf8)+ "&Method=APILoginSGS&callback=?",
+	
 	  function(result) {
+		//det går utmärkt att göra denna hämtning via en variabel, localStorage går alltså att utesluta.
+		var infoinlogg = new Object();
 		console.log(result);
 		$.each(result, function (newsItem,news)
 		{
+		infoinlogg[newsItem]=news;
 		localStorage[newsItem]=news
 			console.log(newsItem + " = " + localStorage[newsItem])
-			
+			console.log(infoinlogg[newsItem]);
 		});
 		
 		if(localStorage.ReturnCode == 'NOMATCH'){
@@ -61,9 +67,6 @@ function hamta() {
 function loggain(){
 var str1="_=1366895108402&customer_name=" + localStorage.SGS_CustomerName + "&customerid=" + localStorage.UserName + "&isresident=" + localStorage.SGS_LivesAtSgs + "&loggedin=" + localStorage.LoggedIn + "&token=" + localStorage.SecurityTokenId + "&tvattstuga=" + localStorage.SGS_Laundry;
 localStorage.urlen="http://www.sgsstudentbostader.se/Assets/Handlers/Momentum.ashx?" + str1;
-console.log("Logga in delen, nuvarande sgs.se URL  " + localStorage.urlen);
-console.log("Användare sparad från form " + localStorage.anv);
-console.log("Logga in delen " + localStorage.UserName);
 hiddenbrowser();
 }
 
@@ -103,16 +106,16 @@ if(button == 2){
 	})
 	console.log('Sätter anv och pass till null');
 	localStorage.LoggedIn = 'false';
-	
+	localStorage.removeItem(anv);
+	localStorage.removeItem(pass);
 	console.log(localStorage.LoggedIn);
-	var mobilsystem = device.platform;
-	console.log(mobilsystem);
+	//var mobilsystem = device.platform;
+	//console.log(mobilsystem);
 	
-	if(mobilsystem != 'iOS'){
-		navigator.app.exitApp();
-	}
-	
-	alert('Du är nu utloggad!');
+	//if(mobilsystem != 'iOS'){
+	//	navigator.app.exitApp();
+	//}
+	//alert('Du är nu utloggad!');
 	
 	}
 }

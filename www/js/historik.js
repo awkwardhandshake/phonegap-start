@@ -67,6 +67,7 @@ console.log('-------------------------------------------------------------------
 //Var skall denna ligga för bästa effekt???
 	var navigering = document.getElementById('navigering')
 	var navigeringkul = navigering.setAttribute('onmousedown', kommaihag[(kommaihag.length-2)]);
+	
 	navigering.setAttribute("class", "null")
 
 }

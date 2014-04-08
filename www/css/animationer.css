@@ -55,9 +55,9 @@
 	-webkit-animation-direction: reverse;
 	
 }
-.inforuta{
+/*.inforuta{
 	/*display: none;*/
-	z-index: 2;
+	/*z-index: 2;
 	position: absolute;
 	height: auto;
 	top: 10%;
@@ -69,12 +69,12 @@
 	border-radius: 5px;
 	border: solid #fff 2px;
 	/*box-shadow: 1px 1px 1px 15px black;*/
-	font-size: 1.0vw;
-	-webkit-animation:myfirst 0.5s; /* Safari and Chrome */
+	/*font-size: 1.0vw;
+	-webkit-animation:myfirst 0.5s;
 	
-}
+}*/
 
-@-webkit-keyframes myfirst{
+/*@-webkit-keyframes myfirst{
 	0% {
 		-webkit-opacity: 0;
 		font-size: 1.0vh;
@@ -96,7 +96,38 @@
 		margin-right: 2%;
 		}
 }
+*/
+.inforuta{
+	/*display: none;*/
+	z-index: 2;
+	position: absolute;
+	height: auto;
+	width: 90%;
+	color: #FFF;
+	background-color: #252c47;
+	padding: 3%;
+	border-radius: 5px;
+	border: solid #fff 2px;
+	/*box-shadow: 1px 1px 1px 15px black;*/
+	-webkit-animation:myfirst 0.5s; /* Safari and Chrome */
+	
+}
 
+
+@-webkit-keyframes myfirst{
+	0% {
+
+		width: 90%;
+		top: -100%;
+		color: #252c47;
+	}
+	
+	100% {	
+		top: 40%;
+
+
+		}
+}
 img.scale-with-grid-start-information{
 		max-width: 20%;
 		height: auto;
