@@ -8,7 +8,7 @@ function tomany(){
 
 function hemmafel(){
 	if(navigator.connection.type != 'wifi'){
-	document.getElementById('meddelande').innerHTML = 	'<p>WIFI-problem</p>'
+	document.getElementById('meddelande').innerHTML = 	'<p>SGS-nätverk</p>'+
 														'<p><small>För att kunna öppna dörren krävs det att telefonen är uppkopplad via ett SGS-nätverk</small></p>';
 	loadtvattaklar();
 	setTimeout(function(){
