@@ -3,9 +3,9 @@ function kollainlogg(){
 show();
 'use strict';
 	if(localStorage.LoggedIn == 'true'){
-		dehamta(localStorage.anv,localStorage.pass);
+		//dehamta(localStorage.anv,localStorage.pass);
 		//loadtvatta('https://www.sgsstudentbostader.se/ext_gw.aspx?module=wwwash&lang=se#lblPanelName');
-		//byggnad('http://www.sgsstudentbostader.se/ext_gw.aspx?module=wwwash&lang=se#lblPanelName');
+		byggnad('http://www.sgsstudentbostader.se/ext_gw.aspx?module=wwwash&lang=se#lblPanelName');
 		console.log('Det verkar finnas en användare');
 		console.log("Detta är användaren" + localStorage.ReturnCode);
 	}
@@ -26,7 +26,8 @@ show();
 
 var historik = new Array();
 //Hämtar inloggningsformet
-function getFormData(){	   
+function getFormData(){
+show();  
 localStorage.anv=document.getElementById("username").value;
 localStorage.pass=document.getElementById("password").value;
 console.log("Den skickar inloggningen");

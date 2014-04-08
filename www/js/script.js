@@ -13,7 +13,7 @@ console.log("Går in i byggnad funktionen");
 				indifiera = $(data).find("#lblShowFirstAvailable");
 				if(indifiera.length != 0){
 historia("byggnad()", urlfranlankarbyggnad);				
-					byggnadlank = $(data).find("td .headerColor");
+					byggnadlank = $(data).find("td .headerColor[onmousedown]");
 					var d = 0;					
 					for(var i = 0; i < (byggnadlank.length -1); i++){
 						var byggnadrow = byggnadtable.insertRow(-1);
@@ -354,7 +354,7 @@ console.log("2");
 		data: "epName=" + encodeURI(sendform.value),
 		charset: 'UTF-8',
 		success: function(data,status,kul){
-			console.log(navigator.connection.type);
+
 			console.log("3");
 			var vilkenhemma = $(data).find('.doorControlEntryPath');
 			var fatalerror;
@@ -386,7 +386,7 @@ console.log("2");
 			}
 		},
 		error: function(error){
-			console.log(navigator.connection.type);
+
 			console.log('Error på hemma-post');
 			hemmafel();
 			loadtvattaklar();

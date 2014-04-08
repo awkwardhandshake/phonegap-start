@@ -1,13 +1,13 @@
 function info_animation(){
-	document.getElementById('bakgrundinformation').className = 'bakgrundinformation_show';
-	document.getElementById('information').className = 'inforuta';
+	//document.getElementById('bakgrundinformation').className = 'bakgrundinformation_show';
+	document.getElementById('information').className = 'nyinforuta';
 	
 }
 
 
-$('#bakgrundinformation').click(function() {
-	document.getElementById('information').className = 'inforuta_ani_hide';
-	document.getElementById('bakgrundinformation').className = 'bakgrundinformation_hide';
+$('#index').click(function() {
+	document.getElementById('information').className = 'nyinforuta_hide';
+
 });
 
 $('#infoclick').click(function(event){

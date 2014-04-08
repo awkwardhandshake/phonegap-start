@@ -6,6 +6,42 @@
 	margin-right: 110;
 }*/
 
+	.nyinforuta{
+		opacity: 0.85;
+		position: fixed;
+		z-index: 1;
+		height: 100%;
+		background-color: #000;
+		color: #fff;
+		-webkit-animation:inforutavisa 0.5s;  /*Safari and Chrome */	
+		/*visibility: hidden;*/
+	}
+	.nyinforuta_ani_hide{
+		position: fixed;
+		-webkit-animation: inforutavisa 0.5s;
+		-webkit-animation-direction: reverse;
+
+	}
+	.nyinforuta_hide{
+		position: fixed;
+		visibility: hidden;
+		z-index: -1;
+	}
+	
+	@-webkit-keyframes inforutavisa{
+	0% {
+		opacity: 0;		
+	}
+	
+	100% {	
+		opacity: 0.85;
+		}
+}
+
+	
+
+
+
 
 
 .bakgrundinformation_hide{

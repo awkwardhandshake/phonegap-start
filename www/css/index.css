@@ -143,14 +143,19 @@ body {
 	}
 	
 }*/
+	
+	
 	#helamenyn{
 		position: fixed;
 		/*margin-top: 20px;*/
+		/*background-color: #fff;*/
 	}
 	#pushmeny{
 		visibility: hidden;
 	}
+	
 	#uppernav{
+
 		/*position: fixed;*/
 		z-index: 1;
 		padding-top: 1%;
