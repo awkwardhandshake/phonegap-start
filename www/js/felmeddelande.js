@@ -16,8 +16,7 @@ function hemmafel(){
 		document.getElementById('meddelande').innerHTML = 	'<p><strong>Öppna entrédörr</strong></p>'+
 															'<p><small>(Open entrance door)</small></p>'
 	},10000)
-	else{	
-	}
+	
 	document.getElementById('meddelande').innerHTML = '<p>Fel vid öppning av porten</p>';
 	loadtvattaklar();
 	setTimeout(function(){

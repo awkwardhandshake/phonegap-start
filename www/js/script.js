@@ -347,30 +347,21 @@ function hamtahemma(){
 function oppnadorr(){
 console.log("1");
 	var sendform = document.getElementById('hemmadorren');
-console.log("1");	
+console.log("2");	
 	$.ajax({	
 		type: "POST",
 		url: "http://hemma.sgsstudentbostader.se/DoorControl/PerformUnlock",
 		data: "epName=" + encodeURI(sendform.value),
 		charset: 'UTF-8',
 		success: function(data,status,kul){
-			
-			console.log(kul);
-			kul = kul.responseText;
-			
-			var fatalerror;
-			fatalerror = data;
-			fatalerror = $(fatalerror).eq(4);
-			
-			fatalerror = fatalerror[0].innerHTML
-			console.log(fatalerror);
-			fatalerror = String(fatalerror).split('<h1>', 2)
-			console.log(fatalerror[1]);
-			
+			console.log("3");
 			var vilkenhemma = $(data).find('.doorControlEntryPath');
+			var fatalerror;
+			fatalerror = $(data).eq(4);
 			
 			//Hade stora fel på denna innan, det verkar kunna bli så om SGS krånglar. Kolla igen imorgon om det fungerar bättre.
 			if(vilkenhemma[0] != undefined){
+			console.log("4");
 			vilkenhemma = vilkenhemma[0].innerHTML;
 			var meddelandehemma = $(data).find('.doorControlMessage');
 			meddelandehemma = meddelandehemma[0].innerHTML;
@@ -381,6 +372,14 @@ console.log("1");
 			loadtvattaklar();
 			}
 			else if(fatalerror != undefined){
+			console.log("5");
+
+			
+				fatalerror = fatalerror[0].innerHTML
+				console.log(fatalerror);
+				fatalerror = String(fatalerror).split('<h1>', 2)
+				console.log(fatalerror[1]);
+				
 				hemmavilken(fatalerror[1]);
 				loadtvattaklar();
 			}
@@ -395,7 +394,7 @@ console.log("1");
 		
 	})
 	
-console.log("1");	
+console.log("6");	
 	
 }
 
