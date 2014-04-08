@@ -354,6 +354,7 @@ console.log("2");
 		data: "epName=" + encodeURI(sendform.value),
 		charset: 'UTF-8',
 		success: function(data,status,kul){
+			console.log(navigator.connection.type);
 			console.log("3");
 			var vilkenhemma = $(data).find('.doorControlEntryPath');
 			var fatalerror;
@@ -385,6 +386,7 @@ console.log("2");
 			}
 		},
 		error: function(error){
+			console.log(navigator.connection.type);
 			console.log('Error på hemma-post');
 			hemmafel();
 			loadtvattaklar();
