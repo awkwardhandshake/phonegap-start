@@ -1,9 +1,11 @@
 function inloggningfel(){
 	document.getElementById('felvidinlogg').innerHTML = 'Användarnamn/Lösenord verkar vara inkorrekt';
+	loadtvattaklar();
 }
 
 function tomany(){
 	document.getElementById('felvidinlogg').innerHTML = 'Du har loggat in för många gånger.';
+	loadtvattaklar();
 }
 
 function hemmafel(){

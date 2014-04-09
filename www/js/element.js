@@ -9,21 +9,20 @@ element = 'element';
 	navback.src = "img/sgs_logout.png";
 	
 	document.getElementById("index").innerHTML=
+'<div id="index">'+
 '<div id="information" class="nyinforuta_hide">'+
-'<table>'+
-'<tr><td class="infostart_door">'+
+'<table class="info-tabel-tvatta">'+
+'<tr><td class="">'+
 '<img src="img/door_button.png" class="scale-with-grid-start-information"></img>'+
 '</td></tr><tr><td class="information-text-middle-start">'+
-'<p>Dörr öppningsknappen är tillför att ge ett komplement till hemma.sgsstudentbostader.se. Om ditt område är utrustat med öppning av entrédörren via hemma.sgsstudentbostader.se gör Dörr-knappen samma sak.</p>'+
+'<p>Om ditt område har möjlighet att öppna ytterdörren via hemma.sgsstudentbostader.se kan du använda dig av "Öppna Entrédörr". Knappen fungerar sålänge du är uppkopplad via ett SGS-nätverk.'+
 '</td></tr>'+
 
-'<tr><td class="infostart_door">'+
+'<tr><td class="">'+
 '<img src="img/cal_button.png" class="scale-with-grid-start-information"></img>'+
-'</td></tr><tr><td class="information-text-middle-start">'+
-'<p>Kalenderikonen tar dig till bokningen för bland annat tvättstuga och sällskapsrum. Du kommer behöva använda ditt inlogg som du använder på www.sgsstudentbostader.se för att logga in.</p>'+
-
+'</td></tr><tr><td class="information-text-middle-start information-text-middle-start-bottom">'+
+'<p>"Boka" tar dig till bokningen av bland annat tvättstuga och sällskapsrum. Du kommer behöva använda ditt inlogg som du använder på www.sgsstudentbostader.se för att logga in.</p>'+
 '</td></tr>'+
-
 '</table>'+
 '</div>'+
 
@@ -96,6 +95,10 @@ function inputfields(){
 '<td class="information-text-middle">'+
 		'<p><strong>Lösenord:</strong> Använd det lösenord du blev tilldelad eller valde när du registrerade dig på www.sgsstudentbostader.se hemsida.</p>'+	
 '</td></tr>'+
+'<td class="information-text-middle">'+
+		'<p><strong>Du har loggat in för många gånger:</strong> Om du anger felaktiga uppgifter för många gånger kommer du bli spärrad från att logga in under 2 timmar.</p>'+	
+'</td></tr>'+
+
 
 '</table>'+
 '</div>'+
