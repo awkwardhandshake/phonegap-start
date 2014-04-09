@@ -114,7 +114,8 @@ function inputfields(){
 		'<span>'+
 		'</div>'
 		
-historia('inputfields()');
+//historia('inputfields()');
+historia('startsida()');
 		};
 
 // ==================================================================================================================		

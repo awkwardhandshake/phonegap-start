@@ -7,10 +7,11 @@
 }*/
 
 	.nyinforuta{
-		opacity: 0.97;
+		opacity: 0.90;
 		position: fixed;
-		z-index: 1;
+		z-index: 10;
 		height: 100%;
+		/*background-color: #fff;*/
 		background-color:#252c47;
 		color:rgba(255,255,255,1.0);
 		-webkit-animation:inforutavisa 0.5s;  /*Safari and Chrome */	
@@ -36,7 +37,7 @@
 	}
 	
 	100% {	
-		opacity: 0.97;
+		opacity: 0.90;
 		/*background-color:rgba(37,44,71,0.8);
 		color:rgba(255,255,255,1.0);*/
 		}

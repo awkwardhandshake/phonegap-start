@@ -13,7 +13,7 @@ console.log("Går in i byggnad funktionen");
 				indifiera = $(data).find("#lblShowFirstAvailable");
 				if(indifiera.length != 0){
 historia("byggnad()", urlfranlankarbyggnad);				
-					byggnadlank = $(data).find("td .headerColor[onmousedown]");
+					byggnadlank = $(data).find("td .headerColor[onmousedown]:not(#lblHeaderText)");
 					var d = 0;					
 					for(var i = 0; i < (byggnadlank.length -1); i++){
 						var byggnadrow = byggnadtable.insertRow(-1);
