@@ -5,12 +5,7 @@
 	left: 570%;
 	margin-right: 110;
 }*/
-	.blura{
-		-moz-filter: blur(5px);
-		-o-filter: blur(5px);
-		-ms-filter: blur(5px);
-		filter: blur(5px);
-	}
+
 	.nyinforuta{
 		/*opacity: 0.90;*/
 		position: fixed;

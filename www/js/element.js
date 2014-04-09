@@ -168,21 +168,25 @@ function skapatvattatable(){
 	'<tr>'+	
 	'</tbody>'+
 '</table>'+
-//'<span id="hide" class="hidden_menu">'+
+
+
 '<table id="navtvatta" border="2">'+
 	'<tbody>'+
 	'</tbody>'+
 '</table>'+
-//'</span>'+
+
+
+'<table id="navtablebottom" border="2">'+
+	'<tbody>'+
+	'</tbody>'+
+'</table>'+
 
 '<table id="tvatta" border="2">'+
 	'<tbody>'+
 	'</tbody>'+
-'</table>'+
-'<table id="navtablebottom" border="2">'+
-	'<tbody>'+
-	'</tbody>'+
 '</table>'
+
+
 
 }
 
@@ -218,6 +222,8 @@ function skapabyggnadtable(){
 	'<tr>'+	
 	'</tbody>'+
 '</table>'+
+
+
 '<table id="byggnad" border="2">'+
 	'<tbody>'+
 	'</tbody>'+

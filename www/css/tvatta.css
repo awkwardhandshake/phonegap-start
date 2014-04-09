@@ -41,13 +41,23 @@ body {
     width:100%;
 	color: #fff;
 }
+	#index{
+		padding-top: 0;
+	}
+	#byggnad{
+		/*padding-top: 10%;*/
+		/*margin-top: 10%;*/
+	}
 	
-		
 	.byggnadnav{
 		color: #FFF;
 		border: 2px solid #FFF;
+		/*margin-top: 10%;*/
 		padding-top: 4%;
 		padding-bottom: 4%;
+	}
+	#allmeny{
+		background-color: #FFF;
 	}
 	
 	#helamenyn{
@@ -55,10 +65,15 @@ body {
 		padding-top: 20px;
 		background-color: #252c47;
 
+
 	}
 	
 	#pushmeny{
+		height: auto;
+		padding-top: 20px;
 		visibility: hidden;
+		position: relative;
+		margin-bottom: 20px;
 	}
 	
 	#uppernav{
@@ -85,14 +100,12 @@ body {
 	vertical-align: middle;
 	}
 	
-	#index{
-		height: 95%;
-	}
 	
 	#navtvatta{
 		/*margin-top: 30%;*/
 		/*display: none;*/
 		margin-bottom: 3%;
+		/*margin-top: 10%;*/
 	}
 	
 	#navnummer{
@@ -130,8 +143,9 @@ body {
 	.overskrift{
 		margin-top: 20px;
 		text-align: center;
-		margin-bottom: 2%;
+		/*margin-bottom: 2%;*/
 		padding-bottom: 20px;
+		visibility: hidden;
 	}
 	
 	.overskrift a{
