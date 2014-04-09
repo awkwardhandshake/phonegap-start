@@ -41,6 +41,7 @@ body {
     padding:0px;
     width:100%;
 	color: #fff;
+
 }
 
 #doorcontrolcontent{
@@ -185,6 +186,7 @@ body {
 	
 	#index{
 		height: 95%;
+
 	}
 
 
@@ -216,6 +218,7 @@ body {
 ================================================== */
 @media only screen and (min-width: 0px) and (max-width: 1080px) {	
     .container                                  { position: relative; width: 100%; margin: 0px auto; padding-top: 40%;
+
     											}
     .container .column,
     .container .columns                         { float: left;}

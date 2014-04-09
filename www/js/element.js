@@ -29,9 +29,6 @@ element = 'element';
 
 		
 	'<div id="index">'+
-'<!--<div class="logo">'+
-	'<img id="topploga" class="scale-with-grid-logo" src="img/sgs_logo_width_512.png">'+
-'</div>-->'+
 '<div class="container">'+
 	'<div class="sixteen columns"></div>'+
 	
@@ -54,6 +51,7 @@ element = 'element';
 			'<p><small>(Book)</small></p>'+
 		'</div>'+
 	'</div>'+
+	
 '<div id="doorcontrolcontent">'+
             '<form action="/DoorControl/PerformUnlock" method="post" ><ul>'+
                   '<li><button type="submit" name="epName" value="varde" id="hemmadorren"></button></li>'+
@@ -114,7 +112,6 @@ function inputfields(){
 		'<span>'+
 		'</div>'
 		
-//historia('inputfields()');
 historia('startsida()');
 		};
 

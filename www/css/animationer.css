@@ -5,17 +5,23 @@
 	left: 570%;
 	margin-right: 110;
 }*/
-
+	.blura{
+		-moz-filter: blur(5px);
+		-o-filter: blur(5px);
+		-ms-filter: blur(5px);
+		filter: blur(5px);
+	}
 	.nyinforuta{
-		opacity: 0.90;
+		/*opacity: 0.90;*/
 		position: fixed;
 		z-index: 10;
 		height: 100%;
-		/*background-color: #fff;*/
-		background-color:#252c47;
+		/*background-color: #fff;
+		background-color:#5a6280;*/
+		background-color:rgba(0,0,0,0.85);
 		color:rgba(255,255,255,1.0);
+		
 		-webkit-animation:inforutavisa 0.5s;  /*Safari and Chrome */	
-		/*visibility: hidden;*/
 	}
 	.nyinforuta_ani_hide{
 		position: fixed;
@@ -26,18 +32,20 @@
 	.nyinforuta_hide{
 		position: fixed;
 		visibility: hidden;
-		z-index: -1;
+		z-index: -5;
 	}
 	
 	@-webkit-keyframes inforutavisa{
 	0% {
-		opacity: 0;
+		color:rgba(255,255,255,0.0);
+		background-color:rgba(0,0,0,0.0);
 		/*color:rgba(255,255,255,0.0);
 		background-color:rgba(37,44,71,0.0);*/		
 	}
 	
 	100% {	
-		opacity: 0.90;
+		color:rgba(255,255,255,1.0);
+		background-color:rgba(0,0,0,0.85);
 		/*background-color:rgba(37,44,71,0.8);
 		color:rgba(255,255,255,1.0);*/
 		}
@@ -222,6 +230,7 @@ img.scale-with-grid-tvatt-information{
 
 .info-tabel-tvatta{
 	height: auto;
+	margin-top: 5%;
 }
 
 .rutatvatt{
