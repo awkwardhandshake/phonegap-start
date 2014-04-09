@@ -2,7 +2,7 @@
 function kollainlogg(){
 show();
 'use strict';
-	if(localStorage.LoggedIn == 'truue'){
+	if(localStorage.LoggedIn == 'true'){
 		dehamta(localStorage.anv,localStorage.pass);
 		//loadtvatta('https://www.sgsstudentbostader.se/ext_gw.aspx?module=wwwash&lang=se#lblPanelName');
 		//byggnad('http://www.sgsstudentbostader.se/ext_gw.aspx?module=wwwash&lang=se#lblPanelName');
