@@ -9,7 +9,7 @@ element = 'element';
 	navback.src = "img/sgs_logout.png";
 	
 	document.getElementById("index").innerHTML=
-'<div id="information" class="inforuta_hide">'+
+'<div id="information" class="nyinforuta_hide">'+
 '<table>'+
 '<tr><td class="infostart_door">'+
 '<img src="img/door_button.png" class="scale-with-grid-start-information"></img>'+
@@ -86,7 +86,7 @@ function inputfields(){
 		navback.src = 'img/button_tillbaka.png';
 		document.getElementById("index").innerHTML=	
 		
-		'<div id="information" class="inforuta_hide">'+
+		'<div id="information" class="nyinforuta_hide">'+
 
 '<table>'+
 '<tr>'+
@@ -130,7 +130,7 @@ function skapatvattatable(){
 	navback.src = 'img/button_tillbaka.png';
 	document.getElementById("index").innerHTML=
 	
-'<div id="information" class="inforuta_hide">'+
+'<div id="information" class="nyinforuta_hide">'+
 '<table class="info-tabel-tvatta">'+
 
 '<tr class="rowtvatt"><td class="rutatvatt">'+		
@@ -200,7 +200,7 @@ function skapabyggnadtable(){
 	var navback = document.getElementById('back');
 	navback.src = 'img/button_tillbaka.png';
 	document.getElementById("index").innerHTML=
-'<div id="information" class="inforuta_hide">'+
+'<div id="information" class="nyinforuta_hide">'+
 
 '<table>'+
 '<tr>'+
