@@ -37,7 +37,7 @@ body {
     font-family: Arial, sans-serif;
     font-size:24px;
     height:95%;
-    margin-top:20px;
+    /*margin-top:20px;*/ /*Här blir det knas med Inforutan*/
     padding:0px;
     width:100%;
 	color: #fff;
@@ -145,20 +145,26 @@ body {
 	
 }*/
 	
-	
+/* Har gjort denna relative för att testa om buggen med softkeyboard försvinner. */
 	#helamenyn{
-		position: fixed;
-		/*margin-top: 20px;*/
-		/*background-color: #fff;*/
+		position: relative;
+		top: 0;
+		z-index: 12;
+		background-color: #252c47;
+		padding-top: 20px;
 	}
+/* Pushmeny är borta då den inte kommer behövas vid relative positionering */	
 	#pushmeny{
-		visibility: hidden;
+		padding-top: 20px;
+		z-index: -1;
+		position: relative;
+		display: none;
 	}
-	
+
 	#uppernav{
 
-		/*position: fixed;*/
-		z-index: 1;
+		position: relative;
+		z-index: 10;
 		padding-top: 1%;
 		width: 100%;
 		/*height: 20%;*/
@@ -166,6 +172,7 @@ body {
 		padding-bottom: 1%;
 		/*margin-bottom: 2%;*/
 		border-bottom: 2px solid #fff;
+		
 		}
 		
 	.uppernavclass{
@@ -218,6 +225,7 @@ body {
 ================================================== */
 @media only screen and (min-width: 0px) and (max-width: 1080px) {	
     .container                                  { position: relative; width: 100%; margin: 0px auto; padding-top: 40%;
+    											
 
     											}
     .container .column,

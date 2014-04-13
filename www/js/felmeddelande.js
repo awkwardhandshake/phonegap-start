@@ -34,5 +34,9 @@ function hemmavilken(adress,medd){
 	}
 	
 	document.getElementById('meddelande').innerHTML = '<p>' + adress + '</p>' + '<p><small>' + medd + '</small></p>';
+	setTimeout(function(){
+		document.getElementById('meddelande').innerHTML = 	'<p><strong>Öppna entrédörr</strong></p>'+
+															'<p><small>(Open entrance door)</small></p>'
+	},10000)
 	loadtvattaklar();
 }

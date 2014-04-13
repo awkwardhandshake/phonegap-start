@@ -11,14 +11,14 @@ console.log("Går in i byggnad funktionen");
 				var byggnadlank;
 				var delabyggnadlank;
 				indifiera = $(data).find("#lblShowFirstAvailable");
-				if(indifiera.length != 0){
+				if(indifiera.length !== 0){
 historia("byggnad()", urlfranlankarbyggnad);				
 					byggnadlank = $(data).find("td .headerColor[onmousedown]:not(#lblHeaderText)");
 					var d = 0;					
 					for(var i = 0; i < (byggnadlank.length -1); i++){
 						var byggnadrow = byggnadtable.insertRow(-1);
 						var byggnadcell = byggnadrow.insertCell(-1);
-						if(byggnadlank[d].onmousedown != null){
+						if(byggnadlank[d].onmousedown !== null){
 							byggnadcell.setAttribute("class", "byggnadnav");
 							delabyggnadlank = String(byggnadlank[d].onmousedown).split("'",2);
 							delabyggnadlank = "'http://tvatta.sgsstudentbostader.se/" + delabyggnadlank[1] + "'";
@@ -31,7 +31,7 @@ historia("byggnad()", urlfranlankarbyggnad);
 				console.log('loading bar avstängd via byggnad');
 				}
 				else{
-console.log("Verkar inte ha funnits någon byggnad???")
+console.log("Verkar inte ha funnits någon byggnad???");
 					loadtvatta('http://www.sgsstudentbostader.se/ext_gw.aspx?module=wwwash&lang=se#lblPanelName');
 					}
 	
@@ -42,7 +42,7 @@ console.log("Verkar inte ha funnits någon byggnad???")
 									yourCallbackTvatta,
 									'Fel',
 									'Nej,Ja'
-									)
+									);
 								}		
 	})
 	//loadtvattaklar();
@@ -61,7 +61,7 @@ var lankartvattariktig;
 //Vi laddar in hela tvatta.sgsstudentbostader.se
 function loadtvatta(urlfranlankar){
 historia('loadtvatta()');
-	skapatvattatable(); 	
+	skapatvattatable();
 	var tvattaimg;
 	var antaltider;
 	var nummer;
@@ -94,7 +94,7 @@ historia('loadtvatta()');
 				var antal = antaltider.length;
 				
 				//Välja typ av lokal att boka
-				if(valjabokning.length != 0){
+				if(valjabokning.length !== 0){
 				var valjabokningtext;
 				var rakna = 0;			
 					var lokalrow = navtable.insertRow(-1);
@@ -102,7 +102,7 @@ historia('loadtvatta()');
 					for(var l=0; l < valjabokning.length; l++){
 						var lokalcell = lokalrow.insertCell(-1);
 						
-						if(valjabokning[rakna].onmousedown == null){
+						if(valjabokning[rakna].onmousedown === null){
 							lokalcell.setAttribute("class", "lokalnav");
 							valjabokningtext = String(valjabokning[rakna].innerHTML).split('&nbsp;');
 							var navnummer = String("navnummer");
@@ -115,7 +115,7 @@ historia('loadtvatta()');
 						lokalenriktig = String(valjabokning[rakna].onmousedown).split("'", 2);
 						lokalenriktig = "'http://tvatta.sgsstudentbostader.se/"+ lokalenriktig[1] +"'";
 						lokalcell.setAttribute("class", "lokalnavlank");
-						lokalcell.setAttribute("onmousedown", "loadtvatta("+ lokalenriktig +")" )
+						lokalcell.setAttribute("onmousedown", "loadtvatta("+ lokalenriktig +")" );
 						valjabokningtext = String(valjabokning[rakna].innerHTML).split('&nbsp;');
 						lokalcell.innerHTML = '<a>'+ valjabokningtext[0] +'</a>';
 						rakna++;
@@ -124,20 +124,20 @@ historia('loadtvatta()');
 				}
 				
 				//Välja vilken lokal att boka i
-				if(typlokal.length != 0){
+				if(typlokal.length !== 0){
 				var typlokaltext;
 				var typrakna = 0;
 					var u = 0;						
 					for(var t = 0; t < typlokal.length; t++){					
-						var typrow = navtable.insertRow(-1);
+						var typrow = navtable.insertRow(-1)
 						for(var u = 0; u < recordposition; u++){
 						typrow.insertCell(-1);
 						}
 						
-						typrow.setAttribute("id", "navnummer")
+						typrow.setAttribute("id", "navnummer");
 						var typcell = typrow.insertCell(-1);
 						
-						if(typlokal[typrakna].onmousedown == null){
+						if(typlokal[typrakna].onmousedown === null){
 						typcell.setAttribute("class", "typlokal");
 						//Här blir det fel för Rosendal, T på ensam rad.
 						console.log(typlokal[typrakna].innerHTML);
