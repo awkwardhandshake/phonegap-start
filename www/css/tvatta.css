@@ -61,10 +61,10 @@ body {
 	}
 	
 	#helamenyn{
-		z-index: -1;
-		/*position: fixed;*/
+		z-index: 9;
+		position: fixed;
 		padding-top: 20px;
-		/*background-color: #252c47;*/
+		background-color: #252c47;
 		/*background-color: #fff;*/
 
 	}
@@ -79,6 +79,7 @@ body {
 	
 	#uppernav{
 		/*background-color: #FFF;*/
+		position: relative;
 		z-index: 10;
 		width: 100%;
 		text-align: center;
