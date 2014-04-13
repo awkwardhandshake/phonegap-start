@@ -70,11 +70,11 @@ body {
 	}
 	
 	#pushmeny{
-		height: auto;
 		padding-top: 20px;
-		visibility: hidden;
 		position: relative;
-		margin-bottom: 20px;
+		height: auto;
+		visibility: hidden;
+		background-color: #FFF;
 	}
 	
 	#uppernav{
@@ -144,10 +144,10 @@ body {
 	}
 	
 	.overskrift{
-		margin-top: 20px;
+		/*margin-top: 20px;*/
 		text-align: center;
 		/*margin-bottom: 2%;*/
-		padding-bottom: 20px;
+		/*padding-bottom: 20px;*/
 		visibility: hidden;
 	}
 	
