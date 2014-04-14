@@ -268,16 +268,22 @@ function bokatid(tiden,nuvarandebokning){
 	console.log("Går in i funktionen bokatid");
 	 var ref = window.open(tiden, '_blank', 'hidden=yes');
 		 
-		 ref.addEventListener('loadstart', function(event2){
+		 ref.addEventListener('loadstart', function(event2,hej,hej2,hej3){
 			console.log('Loadstart v.1.4');
 			console.log("Event2 i loadstart");
 			console.log(event2);
+			console.log(hej);
+			console.log(hej2);
+			console.log(hej3);
 			show();
 		 })
 		 
-		 ref.addEventListener('loadstop', function(event) {
+		 ref.addEventListener('loadstop', function(event,hej4,hej5,hej6) {
 		 	console.log("Event i loadstop");
 		 	console.log(event);
+		 	console.log(hej4);
+		 	console.log(hej5);
+		 	console.log(hej6);
 		 	console.log('Loadstop v.1.5');
 			var testarstring = event.url;
 		 	if(String(testarstring).match('wwwashcalendar.aspx') != null || String(testarstring).match('NextPage') != null){
