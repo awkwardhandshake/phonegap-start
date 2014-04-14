@@ -283,13 +283,18 @@ function bokatid(tiden,nuvarandebokning){
 		 	{ code: "document.getElementById('imgWait').outerHTML" },
 		 		function(values) {
 			 		console.log(values);
+			 		if(values !== undefined){
+				 		navigator.notification.alert(
+				 		'Max antal framtida pass är redan bokade.',  // message
+				 		inputfields,         // callback
+				 		'Bokningsfel',      // title
+				 		'Ok'         // buttonName
+				 		);
+			 		}
 			}
 			);
 		 	
-		 	
 		 	console.log("Event i loadstop");
-		 	
-
 		 	console.log('Loadstop v.1.5');
 			var testarstring = event.url;
 		 	if(String(testarstring).match('wwwashcalendar.aspx') != null || String(testarstring).match('NextPage') != null){
