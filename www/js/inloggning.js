@@ -110,6 +110,7 @@ if(button == 2){
 	localStorage.removeItem(anv);
 	localStorage.removeItem(pass);
 	console.log(localStorage.LoggedIn);
+	
 	//var mobilsystem = device.platform;
 	//console.log(mobilsystem);
 	

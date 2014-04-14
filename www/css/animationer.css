@@ -9,7 +9,6 @@
 		background-color:#5a6280;*/
 		background-color:rgba(0,0,0,0.85);
 		color:rgba(255,255,255,1.0);
-		
 		-webkit-animation:inforutavisa 0.5s;  /*Safari and Chrome */	
 	}
 	.nyinforuta_ani_hide{
@@ -40,8 +39,18 @@
 		}
 }
 
-	
+#dummie{
 
+	position: fixed;
+	z-index: -10;
+	width: 100%;
+	height: 100%;
+	background-color: #FFF;
+	opacity: 0.0;
+}	
+.menyobrukbar{
+	
+}
 
 
 

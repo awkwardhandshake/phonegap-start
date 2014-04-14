@@ -66,13 +66,14 @@
 function info_animation(){
 	//document.getElementById('bakgrundinformation').className = 'bakgrundinformation_show';
 	document.getElementById('information').className = 'nyinforuta';
+	document.getElementById("dummie").style.zIndex="25";
 	
 }
 
 
-$('#index,#helamenyn').click(function() {
+$('#index,#dummie').click(function() {
 	document.getElementById('information').className = 'nyinforuta_hide';
-
+document.getElementById("dummie").style.zIndex="-10";
 });
 
 $('#infoclick').click(function(event){
