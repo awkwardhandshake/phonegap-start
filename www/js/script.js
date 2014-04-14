@@ -286,7 +286,7 @@ function bokatid(tiden,nuvarandebokning){
 			 		if(values !== undefined){
 				 		navigator.notification.alert(
 				 		'Max antal framtida pass är redan bokade.',  // message
-				 		inputfields,         // callback
+				 		dummiefunktion,         // callback
 				 		'Bokningsfel',      // title
 				 		'Ok'         // buttonName
 				 		);
@@ -439,4 +439,10 @@ function loadtvattaklar(){
 	console.log('laddat klart');
 	var spinnerevent = document.getElementById('loading');
 			spinnerevent.style.visibility = 'hidden';
+}
+
+
+// Vid confirmations fönster behövs inte alltid ett callback. Då anropar jag denna.
+function dummiefunktion(){
+	
 }
