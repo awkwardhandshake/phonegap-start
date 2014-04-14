@@ -71,7 +71,7 @@ function info_animation(){
 }
 
 
-$('#index,#dummie').click(function() {
+$('#dummie').click(function() {
 	document.getElementById('information').className = 'nyinforuta_hide';
 document.getElementById("dummie").style.zIndex="-10";
 });

@@ -54,7 +54,12 @@ function hamta(anv,pass) {
 		});
 		
 		if(localStorage.ReturnCode == 'NOMATCH'){
-			inloggningfel();
+			navigator.notification.alert(
+			'Användarnamn eller lösenord är felaktiga',  // message
+			inputfields,         // callback
+			'Inloggningsfel',      // title
+			'Försök igen'         // buttonName
+			);
 		}
 		else{
 		
