@@ -43,17 +43,17 @@ function hamta(anv,pass) {
 	
 	  function(result) {
 		//det går utmärkt att göra denna hämtning via en variabel, localStorage går alltså att utesluta.
-		var infoinlogg = new Object();
+		//var infoinlogg = new Object();
 		console.log(result);
 		$.each(result, function (newsItem,news)
 		{
-		infoinlogg[newsItem]=news;
+		//infoinlogg[newsItem]=news;
 		localStorage[newsItem]=news
 			console.log(newsItem + " = " + localStorage[newsItem])
-			console.log(infoinlogg[newsItem]);
+		//	console.log(infoinlogg[newsItem]);
 		});
 		
-		if(localStorage.ReturnCode == 'NOMATCH'){
+		if(localStorage.ReturnCode === 'NOMATCH'){
 			navigator.notification.alert(
 			'Användarnamn eller lösenord är felaktiga',  // message
 			inputfields,         // callback
