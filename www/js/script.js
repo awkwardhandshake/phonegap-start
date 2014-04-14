@@ -267,28 +267,20 @@ historia('loadtvatta()');
 function bokatid(tiden,nuvarandebokning){
 	console.log("Går in i funktionen bokatid");
 	 var ref = window.open(tiden, '_blank', 'hidden=yes');
+	 var ref2  window.open(encodeURI(tiden), '_blank', 'hidden=yes');
 		 console.log("REF HÄÄÄÄÄR");
-		 console.log(ref);
+		 console.log(ref2);
 		 
 		 ref.addEventListener('loadstart', function(event2,hej){
 			console.log('Loadstart v.1.4');
-			console.log("Event2 i loadstart");
-			console.log("REF 2222 HÄÄÄÄÄR");
-			console.log(ref);
-			console.log(event2);
-			console.log(hej);
-
+			
 
 			show();
 		 })
 		 
 		 ref.addEventListener('loadstop', function(event,hej4) {
 		 	console.log("Event i loadstop");
-		 	console.log("REF 33333 HÄÄÄÄÄR");
-		 	console.log(ref);
-		 	console.log(event);
-		 	console.log(hej4);
-
+		 	
 
 		 	console.log('Loadstop v.1.5');
 			var testarstring = event.url;
