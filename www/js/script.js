@@ -170,7 +170,7 @@ historia('loadtvatta()');
 						console.log(lankartvatta.length);
 						lankartvattariktig = String(lankartvatta[navrakna].onmousedown).split("'", 2);
 						lankartvattariktig = "'http://tvatta.sgsstudentbostader.se/"+ lankartvattariktig[1] +"'";
-						lankartvattatext = String(lankartvatta[navrakna].innerText).split('&nbsp;', 3);
+						lankartvattatext = String(lankartvatta[navrakna].innerText).split('&nbsp;', 1);
 						console.log(lankartvattatext);
 						navcell.setAttribute("onmousedown", "loadtvatta("+lankartvattariktig +")")
 						navcell.setAttribute("class", "navknapparlank");
