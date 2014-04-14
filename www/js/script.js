@@ -279,6 +279,14 @@ function bokatid(tiden,nuvarandebokning){
 		 })
 		 
 		 ref.addEventListener('loadstop', function(event,hej4) {
+		 	ref.executeScript(
+		 	{ code: "document.body.innerHTML" },
+		 		function(values) {
+			 		console.log(values);
+			}
+			);
+		 	
+		 	
 		 	console.log("Event i loadstop");
 		 	
 
