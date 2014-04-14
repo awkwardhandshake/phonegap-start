@@ -129,9 +129,13 @@ body {
 		width: 25%;
 		height: auto;
 	}
+	#navtablebottom{
+		margin-bottom: 20px;
+	}
 	
 	#navtablebottom td{
 		/*border: 2px solid white;*/
+		
 		text-align: center;
 		vertical-align: middle;
 		width: 50%;
@@ -187,8 +191,14 @@ body {
 	}
 	
 	.navknapparlank{
-		padding: 2%;
+		position: relative;
+		padding-bottom: 10px;
+	}
+	
+	.navknapparlank a{
+		padding: 3px;
 		/*background-color: #ccc;*/
+		border: solid 1px #fff;
 	}
 	
 	.lokalnavlank{
