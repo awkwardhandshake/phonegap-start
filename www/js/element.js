@@ -94,10 +94,18 @@ function inputfields(){
 '<td class="information-text-middle">'+
 		'<p><strong>Lösenord:</strong> Använd det lösenord du blev tilldelad eller valde när du registrerade dig på www.sgsstudentbostader.se hemsida.</p>'+	
 '</td></tr>'+
+
+'<td class="information-text-middle">'+
+		'<center><p><strong>Felmeddelande</strong</p></center>'+	
+'</td></tr>'+
+
 '<td class="information-text-middle">'+
 		'<p><strong>Du har loggat in för många gånger:</strong> Om du anger felaktiga uppgifter för många gånger kommer du bli spärrad från att logga in under 2 timmar.</p>'+	
 '</td></tr>'+
 
+'<td class="information-text-middle">'+
+		'<p><strong>Felaktigt lösenord eller användarnamn:</strong> Kontrollera så att lösenordet och användarnamnet är desamma som du använder på www.sgsstudentbostader.se</p>'+	
+'</td></tr>'+
 
 '</table>'+
 '</div>'+
@@ -134,26 +142,26 @@ function skapatvattatable(){
 
 '<tr class="rowtvatt"><td class="rutatvatt">'+		
 		'<img src="images/icon_plus_small.png" class="scale-with-grid-tvatt-information"></img>'+
-'</td><td class="information-text-middle-tvatt" class="rutatvatt">'+
-		'<p>Detta passet är ledigt och går att boka, tryck på ikonen för att utföra bokningen.</p>'+
+'<!--</td><td class="information-text-middle-tvatt" class="rutatvatt">-->'+
+		'<p> Detta passet är ledigt och går att boka, tryck på ikonen för att utföra bokningen.</p>'+
 '</td></tr>'+
 
 '<tr class="rowtvatt"><td class="rutatvatt">'+
 		'<img src="images/icon_no.png" class="scale-with-grid-tvatt-information"></img>'+
-'</td><td class="information-text-middle-tvatt">'+
-		'<p>Passet är redan bokat av en annan användare.</p>'+	
+'<!--</td><td class="information-text-middle-tvatt" class="rutatvatt">-->'+
+		'<p> Passet är redan bokat av en annan användare.</p>'+	
 '</td></tr>'+
 
 '<tr class="rowtvatt"><td class="rutatvatt">'+
 		'<img src="images/icon_own.png" class="scale-with-grid-tvatt-information"></img>'+
-'</td><td class="information-text-middle-tvatt">'+
-		'<p>Passet är bokat på ditt konto.</p>'+	
+'<!--</td><td class="information-text-middle-tvatt" class="rutatvatt">-->'+
+		'<p> Passet är bokat på ditt konto.</p>'+	
 '</td></tr>'+
 
 '<tr class="rowtvatt"><td class="rutatvatt">'+		
 		'<img src="images/icon_no_not.png" class="scale-with-grid-tvatt-information"></img>'+
-'</td><td class="information-text-middle-tvatt">'+
-		'<p>Tiden/datumet har passerat eller så är passet inte tillgängligt just nu.</p>'+	
+'<!--</td><td class="information-text-middle-tvatt" class="rutatvatt">-->'+
+		'<p> Tiden/datumet har passerat eller så är passet inte tillgängligt just nu.</p>'+	
 '</td></tr>'+
 '</table>'+
 
@@ -208,7 +216,8 @@ function skapabyggnadtable(){
 '<table>'+
 '<tr>'+
 '<td class="information-text-middle">'+
-		'<p>Om ditt område har möjlighet att boka tvättstuga på flera olika adresser eller uppgångar visas de olika alternativen på denna sida.</p>'+
+		'<center><p><strong>Byggnadsväljare</strong></p></center>'+
+		'<br><p>Här väljer du den uppgång eller adress som du vill boka via.</p>'+
 '</td></tr>'+
 '</table>'+
 '</div>'+
