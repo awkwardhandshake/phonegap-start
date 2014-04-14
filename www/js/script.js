@@ -280,7 +280,7 @@ function bokatid(tiden,nuvarandebokning){
 		 
 		 ref.addEventListener('loadstop', function(event) {
 		 	ref.executeScript(
-		 	{ code: "document.getElementById('imgWait').innerHTML" },
+		 	{ code: "document.getElementById('imgWait').outerHTML" },
 		 		function(values) {
 			 		console.log(values);
 			}
