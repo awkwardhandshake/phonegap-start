@@ -277,6 +277,8 @@ function bokatid(tiden,nuvarandebokning){
 			var testarstring = event.url;
 		 	if(String(testarstring).match('wwwashcalendar.aspx') != null || String(testarstring).match('NextPage') != null){
 		 		console.log('bokatid if-sats');
+		 		console.log(event.url);
+		 		console.log(event);g
 			 	loadtvatta(nuvarandebokning);
 		 	}
 		 	console.log(event.url);

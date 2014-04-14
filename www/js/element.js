@@ -9,7 +9,7 @@ element = 'element';
 	navback.src = "img/sgs_logout.png";
 	
 	document.getElementById("index").innerHTML=
-'<div id="index">'+
+
 '<div id="information" class="nyinforuta_hide">'+
 '<table class="info-tabel-tvatta">'+
 '<tr><td class="">'+
@@ -27,7 +27,7 @@ element = 'element';
 '</div>'+
 
 		
-	'<div id="index">'+
+
 '<div class="container">'+
 	'<div class="sixteen columns"></div>'+
 	
@@ -50,13 +50,12 @@ element = 'element';
 			'<p><small>(Book)</small></p>'+
 		'</div>'+
 	'</div>'+
-	
+
 '<div id="doorcontrolcontent">'+
             '<form action="/DoorControl/PerformUnlock" method="post" ><ul>'+
                   '<li><button type="submit" name="epName" value="varde" id="hemmadorren"></button></li>'+
                   '</ul>'+
-            '</form><div class="doorControlStatus"></div>'+
-'</div>'+	
+            '</form><div class="doorControlStatus"></div>'+	
 '</div>'
 
 	var bytaut = document.getElementById('navigering');
