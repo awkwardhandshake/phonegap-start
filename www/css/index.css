@@ -931,6 +931,7 @@ body {
 	button,
 	input[type="submit"],
 	input[type="reset"] {
+		outline: none;
 		background: transparent; /* url(img/door_button.png) no-repeat 0 0;*//* Old browsers */
 		/*background: #eee -moz-linear-gradient(top, rgba(255,255,255,.2) 0%, rgba(0,0,0,.2) 100%); /* FF3.6+ */
 		/*background: #eee -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,.2)), color-stop(100%,rgba(0,0,0,.2))); /* Chrome,Safari4+ */
@@ -941,9 +942,10 @@ body {
 	  border: 0px solid #aaa;
 	  border-top: 0px solid #ccc;
 	  border-left: 0px solid #ccc;
+	  /*
 	  -moz-border-radius: 3px;
 	  -webkit-border-radius: 3px;
-	  border-radius: 3px;
+	  border-radius: 3px;*/
 	  /*color: url(img/door_button.png) no-repeat 0 0;*/
 	  /*display: inline-block;*/
 	  /*font-size: 40px;*/
@@ -963,6 +965,7 @@ body {
 	input[type="submit"]:hover,
 	input[type="reset"]:hover,
 	input[type="button"]:hover {
+		outline: none;
 		opacity:0.8;
 		/*background: #ddd; /* Old browsers */
 		/*background: #ddd -moz-linear-gradient(top, rgba(255,255,255,.3) 0%, rgba(0,0,0,.3) 100%); /* FF3.6+ */
@@ -980,6 +983,7 @@ body {
 	input[type="submit"]:active,
 	input[type="reset"]:active,
 	input[type="button"]:active {
+		outline: none;
 		opacity:0.7;
 		border: 0px #666;
 		/*border: 1px solid #666;*/
