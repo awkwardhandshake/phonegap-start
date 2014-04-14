@@ -40,20 +40,12 @@
 }
 
 #dummie{
-
 	position: fixed;
 	z-index: -10;
 	width: 100%;
 	height: 100%;
-	background-color: #FFF;
-	opacity: 0.0;
+	opacity: 1.0;
 }	
-.menyobrukbar{
-	
-}
-
-
-
 
 .bakgrundinformation_hide{
 	display: none;
