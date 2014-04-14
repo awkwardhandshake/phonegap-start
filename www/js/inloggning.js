@@ -13,9 +13,14 @@ show();
 		inputfields();
 		loadtvattaklar();
 		if(localStorage.ReturnCode == 'TOOMANYFAILEDLOGINS'){
-			console.log('Du har loggat in för många gånger, var god vänta en stund och försök igen');
-			tomany();
 			loadtvattaklar();
+			navigator.notification.alert(
+			'Det verkar som att du har försökt logga in för många gånger.',  // message
+			inputfields,         // callback
+			'Hoppsan!',      // title
+			'Vänta lite'         // buttonName
+			);
+			console.log('Du har loggat in för många gånger, var god vänta en stund och försök igen');
 		}
 		console.log('Detta är användaren i else ' + localStorage.LoggedIn);
 		}
@@ -54,12 +59,14 @@ function hamta(anv,pass) {
 		});
 		
 		if(localStorage.ReturnCode === 'NOMATCH'){
+			loadtvattaklar();
 			navigator.notification.alert(
-			'Användarnamn eller lösenord är felaktiga',  // message
+			'Användarnamnet eller lösenordet är felaktigt',  // message
 			inputfields,         // callback
 			'Inloggningsfel',      // title
 			'Försök igen'         // buttonName
 			);
+
 		}
 		else{
 		
