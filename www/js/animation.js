@@ -70,7 +70,7 @@ function info_animation(){
 }
 
 
-$('#index').click(function() {
+$('#index,#helamenyn').click(function() {
 	document.getElementById('information').className = 'nyinforuta_hide';
 
 });

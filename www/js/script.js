@@ -167,11 +167,10 @@ historia('loadtvatta()');
 					var navrow = navtablebottom.insertRow(-1);
 					for(var lt = 0; lt < lankartvatta.length; lt++){
 						var navcell = navrow.insertCell(-1);
-						console.log(lankartvatta.length);
+
 						lankartvattariktig = String(lankartvatta[navrakna].onmousedown).split("'", 2);
 						lankartvattariktig = "'http://tvatta.sgsstudentbostader.se/"+ lankartvattariktig[1] +"'";
-						lankartvattatext = String(lankartvatta[navrakna].innerText).split('&nbsp;', 1);
-						console.log(lankartvattatext);
+						lankartvattatext = String(lankartvatta[navrakna].innerText).split("&nbsp;");
 						navcell.setAttribute("onmousedown", "loadtvatta("+lankartvattariktig +")")
 						navcell.setAttribute("class", "navknapparlank");
 						navcell.innerHTML = '<a>' + lankartvattatext[0] +'</a>';
