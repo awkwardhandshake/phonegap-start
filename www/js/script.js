@@ -270,10 +270,14 @@ function bokatid(tiden,nuvarandebokning){
 		 
 		 ref.addEventListener('loadstart', function(event2){
 			console.log('Loadstart v.1.4');
+			console.log("Event2 i loadstart");
+			console.log(event2);
 			show();
 		 })
 		 
 		 ref.addEventListener('loadstop', function(event) {
+		 	console.log("Event i loadstop");
+		 	console.log(event);
 		 	console.log('Loadstop v.1.5');
 			var testarstring = event.url;
 		 	if(String(testarstring).match('wwwashcalendar.aspx') != null || String(testarstring).match('NextPage') != null){
@@ -282,9 +286,9 @@ function bokatid(tiden,nuvarandebokning){
 		 		//console.log(event);
 			 	loadtvatta(nuvarandebokning);
 		 	}
-		 	console.log(event.url);
-		 	console.log(event);
-		 	console.log(nuvarandebokning);
+		 	//console.log(event.url);
+		 	//console.log(event);
+		 	//console.log(nuvarandebokning);
 		 	})
 		 	
 
