@@ -348,6 +348,10 @@ function hamtahemma(){
 
 							buttonvalue = $(varde).find('button').attr('value');
 							buttonname = $(varde).find('button');
+							if(buttonvalue === undefined){
+								var felskicka = "Var god och kontrollera att ditt hus är utrustat med öppning av entrédörren via internet";
+								hemmavilken(felskicka);	
+							}
 							document.getElementById('hemmadorren').value = buttonvalue;
 							oppnadorr();
 						
