@@ -267,7 +267,7 @@ historia('loadtvatta()');
 function bokatid(tiden,nuvarandebokning){
 	console.log("Går in i funktionen bokatid");
 	 var ref = window.open(tiden, '_blank', 'hidden=yes');
-	 var ref2  window.open(encodeURI(tiden), '_blank', 'hidden=yes');
+	 var ref2 = window.open(encodeURI(tiden), '_blank', 'hidden=yes');
 		 console.log("REF HÄÄÄÄÄR");
 		 console.log(ref2);
 		 
