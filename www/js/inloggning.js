@@ -69,17 +69,18 @@ function hamta(anv,pass) {
 
 		}
 		else if(localStorage.ReturnCode === 'TOOMANYFAILEDLOGINS'){
-		loadtvattaklar();
 			navigator.notification.alert(
 			'Det verkar som att du har försökt logga in för många gånger.',  // message
 			inputfields,         // callback
 			'Hoppsan!',      // title
 			'Vänta lite'         // buttonName
 			);	
-	  
+			loadtvattaklar();
 	  }
 	  
+	  else{
 	  loggain()
+	  }
 	  });
 	  
 };		  
