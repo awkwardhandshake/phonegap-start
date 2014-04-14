@@ -1,83 +1,176 @@
 
-
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN" >
-<html>
-<head>
-	<title>wwwashcalendar</title>
-
-	<script type="text/javascript" id="clientEventHandlersJS" language="javascript" src="script/wwwash.js"></script>
-
-	<link href="css/styles.css" type="text/css" rel="stylesheet" />
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><link href="/Content/cwp.css" rel="stylesheet" type="text/css"/>
+    
+    <script src="/Scripts/jquery-1.4.2.min.js" type="text/javascript"></script><script type="text/javascript" src="/Scripts/jquery.cookie.js"></script>
+    <script type="text/javascript" src="/Scripts/jquery.collapse.js"></script>
+    <script type="text/javascript" src="/Scripts/jquery.query-2.1.7.js"></script>
+    
+    <link href="/Content/jscalendar-1.0/calendar-win2k-1.css" rel="Stylesheet" type="text/css"></link>
+<script src="/Content/jscalendar-1.0/calendar.js" type="text/javascript"></script>
+<script src="/Content/jscalendar-1.0/lang/calendar-sv.js" type="text/javascript"></script>
+<script src="/Content/jscalendar-1.0/cwp-calendar-setup.js" type="text/javascript"></script><script type="text/javascript" src="/Scripts/cwp.js"></script>
+    
+    <title>
+SGS Hemma
+</title>
 </head>
-<body bgcolor="white" onmousedown="resetTimeOut();" onload="initCalendar();">
-	<table width="100%" height="100%" cellpadding="0" cellspacing="0" border="0">
-		<tr height="1">
-			<td valign="top" height="1">
-				<table cellspacing="0" cellpadding="0" width="100%" border="0">
-					<tr>
-						<td class="bigText headerColor" valign="middle" align="left" style="padding-left: 10px">
-							<span id="lblBookingFor">Bokningstider för&nbsp;302029308</span>
-						</td>
-						<td align="right" width="50%" height="35">
-							<table cellspacing="5" cellpadding="3" border="0" style="height:100%;">
-	<tr id="trLinks">
-		<td></td><td class="bgInactiveColor textInactiveColor smallText buttonStyleHelp" onmousedown="location.href='wwwash.aspx'" style="font-weight:bold;">Bokningsplatser</td><td style="width:0px;"></td><td class="bgInactiveColor textInactiveColor smallText buttonStyleHelp" onmousedown="location.href='wwwashbookings.aspx?panelId=2758&amp;weekoffset=0&amp;type=25598&amp;group=65384&amp;date=2014-04-07 14:16:33'" style="font-weight:bold;height:100%;">Visa/Avboka</td><td style="width:0px;"></td><td class="bgInactiveColor textInactiveColor smallText buttonStyleHelp" onmousedown="OpenTheHelpWindow('Help/helpCalendar.aspx');" style="font-weight:bold;">Hjälp</td><td style="width:0px;"></td>
-	</tr>
-</table>
-						</td>
-					</tr>
-				</table>
-			</td>
-		</tr>
-		<tr>
-			<td height="1" valign="top">
-				<table width="100%" border="0" cellpadding="0" cellspacing="0">
-					<tr>
-						<td width="50%" class="bigText headerColor" style="padding-left: 6px" valign="top" align="left">
-							<span id="lblPanelName">&nbsp;Lindholmsallen 25&nbsp;-&nbsp;Vecka&nbsp;15</span>
-						</td>
-						<td width=12% class="headerColor" style="padding-top:5px; padding-bottom:5px;"><b>Välj bokningstyp:&nbsp;</b></td>
-						<td width=12% align="left" class="headerColor"><b>Lokaler</b>&nbsp;</td>
-						<td width=12% align="left" class="headerColor" style="cursor:pointer; cursor:hand;" onmousedown="javascript:location.href='wwwashcalendar.aspx?panelId=2758&weekoffset=0&type=25599'">Tvätt 1-4</a>&nbsp;</td>
-						<td width=12% align="left" class="headerColor" style="cursor:pointer; cursor:hand;" onmousedown="javascript:location.href='wwwashcalendar.aspx?panelId=2758&weekoffset=0&type=25600'">Tvätt 5-7</a>&nbsp;</td>
-					</tr>
-				</table>
-			</td>
-		</tr>
-		<tr>
-			<td height="1">
-				<table cellspacing="0" cellpadding="0" width="100%" border="0">
-					<tr>
-						<td width="50%" rowspan="2" height="1">
-							<table id="tblNav" cellspacing="0" cellpadding="0" border="0" style="width:100%;border-collapse:collapse;">
-	<tr>
-		<td style="height:32px;width:50%;background-image:url(images/Flik/bg_down.gif);"></td><td class="periodLinkColor smallText" align="center" valign="middle" onmousedown="location.href='wwwashcalendar.aspx?panelId=2758&amp;weekoffset=1&amp;type=25598&amp;group=65384'" style="font-weight:bold;height:32px;width:50%;cursor:hand;background-image:url(images/Flik/bg_down.gif);"><b>&nbsp;Nästa vecka&nbsp;</b><img src="images/pil2_right.gif" align="absmiddle" style="border-width:0px;" /></td>
-	</tr>
-</table>
-						</td>
-						<td height="2">
-						</td>
-					</tr>
-					<tr>
-						<td width="50%">
-							<table cellspacing="0" cellpadding="0" width="100%">
-								<td class='bgActiveColor'><img src='images/Flik/start_active.gif'/></td><td width='100%' align='center' background='images/Flik/bg_active2.gif' class='textActiveColor bgActiveColor'><b>Studierum vån 7</b></td><td class='bgActiveColor'><img src='images/Flik/stop_active.gif'/></td>
-							</table>
-						</td>
-					</tr>
-				</table>
-			</td>
-		</tr>
-		<tr valign="top">
-			<td>
-				<table id="tbl1" width="100%" cellpadding="0" class="bgActiveColor" style="border-right: #666666 0px solid; border-left: #666666 0px solid; border-bottom: #666666 0px solid">
-					<tr class="bgActiveColor textActiveColor">
-						<th width="13%" style="padding:5; vertical-align:top"><b>Tid</b></th><th width="12%" align="center" style="padding:5">Måndag<br>7/4</th><th width="13%" align="center" style="padding:5">Tisdag<br>8/4</th><th width="12%" align="center" style="padding:5">Onsdag<br>9/4</th><th width="13%" align="center" style="padding:5">Torsdag<br>10/4</th><th width="12%" align="center" style="padding:5">Fredag<br>11/4</th><th width="13%" align="center" style="padding:5">Lördag<br>12/4</th><th width="12%" align="center" style="padding:5">Söndag<br>13/4</th>
-					</tr>
-					<tr height="36" class="bgTableOddColor textTableOddColor"><td align="center" style="font-weight:bold">&nbsp;&nbsp;07:00-10:00&nbsp;&nbsp;</td><td align=center class="bgTableOddColor textTableOddColor"><table class="bgTableOddColor textTableOddColor" cellpadding=0 cellspacing=4 width="100%" height="100%"><tr><td align="center" class=bgTableOddColor textTableOddColor><img src="images/icon_no_not.gif"></td></td></tr></table></td><td align=center class="bgTableOddColor textTableOddColor"><table class="bgTableOddColor textTableOddColor" cellpadding=0 cellspacing=4 width="100%" height="100%"><tr><td class=bgTableOddColor textTableOddColor align="center" style="cursor:pointer; cursor:hand;" onmousedown="javascript:location.href='wwwashwait.aspx?command=book&PanelId=2758&TypeId=25598&GroupId=65384&Date=2014-04-08&IntervalId=0'"><img src="images/icon_plus.gif"></td></td></tr></table></td><td align=center class="bgTableOddColor textTableOddColor"><table class="bgTableOddColor textTableOddColor" cellpadding=0 cellspacing=4 width="100%" height="100%"><tr><td class=bgTableOddColor textTableOddColor align="center" style="cursor:pointer; cursor:hand;" onmousedown="javascript:location.href='wwwashwait.aspx?command=book&PanelId=2758&TypeId=25598&GroupId=65384&Date=2014-04-09&IntervalId=0'"><img src="images/icon_plus.gif"></td></td></tr></table></td><td align=center class="bgTableOddColor textTableOddColor"><table class="bgTableOddColor textTableOddColor" cellpadding=0 cellspacing=4 width="100%" height="100%"><tr><td class=bgTableOddColor textTableOddColor align="center" style="cursor:pointer; cursor:hand;" onmousedown="javascript:location.href='wwwashwait.aspx?command=book&PanelId=2758&TypeId=25598&GroupId=65384&Date=2014-04-10&IntervalId=0'"><img src="images/icon_plus.gif"></td></td></tr></table></td><td align=center class="bgTableOddColor textTableOddColor"><table class="bgTableOddColor textTableOddColor" cellpadding=0 cellspacing=4 width="100%" height="100%"><tr><td class=bgTableOddColor textTableOddColor align="center" style="cursor:pointer; cursor:hand;" onmousedown="javascript:location.href='wwwashwait.aspx?command=book&PanelId=2758&TypeId=25598&GroupId=65384&Date=2014-04-11&IntervalId=0'"><img src="images/icon_plus.gif"></td></td></tr></table></td><td align=center class="bgTableOddColor textTableOddColor"><table class="bgTableOddColor textTableOddColor" cellpadding=0 cellspacing=4 width="100%" height="100%"><tr><td class=bgTableOddColor textTableOddColor align="center" style="cursor:pointer; cursor:hand;" onmousedown="javascript:location.href='wwwashwait.aspx?command=book&PanelId=2758&TypeId=25598&GroupId=65384&Date=2014-04-12&IntervalId=0'"><img src="images/icon_plus.gif"></td></td></tr></table></td><td align=center class="bgTableOddColor textTableOddColor"><table class="bgTableOddColor textTableOddColor" cellpadding=0 cellspacing=4 width="100%" height="100%"><tr><td class=bgTableOddColor textTableOddColor align="center" style="cursor:pointer; cursor:hand;" onmousedown="javascript:location.href='wwwashwait.aspx?command=book&PanelId=2758&TypeId=25598&GroupId=65384&Date=2014-04-13&IntervalId=0'"><img src="images/icon_plus.gif"></td></td></tr></table></td></tr><tr height="36" class="bgTableEvenColor textTableEvenColor"><td align="center" style="font-weight:bold">&nbsp;&nbsp;10:00-12:00&nbsp;&nbsp;</td><td align=center class="bgTableEvenColor textTableEvenColor"><table class="bgTableEvenColor textTableEvenColor" cellpadding=0 cellspacing=4 width="100%" height="100%"><tr><td align="center" class=bgTableEvenColor textTableEvenColor><img src="images/icon_no_not.gif"></td></td></tr></table></td><td align=center class="bgTableEvenColor textTableEvenColor"><table class="bgTableEvenColor textTableEvenColor" cellpadding=0 cellspacing=4 width="100%" height="100%"><tr><td class=bgTableEvenColor textTableEvenColor align="center" style="cursor:pointer; cursor:hand;" onmousedown="javascript:location.href='wwwashwait.aspx?command=book&PanelId=2758&TypeId=25598&GroupId=65384&Date=2014-04-08&IntervalId=1'"><img src="images/icon_plus.gif"></td></td></tr></table></td><td align=center class="bgTableEvenColor textTableEvenColor"><table class="bgTableEvenColor textTableEvenColor" cellpadding=0 cellspacing=4 width="100%" height="100%"><tr><td class=bgTableEvenColor textTableEvenColor align="center" style="cursor:pointer; cursor:hand;" onmousedown="javascript:location.href='wwwashwait.aspx?command=book&PanelId=2758&TypeId=25598&GroupId=65384&Date=2014-04-09&IntervalId=1'"><img src="images/icon_plus.gif"></td></td></tr></table></td><td align=center class="bgTableEvenColor textTableEvenColor"><table class="bgTableEvenColor textTableEvenColor" cellpadding=0 cellspacing=4 width="100%" height="100%"><tr><td class=bgTableEvenColor textTableEvenColor align="center" style="cursor:pointer; cursor:hand;" onmousedown="javascript:location.href='wwwashwait.aspx?command=book&PanelId=2758&TypeId=25598&GroupId=65384&Date=2014-04-10&IntervalId=1'"><img src="images/icon_plus.gif"></td></td></tr></table></td><td align=center class="bgTableEvenColor textTableEvenColor"><table class="bgTableEvenColor textTableEvenColor" cellpadding=0 cellspacing=4 width="100%" height="100%"><tr><td class=bgTableEvenColor textTableEvenColor align="center" style="cursor:pointer; cursor:hand;" onmousedown="javascript:location.href='wwwashwait.aspx?command=book&PanelId=2758&TypeId=25598&GroupId=65384&Date=2014-04-11&IntervalId=1'"><img src="images/icon_plus.gif"></td></td></tr></table></td><td align=center class="bgTableEvenColor textTableEvenColor"><table class="bgTableEvenColor textTableEvenColor" cellpadding=0 cellspacing=4 width="100%" height="100%"><tr><td class=bgTableEvenColor textTableEvenColor align="center" style="cursor:pointer; cursor:hand;" onmousedown="javascript:location.href='wwwashwait.aspx?command=book&PanelId=2758&TypeId=25598&GroupId=65384&Date=2014-04-12&IntervalId=1'"><img src="images/icon_plus.gif"></td></td></tr></table></td><td align=center class="bgTableEvenColor textTableEvenColor"><table class="bgTableEvenColor textTableEvenColor" cellpadding=0 cellspacing=4 width="100%" height="100%"><tr><td class=bgTableEvenColor textTableEvenColor align="center" style="cursor:pointer; cursor:hand;" onmousedown="javascript:location.href='wwwashwait.aspx?command=book&PanelId=2758&TypeId=25598&GroupId=65384&Date=2014-04-13&IntervalId=1'"><img src="images/icon_plus.gif"></td></td></tr></table></td></tr><tr height="36" class="bgTableOddColor textTableOddColor"><td align="center" style="font-weight:bold">&nbsp;&nbsp;12:00-15:00&nbsp;&nbsp;</td><td align=center class="bgTableOddColor textTableOddColor"><table class="bgTableOddColor textTableOddColor" cellpadding=0 cellspacing=4 width="100%" height="100%"><tr><td align="center" class=bgTableOddColor textTableOddColor><img src="images/icon_no.gif"></td></td></tr></table></td><td align=center class="bgTableOddColor textTableOddColor"><table class="bgTableOddColor textTableOddColor" cellpadding=0 cellspacing=4 width="100%" height="100%"><tr><td class=bgTableOddColor textTableOddColor align="center" style="cursor:pointer; cursor:hand;" onmousedown="javascript:location.href='wwwashwait.aspx?command=book&PanelId=2758&TypeId=25598&GroupId=65384&Date=2014-04-08&IntervalId=2'"><img src="images/icon_plus.gif"></td></td></tr></table></td><td align=center class="bgTableOddColor textTableOddColor"><table class="bgTableOddColor textTableOddColor" cellpadding=0 cellspacing=4 width="100%" height="100%"><tr><td class=bgTableOddColor textTableOddColor align="center" style="cursor:pointer; cursor:hand;" onmousedown="javascript:location.href='wwwashwait.aspx?command=book&PanelId=2758&TypeId=25598&GroupId=65384&Date=2014-04-09&IntervalId=2'"><img src="images/icon_plus.gif"></td></td></tr></table></td><td align=center class="bgTableOddColor textTableOddColor"><table class="bgTableOddColor textTableOddColor" cellpadding=0 cellspacing=4 width="100%" height="100%"><tr><td class=bgTableOddColor textTableOddColor align="center" style="cursor:pointer; cursor:hand;" onmousedown="javascript:location.href='wwwashwait.aspx?command=book&PanelId=2758&TypeId=25598&GroupId=65384&Date=2014-04-10&IntervalId=2'"><img src="images/icon_plus.gif"></td></td></tr></table></td><td align=center class="bgTableOddColor textTableOddColor"><table class="bgTableOddColor textTableOddColor" cellpadding=0 cellspacing=4 width="100%" height="100%"><tr><td class=bgTableOddColor textTableOddColor align="center" style="cursor:pointer; cursor:hand;" onmousedown="javascript:location.href='wwwashwait.aspx?command=book&PanelId=2758&TypeId=25598&GroupId=65384&Date=2014-04-11&IntervalId=2'"><img src="images/icon_plus.gif"></td></td></tr></table></td><td align=center class="bgTableOddColor textTableOddColor"><table class="bgTableOddColor textTableOddColor" cellpadding=0 cellspacing=4 width="100%" height="100%"><tr><td class=bgTableOddColor textTableOddColor align="center" style="cursor:pointer; cursor:hand;" onmousedown="javascript:location.href='wwwashwait.aspx?command=book&PanelId=2758&TypeId=25598&GroupId=65384&Date=2014-04-12&IntervalId=2'"><img src="images/icon_plus.gif"></td></td></tr></table></td><td align=center class="bgTableOddColor textTableOddColor"><table class="bgTableOddColor textTableOddColor" cellpadding=0 cellspacing=4 width="100%" height="100%"><tr><td class=bgTableOddColor textTableOddColor align="center" style="cursor:pointer; cursor:hand;" onmousedown="javascript:location.href='wwwashwait.aspx?command=book&PanelId=2758&TypeId=25598&GroupId=65384&Date=2014-04-13&IntervalId=2'"><img src="images/icon_plus.gif"></td></td></tr></table></td></tr><tr height="36" class="bgTableEvenColor textTableEvenColor"><td align="center" style="font-weight:bold">&nbsp;&nbsp;15:00-18:00&nbsp;&nbsp;</td><td align=center class="bgTableEvenColor textTableEvenColor"><table class="bgTableEvenColor textTableEvenColor" cellpadding=0 cellspacing=4 width="100%" height="100%"><tr><td align="center" class=bgTableEvenColor textTableEvenColor><img src="images/icon_no.gif"></td></td></tr></table></td><td align=center class="bgTableEvenColor textTableEvenColor"><table class="bgTableEvenColor textTableEvenColor" cellpadding=0 cellspacing=4 width="100%" height="100%"><tr><td class=bgTableEvenColor textTableEvenColor align="center" style="cursor:pointer; cursor:hand;" onmousedown="javascript:location.href='wwwashwait.aspx?command=book&PanelId=2758&TypeId=25598&GroupId=65384&Date=2014-04-08&IntervalId=3'"><img src="images/icon_plus.gif"></td></td></tr></table></td><td align=center class="bgTableEvenColor textTableEvenColor"><table class="bgTableEvenColor textTableEvenColor" cellpadding=0 cellspacing=4 width="100%" height="100%"><tr><td class=bgTableEvenColor textTableEvenColor align="center" style="cursor:pointer; cursor:hand;" onmousedown="javascript:location.href='wwwashwait.aspx?command=book&PanelId=2758&TypeId=25598&GroupId=65384&Date=2014-04-09&IntervalId=3'"><img src="images/icon_plus.gif"></td></td></tr></table></td><td align=center class="bgTableEvenColor textTableEvenColor"><table class="bgTableEvenColor textTableEvenColor" cellpadding=0 cellspacing=4 width="100%" height="100%"><tr><td class=bgTableEvenColor textTableEvenColor align="center" style="cursor:pointer; cursor:hand;" onmousedown="javascript:location.href='wwwashwait.aspx?command=book&PanelId=2758&TypeId=25598&GroupId=65384&Date=2014-04-10&IntervalId=3'"><img src="images/icon_plus.gif"></td></td></tr></table></td><td align=center class="bgTableEvenColor textTableEvenColor"><table class="bgTableEvenColor textTableEvenColor" cellpadding=0 cellspacing=4 width="100%" height="100%"><tr><td class=bgTableEvenColor textTableEvenColor align="center" style="cursor:pointer; cursor:hand;" onmousedown="javascript:location.href='wwwashwait.aspx?command=book&PanelId=2758&TypeId=25598&GroupId=65384&Date=2014-04-11&IntervalId=3'"><img src="images/icon_plus.gif"></td></td></tr></table></td><td align=center class="bgTableEvenColor textTableEvenColor"><table class="bgTableEvenColor textTableEvenColor" cellpadding=0 cellspacing=4 width="100%" height="100%"><tr><td class=bgTableEvenColor textTableEvenColor align="center" style="cursor:pointer; cursor:hand;" onmousedown="javascript:location.href='wwwashwait.aspx?command=book&PanelId=2758&TypeId=25598&GroupId=65384&Date=2014-04-12&IntervalId=3'"><img src="images/icon_plus.gif"></td></td></tr></table></td><td align=center class="bgTableEvenColor textTableEvenColor"><table class="bgTableEvenColor textTableEvenColor" cellpadding=0 cellspacing=4 width="100%" height="100%"><tr><td class=bgTableEvenColor textTableEvenColor align="center" style="cursor:pointer; cursor:hand;" onmousedown="javascript:location.href='wwwashwait.aspx?command=book&PanelId=2758&TypeId=25598&GroupId=65384&Date=2014-04-13&IntervalId=3'"><img src="images/icon_plus.gif"></td></td></tr></table></td></tr><tr height="36" class="bgTableOddColor textTableOddColor"><td align="center" style="font-weight:bold">&nbsp;&nbsp;18:00-21:00&nbsp;&nbsp;</td><td align=center class="bgTableOddColor textTableOddColor"><table class="bgTableOddColor textTableOddColor" cellpadding=0 cellspacing=4 width="100%" height="100%"><tr><td class=bgTableOddColor textTableOddColor align="center" style="cursor:pointer; cursor:hand;" onmousedown="javascript:location.href='wwwashwait.aspx?command=book&PanelId=2758&TypeId=25598&GroupId=65384&Date=2014-04-07&IntervalId=4'"><img src="images/icon_plus.gif"></td></td></tr></table></td><td align=center class="bgTableOddColor textTableOddColor"><table class="bgTableOddColor textTableOddColor" cellpadding=0 cellspacing=4 width="100%" height="100%"><tr><td align="center" class=bgTableOddColor textTableOddColor><img src="images/icon_no.gif"></td></td></tr></table></td><td align=center class="bgTableOddColor textTableOddColor"><table class="bgTableOddColor textTableOddColor" cellpadding=0 cellspacing=4 width="100%" height="100%"><tr><td class=bgTableOddColor textTableOddColor align="center" style="cursor:pointer; cursor:hand;" onmousedown="javascript:location.href='wwwashwait.aspx?command=book&PanelId=2758&TypeId=25598&GroupId=65384&Date=2014-04-09&IntervalId=4'"><img src="images/icon_plus.gif"></td></td></tr></table></td><td align=center class="bgTableOddColor textTableOddColor"><table class="bgTableOddColor textTableOddColor" cellpadding=0 cellspacing=4 width="100%" height="100%"><tr><td class=bgTableOddColor textTableOddColor align="center" style="cursor:pointer; cursor:hand;" onmousedown="javascript:location.href='wwwashwait.aspx?command=book&PanelId=2758&TypeId=25598&GroupId=65384&Date=2014-04-10&IntervalId=4'"><img src="images/icon_plus.gif"></td></td></tr></table></td><td align=center class="bgTableOddColor textTableOddColor"><table class="bgTableOddColor textTableOddColor" cellpadding=0 cellspacing=4 width="100%" height="100%"><tr><td class=bgTableOddColor textTableOddColor align="center" style="cursor:pointer; cursor:hand;" onmousedown="javascript:location.href='wwwashwait.aspx?command=book&PanelId=2758&TypeId=25598&GroupId=65384&Date=2014-04-11&IntervalId=4'"><img src="images/icon_plus.gif"></td></td></tr></table></td><td align=center class="bgTableOddColor textTableOddColor"><table class="bgTableOddColor textTableOddColor" cellpadding=0 cellspacing=4 width="100%" height="100%"><tr><td class=bgTableOddColor textTableOddColor align="center" style="cursor:pointer; cursor:hand;" onmousedown="javascript:location.href='wwwashwait.aspx?command=book&PanelId=2758&TypeId=25598&GroupId=65384&Date=2014-04-12&IntervalId=4'"><img src="images/icon_plus.gif"></td></td></tr></table></td><td align=center class="bgTableOddColor textTableOddColor"><table class="bgTableOddColor textTableOddColor" cellpadding=0 cellspacing=4 width="100%" height="100%"><tr><td class=bgTableOddColor textTableOddColor align="center" style="cursor:pointer; cursor:hand;" onmousedown="javascript:location.href='wwwashwait.aspx?command=book&PanelId=2758&TypeId=25598&GroupId=65384&Date=2014-04-13&IntervalId=4'"><img src="images/icon_plus.gif"></td></td></tr></table></td></tr><tr height="36" class="bgTableEvenColor textTableEvenColor"><td align="center" style="font-weight:bold">&nbsp;&nbsp;21:00-24:00&nbsp;&nbsp;</td><td align=center class="bgTableEvenColor textTableEvenColor"><table class="bgTableEvenColor textTableEvenColor" cellpadding=0 cellspacing=4 width="100%" height="100%"><tr><td class=bgTableEvenColor textTableEvenColor align="center" style="cursor:pointer; cursor:hand;" onmousedown="javascript:location.href='wwwashwait.aspx?command=book&PanelId=2758&TypeId=25598&GroupId=65384&Date=2014-04-07&IntervalId=5'"><img src="images/icon_plus.gif"></td></td></tr></table></td><td align=center class="bgTableEvenColor textTableEvenColor"><table class="bgTableEvenColor textTableEvenColor" cellpadding=0 cellspacing=4 width="100%" height="100%"><tr><td class=bgTableEvenColor textTableEvenColor align="center" style="cursor:pointer; cursor:hand;" onmousedown="javascript:location.href='wwwashwait.aspx?command=book&PanelId=2758&TypeId=25598&GroupId=65384&Date=2014-04-08&IntervalId=5'"><img src="images/icon_plus.gif"></td></td></tr></table></td><td align=center class="bgTableEvenColor textTableEvenColor"><table class="bgTableEvenColor textTableEvenColor" cellpadding=0 cellspacing=4 width="100%" height="100%"><tr><td class=bgTableEvenColor textTableEvenColor align="center" style="cursor:pointer; cursor:hand;" onmousedown="javascript:location.href='wwwashwait.aspx?command=book&PanelId=2758&TypeId=25598&GroupId=65384&Date=2014-04-09&IntervalId=5'"><img src="images/icon_plus.gif"></td></td></tr></table></td><td align=center class="bgTableEvenColor textTableEvenColor"><table class="bgTableEvenColor textTableEvenColor" cellpadding=0 cellspacing=4 width="100%" height="100%"><tr><td class=bgTableEvenColor textTableEvenColor align="center" style="cursor:pointer; cursor:hand;" onmousedown="javascript:location.href='wwwashwait.aspx?command=book&PanelId=2758&TypeId=25598&GroupId=65384&Date=2014-04-10&IntervalId=5'"><img src="images/icon_plus.gif"></td></td></tr></table></td><td align=center class="bgTableEvenColor textTableEvenColor"><table class="bgTableEvenColor textTableEvenColor" cellpadding=0 cellspacing=4 width="100%" height="100%"><tr><td class=bgTableEvenColor textTableEvenColor align="center" style="cursor:pointer; cursor:hand;" onmousedown="javascript:location.href='wwwashwait.aspx?command=book&PanelId=2758&TypeId=25598&GroupId=65384&Date=2014-04-11&IntervalId=5'"><img src="images/icon_plus.gif"></td></td></tr></table></td><td align=center class="bgTableEvenColor textTableEvenColor"><table class="bgTableEvenColor textTableEvenColor" cellpadding=0 cellspacing=4 width="100%" height="100%"><tr><td class=bgTableEvenColor textTableEvenColor align="center" style="cursor:pointer; cursor:hand;" onmousedown="javascript:location.href='wwwashwait.aspx?command=book&PanelId=2758&TypeId=25598&GroupId=65384&Date=2014-04-12&IntervalId=5'"><img src="images/icon_plus.gif"></td></td></tr></table></td><td align=center class="bgTableEvenColor textTableEvenColor"><table class="bgTableEvenColor textTableEvenColor" cellpadding=0 cellspacing=4 width="100%" height="100%"><tr><td class=bgTableEvenColor textTableEvenColor align="center" style="cursor:pointer; cursor:hand;" onmousedown="javascript:location.href='wwwashwait.aspx?command=book&PanelId=2758&TypeId=25598&GroupId=65384&Date=2014-04-13&IntervalId=5'"><img src="images/icon_plus.gif"></td></td></tr></table></td></tr>
-				</table>
-			</td>
-		</tr>
-	</table>
+
+<body>
+    <script type="text/javascript">
+    jQuery(document).ready(function() {
+        //jQuery(".old-browser-warning").show();
+        if ($.browser.msie && $.browser.version < 7)
+            jQuery(".old-browser-warning").show();
+        } );
+    </script>
+     <div class="old-browser-warning" style="display: none;">
+        Du använder en mycket gammal webbläsare. Sidan kan se konstig ut, eller inte fungera korrekt.
+     </div>
+     <div id="header-area">
+         <div class="header-contents">
+             <img class="logo" src="/Content/SGS-logo-inverted.png"/>
+             <div class="header-titlearea">
+                 <ul class="pagecontrols">
+    <li><a id="textSizeModifier" href="#">Textstorlek Aa</a></li>
+    <li><a href="/Culture/Set?culture=en-GB&amp;returnUrl=http%3A%2F%2Fhemma.sgsstudentbostader.se%2F">English</a></li>
+    </ul>
+
+<script type="text/javascript">
+<!--
+jQuery(function () {
+    jQuery("#textSizeModifier").click(function() {
+        cwp.toggleTextSize(); return false; });
+        cwp.initTextSize();
+    });
+//-->
+</script><h1>SGS Hemma</h1>
+                 <div class="top-apartment">
+                     <span class="top-apartment-label">L&#228;genhet</span>
+                     <span>517000102</span>
+                 </div>
+             </div>
+             <div class="navigation-wrapper">
+                 <ul class="navigation">
+    <li class="navigation-active">
+            <a href="/">
+                <span class="icon icon-overview"></span><span class="text">&#214;versikt</span>
+            </a>
+        </li>
+    <li class="">
+            <a href="/Main/YourConnection">
+                <span class="icon icon-yourconnection"></span><span class="text">Din anslutning</span>
+            </a>
+        </li>
+    <li class="">
+            <a href="/Main/SecurityLevel">
+                <span class="icon icon-securitylevel"></span><span class="text">S&#228;kerhetsniv&#229;</span>
+            </a>
+        </li>
+    </ul>
+</div>
+         </div>
+         <div class="section-end"></div>
+     </div>
+     <div id="content-area">
+         <div class="content-contents">
+             <div class="content-sidebar">
+                 <div class="titledContentBox doorControlBox">
+    <div class="titledContentBoxTop">
+        <span class="icon"></span>
+        <h4>Entr&#233;</h4>
+    </div>
+    <div class="titledContentBoxContent">
+        <div id="doorcontrolcontent">
+            <form action="/DoorControl/PerformUnlock" method="post"><ul>
+                  
+                  </ul>
+            </form><div class="doorControlStatus"></div>
+            <div class="doorControlBottom"><a href="/DoorControl/Fullscreen">Direktl&#228;nk</a></div>
+        </div>
+    </div>
+    <div class="titledContentBoxBottom"></div>
+</div>
+
+<script type="text/javascript" src="/Scripts/doorcontrol.js"></script>
+
+
+<script type="text/javascript">
+<!--
+    jQuery(document).ready(function() {
+        doorcontrol.activationUrl = "/DoorControl/PerformUnlock";
+        doorcontrol.unlockText = "L&#229;ser upp...";
+        doorcontrol.errorText = "Ett fel uppstod! D&#246;rr ej uppl&#229;st.";
+        doorcontrol.unlockDurationSeconds = 5;
+        
+        jQuery("#doorcontrolcontent button").click(doorcontrol.openEntryPath);
+    });
+//-->
+</script>
+</div>
+             <div class="content-main roundedbox">
+                 <div class="roundedboxtop"><div class="roundedboxleft"></div></div>
+                 <div class="roundedboxcontent">
+                    
+<div class="main-welcome">
+    <h2>V&#228;lkommen till SGS Hemma</h2>
+    
+    <div class="text">
+        <p>H&#228;r kan du se information om din Internetanslutning och v&#228;lja s&#228;kerhetsniv&#229;.  Denna sida kan bara n&#229;s genom Internetuttaget i din l&#228;genhet, och visar personlig information. H&#228;r kommer du i framtiden att kunna v&#228;lja olika alternativ f&#246;r din Internetanslutning.</p><p>T&#228;nk p&#229; att om du har ett tr&#229;dl&#246;st n&#228;tverk i din l&#228;genhet, s&#229; m&#229;ste du s&#228;kerst&#228;lla att det &#228;r krypterat och l&#246;senordskyddat. Om det &#228;r oskyddat, s&#229; kan det bland annat leda till att obeh&#246;riga kommer &#229;t den h&#228;r sidan.</p>
+    </div>
+</div>
+
+
+                 </div>
+                 <div class="roundedboxbottom"><div class="roundedboxleft"></div></div>
+             </div>
+             
+<div class="main-welcome-teasers">
+    <div class="main-yourconnection-teaser">
+    <div class="roundedbox teaser">
+        <div class="roundedboxtop"><div class="roundedboxleft"></div></div>
+        <div class="roundedboxcontent">
+            <h4><span class="icon icon-yourconnection"></span>Din anslutning</h4>
+            <hr/>
+            <dl>
+                <dt class="yc-responsible">Ansvarig</dt>
+                <dd class="yc-responsible">Tore Karlsson</dd>
+                
+                <dt>Datornamn</dt>
+                <dd>hemma.flg.sgsnet.se.</dd>
+            </dl>
+            <div class="teaserBottom"><a href="/Main/YourConnection">Mer</a></div>
+        </div>
+        <div class="roundedboxbottom"><div class="roundedboxleft"></div></div>
+    </div>
+</div>
+<div class="main-securitylevel-teaser">
+    <div class="roundedbox teaser">
+        <div class="roundedboxtop"><div class="roundedboxleft"></div></div>
+        <div class="roundedboxcontent">
+            <h4><span class="icon icon-securitylevel"></span>S&#228;kerhetsniv&#229;</h4>
+            <hr/>
+            <dl>
+                <dt class="sl-level">S&#228;kerhetsniv&#229;</dt>
+                <dd class="sl-level">NORMAL</dd>
+            </dl>
+            <div class="teaserBottom"><a href="/Main/SecurityLevel">Mer</a></div>
+        </div>
+        <div class="roundedboxbottom"><div class="roundedboxleft"></div></div>
+    </div>
+</div>
+</div>
+
+
+         </div>
+     </div>
+
+     <div id="footer-area">
+         <div class="footer-contents">
+             <p>&copy; Copyright 2010 SGS Studentbostäder</p>
+             <address>SGS Studentbostäder&nbsp; |&nbsp; Kaserntorget 11&nbsp; |&nbsp; 411 18 Göteborg&nbsp; |&nbsp; Tele 031-333 63 00&nbsp; |&nbsp; Fax 031-333 63 01</address>
+         </div>
+     </div>
 </body>
 </html>

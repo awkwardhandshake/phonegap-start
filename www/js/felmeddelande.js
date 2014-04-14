@@ -37,6 +37,6 @@ function hemmavilken(adress,medd){
 	setTimeout(function(){
 		document.getElementById('meddelande').innerHTML = 	'<p><strong>Öppna entrédörr</strong></p>'+
 															'<p><small>(Open entrance door)</small></p>'
-	},10000)
+	},20000)
 	loadtvattaklar();
 }

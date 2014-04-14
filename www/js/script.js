@@ -345,16 +345,19 @@ function hamtahemma(){
 			success: function(varde) {
 			var buttonvalue;
 			var buttonname;
-
+							
 							buttonvalue = $(varde).find('button').attr('value');
 							buttonname = $(varde).find('button');
+							console.log("Detta är buttonvalue " + buttonvalue);
 							if(buttonvalue === undefined){
-								var felskicka = "Var god och kontrollera att ditt hus är utrustat med öppning av entrédörren via internet";
-								hemmavilken(felskicka);	
+								console.log("Går in i denna");
+								
+								hemmavilken("Hoppsan!","Det verkar inte som att ditt hus är utrustat med möjligheten att öppna entrédörren via internet.");	
 							}
+							else{
 							document.getElementById('hemmadorren').value = buttonvalue;
 							oppnadorr();
-						
+							}
 			},
 			//Vill att den skall stänga av loading om det blir fel.
 			error: function(varde2, status, error){
