@@ -204,7 +204,7 @@ function skapatvattatable(){
 function skapabyggnadtable(){
 	var navback = document.getElementById('back');
 	navback.style.visibility = 'visible';
-	document.getElementById("styling").href="css/tvatta.css"
+	document.getElementById("styling").href="css/index.css"
 	
 	var navigeringmeny = document.getElementById('navigering');
 	navigeringmeny.removeAttribute('onclick');
@@ -226,7 +226,7 @@ function skapabyggnadtable(){
 '<table class="overskrift" border="2">'+
 	'<tbody>'+
 	'<tr>'+
-		'<td><div class="dropdown_button" class="menu_button" onClick="show_navlokal()"><a>Meny</a></div></td>'+
+		'<td><div class="dropdown_button" class="menu_button" onClick="show_navlokal()"><p>Meny</p></div></td>'+
 	'<tr>'+	
 	'</tbody>'+
 '</table>'+

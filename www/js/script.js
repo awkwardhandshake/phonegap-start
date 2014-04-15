@@ -22,8 +22,8 @@ historia("byggnad()", urlfranlankarbyggnad);
 							byggnadcell.setAttribute("class", "byggnadnav");
 							delabyggnadlank = String(byggnadlank[d].onmousedown).split("'",2);
 							delabyggnadlank = "'http://tvatta.sgsstudentbostader.se/" + delabyggnadlank[1] + "'";
-							byggnadcell.innerHTML = '<a onmousedown="loadtvatta('+ delabyggnadlank +')">'+
-							byggnadlank[d].innerText + "</a>";
+							byggnadcell.innerHTML = '<p onmousedown="loadtvatta('+ delabyggnadlank +')">'+
+							byggnadlank[d].innerText + "</p>";
 						}
 						d++;	
 					}
