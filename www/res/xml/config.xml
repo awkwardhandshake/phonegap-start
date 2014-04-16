@@ -6,7 +6,7 @@
 		version   = "1.0.0">
 		<name>SGS Hemma</name>
 		<description>
-SGS Hemma applikation. Låter dig öppna entrédörren och komma åt bokningsfunktionen.		</description>
+SGS Hemma ger dig som hyresgäst möjlighet att boka olika typer av faciliteter som till exempel tvättstuga och sällskapsrum. Om ditt område är utrustat med öppning av entrédörren via hemma.sgsstudentbostader.se kan du nu öppna dörren med denna applikation.		</description>
 		<author href="www.sgsstudentbostader.se" email="app@sgsstudentbostader.se">
 SGS Studentbostäder
 		</author>
@@ -35,7 +35,7 @@ SGS Studentbostäder
 		<preference name="android-installLocation" value="auto" />
 		<preference name="SplashScreenDelay" value="0" />
 		<preference name="ErrorUrl" value=""/>
-		<preference name="BackgroundColor" value=""/>
+		<preference name="BackgroundColor" value="#252c47"/>
 		<preference name="KeepRunning" value="true"/>
 		<preference name="DisallowOverscroll" value="true"/>
 		<preference name="LoadingDialog" value=","/> 
