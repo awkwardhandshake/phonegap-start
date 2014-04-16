@@ -5,7 +5,7 @@ show();
 	if(localStorage.LoggedIn == 'true'){
 		dehamta(localStorage.anv,localStorage.pass);
 		//loadtvatta('https://www.sgsstudentbostader.se/ext_gw.aspx?module=wwwash&lang=se#lblPanelName');
-		//byggnad('http://www.sgsstudentbostader.se/ext_gw.aspx?module=wwwash&lang=se#lblPanelName');
+		//byggnad('https://www.sgsstudentbostader.se/ext_gw.aspx?module=wwwash&lang=se#lblPanelName');
 		console.log('Det verkar finnas en användare');
 		console.log("Detta är användaren" + localStorage.ReturnCode);
 	}
@@ -44,7 +44,7 @@ dehamta(localStorage.anv,localStorage.pass);
 
 //hämta marknad
 function hamta(anv,pass) {
-	$.getJSON("http://marknad.sgsstudentbostader.se/API/Service/AuthorizationServiceHandler.ashx?&syndicateNo=1&syndicateObjectMainGroupNo=1&username=" +anv.toString(CryptoJS.enc.Utf8)+ "&password=" +pass.toString(CryptoJS.enc.Utf8)+ "&Method=APILoginSGS&callback=?",
+	$.getJSON("https://marknad.sgsstudentbostader.se/API/Service/AuthorizationServiceHandler.ashx?&syndicateNo=1&syndicateObjectMainGroupNo=1&username=" +anv.toString(CryptoJS.enc.Utf8)+ "&password=" +pass.toString(CryptoJS.enc.Utf8)+ "&Method=APILoginSGS&callback=?",
 	
 	  function(result) {
 		//det går utmärkt att göra denna hämtning via en variabel, localStorage går alltså att utesluta.
@@ -88,7 +88,7 @@ function hamta(anv,pass) {
 //logga in	   
 function loggain(){
 var str1="_=1366895108402&customer_name=" + localStorage.SGS_CustomerName + "&customerid=" + localStorage.UserName + "&isresident=" + localStorage.SGS_LivesAtSgs + "&loggedin=" + localStorage.LoggedIn + "&token=" + localStorage.SecurityTokenId + "&tvattstuga=" + localStorage.SGS_Laundry;
-localStorage.urlen="http://www.sgsstudentbostader.se/Assets/Handlers/Momentum.ashx?" + str1;
+localStorage.urlen="https://www.sgsstudentbostader.se/Assets/Handlers/Momentum.ashx?" + str1;
 hiddenbrowser();
 }
 
@@ -102,7 +102,7 @@ function hiddenbrowser(){
 		 	show();
 	 	})
 		ref.addEventListener('loadstop', function(event) {
-			 byggnad('http://www.sgsstudentbostader.se/ext_gw.aspx?module=wwwash&lang=se#lblPanelName');			 
+			 byggnad('https://www.sgsstudentbostader.se/ext_gw.aspx?module=wwwash&lang=se#lblPanelName');			 
 			 console.log("Inloggning hidden loadstop");
 	
 	
@@ -112,8 +112,8 @@ function hiddenbrowser(){
 
 function loggaut(button){
 if(button == 2){			
-	var loggautmomentum = window.open('http://www.sgsstudentbostader.se/Assets/Handlers/MomentumLogout.ashx?_=1390854127881', '_blank', 'hidden=yes');
-	var loggautmarknad = window.open('http://marknad.sgsstudentbostader.se/API/Service/AuthorizationServiceHandler.ashx?&Method=APILogout&callback=jsonp1390854117395', '_blank', 'hidden=yes');
+	var loggautmomentum = window.open('https://www.sgsstudentbostader.se/Assets/Handlers/MomentumLogout.ashx?_=1390854127881', '_blank', 'hidden=yes');
+	var loggautmarknad = window.open('https://marknad.sgsstudentbostader.se/API/Service/AuthorizationServiceHandler.ashx?&Method=APILogout&callback=jsonp1390854117395', '_blank', 'hidden=yes');
 	console.log("Loggar ut momentum " + loggautmomentum);
 	console.log("Loggar ut marknad " + loggautmarknad);
 	
@@ -131,6 +131,13 @@ if(button == 2){
 	localStorage.removeItem(anv);
 	localStorage.removeItem(pass);
 	console.log(localStorage.LoggedIn);
+	
+	navigator.notification.alert(
+			'Stäng ner applikationen och starta om den för att påskynda utloggningen.',  // message
+			inputfields,         // callback
+			'Snart utloggad!',      // title
+			'Ok'         // buttonName
+			);
 	
 	//var mobilsystem = device.platform;
 	//console.log(mobilsystem);

@@ -11,7 +11,7 @@ function tomany(){
 function hemmafel(){
 	if(navigator.connection.type != 'wifi'){
 	document.getElementById('meddelande').innerHTML = 	'<p>SGS-nätverk</p>'+
-														'<p><small>För att kunna öppna dörren krävs det att telefonen är uppkopplad via ett SGS-nätverk</small></p>';
+														'<p><small>För att kunna öppna entrédörren krävs det att enheten är uppkopplad via ett SGS-nätverk</small></p>';
 	loadtvattaklar();
 	setTimeout(function(){
 		document.getElementById('meddelande').innerHTML = 	'<p><strong>Öppna entrédörr</strong></p>'+
@@ -19,7 +19,8 @@ function hemmafel(){
 	},10000)
 	}
 	else{
-	document.getElementById('meddelande').innerHTML = '<p>Fel vid öppning av porten</p>';
+	document.getElementById('meddelande').innerHTML = 	'<p>Fel vid öppning av porten</p>'+
+														'<p><small>Kontrollera att din enhet når ett SGS-nätverk.</small></p>';;
 	loadtvattaklar();
 	setTimeout(function(){
 		document.getElementById('meddelande').innerHTML = 	'<p><strong>Öppna entrédörr</strong></p>'+

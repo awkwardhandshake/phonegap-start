@@ -21,7 +21,7 @@ historia("byggnad()", urlfranlankarbyggnad);
 						if(byggnadlank[d].onmousedown !== null){
 							byggnadcell.setAttribute("class", "byggnadnav");
 							delabyggnadlank = String(byggnadlank[d].onmousedown).split("'",2);
-							delabyggnadlank = "'http://tvatta.sgsstudentbostader.se/" + delabyggnadlank[1] + "'";
+							delabyggnadlank = "'https://tvatta.sgsstudentbostader.se/" + delabyggnadlank[1] + "'";
 							byggnadcell.innerHTML = '<p onmousedown="loadtvatta('+ delabyggnadlank +')">'+
 							byggnadlank[d].innerText + "</p>";
 						}
@@ -32,7 +32,7 @@ historia("byggnad()", urlfranlankarbyggnad);
 				}
 				else{
 console.log("Verkar inte ha funnits någon byggnad???");
-					loadtvatta('http://www.sgsstudentbostader.se/ext_gw.aspx?module=wwwash&lang=se#lblPanelName');
+					loadtvatta('https://www.sgsstudentbostader.se/ext_gw.aspx?module=wwwash&lang=se#lblPanelName');
 					}
 	
 								},
@@ -113,7 +113,7 @@ historia('loadtvatta()');
 						
 						else{
 						lokalenriktig = String(valjabokning[rakna].onmousedown).split("'", 2);
-						lokalenriktig = "'http://tvatta.sgsstudentbostader.se/"+ lokalenriktig[1] +"'";
+						lokalenriktig = "'https://tvatta.sgsstudentbostader.se/"+ lokalenriktig[1] +"'";
 						lokalcell.setAttribute("class", "lokalnavlank");
 						lokalcell.setAttribute("onmousedown", "loadtvatta("+ lokalenriktig +")" );
 						valjabokningtext = String(valjabokning[rakna].innerHTML).split('&nbsp;');
@@ -149,7 +149,7 @@ historia('loadtvatta()');
 						
 						else{						
 						typlokalriktig = String(typlokal[typrakna].onmousedown).split("'", 2);
-						typlokalriktig = "'http://tvatta.sgsstudentbostader.se/"+ typlokalriktig[1] +"'";
+						typlokalriktig = "'https://tvatta.sgsstudentbostader.se/"+ typlokalriktig[1] +"'";
 						typcell.setAttribute("class", "typlokallank");
 						typcell.setAttribute("onmousedown", "loadtvatta("+typlokalriktig +")")
 						typlokaltext = String(typlokal[typrakna].innerHTML).split('&nbsp;');
@@ -169,7 +169,7 @@ historia('loadtvatta()');
 						var navcell = navrow.insertCell(-1);
 
 						lankartvattariktig = String(lankartvatta[navrakna].onmousedown).split("'", 2);
-						lankartvattariktig = "'http://tvatta.sgsstudentbostader.se/"+ lankartvattariktig[1] +"'";
+						lankartvattariktig = "'https://tvatta.sgsstudentbostader.se/"+ lankartvattariktig[1] +"'";
 						lankartvattatext = String(lankartvatta[navrakna].innerText).split("&nbsp;");
 						navcell.setAttribute("onmousedown", "loadtvatta("+lankartvattariktig +")")
 						navcell.setAttribute("class", "navknapparlank");
@@ -227,7 +227,7 @@ historia('loadtvatta()');
 							tvattaimgriktig = String(tvattaimg[smart].outerHTML).split('.');
 							tvattaimgriktig = tvattaimgriktig[0] +'.png">';
 							var split = String(tvattaimg[smart].parentNode.onmousedown).split("'",2);
-							split = "'http://tvatta.sgsstudentbostader.se/" + split[1] +"','"+ urlfranlankar + "'";
+							split = "'https://tvatta.sgsstudentbostader.se/" + split[1] +"','"+ urlfranlankar + "'";
 							cell.setAttribute("class", "bokningsikoner");
 							cell.innerHTML = '<a onmousedown="bokatid(' + split +')">' 
 							+ tvattaimgriktig + "</a>";

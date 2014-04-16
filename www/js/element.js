@@ -10,21 +10,23 @@ element = 'element';
 	
 	document.getElementById("index").innerHTML=
 
+'<div id="index">'+
 '<div id="information" class="nyinforuta_hide">'+
 '<table class="info-tabel-tvatta">'+
 '<tr><td class="">'+
 '<img src="img/door_button.png" class="scale-with-grid-start-information"></img>'+
 '</td></tr><tr><td class="information-text-middle-start">'+
-'<p>Om ditt område har möjlighet att öppna ytterdörren via hemma.sgsstudentbostader.se kan du använda dig av "Öppna Entrédörr". Knappen fungerar sålänge du är uppkopplad via ett SGS-nätverk.'+
+'<p>"Öppna Entrédörr" låter dig öppna entrédörren om ditt område är utrustat med denna funktion. Knappen fungerar endast om din enhet når ett SGS-nätverk.'+
 '</td></tr>'+
 
 '<tr><td class="">'+
 '<img src="img/cal_button.png" class="scale-with-grid-start-information"></img>'+
 '</td></tr><tr><td class="information-text-middle-start information-text-middle-start-bottom">'+
-'<p>"Boka" tar dig till bokningen av bland annat tvättstuga och sällskapsrum. Du kommer behöva använda ditt inlogg som du använder på www.sgsstudentbostader.se för att logga in.</p>'+
+'<p>"Boka" tar dig till bokningen av olika typer av faciliteter som t.ex. tvättstuga och sällskapsrum. För att logga in använder du samma uppgifter som på www.sgsstudentbostader.se.</p>'+
 '</td></tr>'+
 '</table>'+
 '</div>'+
+
 
 		
 
@@ -87,7 +89,7 @@ function inputfields(){
 '<table>'+
 '<tr>'+
 '<td class="information-text-middle">'+
-		'<p><strong>Användarnamn:</strong> Detta är samma som du använder för att logga in på www.sgsstudentbostader.se</p>'+
+		'<p><strong>Användarnamn:</strong> Detta är det som du använder för att logga in på www.sgsstudentbostader.se</p>'+
 '</td></tr>'+
 
 '<tr>'+
@@ -95,9 +97,11 @@ function inputfields(){
 		'<p><strong>Lösenord:</strong> Använd det lösenord du blev tilldelad eller valde när du registrerade dig på www.sgsstudentbostader.se hemsida.</p>'+	
 '</td></tr>'+
 
+'<tr>'+
 '<td class="information-text-middle">'+
 		'<center><p><strong>Felmeddelande</strong</p></center>'+	
 '</td></tr>'+
+
 
 '<td class="information-text-middle">'+
 		'<p><strong>Du har loggat in för många gånger:</strong> Om du anger felaktiga uppgifter för många gånger kommer du bli spärrad från att logga in under 2 timmar.</p>'+	
@@ -163,6 +167,18 @@ function skapatvattatable(){
 '<!--</td><td class="information-text-middle-tvatt" class="rutatvatt">-->'+
 		'<p> Tiden/datumet har passerat eller så är passet inte tillgängligt just nu.</p>'+	
 '</td></tr>'+
+
+
+
+'<td class="information-text-middle">'+
+		'<center><p><strong>Felmeddelande</strong</p></center>'+	
+'</td></tr>'+
+
+
+'<td class="information-text-middle">'+
+		'<p><strong>Max antal framtida pass är redan bokade:</strong> Du har redan bokat maximalt antal framtida pass på ditt konto. Vill du boka fler pass måste du först avboka ett tidigare pass.</p>'+	
+'</td></tr>'+
+
 '</table>'+
 
 '</div>'+
