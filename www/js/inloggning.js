@@ -134,7 +134,7 @@ if(button == 2){
 	
 	navigator.notification.alert(
 			'Stäng ner applikationen och starta om den för att påskynda utloggningen.',  // message
-			inputfields,         // callback
+			dummiefunktion,         // callback
 			'Snart utloggad!',      // title
 			'Ok'         // buttonName
 			);

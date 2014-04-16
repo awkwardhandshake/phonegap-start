@@ -16,7 +16,7 @@ function yourCallbackStanga(button){
 
 function yourCallbackloggaut(){
 	navigator.notification.confirm(
-			'Vill du logga ut? Det kan ta en stund innan en ny användare kan logga in. För att snabba på utloggningen rekommenderar vi att du stänger av appen och öppnar den på nytt',
+			'Vill du logga ut?',
 			loggaut,
 			'Utloggning',
 			'Nej,Ja'
