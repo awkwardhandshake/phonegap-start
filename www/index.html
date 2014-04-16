@@ -84,7 +84,7 @@ console.log('Går in i DeviceReady');
 <tr><td class="">
 <img src="img/cal_button.png" class="scale-with-grid-start-information"></img>
 </td></tr><tr><td class="information-text-middle-start information-text-middle-start-bottom">
-<p>"Boka" tar dig till bokningen av olika typer av faciliteter som t.ex. tvättstuga och sällskapsrum. För att logga in använder du samma uppgifter som på www.sgsstudentbostader.se.</p>
+<p>"Boka" tar dig till bokningen av olika typer av faciliteter som t.ex. tvättstuga och sällskapsrum. För att logga in använder du samma uppgifter som på www.sgsstudentbostader.se</p>
 </td></tr>
 </table>
 </div>
@@ -92,10 +92,10 @@ console.log('Går in i DeviceReady');
 <div class="container">
 	<div class="sixteen columns"></div>
 	
-		<div class="eight columns center">
+		<div id="dorren" class="eight columns center" onmousedown="hamtahemma('http://hemma.sgsstudentbostader.se/DoorControl/Fullscreen'),vidklick('dorren')">
 			
 			
-			<button onmousedown="hamtahemma('http://hemma.sgsstudentbostader.se/DoorControl/Fullscreen')" class="doorbutton">
+			<button class="doorbutton">
 
 				<img class="scale-with-grid" src="img/door_button.png" />
 								
@@ -106,8 +106,8 @@ console.log('Går in i DeviceReady');
 			</span>		 
 		</div>
 		
-		<div class="eight columns center">
-			<button onclick="kollainlogg()">
+		<div id="bokar" class="eight columns center" onclick="kollainlogg(),vidklick('bokar')">
+			<button>
 			<img class="scale-with-grid" src="img/cal_button.png" />
 			</button>
 			<p><strong>Boka</strong></p>

@@ -79,3 +79,12 @@ $('#dummie').click(function() {
 $('#infoclick').click(function(event){
     event.stopPropagation();
 });
+
+
+function vidklick(vilken){
+	console.log(vilken);
+	document.getElementById(vilken).style.opacity = '0.5';
+	
+	setTimeout(function(){document.getElementById(vilken).style.opacity = '1.0'},200);
+}
+

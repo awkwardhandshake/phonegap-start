@@ -31,7 +31,7 @@ SGS Studentbostäder
 		<preference name="KeyboardDisplayRequiresUserAction" value="true" />
 		<preference name="HideKeyboardFormAccessoryBar" value="true" />
 		<preference name="SuppressesIncrementalRendering" value="true" />
-		<preference name="android-minSdkVersion" value="7" />
+		<preference name="android-minSdkVersion" value="8" />
 		<preference name="android-installLocation" value="auto" />
 		<preference name="SplashScreenDelay" value="0" />
 		<preference name="ErrorUrl" value=""/>
