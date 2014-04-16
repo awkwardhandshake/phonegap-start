@@ -128,9 +128,9 @@ if(button == 2){
 	})
 	console.log('Sätter anv och pass till null');
 	localStorage.LoggedIn = 'false';
-	localStorage.removeItem(anv);
-	localStorage.removeItem(pass);
-	console.log(localStorage.LoggedIn);
+	localStorage.anv = null;
+	localStorage.pass = null;
+	console.log('Null på båda');
 	
 	navigator.notification.alert(
 			'Stäng ner applikationen och starta om den för att påskynda utloggningen.',  // message
