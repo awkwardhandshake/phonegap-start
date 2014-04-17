@@ -303,9 +303,7 @@ function bokatid(tiden,nuvarandebokning){
 		 		//console.log(event);
 			 	loadtvatta(nuvarandebokning);
 		 	}
-		 	//console.log(event.url);
-		 	//console.log(event);
-		 	//console.log(nuvarandebokning);
+
 		 	})
 		 	
 

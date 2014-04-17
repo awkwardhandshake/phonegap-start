@@ -4,8 +4,6 @@ show();
 'use strict';
 	if(localStorage.LoggedIn == 'true'){
 		dehamta(localStorage.anv,localStorage.pass);
-		//loadtvatta('https://www.sgsstudentbostader.se/ext_gw.aspx?module=wwwash&lang=se#lblPanelName');
-		//byggnad('https://www.sgsstudentbostader.se/ext_gw.aspx?module=wwwash&lang=se#lblPanelName');
 		console.log('Det verkar finnas en användare');
 		console.log("Detta är användaren" + localStorage.ReturnCode);
 	}
@@ -47,15 +45,13 @@ function hamta(anv,pass) {
 	$.getJSON("https://marknad.sgsstudentbostader.se/API/Service/AuthorizationServiceHandler.ashx?&syndicateNo=1&syndicateObjectMainGroupNo=1&username=" +anv.toString(CryptoJS.enc.Utf8)+ "&password=" +pass.toString(CryptoJS.enc.Utf8)+ "&Method=APILoginSGS&callback=?",
 	
 	  function(result) {
-		//det går utmärkt att göra denna hämtning via en variabel, localStorage går alltså att utesluta.
-		//var infoinlogg = new Object();
-		console.log(result);
+				console.log(result);
 		$.each(result, function (newsItem,news)
 		{
-		//infoinlogg[newsItem]=news;
+		
 		localStorage[newsItem]=news
 			console.log(newsItem + " = " + localStorage[newsItem])
-		//	console.log(infoinlogg[newsItem]);
+		
 		});
 		
 		if(localStorage.ReturnCode === 'NOMATCH'){
@@ -139,13 +135,6 @@ if(button == 2){
 			'Ok'         // buttonName
 			);
 	
-	//var mobilsystem = device.platform;
-	//console.log(mobilsystem);
-	
-	//if(mobilsystem != 'iOS'){
-	//	navigator.app.exitApp();
-	//}
-	//alert('Du är nu utloggad!');
 	
 	}
 }
