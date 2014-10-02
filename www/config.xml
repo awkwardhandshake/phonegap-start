@@ -3,7 +3,7 @@
 		xmlns:gap = "http://phonegap.com/ns/1.0"
 		id        = "com.phonegap.sgsmitthem"
 		versionCode=""
-		version   = "1.0.0">
+		version   = "1.0.1">
 		<name>SGS Mitt Hem</name>
 		<description>
 SGS Mitt Hem ger dig som hyresgäst möjlighet att boka olika typer av faciliteter som till exempel tvättstuga och sällskapsrum. Om ditt område är utrustat med öppning av entrédörren via hemma.sgsstudentbostader.se kan du nu öppna dörren med denna applikation.</description>
