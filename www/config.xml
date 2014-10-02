@@ -11,7 +11,7 @@ SGS Mitt Hem ger dig som hyresgäst möjlighet att boka olika typer av facilitet
 SGS Studentbostäder
 		</author>
 		<preference name="permission" value="none" />
-		<preference name="phonegap-version" value="3.3.0" />
+		<preference name="phonegap-version" value="3.5.0" />
 		<preference name="orientation" value="portrait" />
 		<preference name="fullscreen" value="false" />
 		<preference name="target-device" value="handset" />
