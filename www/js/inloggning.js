@@ -93,6 +93,16 @@ function loggain(){
 var securityTokens = 0;
 var $userId_sgs = localStorage.SGS_CustomerName;
 console.log('Localstorage: ' + CryptoJS.AES.decrypt(localStorage.anv, keyer));
+console.log('Localstorage: ' + CryptoJS.AES.decrypt(localStorage.pass, keyer));
+
+if(document.getElementById("username").value){
+  var userNameSGS = document.getElementById("username").value;
+  var passwordSGS = document.getElementById("password").value;
+}
+else{
+  userNameSGS = CryptoJS.AES.decrypt(localStorage.anv, keyer);
+  passwordSGS = CryptoJS.AES.decrypt(localStorage.pass, keyer);
+}
 console.log('loggain aktiverad');
 
   $.post('http://test-marknad.sgsstudentbostader.se/pgLogin.aspx', 
@@ -100,8 +110,8 @@ console.log('loggain aktiverad');
       __EVENTTARGET : 'DoLogin',
       __VIEWSTATE   : '/wEPDwUJMzc4ODQ2ODcxD2QWAmYPZBYCZg9kFgICAw9kFgICAw9kFgQCBQ8PFgIeB1Zpc2libGVoZGQCBg9kFgYCAQ9kFgQCBw8WAh4JaW5uZXJodG1sBSFMb2dnYSBpbi9HbCYjMjQ2O210IGwmIzI0NjtzZW5vcmRkAgkPZBYCAgEPDxYCHgRUZXh0BSc8P3htbCB2ZXJzaW9uPSIxLjAiIGVuY29kaW5nPSJ1dGYtMTYiPz5kZAIDD2QWIAIBDw8WBB4ISW1hZ2VVcmwFOC9zZ3MvYWxsL3N0dWRlcmFuZGUvaW1hZ2VzLy4uL3BnTG9naW4vaW1hZ2VzL255Y2tlbDIuZ2lmHg1BbHRlcm5hdGVUZXh0ZWRkAgMPDxYCHwIFDUFudsOkbmRhcm5hbW5kZAIFDw9kFgQeCHJlcXVpcmVkZR4TZGF0YS1ydWxlLW1heGxlbmd0aAUCNTBkAgcPDxYCHwIFCUzDtnNlbm9yZGRkAgkPD2QWBB8FZR8GBQI1MGQCCw8PFgIfAgUgU2tpY2thIG1pbmEgaW5sb2dnbmluZ3N1cHBnaWZ0ZXJkZAINDw8WAh8CBTBGeWxsIGkgZsOkbHRlbiBuZWRhbiBvbSBkdSBnbMO2bXQgZGl0dCBsw7ZzZW5vcmRkZAIRD2QWAmYPDxYCHwIFG1NraWNrYSBpbmxvZ2duaW5nc3VwcGdpZnRlcmRkAhcPDxYCHwIF3AFPbSBkdSBoYXIga29udGFrdHPDpHR0IGUtcG9zdCBvY2ggaW50ZSBoYXIgZW4gdmVyaWZpZXJhZCBlLXBvc3RhZHJlc3MsIHPDpSBrb21tZXIgZGV0IGF1dG9tYXRpc2t0IHNraWNrYXMgdXQgZXR0IHZlcmlmaWVyaW5nc21lZGRlbGFuZGUgZsO2cnN0LiBOw6RyIGRpbiBlLXBvc3RhZHJlc3MgaGFyIHZlcmlmaWVyYXRzIHPDpSBrb21tZXIgbMO2c2Vub3JkZXQgYXR0IHNraWNrYXMgdXQuZGQCGQ8PZBYCHg1tb20td2F0ZXJtYXJrBR9QZXJzb25udW1tZXIgKMOlw6XDpcOlbW1kZG5ubm4pZAIbDw9kFgIfBwUMT0NSIHJlZmVyZW5zZAIdDw9kFgIfBwUfUGVyc29ubnVtbWVyICjDpcOlw6XDpW1tZGRubm5uKWQCHw8PZBYCHwcFH1BlcnNvbm51bW1lciAow6XDpcOlw6VtbWRkbm5ubilkAiEPDxYCHwIFhwFEaW4gYWRyZXNzIGtvbW1lciBhdXRvbWF0aXNrdCBhdHQgYmxpIHVwcGRhdGVyYWQgdGlsbCBkaW4gZm9sa2Jva2bDtnJuaW5nc2FkcmVzcy4gU2VkYW4ga29tbWVyIGRpdHQgbMO2c2Vub3JkIGF0dCBza2lja2FzIHV0IHZpYSBicmV2Li5kZAInDxAPFgIfAgUYQWt0aXZlcmEgc25hYmJpbmxvZ2duaW5nZGRkZAIrDw8WAh8CZWRkAgUPZBYIAgEPDxYCHwMFKy9zZ3MvYWxsL3N0dWRlcmFuZGUvcGdMb2dpbi9pbWFnZXMvbG9jay5wbmdkZAIDDxYCHwIFG0RpdHQga29udG8gaGFyIGJsaXZpdCBsw6VzdGQCBQ8WAh8CBR9EZXQgw7ZwcG5hcyBpZ2VuIHt7dW5sb2NrZGF0ZX19ZAIHDw8WAh8CZWRkZCo5mBlMtD2B3w/0MBqr6mrv8SNSd6lKjIOmOIQxMLe7',
     __EVENTVALIDATION : '/wEdAAzQmm7tfz5aZ3ylgaqxk8eZexTBAvXzVCFOoET/RmPPlKmQaT3JpNj5NInoAKY/HIsu0pQYz24kyXKo6KfYaI+MUTCp2X4fAnXnQHCRROEOQm66BMseKj+q1ac1HUs9qs5tGJuNnLz4ey/ZebCjjjpID+Ew+m6pYSJzMG2QaQ2KqxwvaH8JeIuk96iePkQwQst3Kklz111qsv4ROtN6kR2yb/kZ8aosktMuqXyQh4lQjTleFgwBF73wgXLb+Rd8NWTD7OR6tzHQlGUFZpwBEERPyyhkGgZm70DGxBp8B4Fetw==',
-    '_ctl0:_ctl0:HolderForNestedPage:placeAction:ucLogin1:txtClientNo'  : document.getElementById("username").value,
-    '_ctl0:_ctl0:HolderForNestedPage:placeAction:ucLogin1:txtPINCode' :  document.getElementById("password").value
+    '_ctl0:_ctl0:HolderForNestedPage:placeAction:ucLogin1:txtClientNo'  : userNameSGS,
+    '_ctl0:_ctl0:HolderForNestedPage:placeAction:ucLogin1:txtPINCode' :  passwordSGS
   },
   function (data){
     console.log('Jquery postLogin success!');
