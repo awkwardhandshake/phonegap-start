@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 	<widget xmlns = "http://www.w3.org/ns/widgets"
 		xmlns:gap = "http://phonegap.com/ns/1.0"
-		id        = "com.phonegap.sgsmitthem"
-		versionCode= "2"
+		id        = "com.phonegap.sgsmitthem_2"
+		versionCode= "3"
 		version   = "1.0.2">
 		<name>SGS Mitt Hem (beta)</name>
 		<description>
