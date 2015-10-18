@@ -2,7 +2,7 @@
 function kollainlogg(){
 show();
 'use strict';
-	if(localStorage.LoggedIn == 'true'){
+	if(localStorage.LoggedIn == 'ÄNDRAY'){
 		dehamta(localStorage.anv,localStorage.pass);
 		console.log('Det verkar finnas en användare');
 		console.log("Detta är användaren" + localStorage.ReturnCode);
@@ -95,7 +95,7 @@ var $userId_sgs = localStorage.SGS_CustomerName;
 console.log('Localstorage: ' + CryptoJS.AES.decrypt(localStorage.anv, keyer));
 console.log('Localstorage: ' + CryptoJS.AES.decrypt(localStorage.pass, keyer));
 
-if(document.getElementById("username").value){
+if(document.getElementById("username").value != null){
   var userNameSGS = document.getElementById("username").value;
   var passwordSGS = document.getElementById("password").value;
 }
