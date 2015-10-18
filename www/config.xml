@@ -4,7 +4,7 @@
 		id        = "com.phonegap.sgsmitthem"
 		versionCode= "2"
 		version   = "1.0.2">
-		<name>SGS Mitt Hem</name>
+		<name>SGS Mitt Hem (beta)</name>
 		<description>
 SGS Mitt Hem ger dig som hyresgäst möjlighet att boka olika typer av faciliteter som till exempel tvättstuga och sällskapsrum. Om ditt område är utrustat med öppning av entrédörren via hemma.sgsstudentbostader.se kan du nu öppna dörren med denna applikation.</description>
 		<author href="www.sgsstudentbostader.se" email="app@sgsstudentbostader.se">
