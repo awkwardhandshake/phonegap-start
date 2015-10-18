@@ -10,7 +10,7 @@ console.log(localStorage.anv + " : " + localStorage.pass);
 
 function dehamta(anv,pass){
 	    var decryptedanv = CryptoJS.AES.decrypt(anv, keyer);
-		var decryptedpass = CryptoJS.AES.decrypt(pass, keyer);
+      var decryptedpass = CryptoJS.AES.decrypt(pass, keyer);
 
 console.log(decryptedanv.toString(CryptoJS.enc.Utf8));
 console.log(decryptedpass.toString(CryptoJS.enc.Utf8));
