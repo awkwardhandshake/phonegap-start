@@ -32,7 +32,7 @@ historia("byggnad()", urlfranlankarbyggnad);
 				}
 				else{
 console.log("Verkar inte ha funnits någon byggnad???");
-					loadtvatta('https://www.sgsstudentbostader.se/ext_gw.aspx?module=wwwash&lang=se#lblPanelName');
+					loadtvatta(urlfranlankarbyggnad); // Ändrat för att hämta mot test-marknad
 					}
 	
 								},

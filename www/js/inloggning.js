@@ -139,7 +139,8 @@ function getLaundry(){
     console.log(data);
     localStorage.urlen = data;
     console.log(localStorage.urlen);
-    hiddenbrowser();
+    byggnad(data);
+//    hiddenbrowser();
 /*
     console.log($('#tvatta')[0].href=data);
     $('#tvatta').href=data;
