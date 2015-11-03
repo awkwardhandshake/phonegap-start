@@ -42,7 +42,7 @@ function loggain(anvSGS, passSGS){
 
 function getHMS(version, usernameSGS, passwordSGS){
   var dataStorage;
-    $.get('http://test-marknad.sgsstudentbostader.se/API/Service/AuthorizationServiceHandler.ashx?Method=APILoginSGS&syndicateNo=1',
+    $.get('http://marknad.sgsstudentbostader.se/API/Service/AuthorizationServiceHandler.ashx?Method=APILoginSGS&syndicateNo=1',
       {
        username : usernameSGS,
        password : passwordSGS
