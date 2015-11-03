@@ -15,10 +15,13 @@ function yourCallbackStanga(button){
 
 
 function yourCallbackloggaut(){
+
+
 	navigator.notification.confirm(
 			'Vill du logga ut?',
 			loggaut,
 			'Utloggning',
 			'Nej,Ja'
 			)
+
 }
