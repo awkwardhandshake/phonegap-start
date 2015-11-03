@@ -9,7 +9,6 @@
 		<link rel="stylesheet" type="text/css" href="css/animationer.css" />
 		<link rel="stylesheet" type="text/css" href="css/loading.css" />
     <script src="jquery-1.11.3.min.js"></script>
-    <script type='application/javascript' src="js/fastclick.js"></script>
 		<script type="text/javascript" src="js/lankar.js"></script>
 		<script type="text/javascript" src="js/aes.js"></script>
 		<title>SGS Mitt Hem</title>
@@ -18,9 +17,6 @@ function onLoad() {
 
 console.log('Går in i onLoad');
         document.addEventListener("deviceready", onDeviceReady, false); 
-$(function() {
-    FastClick.attach(document.body);
-});
 
     };
     function onDeviceReady() {
