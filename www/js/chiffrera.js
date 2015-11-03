@@ -4,15 +4,11 @@ function encrypt(anv,pass){
 
 localStorage.anv = encryptedanv;
 localStorage.pass = encryptedpass;
-console.log(localStorage.anv + " : " + localStorage.pass);
 
 }
 
 function dehamta(anv,pass){
 	    var decryptedanv = CryptoJS.AES.decrypt(anv, keyer);
       var decryptedpass = CryptoJS.AES.decrypt(pass, keyer);
-
-console.log(decryptedanv.toString(CryptoJS.enc.Utf8));
-console.log(decryptedpass.toString(CryptoJS.enc.Utf8));
 loggain(decryptedanv,decryptedpass);
 }
