@@ -84,8 +84,9 @@ function GetLaundryBooking(SecurityTokenId, version, dataStorage){
 console.log('getLaundry active');
     $.get('http://test-marknad.sgsstudentbostader.se/Momentum/API/ClientService/GetLaundryBooking/1/'+ dataStorage.ClientNo +'/'+ dataStorage.SGS_CustomerName +'/'+SecurityTokenId+'/'+ dataStorage.Lang +'/', function(data){
       console.log('Jquery getLaundry success!');
+      console.log(data);
       localStorage.urlen = data;
-      if(data === 'No URL found.'){
+      if(data === 'No URL found.' || data === ""){
         console.log('No URL found. try GetLaundryBookingModuelOld');
         GetLaundryBookingModuelOld(dataStorage);        
       }
