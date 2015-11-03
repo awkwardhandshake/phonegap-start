@@ -14,5 +14,5 @@ function dehamta(anv,pass){
 
 console.log(decryptedanv.toString(CryptoJS.enc.Utf8));
 console.log(decryptedpass.toString(CryptoJS.enc.Utf8));
-hamta(decryptedanv,decryptedpass);
+loggain(decryptedanv,decryptedpass);
 }

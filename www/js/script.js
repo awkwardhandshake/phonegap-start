@@ -1,7 +1,6 @@
 
 //Byggnads väljare
 function byggnad(urlfranlankarbyggnad){
-console.log("Går in i byggnad funktionen");
 	skapabyggnadtable();
 	$.ajax({
 			url: urlfranlankarbyggnad,
@@ -12,7 +11,7 @@ console.log("Går in i byggnad funktionen");
 				var delabyggnadlank;
 				indifiera = $(data).find("#lblShowFirstAvailable");
 				if(indifiera.length !== 0){
-historia("byggnad()", urlfranlankarbyggnad);				
+          historia("byggnad()", urlfranlankarbyggnad);				
 					byggnadlank = $(data).find("td .headerColor[onmousedown]:not(#lblHeaderText)");
 					var d = 0;					
 					for(var i = 0; i < (byggnadlank.length -1); i++){
@@ -28,10 +27,8 @@ historia("byggnad()", urlfranlankarbyggnad);
 						d++;	
 					}
 				loadtvattaklar();
-				console.log('loading bar avstängd via byggnad');
 				}
 				else{
-console.log("Verkar inte ha funnits någon byggnad???");
 					loadtvatta(urlfranlankarbyggnad); // Ändrat för att hämta mot test-marknad
 					}
 	
@@ -90,7 +87,6 @@ historia('loadtvatta()');
 				lankartvatta = $(data).find("#tblNav td.periodLinkColor");
 				valjabokning = $(data).find("table td[align].headerColor[width]:not(.bigText)");
 				typlokal = $(data).find("td[background]");
-				console.log(valjabokning);
 				var antal = antaltider.length;
 				
 				//Välja typ av lokal att boka
@@ -140,9 +136,7 @@ historia('loadtvatta()');
 						if(typlokal[typrakna].onmousedown === null){
 						typcell.setAttribute("class", "typlokal");
 						//Här blir det fel för Rosendal, T på ensam rad.
-						console.log(typlokal[typrakna].innerHTML);
 						typlokaltext = String(typlokal[typrakna].innerHTML).split('&nbsp;');
-						console.log("Rätt??? " + typlokaltext);
 						typcell.innerHTML = '<a>' + typlokaltext[0] +'</a>';								
 						typrakna++;						
 						}
@@ -190,7 +184,6 @@ historia('loadtvatta()');
 						headcell.setAttribute("class", "bokningstider");
 						tiderdygnetriktig = String(tiderdygnet[f].innerHTML).split('&nbsp;');
 						headcell.innerHTML = "<p>" + tiderdygnetriktig[2] + "</p>";
-						
 						f++
 						}
 				
@@ -237,18 +230,14 @@ historia('loadtvatta()');
 					smart++
 								//Sätter ett onloadevent på sista bilden, får dock ett error. Osäker på vad det innebär..
 								if(nollstall == (smart - extra - 1)){
-									console.log('Den sätter en onload event');
 									var onloadimg = cell.childNodes[0].childNodes;
 									onloadimg[0].setAttribute("onload", "loadtvattaklar()");
-									console.log("stängs av via onload event");
-
 								}
 								}
 								}
 							
 			},
 			error: function(){
-				console.log('Något har gått snett i tvätta');
 				navigator.notification.confirm(
                     'Något gick snett, vill du försöka igen?',
                     yourCallbackTvatta,
@@ -260,21 +249,13 @@ historia('loadtvatta()');
 
 
 //loadtvattaklar();
-	console.log('loading bar avstängd via tvatta');
 			}
 			
 //alt med hidden InAppBrowser
 function bokatid(tiden,nuvarandebokning){
-	console.log("Går in i funktionen bokatid");
-	 var ref = window.open(tiden, '_blank', 'hidden=yes');
-	 //var ref2 = window.open(encodeURI(tiden), '_blank', 'hidden=yes');
-		// console.log("REF HÄÄÄÄÄR");
-		 //console.log(ref2);
-		 
+	 var ref = window.open(tiden, '_blank', 'hidden=yes');		 
 		 ref.addEventListener('loadstart', function(event2,hej){
 			console.log('Loadstart v.1.4');
-			
-
 			show();
 		 })
 		 
@@ -282,7 +263,6 @@ function bokatid(tiden,nuvarandebokning){
 		 	ref.executeScript(
 		 	{ code: "document.getElementById('imgWait').outerHTML" },
 		 		function(values) {
-			 		console.log(values);
 			 		if(values !== undefined){
 				 		navigator.notification.alert(
 				 		'Max antal framtida pass är redan bokade.',  // message
@@ -294,13 +274,9 @@ function bokatid(tiden,nuvarandebokning){
 			}
 			);
 		 	
-		 	console.log("Event i loadstop");
-		 	console.log('Loadstop v.1.5');
 			var testarstring = event.url;
 		 	if(String(testarstring).match('wwwashcalendar.aspx') != null || String(testarstring).match('NextPage') != null){
 		 		console.log('bokatid if-sats');
-		 		//console.log(event.url);
-		 		//console.log(event);
 			 	loadtvatta(nuvarandebokning);
 		 	}
 
@@ -313,7 +289,6 @@ function bokatid(tiden,nuvarandebokning){
 function show_navnummer(){
 
     var menu = document.getElementById("navnummer");
-    console.log(menu);
     if(menu.style.display == 'table-row'){
         menu.style.display = 'none';
     }else {
@@ -335,7 +310,6 @@ function show_navlokal(){
 
 
 //hemma.sgsstudentbostader.se
-
 function hamtahemma(){ 
 	show();
 	$.ajax({
@@ -346,10 +320,7 @@ function hamtahemma(){
 							
 							buttonvalue = $(varde).find('button').attr('value');
 							buttonname = $(varde).find('button');
-							console.log("Detta är buttonvalue " + buttonvalue);
 							if(buttonvalue === undefined){
-								console.log("Går in i denna");
-								
 								hemmavilken("Hoppsan!","Det verkar inte som att ditt hus är utrustat med möjligheten att öppna entrédörren via internet.");	
 							}
 							else{
@@ -361,10 +332,6 @@ function hamtahemma(){
 			error: function(varde2, status, error){
 				hemmafel();
 				loadtvattaklar();
-				console.log('Error på hemma-get');
-				console.log(varde2);
-				console.log(status);
-				console.log(error);				
 			}
 			});
 
@@ -374,59 +341,38 @@ function hamtahemma(){
 
 
 function oppnadorr(){
-console.log("1");
 	var sendform = document.getElementById('hemmadorren');
-console.log("2");	
 	$.ajax({	
 		type: "POST",
 		url: "http://hemma.sgsstudentbostader.se/DoorControl/PerformUnlock",
 		data: "epName=" + encodeURI(sendform.value),
 		charset: 'UTF-8',
 		success: function(data,status,kul){
-
-			console.log("3");
 			var vilkenhemma = $(data).find('.doorControlEntryPath');
 			var fatalerror;
 			fatalerror = $(data).eq(4);
 			
 			//Hade stora fel på denna innan, det verkar kunna bli så om SGS krånglar. Kolla igen imorgon om det fungerar bättre.
 			if(vilkenhemma[0] != undefined){
-			console.log("4");
 			vilkenhemma = vilkenhemma[0].innerHTML;
 			var meddelandehemma = $(data).find('.doorControlMessage');
 			meddelandehemma = meddelandehemma[0].innerHTML;
 			
 			hemmavilken(vilkenhemma,meddelandehemma);
-			console.log(meddelandehemma[0].innerHTML);
-			
 			loadtvattaklar();
 			}
-			else if(fatalerror != undefined){
-			console.log("5");
-
-			
+			else if(fatalerror != undefined){			
 				fatalerror = fatalerror[0].innerHTML
-				console.log(fatalerror);
-				fatalerror = String(fatalerror).split('<h1>', 2)
-				console.log(fatalerror[1]);
-				
+				fatalerror = String(fatalerror).split('<h1>', 2)				
 				hemmavilken(fatalerror[1]);
 				loadtvattaklar();
 			}
 		},
 		error: function(error){
-
-			console.log('Error på hemma-post');
 			hemmafel();
 			loadtvattaklar();
 		}
-
-		
-		
 	})
-	
-console.log("6");	
-	
 }
 
 
@@ -441,7 +387,6 @@ function show(){
 
 
 function loadtvattaklar(){
-	console.log('laddat klart');
 	var spinnerevent = document.getElementById('loading');
 			spinnerevent.style.visibility = 'hidden';
 }
