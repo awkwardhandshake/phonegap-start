@@ -43,6 +43,7 @@ function loggain(userNameSGS, passwordSGS, check){
       getHMSCheck(data);
     })
     .fail(function(){
+			loadtvattaklar();
 			navigator.notification.alert('Applikationen verkar ha förlorat kontakten med servern.', inputfields, 'Serverfel', 'Försök igen' );	      
     });
 }
@@ -103,34 +104,34 @@ console.log('GetLaundryBooking active');
         byggnad('https://www.sgsstudentbostader.se/ext_gw.aspx?module=wwwash&lang=se');
     })
     .fail(function(){
+			loadtvattaklar();
 			navigator.notification.alert('Det gick inte att hämta bokningsfönstret', startsida, 'Hämtningsfel', 'Försök igen' );	      
     });    
   }
 function loggaut(button){
-if(button == 2){			
-  $.get('https://mmarknad.sgsstudentbostader.se/API/Service/AuthorizationServiceHandler.ashx?&Method=APILogout',
-    function(data) {
-      console.log('loggaut marknad ' + data);
-    })
-    .fail(function(){
-			navigator.notification.alert('Det gick inte att slutföra utloggningen', startsida, 'Utloggningsfel', 'Försök igen' );	      
-    });    
-  $.get('http://sgsstudentbostader.se/Assets/Handlers/MomentumLogout.ashx',
-    function(data) {
-      console.log('loggaut momentum ' + data); 
-    })
-    .fail(function(){
-			navigator.notification.alert('Det gick inte att slutföra utloggningen', startsida, 'Utloggningsfel', 'Försök igen' );	      
-    });    
-
-	localStorage.LoggedIn = 'false';
-	localStorage.anv = null;
-	localStorage.pass = null;
-	navigator.notification.alert(
-			'Stäng ner applikationen och starta om den för att påskynda utloggningen.',  // message
-			dummiefunktion,         // callback
-			'Snart utloggad!',      // title
-			'Ok'         // buttonName
-			);
-	}
+  if(button == 2){			
+  var fail = false;
+    $.get('https://mmarknad.sgsstudentbostader.se/API/Service/AuthorizationServiceHandler.ashx?&Method=APILogout',
+      function(data) {
+        console.log('loggaut marknad ' + data);
+      })
+      .fail(function(){
+        fail = true;
+  			navigator.notification.alert('Det gick inte att slutföra utloggningen', dummiefunktion, 'Utloggningsfel', 'Försök igen' );	      
+      });    
+    $.get('http://sgsstudentbostader.se/Assets/Handlers/MomentumLogout.ashx',
+      function(data) {
+        fail = true;
+        console.log('loggaut momentum ' + data); 
+      })
+      .fail(function(){
+  			navigator.notification.alert('Det gick inte att slutföra utloggningen', dummiefunktion, 'Utloggningsfel', 'Försök igen' );	      
+      });    
+    if(fail != true){
+    	localStorage.LoggedIn = 'false';
+    	localStorage.anv = null;
+    	localStorage.pass = null;
+    	navigator.notification.alert('Stäng ner applikationen och starta om den för att påskynda utloggningen.', dummiefunktion, 'Snart utloggad!', 'Ok');
+    }
+  }
 }
