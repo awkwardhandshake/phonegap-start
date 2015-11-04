@@ -46,7 +46,6 @@ function byggnad(urlfranlankarbyggnad){
 									['Nej', 'Ja']
 									);
 								}		
-	          console.log('6');
 	})
           console.log('7');
 }
