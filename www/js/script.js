@@ -5,6 +5,7 @@ function byggnad(urlfranlankarbyggnad){
 	$.ajax({
 			url: urlfranlankarbyggnad,
 			success: function(data) {
+      console.log('0');
 			console.log(data);
 				var byggnadtable = document.getElementById('byggnad');
 				var indifiera;
