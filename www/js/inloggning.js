@@ -128,6 +128,7 @@ function loggaut(button){
   			navigator.notification.alert('Det gick inte att slutföra utloggningen', dummiefunktion, 'Utloggningsfel', 'Försök igen' );	      
       });    
     if(fail != true){
+      console.log(fail);
     	localStorage.LoggedIn = 'false';
     	localStorage.anv = null;
     	localStorage.pass = null;
