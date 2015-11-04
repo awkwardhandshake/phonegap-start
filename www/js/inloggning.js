@@ -110,13 +110,13 @@ console.log('GetLaundryBooking active');
   }
 function loggaut(button){
   if(button == 2){			
-  var fail = false;
+  var failLoggaUt;
     $.get('https://mmarknad.sgsstudentbostader.se/API/Service/AuthorizationServiceHandler.ashx?&Method=APILogout',
       function(data) {
         console.log('loggaut marknad ' + data);
       })
       .fail(function(){
-        fail = true;
+        failLoggaUt = true;
   			navigator.notification.alert('Det gick inte att slutföra utloggningen', dummiefunktion, 'Utloggningsfel', 'Försök igen' );	      
       });    
     $.get('http://sgsstudentbostader.se/Assets/Handlers/MomentumLogout.ashx',
@@ -124,11 +124,11 @@ function loggaut(button){
         console.log('loggaut momentum ' + data); 
       })
       .fail(function(){
-        fail = true;
+        failLoggaUt = true;
   			navigator.notification.alert('Det gick inte att slutföra utloggningen', dummiefunktion, 'Utloggningsfel', 'Försök igen' );	      
       });    
-    if(fail != true){
-      console.log(fail);
+    if(failLoggaUt != true){
+      console.log(failLoggaUt);
     	localStorage.LoggedIn = 'false';
     	localStorage.anv = null;
     	localStorage.pass = null;
