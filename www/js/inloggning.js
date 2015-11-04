@@ -27,7 +27,7 @@ function getFormData(){
 }
 //logga in	   
 function loggain(userNameSGS, passwordSGS, check){
-    $.get('http://test-marknad.sgsstudentbostader.se/API/Service/AuthorizationServiceHandler.ashx?Method=APILoginSGS&syndicateNo=1',
+    $.get('http://marknad.sgsstudentbostader.se/API/Service/AuthorizationServiceHandler.ashx?Method=APILoginSGS&syndicateNo=1',
       {
        username : userNameSGS,
        password : passwordSGS
