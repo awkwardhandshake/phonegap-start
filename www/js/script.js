@@ -31,20 +31,16 @@ function byggnad(urlfranlankarbyggnad){
 				else{
 					loadtvatta(urlfranlankarbyggnad); // Ändrat för att hämta mot test-marknad
 					}
-	
 								},
 								error: function(){
 									navigator.notification.confirm(
 									'Något gick snett, vill du försöka igen?',
 									yourCallbackTvatta,
 									'Fel',
-									'Nej,Ja'
+									['Nej', 'Ja']
 									);
 								}		
 	})
-	//loadtvattaklar();
-
-	
 }
 
 
