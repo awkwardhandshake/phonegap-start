@@ -44,7 +44,12 @@ function loggain(userNameSGS, passwordSGS, check){
     })
     .fail(function(){
 			loadtvattaklar();
-			navigator.notification.alert('Applikationen verkar ha förlorat kontakten med servern.', inputfields, 'Serverfel', 'Försök igen' );	      
+      if(check != true) {
+			  navigator.notification.alert('Applikationen verkar ha förlorat kontakten med servern.', inputfields, 'Serverfel', 'Försök igen' );
+      }
+      else {
+        navigator.notification.alert('Applikationen verkar ha förlorat kontakten med servern.', startsida, 'Serverfel', 'Försök igen' );
+      }
     });
 }
 	
