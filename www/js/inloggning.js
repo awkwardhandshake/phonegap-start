@@ -27,7 +27,7 @@ function getFormData(){
 }
 //logga in	   
 function loggain(userNameSGS, passwordSGS, check){
-    $.get('http://test-marknad.sgsstudentbostader.se/API/Service/AuthorizationServiceHandler.ashx?Method=APILoginSGS&syndicateNo=1',
+    $.get('http://ttest-marknad.sgsstudentbostader.se/API/Service/AuthorizationServiceHandler.ashx?Method=APILoginSGS&syndicateNo=1',
       {
        username : userNameSGS,
        password : passwordSGS
@@ -73,7 +73,7 @@ function getHMSCheck(dataStorage){
 
 function GetLaundryBooking(SecurityTokenId, dataStorage){
 console.log('GetLaundryBooking active');
-    $.get('http://wtest-marknad.sgsstudentbostader.se/Momentum/API/ClientService/GetLaundryBooking/1/'+ dataStorage.ClientNo +'/'+ dataStorage.SGS_CustomerName +'/'+SecurityTokenId+'/'+ dataStorage.Lang +'/', function(data){
+    $.get('http://test-marknad.sgsstudentbostader.se/Momentum/API/ClientService/GetLaundryBooking/1/'+ dataStorage.ClientNo +'/'+ dataStorage.SGS_CustomerName +'/'+SecurityTokenId+'/'+ dataStorage.Lang +'/', function(data){
       localStorage.urlen = data;
       if(data === 'No URL found.' || data === ""){
         console.log('No URL found. try GetLaundryBookingModuelOld');
@@ -92,7 +92,7 @@ console.log('GetLaundryBooking active');
   
   function GetLaundryBookingModuelOld(dataStorage) {
   console.log('GetLaundryBookingModuelOld active');
-    $.get('https://wwww.sgsstudentbostader.se/Assets/Handlers/Momentum.ashx?_=1366895108402&customer_name=' + dataStorage.SGS_CustomerName, {
+    $.get('https://www.sgsstudentbostader.se/Assets/Handlers/Momentum.ashx?_=1366895108402&customer_name=' + dataStorage.SGS_CustomerName, {
       customerid : dataStorage.UserName,
       isresident : dataStorage.SGS_LivesAtSgs,
       loggedin : dataStorage.LoggedIn,
@@ -111,7 +111,7 @@ console.log('GetLaundryBooking active');
 function loggaut(button){
   if(button == 2){			
   var failLoggaUt;
-    $.get('https://mmarknad.sgsstudentbostader.se/API/Service/AuthorizationServiceHandler.ashx?&Method=APILogout',
+    $.get('https://marknad.sgsstudentbostader.se/API/Service/AuthorizationServiceHandler.ashx?&Method=APILogout',
       function(data) {
         console.log('loggaut marknad ' + data);
       })
