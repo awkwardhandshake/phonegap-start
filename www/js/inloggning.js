@@ -121,10 +121,10 @@ function loggaut(button){
       });    
     $.get('http://sgsstudentbostader.se/Assets/Handlers/MomentumLogout.ashx',
       function(data) {
-        fail = true;
         console.log('loggaut momentum ' + data); 
       })
       .fail(function(){
+        fail = true;
   			navigator.notification.alert('Det gick inte att slutföra utloggningen', dummiefunktion, 'Utloggningsfel', 'Försök igen' );	      
       });    
     if(fail != true){
