@@ -21,7 +21,7 @@ function yourCallbackloggaut(){
 			'Vill du logga ut?',
 			loggaut,
 			'Utloggning',
-			'Nej,Ja'
-			)
+			['Nej', 'Ja']
+			);
 
 }

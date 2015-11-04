@@ -132,6 +132,7 @@ function loggaut(button){
     	localStorage.LoggedIn = 'false';
     	localStorage.anv = null;
     	localStorage.pass = null;
+    	failLoggaUt = null;
     	navigator.notification.alert('Stäng ner applikationen och starta om den för att påskynda utloggningen.', dummiefunktion, 'Snart utloggad!', 'Ok');
     }
   }
