@@ -3,7 +3,6 @@ function kollainlogg(){
   show();
   'use strict';
   if(localStorage.LoggedIn == 'true'){
-//    preCheckLaundry()
     dehamta(localStorage.anv,localStorage.pass);
   }
   else{
@@ -17,68 +16,42 @@ function kollainlogg(){
   }
 }
 
-function preCheckLaundry() {
-  if(localStorage.laundryURLpreCheck){
-  console.log('preCheckLaundry start');
-  $.ajax({
-    Method : 'GET',
-    url : localStorage.laundryURLpreCheck,
-    statusCode: {
-      302 : function(data) {
-        byggnad(localStorage.laundryURLpreCheck);
-        },
-      200 : function(data) {
-        dehamta(localStorage.anv,localStorage.pass);
-      }
-      }
-    })
-
-  }
-  else{
-    dehamta(localStorage.anv,localStorage.pass);
-  }
-}
-
-
-
 var historik = new Array();
 //Hämtar inloggningsformet
 function getFormData(){
   show();  
-  localStorage.anv=document.getElementById("username").value;
-  localStorage.pass=document.getElementById("password").value;
-  encrypt(localStorage.anv,localStorage.pass);
-  dehamta(localStorage.anv,localStorage.pass);
+  var getUsername = $('#username').val();
+  var getPassword = $('#password').val();
+  loggain(getUsername, getPassword);
 
 }
 //logga in	   
-function loggain(anvSGS, passSGS){
-   var userNameSGS = anvSGS.toString(CryptoJS.enc.Utf8);
-   var passwordSGS = passSGS.toString(CryptoJS.enc.Utf8);
-   var SyndicateNo = 1;
-   var version;
-   getHMS(version, userNameSGS, passwordSGS);
-}
-
-function getHMS(version, usernameSGS, passwordSGS){
+function loggain(userNameSGS, passwordSGS, check){
     $.get('http://test-marknad.sgsstudentbostader.se/API/Service/AuthorizationServiceHandler.ashx?Method=APILoginSGS&syndicateNo=1',
       {
-       username : usernameSGS,
+       username : userNameSGS,
        password : passwordSGS
       },
       function(data) {
       console.log('Jquery getHMS new success!');
+      console.log(userNameSGS + ' : ' + passwordSGS);
       localStorage.ReturnCode = data.ReturnCode;
       localStorage.LoggedIn = data.LoggedIn;
-      getHMSCheck(data, version);
+      if(check != true) {
+        encrypt(userNameSGS, passwordSGS);
+      }
+      getHMSCheck(data);
+    })
+    .fail(function(){
+			navigator.notification.alert('Applikationen verkar ha förlorat kontakten med servern.', inputfields, 'Serverfel', 'Försök igen' );	      
     });
-}	
+}
 	
-function getHMSCheck(dataStorage, version){	
+function getHMSCheck(dataStorage){	
 		if(dataStorage.ReturnCode === 'NOMATCH' || dataStorage.ReturnCode === undefined) {
 			loadtvattaklar();
 			console.log('Användarnamnet eller lösenordet är felaktigt');
-			navigator.notification.alert( 'Användarnamnet eller lösenordet är felaktigt', inputfields, 'Inloggningsfel', 'Försök igen' );
+			navigator.notification.alert( 'Användarnamnet eller lösenordet är felaktigt.', inputfields, 'Inloggningsfel', 'Försök igen' );
 
 		}
 		else if(dataStorage.ReturnCode === 'TOOMANYFAILEDLOGINS') {
@@ -89,7 +62,7 @@ function getHMSCheck(dataStorage, version){
 	  }
     else if(dataStorage.SecurityTokenId != null) {
       console.log('getLaundry sent');
-      GetLaundryBooking(dataStorage.SecurityTokenId, version, dataStorage);
+      GetLaundryBooking(dataStorage.SecurityTokenId, dataStorage);
     }
     else {
       console.log('Login failed');
@@ -97,9 +70,9 @@ function getHMSCheck(dataStorage, version){
 }
 
 
-function GetLaundryBooking(SecurityTokenId, version, dataStorage){
+function GetLaundryBooking(SecurityTokenId, dataStorage){
 console.log('GetLaundryBooking active');
-    $.get('http://test-marknad.sgsstudentbostader.se/Momentum/API/ClientService/GetLaundryBooking/1/'+ dataStorage.ClientNo +'/'+ dataStorage.SGS_CustomerName +'/'+SecurityTokenId+'/'+ dataStorage.Lang +'/', function(data){
+    $.get('http://wtest-marknad.sgsstudentbostader.se/Momentum/API/ClientService/GetLaundryBooking/1/'+ dataStorage.ClientNo +'/'+ dataStorage.SGS_CustomerName +'/'+SecurityTokenId+'/'+ dataStorage.Lang +'/', function(data){
       localStorage.urlen = data;
       if(data === 'No URL found.' || data === ""){
         console.log('No URL found. try GetLaundryBookingModuelOld');
@@ -107,7 +80,6 @@ console.log('GetLaundryBooking active');
       }
       else{
         console.log('Jquery getLaundry success!');
-        localStorage.laundryURLpreCheck = data;
         byggnad(data);
       }
     })
@@ -119,7 +91,7 @@ console.log('GetLaundryBooking active');
   
   function GetLaundryBookingModuelOld(dataStorage) {
   console.log('GetLaundryBookingModuelOld active');
-    $.get('https://www.sgsstudentbostader.se/Assets/Handlers/Momentum.ashx?_=1366895108402&customer_name=' + dataStorage.SGS_CustomerName, {
+    $.get('https://wwww.sgsstudentbostader.se/Assets/Handlers/Momentum.ashx?_=1366895108402&customer_name=' + dataStorage.SGS_CustomerName, {
       customerid : dataStorage.UserName,
       isresident : dataStorage.SGS_LivesAtSgs,
       loggedin : dataStorage.LoggedIn,
@@ -129,18 +101,28 @@ console.log('GetLaundryBooking active');
       function(data) {
         console.log('Jquery getLaundry success!');
         byggnad('https://www.sgsstudentbostader.se/ext_gw.aspx?module=wwwash&lang=se');
-    });
+    })
+    .fail(function(){
+			navigator.notification.alert('Det gick inte att hämta bokningsfönstret', startsida, 'Hämtningsfel', 'Försök igen' );	      
+    });    
   }
 function loggaut(button){
 if(button == 2){			
-  $.get('https://marknad.sgsstudentbostader.se/API/Service/AuthorizationServiceHandler.ashx?&Method=APILogout',
+  $.get('https://mmarknad.sgsstudentbostader.se/API/Service/AuthorizationServiceHandler.ashx?&Method=APILogout',
     function(data) {
       console.log('loggaut marknad ' + data);
-    });
+    })
+    .fail(function(){
+			navigator.notification.alert('Det gick inte att slutföra utloggningen', startsida, 'Utloggningsfel', 'Försök igen' );	      
+    });    
   $.get('http://sgsstudentbostader.se/Assets/Handlers/MomentumLogout.ashx',
     function(data) {
       console.log('loggaut momentum ' + data); 
-    });
+    })
+    .fail(function(){
+			navigator.notification.alert('Det gick inte att slutföra utloggningen', startsida, 'Utloggningsfel', 'Försök igen' );	      
+    });    
+
 	localStorage.LoggedIn = 'false';
 	localStorage.anv = null;
 	localStorage.pass = null;
