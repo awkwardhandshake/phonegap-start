@@ -2,16 +2,16 @@
 	<widget xmlns = "http://www.w3.org/ns/widgets"
 		xmlns:gap = "http://phonegap.com/ns/1.0"
 		id        = "com.phonegap.sgsmitthem"
-		versionCode= "2"
-		version   = "1.0.1">
-		<name>SGS Mitt Hem</name>
+		versionCode= "3"
+		version   = "1.0.2">
+		<name>SGS Mitt Hem (beta)</name>
 		<description>
 SGS Mitt Hem ger dig som hyresgäst möjlighet att boka olika typer av faciliteter som till exempel tvättstuga och sällskapsrum. Om ditt område är utrustat med öppning av entrédörren via hemma.sgsstudentbostader.se kan du nu öppna dörren med denna applikation.</description>
 		<author href="www.sgsstudentbostader.se" email="app@sgsstudentbostader.se">
 SGS Studentbostäder
 		</author>
 		<preference name="permission" value="none" />
-		<preference name="phonegap-version" value="3.3.0" />
+		<preference name="phonegap-version" value="cli-5.2.0" />
 		<preference name="orientation" value="portrait" />
 		<preference name="fullscreen" value="false" />
 		<preference name="target-device" value="handset" />
@@ -48,8 +48,8 @@ SGS Studentbostäder
 		
 		<gap:platform name="ios" />
 		<gap:platform name="android" />
-		<gap:plugin name="org.apache.cordova.dialogs" version="0.2.6" />
-		<gap:plugin name="org.apache.cordova.inappbrowser"  />
+		<gap:plugin name="org.apache.cordova.dialogs" />
+		<gap:plugin name="org.apache.cordova.inappbrowser" source="npm" />
 		<gap:plugin name="org.apache.cordova.network-information"  />
 		<gap:plugin name="org.apache.cordova.splashscreen"  />
 		
