@@ -27,13 +27,14 @@ function getFormData(){
 }
 //logga in	   
 function loggain(userNameSGS, passwordSGS, check){
-    $.get('http://marknad.sgsstudentbostader.se/API/Service/AuthorizationServiceHandler.ashx?Method=APILoginSGS&syndicateNo=1',
+    $.get('http://test-marknad.sgsstudentbostader.se/API/Service/AuthorizationServiceHandler.ashx?Method=APILoginSGS&syndicateNo=1',
       {
        username : userNameSGS,
        password : passwordSGS
       },
       function(data) {
       console.log('Jquery getHMS new success!');
+      console.log(data);
       console.log(userNameSGS + ' : ' + passwordSGS);
       localStorage.ReturnCode = data.ReturnCode;
       localStorage.LoggedIn = data.LoggedIn;
@@ -64,7 +65,12 @@ function getHMSCheck(dataStorage){
 			loadtvattaklar();
       console.log('Det verkar som att du har försökt logga in för många gånger.');
 			navigator.notification.alert('Det verkar som att du har försökt logga in för många gånger.', inputfields, 'Hoppsan!', 'Vänta lite' );	
-
+	  }
+	  else if(dataStorage.SGS_Laundry == false && dataStorage.LoggedIn == true) {
+			loadtvattaklar();
+      console.log('Det verkar inte finns något att boka för objekt ' + dataStorage.SGS_CustomerName + '.');
+      localStorage.LoggedIn = false; //Om objekt inte har en tvättstuga måste jag tvinga fram en ny inloggning.
+			navigator.notification.alert('Det verkar inte finns något att boka för objekt ' + dataStorage.SGS_CustomerName + '.', inputfields, 'Tvättstuga', 'Ok' );	
 	  }
     else if(dataStorage.SecurityTokenId != null) {
       console.log('getLaundry sent');

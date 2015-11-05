@@ -5,24 +5,19 @@ function byggnad(urlfranlankarbyggnad){
 	$.ajax({
 			url: urlfranlankarbyggnad,
 			success: function(data) {
-      console.log('0');
-			console.log(data);
 				var byggnadtable = document.getElementById('byggnad');
 				var indifiera;
 				var byggnadlank;
 				var delabyggnadlank;
 				indifiera = $(data).find("#lblShowFirstAvailable");
 				if(indifiera.length !== 0){
-          console.log('1');
           historia("byggnad()", urlfranlankarbyggnad);				
 					byggnadlank = $(data).find("td .headerColor[onmousedown]:not(#lblHeaderText)");
 					var d = 0;					
 					for(var i = 0; i < (byggnadlank.length -1); i++){
-          console.log('2');
 						var byggnadrow = byggnadtable.insertRow(-1);
 						var byggnadcell = byggnadrow.insertCell(-1);
 						if(byggnadlank[d].onmousedown !== null){
-              console.log('3');
 							byggnadcell.setAttribute("class", "byggnadnav");
 							delabyggnadlank = String(byggnadlank[d].onmousedown).split("'",2);
 							delabyggnadlank = "'https://tvatta.sgsstudentbostader.se/" + delabyggnadlank[1] + "'";
@@ -31,11 +26,9 @@ function byggnad(urlfranlankarbyggnad){
 						}
 						d++;	
 					}
-          console.log('4');
 				loadtvattaklar();
 				}
 				else{
-				          console.log('5');
 					loadtvatta(urlfranlankarbyggnad); // Ändrat för att hämta mot test-marknad
 					}
 								},
@@ -48,7 +41,6 @@ function byggnad(urlfranlankarbyggnad){
 									);
 								}		
 	})
-          console.log('7');
 }
 
 
