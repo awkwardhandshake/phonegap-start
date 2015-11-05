@@ -70,5 +70,5 @@ SGS Studentbostäder
 		<gap:splash src="res/screen/android/hdpi.png" gap:platform="android" gap:density="hdpi" />
 		<gap:splash src="res/screen/android/xhdpi.png" gap:platform="android" gap:density="xhdpi" />
 		<gap:splash src="splash.png" />
-		<access origin="*" />
+    <access origin="..." subdomains="true"/>
 	</widget>
