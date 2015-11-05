@@ -27,7 +27,7 @@ function getFormData(){
 }
 //logga in	   
 function loggain(userNameSGS, passwordSGS, check){
-    $.get('http://test-marknad.sgsstudentbostader.se/API/Service/AuthorizationServiceHandler.ashx?Method=APILoginSGS&syndicateNo=1',
+    $.get('http://test-marknad.sgsstudentbostader.se/API/Service/AuthorizationServiceHandler.ashx?Method=APILoginSGS&syndicateNo=1&syndicateObjectMainGroupNo=1',
       {
        username : userNameSGS,
        password : passwordSGS
@@ -119,8 +119,8 @@ console.log('GetLaundryBooking active');
 			navigator.notification.alert('Det gick inte att hämta bokningsfönstret', startsida, 'Hämtningsfel', 'Försök igen' );	      
     });    
   }
-function loggaut(button){
-  if(button == 2){			
+function loggaut(buttonIndex){
+  if(buttonIndex == 2) {			
   var failLoggaUt;
     $.get('https://marknad.sgsstudentbostader.se/API/Service/AuthorizationServiceHandler.ashx?&Method=APILogout',
       function(data) {
@@ -130,7 +130,7 @@ function loggaut(button){
         failLoggaUt = true;
   			navigator.notification.alert('Det gick inte att slutföra utloggningen', dummiefunktion, 'Utloggningsfel', 'Försök igen' );	      
       });    
-    $.get('http://sgsstudentbostader.se/Assets/Handlers/MomentumLogout.ashx',
+    $.get('https://www.sgsstudentbostader.se/Assets/Handlers/MomentumLogout.ashx',
       function(data) {
         console.log('loggaut momentum ' + data); 
       })
