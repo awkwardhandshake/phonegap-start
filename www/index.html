@@ -20,8 +20,8 @@ console.log('Går in i onLoad');
 
     };
     function onDeviceReady() {
-
-console.log('Går in i DeviceReady');
+      $.support.cors=true;
+      console.log('Går in i DeviceReady');
 		navigator.splashscreen.hide();
 		console.log('Gömmer splash screen för framförallt android');
         document.addEventListener("backbutton", function(){
