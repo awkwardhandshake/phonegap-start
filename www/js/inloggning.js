@@ -142,7 +142,7 @@ function loggaut(buttonIndex){
       console.log(failLoggaUt);
       navigator.notification.alert('Det gick inte att slutföra utloggningen', dummiefunktion, 'Utloggningsfel', 'Försök igen' );
     }   
-    else {
+    else if(failLoggaUt != true) {
       console.log(failLoggaUt);
     	localStorage.LoggedIn = 'false';
     	localStorage.anv = null;
