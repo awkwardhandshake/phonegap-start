@@ -123,7 +123,7 @@ function loggaut(buttonIndex){
   if(buttonIndex == 2) {			
   var failLoggaUt;
     $.when(
-    $.get('https://marknad.sgsstudentbostader.se/API/Service/AuthorizationServiceHandler.ashx?&Method=APILogout',
+    $.get('htttps://marknad.sgsstudentbostader.se/API/Service/AuthorizationServiceHandler.ashx?&Method=APILogout',
       function(data) {
         console.log('loggaut marknad ' + data);
       })
