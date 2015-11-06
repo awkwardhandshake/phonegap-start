@@ -122,6 +122,7 @@ console.log('GetLaundryBooking active');
 function loggaut(buttonIndex){
   if(buttonIndex == 2) {			
   var failLoggaUt;
+    $.when(
     $.get('https://marknad.sgsstudentbostader.se/API/Service/AuthorizationServiceHandler.ashx?&Method=APILogout',
       function(data) {
         console.log('loggaut marknad ' + data);
@@ -129,7 +130,7 @@ function loggaut(buttonIndex){
       .fail(function(){
         console.log('fail marknad');
         failLoggaUt = true;
-      });    
+      }),    
     $.get('https://www.sgsstudentbostader.se/Assets/Handlers/MomentumLogout.ashx',
       function(data) {
         console.log('loggaut momentum ' + data); 
@@ -137,21 +138,19 @@ function loggaut(buttonIndex){
       .fail(function(){
         console.log('fail momentum');
         failLoggaUt = true;	      
+      })
+      ).fail(function() {
+        console.log('then');
+          console.log(failLoggaUt);
+          navigator.notification.alert('Det gick inte att slutföra utloggningen', dummiefunktion, 'Utloggningsfel', 'Försök igen' );        
+          
+      }).done(function() {
+          console.log(failLoggaUt);
+        	localStorage.LoggedIn = 'false';
+        	localStorage.anv = null;
+        	localStorage.pass = null;
+        	failLoggaUt = null;
+        	navigator.notification.alert('Stäng ner applikationen och starta om den för att påskynda utloggningen.', dummiefunktion, 'Snart utloggad!', 'Ok');
       });   
-      checkError(failLoggaUt);
   }
 }  
-function checkError(failLoggaUt) {
-    if(failLoggaUt == true) {
-      console.log(failLoggaUt);
-      navigator.notification.alert('Det gick inte att slutföra utloggningen', dummiefunktion, 'Utloggningsfel', 'Försök igen' );
-    }   
-    else if(failLoggaUt != true) {
-      console.log(failLoggaUt);
-    	localStorage.LoggedIn = 'false';
-    	localStorage.anv = null;
-    	localStorage.pass = null;
-    	failLoggaUt = null;
-    	navigator.notification.alert('Stäng ner applikationen och starta om den för att påskynda utloggningen.', dummiefunktion, 'Snart utloggad!', 'Ok');
-    }
-}
