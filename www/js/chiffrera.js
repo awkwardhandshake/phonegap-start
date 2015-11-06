@@ -13,6 +13,5 @@ function dehamta(anv,pass){
       var decryptedpass = CryptoJS.AES.decrypt(pass, keyer);
       decryptedanv = decryptedanv.toString(CryptoJS.enc.Utf8);
       decryptedpass = decryptedpass.toString(CryptoJS.enc.Utf8);
-      console.log('dehamta ' + decryptedanv +' : '+ decryptedpass);
 loggain(decryptedanv,decryptedpass,dehamta);
 }

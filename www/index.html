@@ -14,16 +14,12 @@
 		<title>SGS Mitt Hem</title>
 <script type="text/javascript">
 function onLoad() {
-
-console.log('Går in i onLoad');
         document.addEventListener("deviceready", onDeviceReady, false); 
 
     };
     function onDeviceReady() {
       $.support.cors=true;
-      console.log('Går in i DeviceReady');
 		navigator.splashscreen.hide();
-		console.log('Gömmer splash screen för framförallt android');
         document.addEventListener("backbutton", function(){
 	        navigator.notification.confirm(
 			'Vill du stänga ner appen?',
@@ -145,14 +141,5 @@ console.log('Går in i onLoad');
 <script type="text/javascript">
 historia('startsida()');
 </script>
-
-<!-- Version 2.1.9 -->
-
-
-
-
-
 	</body>
 </html>
-		<!--<div id="dorren" class="eight columns center" onmousedown="hamtahemma('http://hemma.sgsstudentbostader.se/DoorControl/Fullscreen'),vidklick('dorren')">
-		<div id="bokar" class="eight columns center" onclick="kollainlogg(),vidklick('bokar')">-->
