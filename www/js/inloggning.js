@@ -138,6 +138,10 @@ function loggaut(buttonIndex){
         console.log('fail momentum');
         failLoggaUt = true;	      
       });   
+      checkError(failLoggaUt);
+  }
+}  
+function checkError(failLoggaUt) {
     if(failLoggaUt == true) {
       console.log(failLoggaUt);
       navigator.notification.alert('Det gick inte att slutföra utloggningen', dummiefunktion, 'Utloggningsfel', 'Försök igen' );
@@ -150,5 +154,4 @@ function loggaut(buttonIndex){
     	failLoggaUt = null;
     	navigator.notification.alert('Stäng ner applikationen och starta om den för att påskynda utloggningen.', dummiefunktion, 'Snart utloggad!', 'Ok');
     }
-  }
 }
