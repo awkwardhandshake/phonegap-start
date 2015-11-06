@@ -27,7 +27,7 @@ function getFormData(){
 }
 //logga in	   
 function loggain(userNameSGS, passwordSGS, check){
-    $.get('http://test-marknad.sgsstudentbostader.se/API/Service/AuthorizationServiceHandler.ashx?Method=APILoginSGS&syndicateNo=1&syndicateObjectMainGroupNo=1',
+    $.get('https://marknad.sgsstudentbostader.se/API/Service/AuthorizationServiceHandler.ashx?Method=APILoginSGS&syndicateNo=1&syndicateObjectMainGroupNo=1',
       {
        username : userNameSGS,
        password : passwordSGS
@@ -84,7 +84,7 @@ function getHMSCheck(dataStorage){
 
 function GetLaundryBooking(SecurityTokenId, dataStorage){
 console.log('GetLaundryBooking active');
-    $.get('http://test-marknad.sgsstudentbostader.se/Momentum/API/ClientService/GetLaundryBooking/1/'+ dataStorage.ClientNo +'/'+ dataStorage.SGS_CustomerName +'/'+SecurityTokenId+'/'+ dataStorage.Lang +'/', function(data){
+    $.get('https://marknad.sgsstudentbostader.se/Momentum/API/ClientService/GetLaundryBooking/1/'+ dataStorage.ClientNo +'/'+ dataStorage.SGS_CustomerName +'/'+SecurityTokenId+'/'+ dataStorage.Lang +'/', function(data){
       localStorage.urlen = data;
       if(data === 'No URL found.' || data === ""){
         console.log('No URL found. try GetLaundryBookingModuelOld');
@@ -121,31 +121,19 @@ console.log('GetLaundryBooking active');
   }
 function loggaut(buttonIndex){
   if(buttonIndex == 2) {			
-  var failLoggaUt;
     $.when(
-    $.get('htttps://marknad.sgsstudentbostader.se/API/Service/AuthorizationServiceHandler.ashx?&Method=APILogout',
+    $.get('https://marknad.sgsstudentbostader.se/API/Service/AuthorizationServiceHandler.ashx?&Method=APILogout',
       function(data) {
-        console.log('loggaut marknad ' + data);
-      })
-      .fail(function(){
-        console.log('fail marknad');
-        failLoggaUt = true;
-      }),    
+      }),
     $.get('https://www.sgsstudentbostader.se/Assets/Handlers/MomentumLogout.ashx',
-      function(data) {
-        console.log('loggaut momentum ' + data); 
-      })
-      .fail(function(){
-        console.log('fail momentum');
-        failLoggaUt = true;	      
+      function(data) { 
       })
       ).fail(function() {
-        console.log('then');
-          console.log(failLoggaUt);
+        console.log('fail');
           navigator.notification.alert('Det gick inte att slutföra utloggningen', dummiefunktion, 'Utloggningsfel', 'Försök igen' );        
           
       }).done(function() {
-          console.log(failLoggaUt);
+          console.log('done');
         	localStorage.LoggedIn = 'false';
         	localStorage.anv = null;
         	localStorage.pass = null;
