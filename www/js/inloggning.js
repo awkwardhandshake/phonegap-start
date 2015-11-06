@@ -127,6 +127,7 @@ function loggaut(buttonIndex){
         console.log('loggaut marknad ' + data);
       })
       .fail(function(){
+        console.log('fail marknad');
         failLoggaUt = true;
       });    
     $.get('https://www.sgsstudentbostader.se/Assets/Handlers/MomentumLogout.ashx',
@@ -134,6 +135,7 @@ function loggaut(buttonIndex){
         console.log('loggaut momentum ' + data); 
       })
       .fail(function(){
+        console.log('fail momentum');
         failLoggaUt = true;	      
       });   
     if(failLoggaUt == true) {
