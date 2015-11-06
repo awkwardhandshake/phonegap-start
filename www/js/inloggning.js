@@ -128,17 +128,19 @@ function loggaut(buttonIndex){
       })
       .fail(function(){
         failLoggaUt = true;
-  			navigator.notification.alert('Det gick inte att slutföra utloggningen', dummiefunktion, 'Utloggningsfel', 'Försök igen' );	      
       });    
     $.get('https://www.sgsstudentbostader.se/Assets/Handlers/MomentumLogout.ashx',
       function(data) {
         console.log('loggaut momentum ' + data); 
       })
       .fail(function(){
-        failLoggaUt = true;
-  			navigator.notification.alert('Det gick inte att slutföra utloggningen', dummiefunktion, 'Utloggningsfel', 'Försök igen' );	      
-      });    
-    if(failLoggaUt != true){
+        failLoggaUt = true;	      
+      });   
+    if(failLoggaUt == true) {
+      console.log(failLoggaUt);
+      navigator.notification.alert('Det gick inte att slutföra utloggningen', dummiefunktion, 'Utloggningsfel', 'Försök igen' );
+    }   
+    else {
       console.log(failLoggaUt);
     	localStorage.LoggedIn = 'false';
     	localStorage.anv = null;
